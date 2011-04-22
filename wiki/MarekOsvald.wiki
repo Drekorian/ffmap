@@ -1,7 +1,8 @@
 #labels Featured
 =Marek Osvald=
 
-#summary
+#summary Developers - Marek Osvald
+
 Marek Osvald is along with [http://code.google.com/p/ffmap/w/AlexandarZivkovic Alexandar Živkovič] and [http://code.google.com/p/ffmap/w/MartinPutniorz Martin Putniorz] one of the ffmap's developers.
 
 == Duties ==
