@@ -6,7 +6,8 @@ Martin Putniorz is along with [http://code.google.com/p/ffmap/wiki/MarekOsvald M
 
 == Duties ==
 
-Back-end development
+  * Back-end development
+  * Database development
 
 == Contact ==
 
