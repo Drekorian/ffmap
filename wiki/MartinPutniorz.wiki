@@ -1,4 +1,4 @@
-#labels Developers
+#labels Featured
 = Martin Putniorz =
 
 Martin Putniorz is along with [http://code.google.com/p/ffmap/wiki/MarekOsvald Marek Osvald] nad Alexandar Živkovič one of the ffmap's developers.
