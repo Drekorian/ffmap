@@ -3,7 +3,7 @@
 
 =Marek Osvald=
 
-Marek Osvald is along with [http://code.google.com/p/ffmap/wiki/AleksandarZivkovic Alexandar Živkovič] and [http://code.google.com/p/ffmap/wiki/MartinPutniorz Martin Putniorz] one of the ffmap's developers.
+Marek Osvald is along with [http://code.google.com/p/ffmap/wiki/AleksandarZivkovic Alexandar Živkovič] and [http://code.google.com/p/ffmap/wiki/MartinPutniorz Martin Putniorz] one of the [http://code.google.com/p/ffmap/wiki/ffmap ffmap's] developers.
 
 == Duties ==
   * project management
