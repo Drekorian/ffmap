@@ -1,4 +1,4 @@
-#summary Developer Martin Putniorz
+#summary Developers - Martin Putniorz
 #labels Featured
 = Martin Putniorz =
 
