@@ -1,3 +1,4 @@
+#labels Featured
 = Alexandar Živkovič =
 
 I am along with [MarekOsvald Marek Osvald] and [MartinPutniorz Martin Putniorz] one of ffmap's developers.
