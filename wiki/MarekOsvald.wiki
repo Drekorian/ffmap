@@ -1,0 +1,14 @@
+#labels Featured
+=Marek Osvald=
+
+#summary Marek Osvald is along with Alexandar Živkovič and Martin Putniorz one of the ffmap's developers.
+
+== Duties ==
+* project management
+* front-end development
+
+== Contact ==
+
+* icq: 232-747-004
+* @: 32523@mail.muni.cz
+* tel: +420776791289
