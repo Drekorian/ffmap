@@ -33,7 +33,7 @@ Currently ffmap is developed purely as a web-based service. If time allows howev
 ===Developers===
  * [MarekOsvald Marek Osvald]
  * [MartinPutniorz Martin Putniorz]
- * Alexandar Živkovič
+ * [AlexandarZivkovic Alexandar Živkovič]
 
 ===Supervisors===
  * Mgr. Marek Grác
