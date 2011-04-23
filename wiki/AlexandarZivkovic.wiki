@@ -3,7 +3,7 @@
 
 = Alexandar Živkovič =
 
-I am along with [MarekOsvald Marek Osvald] and [MartinPutniorz Martin Putniorz] one of ffmap's developers.
+I am along with [MarekOsvald Marek Osvald] and [MartinPutniorz Martin Putniorz] one of [AboutFfmap ffmap's] developers.
 
 ==Duties==
  * front-end development 
