@@ -2,7 +2,7 @@
 #labels Featured
 = Martin Putniorz =
 
-Martin Putniorz is along with [http://code.google.com/p/ffmap/wiki/MarekOsvald Marek Osvald] and [http://code.google.com/p/ffmap/wiki/AlexandarZivkovic Alexandar Živkovič] one of the [http://code.google.com/p/ffmap/ ffmap's] developers.
+Martin Putniorz is along with [MarekOsvald Marek Osvald] and [AlexandarZivkovic Alexandar Živkovič] one of the [http://code.google.com/p/ffmap/ ffmap's] developers.
 
 == Duties ==
 
