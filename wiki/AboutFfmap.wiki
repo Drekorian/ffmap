@@ -1,4 +1,6 @@
+#summary Project info and goals
 #labels Featured,Phase-Requirements
+
 = Overview =
 
 Ffmap is a semestral project for PB138 - Modern Markup Languages class at [http://www.muni.cz/?lang=en Masaryk University], [http://www.fi.muni.cz/index.xhtml.en Faculty of Informatics]. Currently under development, it uses [http://en.wikipedia.org/wiki/Java_se JAVA SE], [http://en.wikipedia.org/wiki/Xml XML], [http://en.wikipedia.org/wiki/Xhtml XHTML] and [http://en.wikipedia.org/wiki/Google_Maps_API#Google_Maps_API Google Maps API].
