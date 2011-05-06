@@ -1,5 +1,4 @@
 #summary Developers - Alexandar Živkovič
-#labels Featured
 
 = Alexandar Živkovič =
 
