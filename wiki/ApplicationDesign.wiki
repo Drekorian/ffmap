@@ -32,6 +32,7 @@ http://img15.imageshack.us/img15/3692/ffmapdata.png
 === List of used 3^rd^ party SW, libraries and technologies ===
 
   * BaseX
+  * Google Maps API
   * Java SE 6.0
   * XML
   * XML Schema
