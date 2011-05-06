@@ -1,0 +1,9 @@
+#summary Intended design of the application.
+
+= Basics =
+
+ffmap is going to implement the MVC architecture. We're not yet sure whether we implement the MVC architecture ourselves or use a framework (we're considering using the Play framework).
+
+== MVC architecture ==
+
+= Data =
