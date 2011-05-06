@@ -23,7 +23,7 @@ While the main purpose of the console interface is testing and debugging, it can
 
 = Data =
 
-ffmap's date are going to be stored in XML database. For that purpose we've chosen open source BaseX database.
+ffmap's data are going to be stored in XML database. For that purpose we've chosen open source BaseX database.
 
 == Data flow ==
 
