@@ -7,3 +7,7 @@ ffmap is going to implement the MVC architecture. We're not yet sure whether we 
 == MVC architecture ==
 
 = Data =
+
+== Data flow ==
+
+http://img15.imageshack.us/img15/3692/ffmapdata.png
