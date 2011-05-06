@@ -23,11 +23,11 @@ While the main purpose of the console interface is testing and debugging, it can
 
 = Data =
 
-ffmap's data are going to be stored in XML database. For that purpose we've chosen open source BaseX database.
+ffmap's data are going to be stored in XML database. For that purpose we've chosen open source BaseX database. Wr have chosen BaseX mainly because of being accessible via different protocols and useful GUI front-end tool.
 
 == Data flow ==
 
-http://img15.imageshack.us/img15/3692/ffmapdata.png
+http://img713.imageshack.us/img713/3692/ffmapdata.png
 
 === List of used 3^rd^ party SW, libraries and technologies ===
 
