@@ -2,19 +2,19 @@
 
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     elementFormDefault="qualified">
-    <xsd:include schemaLocation="tagsSchema.xsd"/>
-    <xsd:include schemaLocation="productsSchema.xsd" />
     <xsd:simpleType name="latType">
-        <xsd:restriction base="xsd:double">
+        <xsd:restriction base="xsd:decimal">
             <xsd:minInclusive value="-90" />
             <xsd:maxInclusive value="90" />
+            <xsd:fractionDigits value="6"/>
         </xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="lonType">
-        <xsd:restriction base="xsd:double">
+        <xsd:restriction base="xsd:decimal">
             <xsd:minInclusive value="-180" />
             <xsd:maxInclusive value="180" />
+            <xsd:fractionDigits value="6"/>
         </xsd:restriction>
     </xsd:simpleType>
 
@@ -36,23 +36,76 @@
         </xsd:restriction>
     </xsd:simpleType>
 
-    <xsd:simpleType name="priceType">
-        <xsd:restriction base="xsd:double">
+    <xsd:simpleType name="priceValueType">
+        <xsd:restriction base="xsd:decimal">
             <xsd:minInclusive value="1" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="userNameType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([a-zA-Z0-9])+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="passwordType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([a-zA-Z0-9])+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="nameType">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="([a-žA-Ž])+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="roleType">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="user"/>
+            <xsd:enumeration value="admin"/>
         </xsd:restriction>
     </xsd:simpleType>
 
     <xsd:element name="fastfood-database" type="ffDatabase">
         <xsd:key name="jointIDUnique">
-            <xsd:selector xpath="joint" />
+            <xsd:selector xpath="joints/joint" />
             <xsd:field xpath="@id" />
         </xsd:key>
-        
+        <xsd:key name="productUniqueID">
+            <xsd:selector xpath="products/product" />
+            <xsd:field xpath="@id" />
+        </xsd:key>
+        <xsd:keyref name="productRef" refer="productUniqueID">
+                    <xsd:selector xpath="joints/joint/menu/menu-item" />
+                    <xsd:field xpath="@product-ref" />
+        </xsd:keyref>
+        <xsd:keyref name="userRef" refer="userIDUnique">
+            <xsd:selector xpath="joints/joint"/>
+            <xsd:field xpath="@added-by"/>
+        </xsd:keyref>
+        <xsd:key name="userIDUnique">
+            <xsd:selector xpath="users/user"/>
+            <xsd:field xpath="@id"/>
+        </xsd:key>
     </xsd:element>
 
     <xsd:complexType name="ffDatabase">
         <xsd:sequence>
-            <xsd:element name="joint" type="jointType" minOccurs="0" maxOccurs="unbounded" />
+            <xsd:element name="joints" type="jointsType" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="products" type="productsType" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="users" type="usersType" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="jointsType">
+        <xsd:sequence>
+            <xsd:element name="joint" type="jointType" minOccurs="0" maxOccurs="unbounded">
+                <xsd:unique name="refUnique">
+                    <xsd:selector xpath="menu/menu-item"/>
+                    <xsd:field xpath="@product-ref"/>
+                </xsd:unique>
+            </xsd:element>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -67,6 +120,7 @@
         </xsd:sequence>
         <xsd:attribute name="id" type="xsd:positiveInteger" use="required" />
         <xsd:attribute name="name" type="xsd:string" use="required" />
+        <xsd:attribute name="added-by" type="xsd:positiveInteger"/>
     </xsd:complexType>
 
     <xsd:complexType name="locationType">
@@ -119,14 +173,18 @@
 
     <xsd:complexType name="itemType">
         <xsd:sequence>
-            <xsd:element name="product-ref" type="xsd:positiveInteger">
-                <xsd:keyref name="productRef" refer="productUniqueID">
-                    <xsd:selector xpath="product" />
-                    <xsd:field xpath="@id" />
-                </xsd:keyref>
-            </xsd:element>
-            <xsd:element name="price" type="priceType" />
+            <xsd:element name="price" type="priceType" minOccurs="1" maxOccurs="unbounded"/>
         </xsd:sequence>
+        <xsd:attribute name="product-ref" type="xsd:positiveInteger" use="required"/>
+    </xsd:complexType>
+
+    <xsd:complexType name="priceType">
+        <xsd:simpleContent>
+            <xsd:extension base="priceValueType">
+                <xsd:attribute name="from" type="xsd:time" use="optional" default="00:00:00"/>
+                <xsd:attribute name="to" type="xsd:time" use="optional" default="23:59:59"/>
+            </xsd:extension>
+        </xsd:simpleContent>
     </xsd:complexType>
 
     <xsd:complexType name="tagsType">
@@ -136,9 +194,42 @@
     </xsd:complexType>
 
     <xsd:complexType name="commentsType">
-        <xsd:sequence minOccurs="0">
-            <xsd:element name="comment" type="xsd:string" />
+        <xsd:sequence>
+            <xsd:element name="comment" type="xsd:string" maxOccurs="unbounded" minOccurs="0" />
         </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="productsType">
+        <xsd:sequence>
+            <xsd:element name="product" type="productType" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="productType">
+        <xsd:all minOccurs="0">
+            <xsd:element name="description" type="xsd:string" />
+        </xsd:all>
+        <xsd:attribute name="id" type="xsd:positiveInteger" use="required" />
+        <xsd:attribute name="name" type="xsd:string" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="usersType">
+        <xsd:sequence>
+            <xsd:element name="user" type="userType" minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="userType">
+        <xsd:sequence>
+            <xsd:element name="username" type="userNameType"/>
+            <xsd:element name="password" type="passwordType"/>
+            <xsd:element name="role" type="roleType"/>
+            <xsd:element name="firstName" type="nameType"/>
+            <xsd:element name="surName" type="nameType"/>
+            <xsd:element name="date-registered" type="xsd:date"/>
+            <xsd:element name="active" type="xsd:boolean" />
+        </xsd:sequence>
+        <xsd:attribute name="id" type="xsd:positiveInteger" use="required"/>
     </xsd:complexType>
 
 </xsd:schema>
