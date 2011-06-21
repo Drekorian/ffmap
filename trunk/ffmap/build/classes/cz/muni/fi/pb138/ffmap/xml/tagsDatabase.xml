@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : tagsDatabase.xml
+    Created on : 3. květen 2011, 23:44
+    Author     : Stash
+    Description:
+        Purpose of the document follows.
+-->
+
+<tags-database xsi:noNamespaceSchemaLocation="tagsSchema.xsd" xmlns=""
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <tag id="1">Chinese</tag>
+   <tag id="2">French</tag>
+   <tag id="3">Italian</tag>
+</tags-database>
