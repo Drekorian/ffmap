@@ -6,7 +6,8 @@ import java.util.List;
  * Class representing a fast food joint.
  *
  * @author Marek Osvald
- * @version 2011.0621
+ * @author Martin Putniorz
+ * @version 2011.0622
  */
 
 public class Joint {

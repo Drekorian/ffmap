@@ -4,7 +4,8 @@ package java.cz.muni.fi.pb138.ffmap;
  * Class representing location of a fast food joint.
  *
  * @author Marek Osvald
- * @version 2011.0621
+ * @author Martin Putniorz
+ * @version 2011.0622
  */
 
 public class Location {
@@ -29,5 +30,25 @@ public class Location {
         this.city = city;
         this.streetName = streetName;
         this.streetNumber = streetNumber;
+    }
+    
+    public double getLatitude(){
+        return latitude;
+    }
+    
+    public double getLongitude(){
+        return longitude;
+    }
+    
+    public String getCity(){
+        return city;
+    }
+    
+    public String getStreetName(){
+        return streetName;
+    }
+    
+    public String getStreetNumber(){
+        return streetNumber;
     }
 }
