@@ -17,6 +17,15 @@ public class Joint {
     private List<OpeningHour> openingHours;
     private List<Meal> menu;
 
+    /**
+     * Paramentric constructor for all attributes 
+     * 
+     * @param name joint name
+     * @param addedBy User ID
+     * @param location joint location
+     * @param openingHours opening hours
+     * @param menu menu
+     */
     public Joint(String name, Long addedBy, Location location,
             List<OpeningHour> openingHours, List<Meal> menu){
         this.id = null;
