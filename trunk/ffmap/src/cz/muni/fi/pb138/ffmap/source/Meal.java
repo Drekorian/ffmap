@@ -1,4 +1,4 @@
-package cz.muni.fi.pb138.ffmap;
+package cz.muni.fi.pb138.ffmap.source;
 
 import java.util.Currency;
 import java.util.Locale;

@@ -1,4 +1,4 @@
-package cz.muni.fi.pb138.ffmap;
+package java.cz.muni.fi.pb138.ffmap;
 
 /**
  * Enumeration representing roles of user in the ffmap system.

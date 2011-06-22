@@ -1,4 +1,4 @@
-package cz.muni.fi.pb138.ffmap;
+package java.cz.muni.fi.pb138.ffmap;
 
 /**
  * Class representing location of a fast food joint.
