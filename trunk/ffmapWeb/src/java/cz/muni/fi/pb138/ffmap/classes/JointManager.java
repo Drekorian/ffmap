@@ -5,8 +5,10 @@
 
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseManager;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -20,8 +22,9 @@ import org.basex.core.BaseXException;
  */
 public class JointManager implements IDatabaseManager {
     private static JointManager instance = null;
+    private DBHandler database;
 
-    public static JointManager getInstance() {
+    public static JointManager getInstance() throws DatabaseInitException {
         if (instance == null) {
             instance = new JointManager();
         }
@@ -29,20 +32,26 @@ public class JointManager implements IDatabaseManager {
         return instance;
     }
 
-    private JointManager() {
+    private JointManager() throws DatabaseInitException {
+        database = DBHandler.getInstance();
     }
 
     public IDatabaseStoreable find(long id) {
-        //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
     }
+
     public List<IDatabaseStoreable> getAll() {
         //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
     }
+    
     public List<IDatabaseStoreable> count() {
         //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public void addUserTest() throws BaseXException, IOException{
+        database.XQueryCommand("insert node (<meal>{(attribute{'id'}{4})(attribute{'name'}{Grcek})}</meal>)");
     }
 
     /**
@@ -52,11 +61,9 @@ public class JointManager implements IDatabaseManager {
     public String justTesting() {
         String result = null;
         try {
-            DBHandler.getInstance().setSession("localhost", 1984, "admin", "admin");
-            DBHandler.getInstance().openDatabase("ffmap");
-            result = DBHandler.getInstance().XQueryCommand(
-                "for $joint in db:open('ffmap')//joint//mon " +
-                "return $joint"
+            //database.switchToTest();
+            result = database.XQueryCommand(
+                "for $joint in //joints/joint return $joint"
             );
 
         } catch (Exception ex) {

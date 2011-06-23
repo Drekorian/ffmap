@@ -5,6 +5,7 @@
 
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.util.Calendar;
 import java.util.Collections;
 import java.util.Date;
@@ -18,7 +19,7 @@ import java.util.Map;
  * @version 2011.0621
  */
 
-public class Meal {
+public class Meal implements IDatabaseStoreable {
     private Long id;
     private String name;
     private Map<OpeningHour, Double> prices;
@@ -98,5 +99,13 @@ public class Meal {
      */
     public void setPrice(Double price) {
         setPrice(new OpeningHour(new Date(OpeningHour.DAY_BEGIN), new Date(OpeningHour.DAY_END)), price);
+    }
+
+    public boolean save() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public boolean destroy() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

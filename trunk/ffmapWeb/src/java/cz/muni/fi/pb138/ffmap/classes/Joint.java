@@ -7,6 +7,7 @@ package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.exceptions.MealException;
 import cz.muni.fi.pb138.ffmap.exceptions.OpeningHourException;
+import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Collections;
@@ -18,7 +19,7 @@ import java.util.Collections;
  * @version 2011.0621
  */
 
-public class Joint {
+public class Joint implements IDatabaseStoreable {
     private Long id;
     private Long addedBy;
     private String name;
@@ -147,5 +148,13 @@ public class Joint {
                 throw new OpeningHourException("Passed opening hours overlapse with current ones.");
             }
         }
+    }
+
+    public boolean save() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public boolean destroy() {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

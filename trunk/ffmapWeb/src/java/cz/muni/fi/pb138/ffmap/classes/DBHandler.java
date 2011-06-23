@@ -5,6 +5,7 @@
 
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -23,57 +24,97 @@ import org.basex.server.ClientQuery;
 public class DBHandler {
     private static DBHandler instance = null;
 
-    private ClientSession session;
-    private final String FF_MAP_XML = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabaseSample.xml";
+    private ClientSession master_session;
+    private final String FFMAP_DATABASE = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml";
+    private final String FFMAP_TEST_DATABASE = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapTestDatabase.xml";
     private BaseXServer server;
-    //private final Context context = new Context();
+    private final Context context; // = new Context();
 
-    public static DBHandler getInstance(){
+    public static DBHandler getInstance() throws DatabaseInitException{
         if (instance == null){
             instance = new DBHandler();
-
-            instance.startServer();
         }
-
         return instance;
     }
 
     /*
      * Parameterless constructor. Private in order the class to be a singleton
      */
-    private DBHandler() {
+    private DBHandler() throws DatabaseInitException {
+        startServer();
+        context = new Context();
+        try {
+            setMasterSession("admin", "admin");
+        } catch (Exception ex) {
+            Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
+            stopServer();
+            throw new DatabaseInitException("Cannot establish master session!", ex);
+        }
+        try {
+            openDatabase("ffmapDatabase");
+        } catch (BaseXException ex) {
+            Logger.getLogger(DBHandler.class.getName()).log(Level.WARNING, null, ex);
+            try {
+                createDatabase(FFMAP_DATABASE, "ffmapDatabase");
+            } catch (Exception innerEx) {
+                Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, innerEx);
+                stopServer();
+                throw new DatabaseInitException("Cannot open nor create a new database!", innerEx);
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
+            stopServer();
+            throw new DatabaseInitException("Unable to initialize database!", ex);
+        }
     }
 
     @Override @SuppressWarnings("FinalizeDeclaration")
     public void finalize() throws Throwable {
+        closeMasterSession();
         stopServer();
         super.finalize();
     }
 
-    public void setSession(String host, int port, String userName, String password) throws IOException{
-        session = new ClientSession(host, port, userName, password);
+    private void setMasterSession(String userName, String password) throws IOException{
+        master_session = new ClientSession(context, userName, password);
     }
 
-    public void clearSession() throws IOException{
-        session.close();
+    private void closeMasterSession() throws IOException{
+        master_session.close();
     }
 
-    public void initializeDatabase(String sourceXMLLocation) throws BaseXException, IOException{
-        session.execute("CREATE DATABASE ffmap " + sourceXMLLocation);
+    private void createDatabase(String sourceXMLLocation, String databaseName) throws BaseXException, IOException{
+        master_session.execute("CREATE DATABASE " + databaseName + " " + sourceXMLLocation);
     }
 
-    public void initializeDatabase() throws BaseXException, IOException{
-        session.execute("CREATE DATABASE ffmap " + FF_MAP_XML);
+    private void openDatabase(String databaseName) throws BaseXException, IOException {
+        master_session.execute("OPEN " + databaseName);
     }
 
-    public String XQueryCommand(String query) throws BaseXException{
-        return session.execute("XQUERY " + query);
+    public String XQueryCommand(String query) throws BaseXException, IOException{
+        ClientQuery clientQuery = new ClientQuery(query , master_session);
+        String result = clientQuery.execute();
+        return result;
     }
 
-    public void openDatabase(String database) throws BaseXException {
-        session.execute("OPEN " + database);
+    public void switchToTest() throws DatabaseInitException {
+        try {
+            master_session.execute("CLOSE");
+            try {
+                openDatabase("ffmapTestDatabase");
+            } catch (Exception ex) {
+                Logger.getLogger(DBHandler.class.getName()).log(Level.WARNING, null, ex);
+                try {
+                    createDatabase(FFMAP_TEST_DATABASE, "ffmapTestDatabase");
+                } catch (Exception ex1) {
+                    Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex1);
+                    throw new DatabaseInitException("Cannot open nor create the test database!", ex1);
+                }
+            }
+        } catch (BaseXException ex) {
+            Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-
     /**
      * TODO: Javadoc me
      */
@@ -85,7 +126,7 @@ public class DBHandler {
     /**
      * TODO: Javadoc me
      */
-    private void stopServer(){
+    private void stopServer() {
         if(server != null){
             server.stop();
         }
