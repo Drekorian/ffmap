@@ -26,11 +26,12 @@ public interface IDatabaseManager {
      *
      * @return list of all database storeable objects (of current type) in the database.
      */
-    public List<IDatabaseStoreable> getAll();
+    public List<? extends IDatabaseStoreable> getAll();
     /**
      * Retrieves the count of all database objects (of current type) in the database.
      *
-     * @return count of all database storeable objects in the database
+     * @return count of all database storeable objects in the database, or -1
+     * provided that the operation fails
      */
-    public List<IDatabaseStoreable> count();
+    public long count();
 }

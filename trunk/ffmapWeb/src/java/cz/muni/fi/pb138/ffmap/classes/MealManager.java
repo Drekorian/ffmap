@@ -68,7 +68,7 @@ public class MealManager implements IDatabaseManager {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public List<IDatabaseStoreable> count() {
+    public long count() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 

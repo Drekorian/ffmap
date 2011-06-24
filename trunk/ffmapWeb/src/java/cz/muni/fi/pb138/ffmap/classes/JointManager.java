@@ -15,7 +15,7 @@ import java.util.logging.Logger;
 import org.basex.core.BaseXException;
 
 /**
- * Class managing data retrievel o
+ * Class managing data retrieval of the Joint class.
  *
  * @author Marek Osvald
  * @version 2011.0622
@@ -45,7 +45,7 @@ public class JointManager implements IDatabaseManager {
         throw new UnsupportedOperationException("Not supported yet.");
     }
     
-    public List<IDatabaseStoreable> count() {
+    public long count() {
         //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
     }
