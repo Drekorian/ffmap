@@ -29,6 +29,10 @@ public class UserManager implements IDatabaseManager {
         return instance;
     }
 
+    /**
+     * Parameterless constructor. Private in order to force the class to be
+     * singleton.
+     */
     private UserManager() {
     }
 
@@ -50,7 +54,6 @@ public class UserManager implements IDatabaseManager {
 
         return result;
     }
-
     public IDatabaseStoreable find(long id) {
         try {
             Document document = XQueryResultController.getDocument(DBHandler.getInstance().XQueryCommand("/fastfood-database/users/user[@id=" + id + "]"));
@@ -61,7 +64,6 @@ public class UserManager implements IDatabaseManager {
 
         return null;
     }
-
     public long count() {
         long result = -1;
 

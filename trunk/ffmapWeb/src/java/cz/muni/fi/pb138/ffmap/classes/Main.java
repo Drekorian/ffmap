@@ -26,6 +26,8 @@ public class Main {
 
         //System.out.println(UserManager.getInstance().find(1));
 
+        System.out.println(((User)UserManager.getInstance().find(1)));
+
 
         List<?> list = UserManager.getInstance().getAll();
         System.out.println(list.get(0));

@@ -31,14 +31,16 @@ public class DBHandler {
     private final Context context; // = new Context();
 
     public static DBHandler getInstance() throws DatabaseInitException{
-        if (instance == null){
+        if (instance == null) {
             instance = new DBHandler();
         }
+        
         return instance;
     }
 
     /*
-     * Parameterless constructor. Private in order the class to be a singleton
+     * Parameterless constructor. Private in order to force the class to be
+     * a singleton.
      */
     private DBHandler() throws DatabaseInitException {
         startServer();

@@ -1,19 +1,12 @@
 <%-- 
     Document   : index
-    Created on : 22.6.2011, 20:35:30
-    Author     : Stash
+    Version : 2011.0624
+    Author     : Marek Osvald
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>Hello World!</h1>
-        <div xmlns:c="http://java.sun.com/jsp/jstl/core" />
-    </body>
-</html>
+<%@include file="includes/header.jsp" %>
+
+<a href="<c:url value="users" />">Zobrazit registrované uživatele</a>
+
+<%@include file="includes/footer.jsp" %>

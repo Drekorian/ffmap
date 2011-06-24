@@ -2,11 +2,19 @@
 <web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
     <servlet>
         <servlet-name>viewAllUsers</servlet-name>
-        <servlet-class>cz.muni.fi.pb138.ffmap.classes.viewAllUsersServlet</servlet-class>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewAllUsersServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewUser</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewUserServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>viewAllUsers</servlet-name>
         <url-pattern>/users</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewUser</servlet-name>
+        <url-pattern>/user/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

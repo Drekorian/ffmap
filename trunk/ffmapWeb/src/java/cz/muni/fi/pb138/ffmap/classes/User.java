@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
@@ -24,10 +19,33 @@ public class User implements IDatabaseStoreable {
     private Date dateRegistered;
     private boolean active;
 
+    /**
+     * Recreates user previously saved to the databse.
+     * 
+     * @param id unique ID of the user
+     * @param userName user's chosen login
+     * @param role role of the user
+     * @param firstName user's first name
+     * @param surname user's surname
+     * @param dateRegistered date of user's registration
+     * @param active whether user is active or not
+     * @return user recreated from the database
+     */
     public static User loadUser(Long id, String userName, Role role, String firstName, String surname, Date dateRegistered, boolean active) {
         return new User(id, userName, role, firstName, surname, dateRegistered, active);
     }
 
+    /**
+     * Primate constructor. Sets all attributes.
+     * 
+     * @param id unique ID of the user
+     * @param userName user's chosen login
+     * @param role role of the user
+     * @param firstName user's first name
+     * @param surname user's surname
+     * @param dateRegistered date of user's registration
+     * @param active whether user is active or not
+     */
     private User(Long id, String userName, Role role, String firstName, String surname, Date dateRegistered, boolean active) {
         this.id = id;
         this.userName = userName;
@@ -51,14 +69,15 @@ public class User implements IDatabaseStoreable {
     }
 
     public boolean save() {
+        //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
     }
-
     public boolean destroy() {
+        //TODO: implement
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public Long getID() {
+    public Long getId() {
         return id;
     }
     public String getUserName() {
@@ -92,16 +111,26 @@ public class User implements IDatabaseStoreable {
         return active;
     }
 
+    /**
+     * Alias for getActive().
+     * 
+     * @return true when user is active, false otherwise.
+     */
     public boolean isActive() {
         return getActive();
     }
-
+    /**
+     * Activates user provided that user is inactive. Otherwise does nothing.
+     */
     public void activate() {
         if (!active) {
             active = true;
         }
     }
-
+    /**
+     * Deactivates the user provided that user is active. Otherwise does
+     * nothing.
+     */
     public void deactivate() {
         if (active) {
             active = false;
