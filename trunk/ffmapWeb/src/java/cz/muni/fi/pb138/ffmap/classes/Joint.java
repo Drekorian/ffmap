@@ -25,7 +25,7 @@ public class Joint implements IDatabaseStoreable {
     private String name;
     private Location location;
     private List<OpeningHour> openingHours;
-    private List<Meal> menu;
+    private List<MenuItem> menu;
 
     /**
      * Parametric constructor.
@@ -52,7 +52,7 @@ public class Joint implements IDatabaseStoreable {
         this.name = name;
         this.location = location;
         this.openingHours = new ArrayList<OpeningHour>();
-        this.menu = new ArrayList<Meal>();
+        this.menu = new ArrayList<MenuItem>();
     }
 
     public Long getID() {
@@ -81,7 +81,7 @@ public class Joint implements IDatabaseStoreable {
 
         this.location = location;
     }
-    public List<Meal> getMenu() {
+    public List<MenuItem> getMenu() {
         return Collections.unmodifiableList(menu);
     }
     public List<OpeningHour> getOpeningHours() {
@@ -99,32 +99,34 @@ public class Joint implements IDatabaseStoreable {
     }
     /**
      * Adds supplied meal to joint's menu.
-     * @param meal meal to add
+     * @param menuItem meal to add
      */
-    public void addMealToMenu(Meal meal) throws MealException {
-        if (meal == null) {
-            throw new IllegalArgumentException("Meal cannot be null");
+    public void addMenuItem(MenuItem menuItem) throws MealException {
+        if (menuItem == null) {
+            throw new IllegalArgumentException("MenuItem cannot be null");
         }
 
-        if (menu.contains(meal)) {
-            throw new MealException("Menu already contains meal " + meal);
+        if (menu.contains(menuItem)) {
+            //Todo: create and put MenuItemException, maybe just rename MealException
+            throw new MealException("Menu already contains item " + menuItem);
         }
 
-        menu.add(meal);
+        menu.add(menuItem);
     }
     /**
      * Tries to remove a meal from the menu. Provided that the passed meal is
      * not on the menu, MealException is thrown.
      *
-     * @param meal meal to remove from the menu
+     * @param menuItem meal to remove from the menu
      * @throws MealException
      */
-    public void removeMealFromMenu(Meal meal) throws MealException {
-        if (meal == null) {
-            throw new IllegalArgumentException("Meal cannot be null");
+    public void removeMealFromMenu(MenuItem menuItem) throws MealException {
+        if (menuItem == null) {
+            throw new IllegalArgumentException("MenuItem cannot be null");
         }
 
-        if (!menu.remove(meal)) {
+        if (!menu.remove(menuItem)) {
+            //Todo: create and put MenuItemException, maybe just rename MealException
             throw new MealException("Unable to remove an item that's not on the menu.");
         }
     }

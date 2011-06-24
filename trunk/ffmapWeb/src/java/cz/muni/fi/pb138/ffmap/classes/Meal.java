@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
@@ -37,6 +32,22 @@ public class Meal implements IDatabaseStoreable {
         this.name = name;
         this.prices = prices;
         this.description = description;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || getClass() != obj.getClass() || name == null) {
+            return false;
+        }
+        
+        final Meal other = (Meal)obj;
+
+        return name.equals(other.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return name != null ? name.hashCode() : 0;
     }
 
     @Override
