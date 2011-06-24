@@ -96,6 +96,9 @@
             <xsd:element name="meals" type="mealsType" minOccurs="1" maxOccurs="1"/>
             <xsd:element name="users" type="usersType" minOccurs="1" maxOccurs="1"/>
         </xsd:sequence>
+        <xsd:attribute name="joints-key-number" type="xsd:positiveInteger" use="required" />
+        <xsd:attribute name="meals-key-number" type="xsd:positiveInteger" use="required" />
+        <xsd:attribute name="users-key-number" type="xsd:positiveInteger" use="required" />
     </xsd:complexType>
 
     <xsd:complexType name="jointsType">

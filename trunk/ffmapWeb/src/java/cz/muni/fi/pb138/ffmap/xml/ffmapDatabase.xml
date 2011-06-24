@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fastfood-database xsi:noNamespaceSchemaLocation="ffmapSchema.xsd" xmlns=""
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" joints-key-number="2" meals-key-number="3" users-key-number="1">
    <joints>
    <joint id="1" name="Vyhlídal" added-by="1">
        <location lat="32.2222" lon="45.55555">

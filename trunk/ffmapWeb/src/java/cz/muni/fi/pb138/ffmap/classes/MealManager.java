@@ -9,6 +9,7 @@ import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseManager;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -39,37 +40,29 @@ public class MealManager implements IDatabaseManager {
     }
 
     public IDatabaseStoreable find(long id) {
-        try {
-            String queryResult = database.XQueryCommand("for $meal in //meals return $meal");
-            System.out.println(queryResult);
-            Document doc = XQueryResultController.getDocument(queryResult);
-            Element node = doc.getElementById(String.valueOf(id));
-            if(node == null) System.out.println("Fail!");
-            long mealId = Long.valueOf(node.getAttribute("id"));
-            String name = node.getAttribute("name");
-            String description = node.getFirstChild().getNodeValue();
-            Meal meal = new Meal(name, null, description);
-            return meal;
-        } catch (SAXException ex) {
-            Logger.getLogger(MealManager.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (ParserConfigurationException ex) {
-            Logger.getLogger(MealManager.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (BaseXException ex) {
-            Logger.getLogger(MealManager.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
-            Logger.getLogger(MealManager.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        finally {
-            return null;
-        }
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public List<IDatabaseStoreable> getAll() {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<? extends IDatabaseStoreable> getAll() {
+        List<Meal> result = new ArrayList<Meal>();
+
+        Document queryResult = XQueryResultController.getDocument(database.XQueryCommand("/fastfood-database/meals"));
+
     }
 
     public long count() {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    private parseMeal(Element meal, NodeList prices){
+        Meal result = null;
+
+        Long _id = Long.valueOf(meal.getAttribute("id"));
+        String _name = meal.getAttribute("name");
+        if(meal.hasChildNodes()){
+            String _description = meal.getElementsByTagName("description").item(0).getTextContent();
+        }
+
     }
 
 }
