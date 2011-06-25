@@ -1,0 +1,19 @@
+18:48:26.231	Server was started.
+18:48:26.430	[127.0.0.1:6200]	LOGIN admin	OK
+18:48:26.463	[127.0.0.1:6200]	OPEN ffmapDatabase
+18:48:26.548	[127.0.0.1:6200]	OK	116.52 ms
+18:48:26.783	[127.0.0.1:6200]	QUERY(0)	/fastfood-database/users	OK
+18:48:26.783	[127.0.0.1:6200]	QUERY(0)	OK
+18:48:26.909	[127.0.0.1:6200]	EXEC(0)	OK
+18:48:26.996	Server was stopped.
+22:24:52.112	Server was started.
+22:24:52.442	[127.0.0.1:7359]	LOGIN admin	OK
+22:24:52.492	[127.0.0.1:7359]	OPEN ffmapDatabase
+22:24:52.675	[127.0.0.1:7359]	OK	232.48 ms
+22:24:52.930	[127.0.0.1:7359]	QUERY(0)	/fastfood-database/users/user[@id=1]	OK
+22:24:52.931	[127.0.0.1:7359]	QUERY(0)	OK
+22:24:53.042	[127.0.0.1:7359]	EXEC(0)	OK
+22:24:53.178	[127.0.0.1:7359]	QUERY(1)	/fastfood-database/users	OK
+22:24:53.178	[127.0.0.1:7359]	QUERY(1)	OK
+22:24:53.182	[127.0.0.1:7359]	EXEC(1)	OK
+22:24:53.189	Server was stopped.

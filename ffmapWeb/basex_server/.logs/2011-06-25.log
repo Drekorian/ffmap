@@ -1,0 +1,19 @@
+13:28:06.426	Server was started.
+13:28:06.598	[127.0.0.1:2446]	LOGIN admin	OK
+13:28:06.629	[127.0.0.1:2446]	OPEN ffmapDatabase
+13:28:06.669	[127.0.0.1:2446]	OK	69.66 ms
+13:28:06.691	[127.0.0.1:2446]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+13:28:06.821	[127.0.0.1:2446]	OK	151.15 ms
+13:28:07.115	[127.0.0.1:2446]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+13:28:07.115	[127.0.0.1:2446]	QUERY(0)	OK
+13:28:07.144	[127.0.0.1:2446]	EXEC(0)	OK
+13:28:07.146	[127.0.0.1:2446]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+13:28:07.146	[127.0.0.1:2446]	QUERY(1)	OK
+13:28:07.147	[127.0.0.1:2446]	EXEC(1)	OK
+13:28:07.154	[127.0.0.1:2446]	QUERY(2)	let $users := /fastfood-database/users return insert node<user id="2"><username>user</username> <password>[B@186d4c1</password><role>user</role><first-name>Mother</first-name><surname>Fucker</surname><date-registered>2011-5-25</date-registered><active>true</active></user>as last into $users	OK
+13:28:07.154	[127.0.0.1:2446]	QUERY(2)	OK
+13:28:07.170	[127.0.0.1:2446]	EXEC(2)	OK
+13:28:07.173	[127.0.0.1:2446]	QUERY(3)	/fastfood-database/users	OK
+13:28:07.173	[127.0.0.1:2446]	QUERY(3)	OK
+13:28:07.175	[127.0.0.1:2446]	EXEC(3)	OK
+13:28:07.196	Server was stopped.
