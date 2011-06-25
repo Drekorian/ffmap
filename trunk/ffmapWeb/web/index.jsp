@@ -1,6 +1,6 @@
 <%-- 
     Document   : index
-    Version : 2011.0624
+    Version    : 2011.0624
     Author     : Marek Osvald
 --%>
 

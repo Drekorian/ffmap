@@ -55,8 +55,21 @@ public class UserManager implements IDatabaseManager {
         return result;
     }
     public IDatabaseStoreable find(long id) {
+        if (id <= 0) {
+            throw new IllegalArgumentException("ID cannot be less than or equal to zero.");
+        }
+        
+        final String query = "for $user in /fastfood-database/users/user[@id=" + id + "]"
+                               + "return $user";
+        
         try {
-            Document document = XQueryResultController.getDocument(DBHandler.getInstance().XQueryCommand("/fastfood-database/users/user[@id=" + id + "]"));
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
+
+            if (queryResult == null || queryResult.equals("")) {
+                return null;
+            }
+
+            Document document = XQueryResultController.getDocument(queryResult);
             return parseUser(document.getDocumentElement());
         } catch (Exception ex) {
             Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
@@ -129,7 +142,7 @@ public class UserManager implements IDatabaseManager {
             Date _dateRegistered = parseDate(user.getElementsByTagName("date-registered").item(0).getTextContent());
             boolean _active = parseBoolean(user.getElementsByTagName("active").item(0).getTextContent());
 
-            result = User.loadUser(_id, _username, _role, _firstName, _surname, _dateRegistered, _active);
+            result = User.loadUser(_id, _username, _password, _role, _firstName, _surname, _dateRegistered, _active);
         } catch (Exception ex) {
             Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
         }

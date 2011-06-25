@@ -133,4 +133,26 @@ public class DBHandler {
             server.stop();
         }
     }
+
+    public void createHack(String offset) {
+        try {
+            /*TODO: delete me */
+            createDatabase(FFMAP_DATABASE, "ffmapDatabase");
+        } catch (Exception ex) {
+            Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public void keyIncrement(String keyName) throws BaseXException, DatabaseInitException, IOException {
+        if (!keyName.equals("joints-key-number") &&
+            !keyName.equals("meals-key-number") &&
+            !keyName.equals("users-key-number")) {
+            throw new IllegalArgumentException("KeyName has to be either joints-key-number, meals-key-number, users-key-number");
+        }
+
+        XQueryCommand(
+            "let $lastKey := /fastfood-database/@users-key-number " +
+            "return replace value of node $lastKey with number($lastKey) + 1"
+        );
+    }
 }

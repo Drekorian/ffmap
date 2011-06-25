@@ -26,5 +26,4 @@ public class XQueryResultController {
         InputSource source = new InputSource(new StringReader(queryResult));
         return builder.parse(source);
     }
-
 }

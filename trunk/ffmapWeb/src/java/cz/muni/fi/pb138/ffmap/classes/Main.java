@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
-import java.util.List;
+import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
+import java.io.IOException;
+import org.basex.core.BaseXException;
 
 /**
  *
@@ -17,23 +14,15 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) throws DatabaseInitException {
-        //System.out.println(JointManager.getInstance().justTesting());
-        /*Meal meal = (Meal) MealManager.getInstance().find(1);
-        System.out.println(meal.getName());*/
+    public static void main(String[] args) throws DatabaseInitException, BaseXException, IOException {
+        DBHandler.getInstance().createHack(null);
 
-        //System.out.println(UserManager.getInstance().count());
+        User newUser = new User("user", "password", Role.USER, "Mother", "Fucker");
+        System.out.println(newUser.save());
 
-        //System.out.println(UserManager.getInstance().find(1));
-
-        System.out.println(((User)UserManager.getInstance().find(1)));
-
-
-        List<?> list = UserManager.getInstance().getAll();
-        System.out.println(list.get(0));
-        System.out.println("Size: " +list.size());
-
+        for (IDatabaseStoreable user: UserManager.getInstance().getAll()) {
+            System.out.println((User)user);
+        }
         System.exit(0);
     }
-
 }
