@@ -1,0 +1,250 @@
+01:10:46.209	Server was started.
+01:10:46.359	[127.0.0.1:8304]	LOGIN admin	OK
+01:10:46.388	[127.0.0.1:8304]	CHECK src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+01:10:46.580	[127.0.0.1:8304]	OK	220.12 ms
+01:10:46.584	[127.0.0.1:8305]	LOGIN admin	OK
+01:10:46.808	[127.0.0.1:8305]	XQUERY for $joint in db:open('ffmapTestDatabase')//joint//mon return $joint
+01:10:46.814	[127.0.0.1:8305]	Error: Stopped at line 1, column 42: [BASX0003] Database 'ffmapTestDatabase' not found.	229.73 ms
+01:10:46.856	Server was stopped.
+01:11:22.187	Server was started.
+01:11:22.331	[127.0.0.1:8310]	LOGIN admin	OK
+01:11:22.359	[127.0.0.1:8310]	CHECK src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+01:11:22.402	[127.0.0.1:8310]	OK	69.41 ms
+01:11:22.402	[127.0.0.1:8310]	CHECK src/java/cz/muni/fi/pb138/ffmap/xml/ffmapTestDatabase.xml
+01:11:22.530	[127.0.0.1:8310]	OK	128.22 ms
+01:11:22.533	[127.0.0.1:8311]	LOGIN admin	OK
+01:11:22.744	[127.0.0.1:8311]	XQUERY for $joint in db:open('ffmapTestDatabase')//joint//mon return $joint
+01:11:22.766	[127.0.0.1:8311]	OK	232.16 ms
+01:11:22.769	[127.0.0.1:8311]	LOGOUT admin	OK
+01:11:22.771	Server was stopped.
+18:15:26.849	Server was started.
+18:15:27.026	[127.0.0.1:4757]	LOGIN admin	OK
+18:15:27.056	[127.0.0.1:4757]	OPEN ffmapDatabase
+18:15:27.058	[127.0.0.1:4757]	Error: Database 'ffmapDatabase' was not found.	30.69 ms
+18:15:27.362	Server was stopped.
+18:41:10.289	Server was started.
+18:41:10.434	[127.0.0.1:5127]	LOGIN admin	OK
+18:41:10.466	[127.0.0.1:5127]	OPEN ffmapDatabase
+18:41:10.467	[127.0.0.1:5127]	Error: Database 'ffmapDatabase' was not found.	32.84 ms
+18:41:10.555	Server was stopped.
+18:45:40.968	Server was started.
+18:45:41.117	[127.0.0.1:5185]	LOGIN admin	OK
+18:45:41.148	[127.0.0.1:5185]	OPEN ffmapDatabase
+18:45:41.185	[127.0.0.1:5185]	Error: Database 'ffmapDatabase' was not found.	67.57 ms
+18:45:41.202	[127.0.0.1:5185]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+18:45:41.487	[127.0.0.1:5185]	OK	298.95 ms
+18:45:41.488	[127.0.0.1:5185]	CLOSE
+18:45:41.502	[127.0.0.1:5185]	OK	14.26 ms
+18:45:41.502	[127.0.0.1:5185]	OPEN ffmapTestDatabase
+18:45:41.509	[127.0.0.1:5185]	Error: Database 'ffmapTestDatabase' was not found.	7.45 ms
+18:45:41.630	Server was stopped.
+18:50:42.683	Server was started.
+18:50:42.826	[127.0.0.1:5211]	LOGIN admin	OK
+18:50:42.871	[127.0.0.1:5211]	OPEN ffmapDatabase
+18:50:42.913	[127.0.0.1:5211]	OK	86.01 ms
+18:50:42.918	[127.0.0.1:5212]	LOGIN admin	OK
+18:50:43.153	[127.0.0.1:5212]	XQUERY for $joint in db:open('ffmapTestDatabase')//joint//mon return $joint
+18:50:43.159	[127.0.0.1:5212]	Error: Stopped at line 1, column 42: [BASX0003] Database 'ffmapTestDatabase' not found.	241.24 ms
+18:50:43.197	Server was stopped.
+18:50:54.693	Server was started.
+18:50:54.836	[127.0.0.1:5217]	LOGIN admin	OK
+18:50:54.869	[127.0.0.1:5217]	OPEN ffmapDatabase
+18:50:54.907	[127.0.0.1:5217]	OK	69.7 ms
+18:50:54.911	[127.0.0.1:5218]	LOGIN admin	OK
+18:50:55.147	[127.0.0.1:5218]	XQUERY for $joint in db:open('ffmapDatabase')//joint//mon return $joint
+18:50:55.171	[127.0.0.1:5218]	OK	260.62 ms
+18:50:55.173	[127.0.0.1:5218]	LOGOUT admin	OK
+18:50:55.174	Server was stopped.
+18:54:03.462	Server was started.
+18:54:03.610	[127.0.0.1:5256]	LOGIN admin	OK
+18:54:03.642	[127.0.0.1:5256]	OPEN ffmapDatabase
+18:54:03.681	[127.0.0.1:5256]	OK	69.59 ms
+18:54:03.682	[127.0.0.1:5256]	CLOSE
+18:54:03.687	[127.0.0.1:5256]	OK	5.52 ms
+18:54:03.687	[127.0.0.1:5256]	OPEN ffmapTestDatabase
+18:54:03.688	[127.0.0.1:5256]	Error: Database 'ffmapTestDatabase' was not found.	1.04 ms
+18:54:03.739	[127.0.0.1:5256]	CREATE DB ffmapTestDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapTestDatabase.xml
+18:54:03.846	[127.0.0.1:5256]	OK	114.62 ms
+18:54:03.848	[127.0.0.1:5257]	LOGIN admin	OK
+18:54:04.036	[127.0.0.1:5257]	XQUERY for $joint in //joint//mon return $joint
+18:54:04.046	[127.0.0.1:5257]	Error: Stopped at line 1, column 22: [XPDY0002] No context item set for 'root()'.	198.51 ms
+18:54:04.050	Server was stopped.
+18:55:18.318	Server was started.
+18:55:18.467	[127.0.0.1:5273]	LOGIN admin	OK
+18:55:18.499	[127.0.0.1:5273]	OPEN ffmapDatabase
+18:55:18.540	[127.0.0.1:5273]	OK	71.41 ms
+18:55:18.541	[127.0.0.1:5273]	CLOSE
+18:55:18.545	[127.0.0.1:5273]	OK	4.73 ms
+18:55:18.546	[127.0.0.1:5273]	OPEN ffmapTestDatabase
+18:55:18.550	[127.0.0.1:5273]	OK	4.98 ms
+18:55:18.560	[127.0.0.1:5274]	LOGIN admin	OK
+18:55:18.753	[127.0.0.1:5274]	XQUERY for $joint in //joint//mon return $joint
+18:55:18.761	[127.0.0.1:5274]	Error: Stopped at line 1, column 22: [XPDY0002] No context item set for 'root()'.	201.21 ms
+18:55:18.808	Server was stopped.
+18:55:49.810	Server was started.
+18:55:49.955	[127.0.0.1:5280]	LOGIN admin	OK
+18:55:49.988	[127.0.0.1:5280]	OPEN ffmapDatabase
+18:55:50.028	[127.0.0.1:5280]	OK	71.31 ms
+18:55:50.029	[127.0.0.1:5280]	CLOSE
+18:55:50.033	[127.0.0.1:5280]	OK	4.49 ms
+18:55:50.033	[127.0.0.1:5280]	OPEN ffmapTestDatabase
+18:55:50.039	[127.0.0.1:5280]	OK	6.26 ms
+18:55:50.048	[127.0.0.1:5281]	LOGIN admin	OK
+18:55:50.222	[127.0.0.1:5281]	XQUERY for $joint in //joint/mon return $joint
+18:55:50.228	[127.0.0.1:5281]	Error: Stopped at line 1, column 22: [XPDY0002] No context item set for 'root()'.	179.72 ms
+18:55:50.266	Server was stopped.
+18:56:15.990	Server was started.
+18:56:16.134	[127.0.0.1:5282]	LOGIN admin	OK
+18:56:16.164	[127.0.0.1:5282]	OPEN ffmapDatabase
+18:56:16.201	[127.0.0.1:5282]	OK	65.89 ms
+18:56:16.202	[127.0.0.1:5282]	CLOSE
+18:56:16.206	[127.0.0.1:5282]	OK	4.76 ms
+18:56:16.207	[127.0.0.1:5282]	OPEN ffmapTestDatabase
+18:56:16.210	[127.0.0.1:5282]	OK	4.16 ms
+18:56:16.220	[127.0.0.1:5283]	LOGIN admin	OK
+18:56:16.395	[127.0.0.1:5283]	XQUERY for $joint in //joint/mon return $joint
+18:56:16.400	[127.0.0.1:5283]	Error: Stopped at line 1, column 22: [XPDY0002] No context item set for 'root()'.	180.19 ms
+18:56:16.443	Server was stopped.
+18:56:34.972	Server was started.
+18:56:35.115	[127.0.0.1:5290]	LOGIN admin	OK
+18:56:35.146	[127.0.0.1:5290]	OPEN ffmapDatabase
+18:56:35.183	[127.0.0.1:5290]	OK	67.11 ms
+18:56:35.187	[127.0.0.1:5291]	LOGIN admin	OK
+18:56:35.368	[127.0.0.1:5291]	XQUERY for $joint in //joint/mon return $joint
+18:56:35.374	[127.0.0.1:5291]	Error: Stopped at line 1, column 22: [XPDY0002] No context item set for 'root()'.	186.63 ms
+18:56:35.412	Server was stopped.
+18:58:37.023	Server was started.
+18:58:37.036	Unrecognized Windows Sockets error: 0: JVM_Bind
+18:58:51.415	Server was started.
+18:58:51.566	[127.0.0.1:5313]	LOGIN admin	OK
+18:58:51.606	[127.0.0.1:5313]	OPEN ffmapDatabase
+18:58:51.648	[127.0.0.1:5313]	OK	80.84 ms
+18:58:51.652	[127.0.0.1:5314]	LOGIN admin	OK
+18:58:51.863	[127.0.0.1:5314]	XQUERY for $joint in //joints return $joint
+18:58:51.870	[127.0.0.1:5314]	Error: Stopped at line 1, column 23: [XPDY0002] No context item set for 'root()'.	217.72 ms
+18:58:51.915	Server was stopped.
+18:59:10.820	Server was started.
+18:59:10.971	[127.0.0.1:5319]	LOGIN admin	OK
+18:59:11.004	[127.0.0.1:5319]	OPEN ffmapDatabase
+18:59:11.045	[127.0.0.1:5319]	OK	73.3 ms
+18:59:11.049	[127.0.0.1:5320]	LOGIN admin	OK
+18:59:11.235	[127.0.0.1:5319]	XQUERY for $joint in //joints return $joint
+18:59:11.324	[127.0.0.1:5319]	OK	276.67 ms
+18:59:11.327	[127.0.0.1:5320]	LOGOUT admin	OK
+18:59:11.333	Server was stopped.
+18:59:35.644	Server was started.
+18:59:35.820	[127.0.0.1:5325]	LOGIN admin	OK
+18:59:35.855	[127.0.0.1:5325]	OPEN ffmapDatabase
+18:59:35.891	[127.0.0.1:5325]	OK	69.57 ms
+18:59:35.895	[127.0.0.1:5326]	LOGIN admin	OK
+18:59:36.073	[127.0.0.1:5325]	XQUERY for $joint in //joints/joint return $joint
+18:59:36.098	[127.0.0.1:5325]	OK	203.85 ms
+18:59:36.100	[127.0.0.1:5326]	LOGOUT admin	OK
+18:59:36.107	Server was stopped.
+19:00:54.471	Server was started.
+19:00:54.616	[127.0.0.1:5336]	LOGIN admin	OK
+19:00:54.646	[127.0.0.1:5336]	OPEN ffmapDatabase
+19:00:54.682	[127.0.0.1:5336]	OK	65.66 ms
+19:00:54.685	[127.0.0.1:5337]	LOGIN admin	OK
+19:00:54.866	[127.0.0.1:5337]	XQUERY for $joint in //joints/joint return $joint
+19:00:54.871	[127.0.0.1:5337]	Error: Stopped at line 1, column 23: [XPDY0002] No context item set for 'root()'.	186.68 ms
+19:00:54.914	Server was stopped.
+19:01:23.914	Server was started.
+19:01:24.060	[127.0.0.1:5343]	LOGIN admin	OK
+19:01:24.093	[127.0.0.1:5343]	OPEN ffmapDatabase
+19:01:24.130	[127.0.0.1:5343]	OK	69.07 ms
+19:01:24.136	[127.0.0.1:5344]	LOGIN admin	OK
+19:01:24.319	[127.0.0.1:5344]	XQUERY for $joint in //joints/joint return $joint
+19:01:24.324	[127.0.0.1:5344]	Error: Stopped at line 1, column 23: [XPDY0002] No context item set for 'root()'.	188.15 ms
+19:01:24.363	Server was stopped.
+19:13:19.979	Server was started.
+19:13:20.123	[127.0.0.1:5488]	LOGIN admin	OK
+19:13:20.155	[127.0.0.1:5488]	OPEN ffmapDatabase
+19:13:20.195	[127.0.0.1:5488]	OK	69.98 ms
+19:13:20.374	[127.0.0.1:5488]	QUERY(XQUERY for $joint in //joints/joint return $joint)	Error: Stopped at line 1, column 7: [XPST0003] Unexpected end of query: 'for $joint in /...'.
+19:13:20.422	Server was stopped.
+19:13:53.321	Server was started.
+19:13:53.466	[127.0.0.1:5493]	LOGIN admin	OK
+19:13:53.498	[127.0.0.1:5493]	OPEN ffmapDatabase
+19:13:53.537	[127.0.0.1:5493]	OK	69.43 ms
+19:13:53.707	[127.0.0.1:5493]	QUERY(0)	for $joint in //joints/joint return $joint	OK
+19:13:53.708	[127.0.0.1:5493]	QUERY(0)	OK
+19:13:53.737	[127.0.0.1:5493]	EXEC(0)	OK
+19:13:53.745	Server was stopped.
+19:14:58.188	Server was started.
+19:14:58.335	[127.0.0.1:5516]	LOGIN admin	OK
+19:14:58.367	[127.0.0.1:5516]	OPEN ffmapDatabase
+19:14:58.405	[127.0.0.1:5516]	OK	68.56 ms
+19:14:58.589	[127.0.0.1:5516]	QUERY(0)	for $joint in //joints/joint return $joint	OK
+19:14:58.589	[127.0.0.1:5516]	QUERY(0)	OK
+19:14:58.619	[127.0.0.1:5516]	EXEC(0)	OK
+19:14:58.633	Server was stopped.
+19:49:18.827	Server was started.
+19:49:18.977	[127.0.0.1:5872]	LOGIN admin	OK
+19:49:19.008	[127.0.0.1:5872]	OPEN ffmapDatabase
+19:49:19.045	[127.0.0.1:5872]	OK	66.98 ms
+19:49:19.220	[127.0.0.1:5872]	QUERY(0)	for $joint in //joints/joint return $joint	OK
+19:49:19.220	[127.0.0.1:5872]	QUERY(0)	OK
+19:49:19.250	[127.0.0.1:5872]	EXEC(0)	OK
+19:49:19.325	[127.0.0.1:5872]	QUERY(1)	for $meal in //meals where $meal/data(@id) = /data(@id) return $meal	OK
+19:49:19.325	[127.0.0.1:5872]	QUERY(1)	OK
+19:49:19.336	[127.0.0.1:5872]	EXEC(1)	OK
+19:50:03.809	Server was started.
+19:50:03.822	Unrecognized Windows Sockets error: 0: JVM_Bind
+19:50:10.737	Server was started.
+19:50:10.880	[127.0.0.1:5882]	LOGIN admin	OK
+19:50:10.911	[127.0.0.1:5882]	OPEN ffmapDatabase
+19:50:10.946	[127.0.0.1:5882]	OK	65.06 ms
+19:50:11.183	[127.0.0.1:5882]	QUERY(0)	for $meal in //meals where $meal/data(@id) = /data(@id) return $meal	OK
+19:50:11.183	[127.0.0.1:5882]	QUERY(0)	OK
+19:50:11.211	[127.0.0.1:5882]	EXEC(0)	OK
+19:50:50.821	Server was started.
+19:50:50.836	Unrecognized Windows Sockets error: 0: JVM_Bind
+19:50:58.689	Server was started.
+19:50:58.833	[127.0.0.1:5888]	LOGIN admin	OK
+19:50:58.864	[127.0.0.1:5888]	OPEN ffmapDatabase
+19:50:58.905	[127.0.0.1:5888]	OK	70.62 ms
+19:50:59.137	[127.0.0.1:5888]	QUERY(0)	for $meal in //meals/meal where $meal/data(@id) = /data(@id) return $meal	OK
+19:50:59.137	[127.0.0.1:5888]	QUERY(0)	OK
+19:50:59.166	[127.0.0.1:5888]	EXEC(0)	OK
+19:51:25.983	Server was started.
+19:51:25.996	Unrecognized Windows Sockets error: 0: JVM_Bind
+19:51:32.356	Server was started.
+19:51:32.500	[127.0.0.1:5896]	LOGIN admin	OK
+19:51:32.530	[127.0.0.1:5896]	OPEN ffmapDatabase
+19:51:32.567	[127.0.0.1:5896]	OK	65.54 ms
+19:51:32.739	[127.0.0.1:5896]	QUERY(0)	for $meal in //meals/meal return $meal	OK
+19:51:32.740	[127.0.0.1:5896]	QUERY(0)	OK
+19:51:32.766	[127.0.0.1:5896]	EXEC(0)	OK
+19:51:53.219	Server was started.
+19:51:53.363	[127.0.0.1:5902]	LOGIN admin	OK
+19:51:53.394	[127.0.0.1:5902]	OPEN ffmapDatabase
+19:51:53.430	[127.0.0.1:5902]	OK	65.24 ms
+19:51:53.604	[127.0.0.1:5902]	QUERY(for $meal in //meals/meal return $meals)	Error: Stopped at line 1, column 39: [XPST0008] Undefined variable $meals.
+19:52:13.296	Server was started.
+19:52:13.310	Unrecognized Windows Sockets error: 0: JVM_Bind
+19:52:20.229	Server was started.
+19:52:20.377	[127.0.0.1:5909]	LOGIN admin	OK
+19:52:20.410	[127.0.0.1:5909]	OPEN ffmapDatabase
+19:52:20.448	[127.0.0.1:5909]	OK	69.47 ms
+19:52:20.622	[127.0.0.1:5909]	QUERY(0)	for $meal in //meals return $meal	OK
+19:52:20.623	[127.0.0.1:5909]	QUERY(0)	OK
+19:52:20.685	[127.0.0.1:5909]	EXEC(0)	OK
+19:54:20.082	Server was started.
+19:54:20.095	Unrecognized Windows Sockets error: 0: JVM_Bind
+19:54:28.089	Server was started.
+19:54:28.233	[127.0.0.1:5917]	LOGIN admin	OK
+19:54:28.264	[127.0.0.1:5917]	OPEN ffmapDatabase
+19:54:28.302	[127.0.0.1:5917]	OK	67.39 ms
+19:54:28.482	[127.0.0.1:5917]	QUERY(0)	for $meal in //meals return $meal	OK
+19:54:28.483	[127.0.0.1:5917]	QUERY(0)	OK
+19:54:28.546	[127.0.0.1:5917]	EXEC(0)	OK
+20:03:39.596	Server was started.
+20:03:39.610	Unrecognized Windows Sockets error: 0: JVM_Bind
+20:03:44.396	Server was started.
+20:03:44.538	[127.0.0.1:6033]	LOGIN admin	OK
+20:03:44.568	[127.0.0.1:6033]	OPEN ffmapDatabase
+20:03:44.605	[127.0.0.1:6033]	OK	66.13 ms
+20:03:44.788	[127.0.0.1:6033]	QUERY(0)	for $meal in //meals return $meal	OK
+20:03:44.788	[127.0.0.1:6033]	QUERY(0)	OK
+20:03:44.854	[127.0.0.1:6033]	EXEC(0)	OK

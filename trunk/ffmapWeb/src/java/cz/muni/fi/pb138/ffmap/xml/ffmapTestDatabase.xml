@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<fastfood-database xsi:noNamespaceSchemaLocation="ffmapSchema.xsd" xmlns=""
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" joints-key-number="2" meals-key-number="3" users-key-number="1">
+   <joints>
+   <joint id="1" name="Vyhlídal" added-by="1">
+       <location lat="32.2222" lon="45.55555">
+           <adress>
+               <city>Brno</city>
+               <street-name>Sladkého</street-name>
+               <street-number>9A</street-number>
+           </adress>
+       </location>
+       <opening-hours>
+           <mon>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </mon>
+           <tue>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </tue>
+           <wed>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </wed>
+           <thu>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </thu>
+           <fri>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </fri>
+           <sat>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </sat>
+           <sun>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </sun>
+       </opening-hours>
+       <menu>
+           <menu-item meal-ref="1">
+               <price from="10:00:00" to="20:00:00">10.00</price>
+           </menu-item>
+           <menu-item meal-ref="3">
+               <price>27.00</price>
+           </menu-item>
+       </menu>
+       <tags>
+           <tag>Kentus</tag>
+       </tags>
+       <comments/>
+       <web-page>http://www.stash.wz.cz</web-page>
+   </joint>
+   <joint id="2" name="Nguyen Kong Noodles">
+       <location lat="32.2222" lon="45.55555">
+           <adress>
+               <city>Brno</city>
+               <street-name>Sladkého</street-name>
+               <street-number>9A</street-number>
+           </adress>
+       </location>
+       <opening-hours>
+           <mon>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </mon>
+           <tue>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </tue>
+           <wed>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </wed>
+           <thu>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </thu>
+           <fri>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </fri>
+           <sat>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </sat>
+           <sun>
+                <open-span>
+                    <start>08:00:00</start>
+                    <end>23:30:00</end>
+                </open-span>
+           </sun>
+       </opening-hours>
+       <menu>
+           <menu-item meal-ref="1">
+               <price>10.00</price>
+           </menu-item>
+           <menu-item meal-ref="3">
+               <price>27.00</price>
+           </menu-item>
+       </menu>
+       <tags>
+           <tag>Kentus</tag>
+       </tags>
+       <comments/>
+       <web-page>http://www.stash.wz.cz</web-page>
+   </joint>
+   </joints>
+   <meals>
+       <meal id="1" name="Hermelínový hamburger" />
+       <meal id="2" name="Hot dog"/>
+       <meal id="3" name="Hnus fialovej">
+           <description>Hnis</description>
+       </meal>
+   </meals>
+   <users>
+       <user id="1">
+           <username>admin</username>
+           <password>d033e22ae348aeb5660fc2140aec35850c4da997</password> <!--SHA1 of "admin"-->
+           <role>admin</role>
+           <first-name>Jan</first-name>
+           <surname>Sourek</surname>
+           <date-registered>2011-06-12</date-registered>
+           <active>true</active>
+       </user>
+   </users>
+</fastfood-database>
