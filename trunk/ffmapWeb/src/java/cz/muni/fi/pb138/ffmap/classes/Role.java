@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes;
 
 /**
@@ -13,5 +8,5 @@ package cz.muni.fi.pb138.ffmap.classes;
  */
 public enum Role {
     USER, //standard user
-    ADMIN //administrator
+    ADMIN; //administrator
 }

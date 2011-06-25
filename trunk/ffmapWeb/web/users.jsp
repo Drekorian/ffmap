@@ -30,6 +30,10 @@
                             <c:out value="${user.surname}" />
                         </li>
                         <li>
+                            Heslo (SHA1):
+                            <c:out value="${user.password}" />
+                        </li>
+                        <li>
                             Datum registrace: 
                             <f:formatDate type="date" value="${user.dateRegistered}" pattern="d. M. 20y" />
                         </li>

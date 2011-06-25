@@ -78,24 +78,31 @@ public class User implements IDatabaseStoreable {
         this(null, userName, password, role, firstName, surname, new Date(), true);
     }
 
+    @Override
+    public String toString() {
+        //TODO: delete me
+        return userName + " [" + id + "]: " + role + ", " + firstName + " " + surname + ", " + dateRegistered + ", " + active;
+    }
     public boolean save() {
         if (id == null) {
             return insert();
-        } else {
-            return update();
         }
+        
+        return update();
     }
     public boolean destroy() {
         if (id == null) {
             return false;
         }
 
+        String query = "for $user in /fastfood-database/users/user[@id=" + id +"]" +
+                       "return delete node $user";
+
         try {
-            DBHandler.getInstance().XQueryCommand("for $user in /fastfood-database/users/user[@id=" + id +"]"
-                                                + "return delete node $user");
+            DBHandler.getInstance().XQueryCommand(query);
             return true;
         } catch (Exception ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 
         return false;
@@ -112,6 +119,9 @@ public class User implements IDatabaseStoreable {
     }
     public String getPassword() {
         return password;
+    }
+    public void setPassword(String password) {
+        this.password = encrypt(password);
     }
     public Role getRole() {
         return role;
@@ -163,13 +173,22 @@ public class User implements IDatabaseStoreable {
             active = false;
         }
     }
-
-    @Override
-    public String toString() {
-        //TODO: delete me
-        return userName + " [" + id + "]: " + role + ", " + firstName + " " + surname + ", " + dateRegistered + ", " + active;
+    
+    /**
+     * Increments the users primary key sequence by 1.
+     * 
+     * @throws BaseXException
+     * @throws DatabaseInitException
+     * @throws IOException
+     */
+    private void keyIncrement() throws BaseXException, DatabaseInitException, IOException {
+        DBHandler.getInstance().keyIncrement("users-key-number");
     }
-
+    /**
+     * Inserts new user into the database.
+     * 
+     * @return true if user is successfully inserted, false otherwise
+     */
     private boolean insert() {
         try {
             Calendar calendar = new GregorianCalendar();
@@ -179,48 +198,89 @@ public class User implements IDatabaseStoreable {
             int year = calendar.get(Calendar.YEAR);
 
             keyIncrement();
-            id = Long.valueOf(DBHandler.getInstance().XQueryCommand(
-                "let $id := /fastfood-database/@users-key-number " +
-                "return number($id)"));
-            
-            DBHandler.getInstance().XQueryCommand(
-                "let $users := /fastfood-database/users " +
-                "return insert node" +
-                    "<user id=\"" + id + "\">" +
-                        "<username>" + userName + "</username> " +
-                        "<password>" + password + "</password>" +
-                        "<role>" + role.toString().toLowerCase() + "</role>" +
-                        "<first-name>" + firstName + "</first-name>" +
-                        "<surname>" + surname + "</surname>" +
-                        "<date-registered>" + year + "-" + month + "-" + day + "</date-registered>" +
-                        "<active>" + (active ? "true" : "false") + "</active>" +
-                    "</user>"+
-                "as last into $users"
-            );
 
+            String idQuery = "let $id := /fastfood-database/@users-key-number " +
+                             "return number($id)";
+            
+            if ((id = Long.valueOf(DBHandler.getInstance().XQueryCommand(idQuery))) == null) {
+                return false;
+            }
+
+            String query = "let $users := /fastfood-database/users " +
+                           "return insert node " +
+                               "<user id=\"" + id + "\"> " +
+                                   "<username>" + userName + "</username> " +
+                                   "<password>" + password + "</password> " +
+                                   "<role>" + role.toString().toLowerCase() + "</role> " +
+                                   "<first-name>" + firstName + "</first-name> " +
+                                   "<surname>" + surname + "</surname> " +
+                                   "<date-registered>" + year + "-" + month + "-" + day + "</date-registered> " +
+                                   "<active>" + (active ? "true" : "false") + "</active> " +
+                               "</user> "+
+                            "as last into $users";
+            DBHandler.getInstance().XQueryCommand(query);
+            
             return true;
         } catch (Exception ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 
         return false;
     }
-    
+    /**
+     * Updates previously saved user's data.
+     *
+     * @return true if user is successfully updated, false otherwise
+     */
     private boolean update() {
-        throw new UnsupportedOperationException();
-    }
+        String query = "let $user := /fastfood-database/users/user[@id=" + id + "]" +
+                       "return (" +
+                           "replace value of node $user/username with \"" + userName + "\", " +
+                           "replace value of node $user/password with \"" + password + "\", " +
+                           "replace value of node $user/role with \"" + role.toString().toLowerCase() + "\", " +
+                           "replace value of node $user/first-name with \"" + firstName + "\", " +
+                           "replace value of node $user/surname with \"" + surname + "\", " +
+                           "replace value of node $user/active with \"" + (active ? "true" : "false") + "\" " +
+                       ")";
+        try {
+            DBHandler.getInstance().XQueryCommand(query);
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
 
-    private void keyIncrement() throws BaseXException, DatabaseInitException, IOException {
-        DBHandler.getInstance().keyIncrement("users-key-number");
+        return false;
     }
-
+    /**
+     * Encrypts input using the SHA1 algorithm
+     *
+     * @param input input to encrypt
+     * @return encrypted input
+     */
     private String encrypt(String input) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA1");
             digest.update(input.getBytes());
-            return digest.digest().toString();
+            return bytesToHex(digest.digest());
         } catch (NoSuchAlgorithmException ex) {
             throw new RuntimeException("SHA1 algorithm not supported.");
         }
     }
+    /**
+     * Converts array of bytes to is hexadecimal representation.
+     * 
+     * @param bytes bytes to transcript
+     * @return hexadecimal transcript of provided bytes
+     */
+    public static String bytesToHex(byte[] bytes) {
+      char hexDigit[] = {'0', '1', '2', '3', '4', '5', '6', '7',
+                         '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+      StringBuilder builder = new StringBuilder();
+      for (int i = 0; i < bytes.length; i++) {
+         builder.append(hexDigit[(bytes[i] >> 4) & 0x0f]);
+         builder.append(hexDigit[bytes[i] & 0x0f]);
+      }
+      
+      return builder.toString();
+   }
 }

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.exceptions.MealException;
@@ -26,6 +21,9 @@ public class Joint implements IDatabaseStoreable {
     private Location location;
     private List<OpeningHour> openingHours;
     private List<MenuItem> menu;
+    /*
+     * TODO: add tags, comments, website
+     */
 
     /**
      * Parametric constructor.

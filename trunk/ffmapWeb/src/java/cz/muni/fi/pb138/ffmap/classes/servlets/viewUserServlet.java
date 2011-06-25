@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
  * @version 2011.0624
  */
 public class viewUserServlet extends HttpServlet {
-    private static final String URL = "/ffmapWeb/user/";
+    private static final String URL = "/user/";
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

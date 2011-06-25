@@ -37,10 +37,14 @@ public class UserManager implements IDatabaseManager {
     }
 
     public List<? extends IDatabaseStoreable> getAll() {
-        List<User> result = new ArrayList<User>();
-
+        List<User> result = null;
+        String query = "let $users := /fastfood-database/users " +
+                       "return $users";
+        
         try {
-            Document document = XQueryResultController.getDocument(DBHandler.getInstance().XQueryCommand("/fastfood-database/users"));
+            String queryResult = DBHandler.getInstance().XQueryCommand("/fastfood-database/users");
+            Document document = XQueryResultController.getDocument(queryResult);
+            result = new ArrayList<User>();
 
             for (int i = 0; i < document.getDocumentElement().getElementsByTagName("user").getLength(); i++) {
                 User user = parseUser((Element)document.getDocumentElement().getElementsByTagName("user").item(i));
@@ -49,7 +53,7 @@ public class UserManager implements IDatabaseManager {
                 }
             }
         } catch (Exception ex) {
-            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 
         return result;
@@ -72,24 +76,67 @@ public class UserManager implements IDatabaseManager {
             Document document = XQueryResultController.getDocument(queryResult);
             return parseUser(document.getDocumentElement());
         } catch (Exception ex) {
-            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
 
         return null;
     }
     public long count() {
         long result = -1;
+        String query = "let $users := /fastfood-database/users/user " +
+                       "return count($users)";
 
         try {
-            Document document = XQueryResultController.getDocument(DBHandler.getInstance().XQueryCommand("/fastfood-database/users"));
-            result = document.getDocumentElement().getElementsByTagName("user").getLength();
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
+
+            if (queryResult == null || queryResult.equals("")) {
+                return -1;
+            }
+
+            result = Long.valueOf(queryResult);
         } catch (Exception ex) {
-            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
         }
         
         return result;
     }
 
+    /**
+     * Find user by his chosen login.
+     * 
+     * @param userName user's chosen login.
+     * @return user retrieved from the database provided that one has been
+     * found, false otherwise
+     */
+    public User findByUserName(String userName) {
+        if (userName == null || userName.equals((""))) {
+            throw new IllegalArgumentException("UserName cannot be null or empty.");
+        }
+
+        String query = "let $user := /fastfood-database/users/user[username=\"" + userName + "\"]" +
+                       "return $user";
+
+        try {
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
+
+            if (queryResult == null || queryResult.equals("")) {
+                return null;
+            }
+
+            Document document = XQueryResultController.getDocument(queryResult);
+            return parseUser(document.getDocumentElement());
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return null;
+    }
+    /**
+     * Converts String to Role.
+     *
+     * @param role string to convert
+     * @return value of the string converted to Role
+     */
     private Role parseRole(String role) {
         if (role == null || role.equals("")) {
             throw new IllegalArgumentException("Role cannot be null or empty.");
@@ -99,14 +146,27 @@ public class UserManager implements IDatabaseManager {
             return Role.ADMIN;
         }
 
-        return Role.USER;
+        if (role.equals("user")) {
+            return Role.USER;
+        }
+
+        throw new IllegalArgumentException("Passed argument cannot be converted to Role.");
     }
-
+    /**
+     * Converts String to a Date.
+     *
+     * @param date String to convert
+     * @return value of the string converted to Date
+     */
     private Date parseDate(String date) {
-        String[] dateParts = date.split("-");
-
         if (date == null || date.equals("")) {
             throw new IllegalArgumentException("Date cannot be null or empty.");
+        }
+        
+        String[] dateParts = date.split("-");
+
+        if (dateParts.length != 3) {
+            throw new IllegalArgumentException("Passed argument cannot be converted to Date.");
         }
 
         return new Date(
@@ -116,7 +176,12 @@ public class UserManager implements IDatabaseManager {
             ).getTimeInMillis()
         );
     }
-
+    /**
+     * Converts String to a boolean.
+     *
+     * @param bool String to convert
+     * @return String value converted to boolean
+     */
     private boolean parseBoolean(String bool) {
         if (bool == null || bool.equals("")) {
             throw new IllegalArgumentException("Bool cannot be null or empty.");
@@ -128,7 +193,13 @@ public class UserManager implements IDatabaseManager {
 
         return false;
     }
-
+    /**
+     * Parses data from the User Element and recrates a User from the database.
+     *
+     * @param user Element holding the user's data
+     * @return User recreated from the database if parsing is successful,
+     * null otherwise
+     */
     private User parseUser(Element user) {
         User result = null;
 

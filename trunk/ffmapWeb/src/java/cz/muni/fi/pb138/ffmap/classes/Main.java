@@ -20,9 +20,24 @@ public class Main {
         User newUser = new User("user", "password", Role.USER, "Mother", "Fucker");
         System.out.println(newUser.save());
 
-        for (IDatabaseStoreable user: UserManager.getInstance().getAll()) {
-            System.out.println((User)user);
-        }
+        User user = (User)UserManager.getInstance().find(2);
+        System.out.println(user);
+        System.out.println("Heslo : " + user.getPassword());
+        user.setFirstName("Petr");
+        user.setSurname("Kobliha");
+        user.save();
+        System.out.println("Heslo : " + user.getPassword());
+
+        User user2 = UserManager.getInstance().findByUserName("user");
+        System.out.println(user2);
+
+        User user3 = UserManager.getInstance().findByUserName("admin");
+        System.out.println(user3);
+
+        System.out.println(user);
+
+        System.out.println(UserManager.getInstance().count());
+
         System.exit(0);
     }
 }
