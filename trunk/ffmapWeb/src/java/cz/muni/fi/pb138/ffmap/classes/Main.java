@@ -38,6 +38,11 @@ public class Main {
 
         System.out.println(UserManager.getInstance().count());
 
+        System.out.println("=====");
+        for(User u: UserManager.getInstance().findActiveUsers()) {
+            System.out.println(u);
+        }
+
         System.exit(0);
     }
 }

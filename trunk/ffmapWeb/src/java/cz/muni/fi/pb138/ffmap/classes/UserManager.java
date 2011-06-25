@@ -132,6 +132,43 @@ public class UserManager implements IDatabaseManager {
         return null;
     }
     /**
+     * Retrieves list of all active users from the database.
+     *
+     * @return list of all active users or null provided that the operation fails.
+     */
+    public List<User> findActiveUsers() {
+        List<User> result = null;
+
+        String query = "<users> {" +
+                           "for $user in /fastfood-database/users/user[active=\"true\"]" +
+                           "return $user" +
+                       "} </users>";
+
+        try {
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
+
+            System.out.println(queryResult);
+
+            if (queryResult == null || queryResult.equals("")) {
+                return null;
+            }
+
+            Document document = XQueryResultController.getDocument(queryResult);
+            result = new ArrayList<User>();
+            
+            for (int i = 0; i < document.getElementsByTagName("user").getLength(); i++) {
+                result.add(parseUser((Element)document.getElementsByTagName("user").item(i)));
+            }
+
+            return result;
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return null;
+    }
+
+    /**
      * Converts String to Role.
      *
      * @param role string to convert
