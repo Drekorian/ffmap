@@ -223,7 +223,7 @@ public class UserManager implements IDatabaseManager {
 
     public boolean checkUsernameAvailability(String username){
         String query = "let $users := /fastfood-database/users/user" +
-                       " return count($meals[lower-case(username) = \"" + username.toLowerCase() + "\"])";
+                       " return count($users[lower-case(username) = \"" + username.toLowerCase() + "\"])";
         try {
             long result = Long.valueOf(DBHandler.getInstance().XQueryCommand(query));
             if(result != 0){

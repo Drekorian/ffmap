@@ -9,14 +9,12 @@ import cz.muni.fi.pb138.ffmap.classes.Role;
 import cz.muni.fi.pb138.ffmap.classes.User;
 import cz.muni.fi.pb138.ffmap.classes.UserManager;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -35,7 +33,7 @@ public class registerNewUserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("/registration.jsp").forward(request, response);
+        request.getRequestDispatcher("/registration.jsp").forward(request, response);       
     } 
 
     /** 
@@ -49,8 +47,9 @@ public class registerNewUserServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/registration.jsp");
-        //Map<String, String> messages = new HashMap<String, String>();
+        RequestDispatcher err = getServletContext().getRequestDispatcher("/registration.jsp");
+        response.setCharacterEncoding("UTF-8");
+        request.setCharacterEncoding("UTF-8");
         String _username = request.getParameter("username");
         String _password = request.getParameter("pass");
         String _passconf = request.getParameter("passconf");
@@ -59,39 +58,56 @@ public class registerNewUserServlet extends HttpServlet {
         Role _role = Role.USER;
         boolean valid = true;
         if((_username == null) || _username.isEmpty()){
-            request.setAttribute("username_error", "Username must be filled!");
+            request.setAttribute("username_error", "Zvolte si uživatelské jméno!");
             valid = false;
+        } else {
+            request.setAttribute("uname", _username);
         }
         if((_password == null) || _password.isEmpty()){
-            request.setAttribute("pass_error", "Password must be filled!");
+            request.setAttribute("pass_error", "Musíte vyplnit heslo!");
             valid = false;
+        } else {
+            if(_password.length() < 6){
+                request.setAttribute("pass_error", "Heslo musí mít alespoň 6 znaků!");
+                valid = false;
+            }
         }
         if(!_password.equals(_passconf)){
-            request.setAttribute("passconf_error", "Passwords you have entered do not match!");
+            request.setAttribute("passconf_error", "Hesla se neschodují!");
             valid = false;
         }
         if((_firstName == null) || _firstName.isEmpty()){
-            request.setAttribute("firstname_error", "You must fill in your first name!");
+            request.setAttribute("firstname_error", "Musíte vyplnit své křestní jméno!");
             valid = false;
+        } else {
+            request.setAttribute("fname", _firstName);
         }
         if((_lastName == null) || _lastName.isEmpty()){
-            request.setAttribute("lastname_error", "You must fill in your last name!");
+            request.setAttribute("lastname_error", "Musíte vyplnit své příjmení!");
             valid = false;
+        } else {
+            request.setAttribute("lname", _lastName);
         }
         if(valid){
             if(!UserManager.getInstance().checkUsernameAvailability(_username)){
-                request.setAttribute("username_error", "This username is already taken!");
+                request.setAttribute("username_error", "Toto uživatelské jméno je již obsazeno!");
                 valid = false;
             }
         }
         if(valid){
             User newUser = new User(_username, User.encrypt(_password), _role, _firstName, _lastName);
             if(!newUser.save()){
-                response.sendRedirect("/registration.jsp");
-                return;
+                err.forward(request, response);
+            } else {
+                RequestDispatcher suc = getServletContext().getRequestDispatcher("/registrationSuccess.jsp");
+                request.setAttribute("username", _username);
+                request.setAttribute("password", _password);
+                request.setAttribute("firstname", _firstName);
+                request.setAttribute("lastname", _lastName);
+                suc.forward(request, response);
             }
         } else {
-            dispatcher.forward(request, response);
+            err.forward(request, response);
         }
     }
 

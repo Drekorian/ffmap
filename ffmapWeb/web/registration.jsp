@@ -7,6 +7,7 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
+<%@include file="includes/header.jsp" %>
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
@@ -18,32 +19,33 @@
         <title>ffmap</title>
     </head>
     <body>
-        <h1>User registration</h1>
+        <h1>Registrace nového uživatele</h1>
+        <p>Všechna pole jsou povinná</p>
         <form action="register" method="post">
             <table border="0">
                 <tr>
-                    <td><b>User name: </b></td>
-                    <td><input type="text" name="username" value="" size="20" maxlength="15"></td>
+                    <td><b>Uživatelské jméno: </b></td>
+                    <td><input type="text" name="username" value="${uname}" size="20" maxlength="15"></td>
                     <td><c:out value="${username_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Password: </b></td>
+                    <td><b>Heslo: </b></td>
                     <td><input type="password" name="pass" value="" size="20" maxlength="15"></td>
                     <td><c:out value="${pass_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Confirm password: </b></td>
+                    <td><b>Potvrzení hesla: </b></td>
                     <td><input type="password" name="passconf" value="" size="20" maxlength="15"></td>
                     <td><c:out value="${passconf_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>First name: </b></td>
-                    <td><input type="text" name="firstname" value="" size="20"></td>
+                    <td><b>Křestní jméno: </b></td>
+                    <td><input type="text" name="firstname" value="${fname}" size="20"></td>
                     <td><c:out value="${firstname_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Last name: </b></td>
-                    <td><input type="text" name="lastname" value="" size="20"></td>
+                    <td><b>Příjmení: </b></td>
+                    <td><input type="text" name="lastname" value="${lname}" size="20"></td>
                     <td><c:out value="${lastname_error}"></c:out></td>
                 </tr>
             </table>
@@ -51,3 +53,5 @@
         </form>
     </body>
 </html>
+
+<%@include file="includes/footer.jsp" %>
