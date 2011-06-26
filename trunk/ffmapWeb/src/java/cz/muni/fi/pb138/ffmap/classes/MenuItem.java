@@ -1,8 +1,13 @@
 package cz.muni.fi.pb138.ffmap.classes;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.w3c.dom.Element;
 
 /**
  * Class representing an item on joint's menu.
@@ -13,6 +18,25 @@ import java.util.Map;
 public class MenuItem {
     private Meal meal;
     private Map<OpeningHour, Double> prices;
+
+    public static MenuItem parseMenuItem(Element menuItem) {
+        try {
+            Meal _meal = (Meal)MealManager.getInstance().find(Long.valueOf(menuItem.getAttribute("meal-ref")).longValue());
+            Map<OpeningHour, Double> _prices = new HashMap<OpeningHour, Double>();
+
+            for (int i = 0; i < menuItem.getElementsByTagName("price").getLength(); i++) {
+                OpeningHour _openingHour = OpeningHour.parsePriceOpeningHour(((Element)menuItem.getElementsByTagName("price").item(i)));
+                Double _price  = Double.valueOf(menuItem.getElementsByTagName("price").item(i).getTextContent());
+                _prices.put(_openingHour, _price);
+            }
+
+            return new MenuItem(_meal, _prices);
+        } catch (Exception ex) {
+            Logger.getLogger(MenuItem.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return null;
+    }
 
     public MenuItem(Meal meal, Map<OpeningHour, Double> prices) {
         if (meal == null) {
@@ -62,4 +86,32 @@ public class MenuItem {
         return prices;
     }
 
+    /**
+     * Serializes MenuItem to XML.
+     *
+     * @return serialized XML string
+     */
+    public String serialize() {
+        String result =
+            "<menu-item meal-ref=\"" + getMeal().getId() + "\"> ";
+            for (OpeningHour openingHour: prices.keySet()) {
+                Calendar fromCalendar = new GregorianCalendar(),
+                         toCalendar = new GregorianCalendar();
+
+                fromCalendar.setTimeInMillis(openingHour.getFrom().getTime());
+                toCalendar.setTimeInMillis(openingHour.getTo().getTime());
+
+                result += "<price from=\"" + fromCalendar.get(Calendar.HOUR) + ":" +
+                                             fromCalendar.get(Calendar.MINUTE) + ":" +
+                                             fromCalendar.get(Calendar.SECOND) + "\" " +
+                                   "to=\"" + toCalendar.get(Calendar.HOUR) + ":" +
+                                             toCalendar.get(Calendar.MINUTE) + ":" +
+                                             toCalendar.get(Calendar.SECOND) + "\"" +
+                          "</price>";
+            }
+
+            result += "</menu-item>";
+            
+        return result;
+    }
 }

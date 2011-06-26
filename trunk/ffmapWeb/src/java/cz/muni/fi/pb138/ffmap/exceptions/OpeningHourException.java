@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.exceptions;
 
 /**
@@ -12,6 +7,7 @@ package cz.muni.fi.pb138.ffmap.exceptions;
  * @author Marek Osvald
  * @version 2011.0621
  */
+
 public class OpeningHourException extends Exception {
     public OpeningHourException(Throwable cause) {
     }

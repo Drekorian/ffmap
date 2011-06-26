@@ -5,6 +5,8 @@
 
 package cz.muni.fi.pb138.ffmap.classes;
 
+import org.w3c.dom.Element;
+
 /**
  * Class representing location of a fast food joint.
  *
@@ -19,6 +21,21 @@ public class Location {
     private String city;
     private String streetName;
     private String streetNumber;
+
+    /**
+     * TODO: javadoc
+     * @param location
+     * @return
+     */
+    public static Location parseLocation(Element location) {
+        double _latitude = Double.valueOf(location.getAttribute("lat")).doubleValue();
+        double _longitude = Double.valueOf(location.getAttribute("lon")).doubleValue();
+        String _city = ((Element)location.getElementsByTagName("adress").item(0)).getElementsByTagName("city").item(0).getTextContent();
+        String _streeName = ((Element)location.getElementsByTagName("adress").item(0)).getElementsByTagName("street-name").item(0).getTextContent();
+        String _streeNumber = ((Element)location.getElementsByTagName("adress").item(0)).getElementsByTagName("street-number").item(0).getTextContent();
+
+        return new Location(_latitude, _longitude, _city, _streeName, _streeNumber);
+    }
 
     /**
      * Parametric constructor. Sets all attributes.
@@ -65,4 +82,20 @@ public class Location {
         return streetNumber;
     }
 
+    /**
+     * Serializes the Location to XML.
+     *
+     * @return serialized XML string
+     */
+    public String serialize() {
+        String result = "<location lat=\"" + latitude + "\" lon=\"" + longitude + "\"> " +
+                           "<address> " +
+                                "<city>" + city + "</city>" +
+                                "<street-name>" + streetName + "</street-name> " +
+                                "<street-number>" + streetNumber + "</street-number> " +
+                            "</address>" +
+                        "</location> ";
+
+        return result;
+    }
 }

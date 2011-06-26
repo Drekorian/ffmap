@@ -1,5 +1,6 @@
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.enums.Role;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseManager;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class UserManager implements IDatabaseManager {
         
         try {
             String queryResult = DBHandler.getInstance().XQueryCommand(query);
+
             Document document = XQueryResultController.getDocument(queryResult);
             result = new ArrayList<User>();
 
