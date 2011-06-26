@@ -3,6 +3,7 @@ package cz.muni.fi.pb138.ffmap.classes;
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;
+import java.util.List;
 import org.basex.core.BaseXException;
 
 /**
@@ -15,28 +16,55 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws DatabaseInitException, BaseXException, IOException {
-        DBHandler.getInstance().createHack(null);
 
-        User newUser = new User("user", "password", Role.USER, "Mother", "Fucker");
-        System.out.println(newUser.save());
+        System.out.println("User authentication:");
+        System.out.println("Username: dostojev, Password: koloman, Result: " + User.authenticate("dostojev", "koloman"));
+        System.out.println("Username: admin, Password: koloman, Result: " + User.authenticate("admin", "koloman"));
+        System.out.println("Username: dostojev, Password: admin, Result: " + User.authenticate("dostojev", "admin"));
+        System.out.println("Username: admin, Password: admin, Result: " + User.authenticate("admin", "admin"));
 
-        User user = (User)UserManager.getInstance().find(2);
-        System.out.println(user);
-        System.out.println("Heslo : " + user.getPassword());
-        user.setFirstName("Petr");
-        user.setSurname("Kobliha");
-        user.save();
-        System.out.println("Heslo : " + user.getPassword());
+        System.out.println("MEALS NOW FUCKERS!!!!!!!!!!!!!!!");
+        Meal newMeal1 = new Meal("Grcka hnusna", "Fakt kentus");
+        Meal newMeal2 = new Meal("Vagintarian", null);
 
-        User user2 = UserManager.getInstance().findByUserName("user");
-        System.out.println(user2);
+        System.out.println("Saving new users:");
+        if(MealManager.getInstance().checkNameAvalilability(newMeal1.getName())){
+            System.out.println(newMeal1.save());
+        } else {
+            System.out.println("Already present!");
+        }
+        if(MealManager.getInstance().checkNameAvalilability(newMeal2.getName())){
+            System.out.println(newMeal2.save());
+        } else {
+            System.out.println("Already present!");
+        }
 
-        User user3 = UserManager.getInstance().findByUserName("admin");
-        System.out.println(user3);
+        Meal meal = (Meal)MealManager.getInstance().find(3);
+        System.out.println("Finding existing meal with id 3:");
+        if(meal != null){
+            System.out.println(meal.toString());
+            meal.setName("Podkozak");
+            meal.setDescription("Variot");
+            System.out.println(meal.save());
+        }
 
-        System.out.println(user);
+        List<Meal> all = (List<Meal>) MealManager.getInstance().getAll();
 
-        System.out.println(UserManager.getInstance().count());
+        for(Meal iter : all){
+            System.out.println(iter.toString());
+        }
+
+        if(meal != null){
+            meal.destroy();
+        }
+        
+        Meal foundName = (Meal) MealManager.getInstance().find("Vagintarian");
+
+        System.out.println("Found by name:");
+        if(foundName != null){
+            System.out.println(foundName.toString());
+        }
+        System.out.println("Number of meals: " + MealManager.getInstance().count());
 
         System.exit(0);
     }

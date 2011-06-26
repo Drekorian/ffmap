@@ -42,7 +42,7 @@ public class UserManager implements IDatabaseManager {
                        "return $users";
         
         try {
-            String queryResult = DBHandler.getInstance().XQueryCommand("/fastfood-database/users");
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
             Document document = XQueryResultController.getDocument(queryResult);
             result = new ArrayList<User>();
 
@@ -219,5 +219,21 @@ public class UserManager implements IDatabaseManager {
         }
 
         return result;
+    }
+
+    public boolean checkUsernameAvailability(String username){
+        String query = "let $users := /fastfood-database/users/user" +
+                       " return count($meals[lower-case(username) = \"" + username.toLowerCase() + "\"])";
+        try {
+            long result = Long.valueOf(DBHandler.getInstance().XQueryCommand(query));
+            if(result != 0){
+                return false;
+            }
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return false;
     }
 }

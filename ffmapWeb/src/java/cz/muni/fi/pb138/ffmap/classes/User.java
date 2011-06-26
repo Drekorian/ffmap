@@ -257,7 +257,7 @@ public class User implements IDatabaseStoreable {
      * @param input input to encrypt
      * @return encrypted input
      */
-    private String encrypt(String input) {
+    public static String encrypt(String input) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA1");
             digest.update(input.getBytes());
@@ -282,5 +282,21 @@ public class User implements IDatabaseStoreable {
       }
       
       return builder.toString();
-   }
+    }
+
+    public static boolean authenticate(String name, String password){
+        try {
+            String shaPass = encrypt(password);
+            String nameQuery = "let $user := /fastfood-database/users/user[lower-case(username) = \""
+                    + name
+                    + "\" and password = \"" + shaPass + "\"] return exists($user)";
+            String resultName = DBHandler.getInstance().XQueryCommand(nameQuery);
+            if (resultName.toLowerCase().contains("true")) {
+                return true;
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
 }

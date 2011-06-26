@@ -1,11 +1,11 @@
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
-import java.util.Calendar;
-import java.util.Collections;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.Map;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.basex.core.BaseXException;
 
 /**
  * Class representing a meal served by fast-food restaurants.
@@ -17,8 +17,17 @@ import java.util.Map;
 public class Meal implements IDatabaseStoreable {
     private Long id;
     private String name;
-    private Map<OpeningHour, Double> prices;
     private String description;
+
+    public static Meal loadMeal(Long id, String name, String description){
+        return new Meal(id, name, description);
+    }
+
+    private Meal(Long id, String name, String description){
+        this.id = id;
+        this.name = name;
+        this.description = description;
+    }
 
     /**
      * Parametric constructor.
@@ -27,11 +36,8 @@ public class Meal implements IDatabaseStoreable {
      * @param prices prices of the meal during the day
      * @param description meal's description
      */
-    public Meal(String name, Map<OpeningHour, Double> prices, String description) {
-        this.id = null;
-        this.name = name;
-        this.prices = prices;
-        this.description = description;
+    public Meal(String name, String description) {
+        this(null, name, description);
     }
 
     @Override
@@ -50,12 +56,7 @@ public class Meal implements IDatabaseStoreable {
         return name != null ? name.hashCode() : 0;
     }
 
-    @Override
-    public String toString() {
-        return name;
-    }
-
-    public Long getID() {
+    public Long getId() {
         return id;
     }
     public String getName() {
@@ -68,55 +69,94 @@ public class Meal implements IDatabaseStoreable {
 
         this.name = name;
     }
-    public Map<OpeningHour, Double> getPrices() {
-        return Collections.unmodifiableMap(prices);
-    }
+
     public String getDescription() {
         return description;
     }
-    public void setDescription(String description) {
-        if (description == null || description.equals("")) {
-            throw new IllegalArgumentException("Description cannot be null or empty.");
-        }
 
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    /**
-     * Sets price of the meal during the opening hours.
-     *
-     * @param openingHours opening hours when price is applied
-     * @param price price of the meal
-     */
-    public void setPrice(OpeningHour openingHours, Double price) {
-        if (openingHours == null) {
-            throw new IllegalArgumentException("OpeningHours cannot be nully.");
-        }
-
-        if (price == null) {
-            throw new IllegalArgumentException("Price cannot be null");
-        }
-
-        if (price <= 0) {
-            throw new IllegalArgumentException("Price cannot be lower or equal to zero.");
-        }
-
-        prices.put(openingHours, price);
-    }
-    /**
-     * Sets price of the meal for the entire day.
-     *
-     * @param price price of the meal
-     */
-    public void setPrice(Double price) {
-        setPrice(new OpeningHour(new Date(OpeningHour.DAY_BEGIN), new Date(OpeningHour.DAY_END)), price);
+    @Override
+    public String toString(){
+        return name + "[" + id + "] " + description;
     }
 
     public boolean save() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(id == null){
+            return insert();
+        }
+        return update();
     }
 
     public boolean destroy() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if(id == null){
+            return false;
+        }
+
+        String command = "for $meal in /fastfood-database/meals/meal[@id = "+
+                + id + "] return delete node $meal";
+        try {
+            DBHandler.getInstance().XQueryCommand(command);
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(Meal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
     }
+
+    private void keyIncrement() throws BaseXException, DatabaseInitException, IOException{
+        DBHandler.getInstance().keyIncrement("meals-key-number");
+    }
+
+    private boolean insert(){
+        try {
+
+            keyIncrement();
+            String idQuery = "let $id := /fastfood-database/@meals-key-number " + "return number($id)";
+
+            if ((id = Long.valueOf(DBHandler.getInstance().XQueryCommand(idQuery))) == null) {
+                return false;
+            }
+
+            String command = "let $meals := /fastfood-database/meals " + "return insert node " + "<meal id=\"" + id + "\" name=\"" + name + "\"> ";
+            if (description != null) {
+                command = command.concat("<description>" + description + "</description> ");
+            }
+            command = command.concat("</meal> as last into $meals ");
+
+            DBHandler.getInstance().XQueryCommand(command);
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(Meal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return false;
+                                
+    }
+
+    private boolean update(){
+        String command = "let $meal := /fastfood-database/meals/meal[@id=" + id + "]" +
+                         "return (" +
+                            "replace value of node $meal/@name with \"" + name + "\" ";
+        
+        if(description != null){
+            command = command.concat(", if(exists($meal/description)) then " +
+                    "replace value of node $meal/description with \"" + description + "\" " +
+                    "else insert node <description>" + description + "</description> into $meal)");
+        } else {
+            command = command.concat(", if(exists($meal/description)) then " +
+                    "delete node $meal/description else () )");
+        }
+        try {
+            DBHandler.getInstance().XQueryCommand(command);
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(Meal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return false;
+    }
+
+    
 }

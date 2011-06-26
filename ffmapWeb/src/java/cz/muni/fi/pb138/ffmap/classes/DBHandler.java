@@ -96,6 +96,7 @@ public class DBHandler {
     public String XQueryCommand(String query) throws BaseXException, IOException{
         ClientQuery clientQuery = new ClientQuery(query , master_session);
         String result = clientQuery.execute();
+        clientQuery.close();
         return result;
     }
 
@@ -151,7 +152,7 @@ public class DBHandler {
         }
 
         XQueryCommand(
-            "let $lastKey := /fastfood-database/@users-key-number " +
+            "let $lastKey := /fastfood-database/@" + keyName + " " +
             "return replace value of node $lastKey with number($lastKey) + 1"
         );
     }
