@@ -1,5 +1,6 @@
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.enums.Role;
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;

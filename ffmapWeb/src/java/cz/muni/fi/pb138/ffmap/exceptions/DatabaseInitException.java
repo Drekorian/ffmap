@@ -1,14 +1,12 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.exceptions;
 
 /**
+ * An Exception thrown when database initialization fails.
  *
- * @author Stash
+ * @author Aleksandar Zivkovic
+ * @version 2011.0626
  */
+
 public class DatabaseInitException extends Exception {
     public DatabaseInitException(Throwable cause) {
         super(cause);

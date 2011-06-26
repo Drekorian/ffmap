@@ -156,7 +156,7 @@
 
     <xsd:complexType name="dayHoursType">
         <xsd:sequence>
-            <xsd:element name="open-span" type="openSpanType" maxOccurs="2" />
+            <xsd:element name="open-span" type="openSpanType" minOccurs="1" maxOccurs="2" />
         </xsd:sequence>
     </xsd:complexType>
 
