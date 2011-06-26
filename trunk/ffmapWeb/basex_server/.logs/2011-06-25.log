@@ -17,3 +17,2396 @@
 13:28:07.173	[127.0.0.1:2446]	QUERY(3)	OK
 13:28:07.175	[127.0.0.1:2446]	EXEC(3)	OK
 13:28:07.196	Server was stopped.
+22:17:49.790	Server was started.
+22:17:49.934	[127.0.0.1:7403]	LOGIN admin	OK
+22:17:49.965	[127.0.0.1:7403]	OPEN ffmapDatabase
+22:17:49.966	[127.0.0.1:7403]	Error: Database 'ffmapDatabase' was not found.	30.84 ms
+22:17:50.010	[127.0.0.1:7403]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:17:50.015	[127.0.0.1:7403]	Error: File or directory "D:/skola/jaro2011/pb138 - znackace/projekt/ffmapWeb/xml_data/ffmapDatabase.xml" not found.	13.74 ms
+22:17:50.078	Server was stopped.
+22:18:49.808	Server was started.
+22:18:49.953	[127.0.0.1:7405]	LOGIN admin	OK
+22:18:49.984	[127.0.0.1:7405]	OPEN ffmapDatabase
+22:18:49.985	[127.0.0.1:7405]	Error: Database 'ffmapDatabase' was not found.	30.99 ms
+22:18:50.027	[127.0.0.1:7405]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:18:50.161	[127.0.0.1:7405]	OK	142.04 ms
+22:18:50.162	[127.0.0.1:7405]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:18:50.205	[127.0.0.1:7405]	OK	43.27 ms
+22:18:50.428	[127.0.0.1:7405]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:18:50.429	[127.0.0.1:7405]	QUERY(0)	OK
+22:18:50.463	[127.0.0.1:7405]	EXEC(0)	OK
+22:18:50.464	[127.0.0.1:7405]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:18:50.464	[127.0.0.1:7405]	QUERY(1)	OK
+22:18:50.465	[127.0.0.1:7405]	EXEC(1)	OK
+22:18:50.471	[127.0.0.1:7405]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:18:50.472	[127.0.0.1:7405]	QUERY(2)	OK
+22:18:50.481	[127.0.0.1:7405]	EXEC(2)	OK
+22:18:50.488	[127.0.0.1:7405]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:18:50.488	[127.0.0.1:7405]	QUERY(3)	OK
+22:18:50.492	[127.0.0.1:7405]	EXEC(3)	OK
+22:18:50.511	[127.0.0.1:7405]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:18:50.512	[127.0.0.1:7405]	QUERY(4)	OK
+22:18:50.515	[127.0.0.1:7405]	EXEC(4)	OK
+22:18:50.517	[127.0.0.1:7405]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:18:50.517	[127.0.0.1:7405]	QUERY(5)	OK
+22:18:50.518	[127.0.0.1:7405]	EXEC(5)	OK
+22:18:50.522	[127.0.0.1:7405]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:18:50.522	[127.0.0.1:7405]	QUERY(6)	OK
+22:18:50.524	[127.0.0.1:7405]	EXEC(6)	OK
+22:18:50.532	[127.0.0.1:7405]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:18:50.532	[127.0.0.1:7405]	QUERY(7)	OK
+22:18:50.534	[127.0.0.1:7405]	EXEC(7)	OK
+22:18:50.537	[127.0.0.1:7405]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:18:50.538	[127.0.0.1:7405]	QUERY(8)	OK
+22:18:50.540	[127.0.0.1:7405]	EXEC(8)	OK
+22:18:50.542	[127.0.0.1:7405]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:18:50.542	[127.0.0.1:7405]	QUERY(9)	OK
+22:18:50.542	[127.0.0.1:7405]	EXEC(9)	OK
+22:18:50.546	[127.0.0.1:7405]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna" /> )	Error: Stopped at line 1, column 94: [XPST0003] Incomplete expression.
+22:18:50.548	[127.0.0.1:7405]	QUERY(10)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:18:50.549	[127.0.0.1:7405]	QUERY(10)	OK
+22:18:50.553	[127.0.0.1:7405]	EXEC(10)	OK
+22:18:50.554	[127.0.0.1:7405]	QUERY(11)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:18:50.554	[127.0.0.1:7405]	QUERY(11)	OK
+22:18:50.555	[127.0.0.1:7405]	EXEC(11)	OK
+22:18:50.556	[127.0.0.1:7405]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian" /> )	Error: Stopped at line 1, column 93: [XPST0003] Incomplete expression.
+22:18:50.560	[127.0.0.1:7405]	QUERY(12)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:18:50.560	[127.0.0.1:7405]	QUERY(12)	OK
+22:18:50.561	[127.0.0.1:7405]	EXEC(12)	OK
+22:18:59.963	Server was started.
+22:18:59.974	Unrecognized Windows Sockets error: 0: JVM_Bind
+22:19:11.994	Server was started.
+22:19:12.138	[127.0.0.1:7406]	LOGIN admin	OK
+22:19:12.168	[127.0.0.1:7406]	OPEN ffmapDatabase
+22:19:12.202	[127.0.0.1:7406]	OK	63.65 ms
+22:19:12.210	[127.0.0.1:7406]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:19:12.343	[127.0.0.1:7406]	OK	140.62 ms
+22:19:12.571	[127.0.0.1:7406]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:19:12.571	[127.0.0.1:7406]	QUERY(0)	OK
+22:19:12.599	[127.0.0.1:7406]	EXEC(0)	OK
+22:19:12.600	[127.0.0.1:7406]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:19:12.601	[127.0.0.1:7406]	QUERY(1)	OK
+22:19:12.602	[127.0.0.1:7406]	EXEC(1)	OK
+22:19:12.608	[127.0.0.1:7406]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:19:12.609	[127.0.0.1:7406]	QUERY(2)	OK
+22:19:12.624	[127.0.0.1:7406]	EXEC(2)	OK
+22:19:12.631	[127.0.0.1:7406]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:19:12.631	[127.0.0.1:7406]	QUERY(3)	OK
+22:19:12.635	[127.0.0.1:7406]	EXEC(3)	OK
+22:19:12.656	[127.0.0.1:7406]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:19:12.656	[127.0.0.1:7406]	QUERY(4)	OK
+22:19:12.660	[127.0.0.1:7406]	EXEC(4)	OK
+22:19:12.662	[127.0.0.1:7406]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:19:12.662	[127.0.0.1:7406]	QUERY(5)	OK
+22:19:12.663	[127.0.0.1:7406]	EXEC(5)	OK
+22:19:12.667	[127.0.0.1:7406]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:19:12.667	[127.0.0.1:7406]	QUERY(6)	OK
+22:19:12.669	[127.0.0.1:7406]	EXEC(6)	OK
+22:19:12.677	[127.0.0.1:7406]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:19:12.677	[127.0.0.1:7406]	QUERY(7)	OK
+22:19:12.679	[127.0.0.1:7406]	EXEC(7)	OK
+22:19:12.681	[127.0.0.1:7406]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:19:12.682	[127.0.0.1:7406]	QUERY(8)	OK
+22:19:12.684	[127.0.0.1:7406]	EXEC(8)	OK
+22:19:12.685	[127.0.0.1:7406]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:19:12.686	[127.0.0.1:7406]	QUERY(9)	OK
+22:19:12.687	[127.0.0.1:7406]	EXEC(9)	OK
+22:19:12.690	[127.0.0.1:7406]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna" /> )	Error: Stopped at line 1, column 94: [XPST0003] Incomplete expression.
+22:19:12.699	[127.0.0.1:7406]	QUERY(10)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:19:12.699	[127.0.0.1:7406]	QUERY(10)	OK
+22:19:12.704	[127.0.0.1:7406]	EXEC(10)	OK
+22:19:12.706	[127.0.0.1:7406]	QUERY(11)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:19:12.709	[127.0.0.1:7406]	QUERY(11)	OK
+22:19:12.710	[127.0.0.1:7406]	EXEC(11)	OK
+22:19:12.711	[127.0.0.1:7406]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian" /> )	Error: Stopped at line 1, column 93: [XPST0003] Incomplete expression.
+22:19:12.750	[127.0.0.1:7406]	QUERY(12)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:19:12.751	[127.0.0.1:7406]	QUERY(12)	OK
+22:19:12.753	[127.0.0.1:7406]	EXEC(12)	OK
+22:23:35.352	Server was started.
+22:23:35.366	Unrecognized Windows Sockets error: 0: JVM_Bind
+22:23:42.426	Server was started.
+22:23:42.572	[127.0.0.1:7412]	LOGIN admin	OK
+22:23:42.602	[127.0.0.1:7412]	OPEN ffmapDatabase
+22:23:42.636	[127.0.0.1:7412]	OK	62.54 ms
+22:23:42.643	[127.0.0.1:7412]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:23:42.780	[127.0.0.1:7412]	OK	143.29 ms
+22:23:43.015	[127.0.0.1:7412]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:23:43.015	[127.0.0.1:7412]	QUERY(0)	OK
+22:23:43.046	[127.0.0.1:7412]	EXEC(0)	OK
+22:23:43.048	[127.0.0.1:7412]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:23:43.048	[127.0.0.1:7412]	QUERY(1)	OK
+22:23:43.049	[127.0.0.1:7412]	EXEC(1)	OK
+22:23:43.056	[127.0.0.1:7412]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:23:43.056	[127.0.0.1:7412]	QUERY(2)	OK
+22:23:43.073	[127.0.0.1:7412]	EXEC(2)	OK
+22:23:43.080	[127.0.0.1:7412]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:23:43.080	[127.0.0.1:7412]	QUERY(3)	OK
+22:23:43.085	[127.0.0.1:7412]	EXEC(3)	OK
+22:23:43.103	[127.0.0.1:7412]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:23:43.103	[127.0.0.1:7412]	QUERY(4)	OK
+22:23:43.109	[127.0.0.1:7412]	EXEC(4)	OK
+22:23:43.111	[127.0.0.1:7412]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:23:43.111	[127.0.0.1:7412]	QUERY(5)	OK
+22:23:43.113	[127.0.0.1:7412]	EXEC(5)	OK
+22:23:43.116	[127.0.0.1:7412]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:23:43.117	[127.0.0.1:7412]	QUERY(6)	OK
+22:23:43.119	[127.0.0.1:7412]	EXEC(6)	OK
+22:23:43.127	[127.0.0.1:7412]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:23:43.127	[127.0.0.1:7412]	QUERY(7)	OK
+22:23:43.129	[127.0.0.1:7412]	EXEC(7)	OK
+22:23:43.131	[127.0.0.1:7412]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:23:43.132	[127.0.0.1:7412]	QUERY(8)	OK
+22:23:43.134	[127.0.0.1:7412]	EXEC(8)	OK
+22:23:43.135	[127.0.0.1:7412]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:23:43.136	[127.0.0.1:7412]	QUERY(9)	OK
+22:23:43.136	[127.0.0.1:7412]	EXEC(9)	OK
+22:23:43.140	[127.0.0.1:7412]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna" > )	Error: Stopped at line 1, column 93: [XPST0003] Expecting closing tag </meal>.
+22:23:43.150	[127.0.0.1:7412]	QUERY(10)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:23:43.150	[127.0.0.1:7412]	QUERY(10)	OK
+22:23:43.155	[127.0.0.1:7412]	EXEC(10)	OK
+22:23:43.157	[127.0.0.1:7412]	QUERY(11)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:23:43.160	[127.0.0.1:7412]	QUERY(11)	OK
+22:23:43.161	[127.0.0.1:7412]	EXEC(11)	OK
+22:23:43.163	[127.0.0.1:7412]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian" > )	Error: Stopped at line 1, column 92: [XPST0003] Expecting closing tag </meal>.
+22:23:43.217	[127.0.0.1:7412]	QUERY(12)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:23:43.217	[127.0.0.1:7412]	QUERY(12)	OK
+22:23:43.219	[127.0.0.1:7412]	EXEC(12)	OK
+22:28:21.015	Server was started.
+22:28:21.028	Unrecognized Windows Sockets error: 0: JVM_Bind
+22:28:26.210	Server was started.
+22:28:26.354	[127.0.0.1:7419]	LOGIN admin	OK
+22:28:26.385	[127.0.0.1:7419]	OPEN ffmapDatabase
+22:28:26.418	[127.0.0.1:7419]	OK	63.18 ms
+22:28:26.427	[127.0.0.1:7419]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:28:26.565	[127.0.0.1:7419]	OK	146.19 ms
+22:28:26.787	[127.0.0.1:7419]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:28:26.787	[127.0.0.1:7419]	QUERY(0)	OK
+22:28:26.815	[127.0.0.1:7419]	EXEC(0)	OK
+22:28:26.816	[127.0.0.1:7419]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:28:26.816	[127.0.0.1:7419]	QUERY(1)	OK
+22:28:26.817	[127.0.0.1:7419]	EXEC(1)	OK
+22:28:26.824	[127.0.0.1:7419]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:28:26.825	[127.0.0.1:7419]	QUERY(2)	OK
+22:28:26.840	[127.0.0.1:7419]	EXEC(2)	OK
+22:28:26.847	[127.0.0.1:7419]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:28:26.847	[127.0.0.1:7419]	QUERY(3)	OK
+22:28:26.851	[127.0.0.1:7419]	EXEC(3)	OK
+22:28:26.871	[127.0.0.1:7419]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:28:26.872	[127.0.0.1:7419]	QUERY(4)	OK
+22:28:26.876	[127.0.0.1:7419]	EXEC(4)	OK
+22:28:26.877	[127.0.0.1:7419]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:28:26.878	[127.0.0.1:7419]	QUERY(5)	OK
+22:28:26.879	[127.0.0.1:7419]	EXEC(5)	OK
+22:28:26.882	[127.0.0.1:7419]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:28:26.883	[127.0.0.1:7419]	QUERY(6)	OK
+22:28:26.884	[127.0.0.1:7419]	EXEC(6)	OK
+22:28:26.893	[127.0.0.1:7419]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:28:26.893	[127.0.0.1:7419]	QUERY(7)	OK
+22:28:26.894	[127.0.0.1:7419]	EXEC(7)	OK
+22:28:26.897	[127.0.0.1:7419]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:28:26.897	[127.0.0.1:7419]	QUERY(8)	OK
+22:28:26.900	[127.0.0.1:7419]	EXEC(8)	OK
+22:28:26.901	[127.0.0.1:7419]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:28:26.901	[127.0.0.1:7419]	QUERY(9)	OK
+22:28:26.902	[127.0.0.1:7419]	EXEC(9)	OK
+22:28:26.905	[127.0.0.1:7419]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> )	Error: Stopped at line 1, column 92: [XPST0003] Expecting closing tag </meal>.
+22:28:26.915	[127.0.0.1:7419]	QUERY(10)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:28:26.915	[127.0.0.1:7419]	QUERY(10)	OK
+22:28:26.920	[127.0.0.1:7419]	EXEC(10)	OK
+22:28:26.921	[127.0.0.1:7419]	QUERY(11)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:28:26.921	[127.0.0.1:7419]	QUERY(11)	OK
+22:28:26.925	[127.0.0.1:7419]	EXEC(11)	OK
+22:28:26.926	[127.0.0.1:7419]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> )	Error: Stopped at line 1, column 91: [XPST0003] Expecting closing tag </meal>.
+22:28:26.973	[127.0.0.1:7419]	QUERY(12)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:28:26.973	[127.0.0.1:7419]	QUERY(12)	OK
+22:28:26.975	[127.0.0.1:7419]	EXEC(12)	OK
+22:29:26.368	Server was started.
+22:29:26.382	Unrecognized Windows Sockets error: 0: JVM_Bind
+22:29:31.257	Server was started.
+22:29:31.401	[127.0.0.1:7424]	LOGIN admin	OK
+22:29:31.433	[127.0.0.1:7424]	OPEN ffmapDatabase
+22:29:31.466	[127.0.0.1:7424]	OK	63.55 ms
+22:29:31.473	[127.0.0.1:7424]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:29:31.606	[127.0.0.1:7424]	OK	139.5 ms
+22:29:31.836	[127.0.0.1:7424]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:29:31.836	[127.0.0.1:7424]	QUERY(0)	OK
+22:29:31.865	[127.0.0.1:7424]	EXEC(0)	OK
+22:29:31.866	[127.0.0.1:7424]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:29:31.867	[127.0.0.1:7424]	QUERY(1)	OK
+22:29:31.868	[127.0.0.1:7424]	EXEC(1)	OK
+22:29:31.874	[127.0.0.1:7424]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:29:31.875	[127.0.0.1:7424]	QUERY(2)	OK
+22:29:31.890	[127.0.0.1:7424]	EXEC(2)	OK
+22:29:31.897	[127.0.0.1:7424]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:29:31.897	[127.0.0.1:7424]	QUERY(3)	OK
+22:29:31.902	[127.0.0.1:7424]	EXEC(3)	OK
+22:29:31.922	[127.0.0.1:7424]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:29:31.922	[127.0.0.1:7424]	QUERY(4)	OK
+22:29:31.926	[127.0.0.1:7424]	EXEC(4)	OK
+22:29:31.928	[127.0.0.1:7424]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:29:31.928	[127.0.0.1:7424]	QUERY(5)	OK
+22:29:31.930	[127.0.0.1:7424]	EXEC(5)	OK
+22:29:31.933	[127.0.0.1:7424]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:29:31.934	[127.0.0.1:7424]	QUERY(6)	OK
+22:29:31.935	[127.0.0.1:7424]	EXEC(6)	OK
+22:29:31.943	[127.0.0.1:7424]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:29:31.944	[127.0.0.1:7424]	QUERY(7)	OK
+22:29:31.945	[127.0.0.1:7424]	EXEC(7)	OK
+22:29:31.948	[127.0.0.1:7424]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:29:31.949	[127.0.0.1:7424]	QUERY(8)	OK
+22:29:31.951	[127.0.0.1:7424]	EXEC(8)	OK
+22:29:31.952	[127.0.0.1:7424]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:29:31.952	[127.0.0.1:7424]	QUERY(9)	OK
+22:29:31.953	[127.0.0.1:7424]	EXEC(9)	OK
+22:29:31.957	[127.0.0.1:7424]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> )	Error: Stopped at line 1, column 92: [XPST0003] Expecting closing tag </meal>.
+22:29:31.967	[127.0.0.1:7424]	QUERY(10)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:29:31.967	[127.0.0.1:7424]	QUERY(10)	OK
+22:29:31.973	[127.0.0.1:7424]	EXEC(10)	OK
+22:29:31.974	[127.0.0.1:7424]	QUERY(11)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:29:31.975	[127.0.0.1:7424]	QUERY(11)	OK
+22:29:31.980	[127.0.0.1:7424]	EXEC(11)	OK
+22:29:31.981	[127.0.0.1:7424]	QUERY(let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> )	Error: Stopped at line 1, column 91: [XPST0003] Expecting closing tag </meal>.
+22:29:32.023	[127.0.0.1:7424]	QUERY(12)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:29:32.024	[127.0.0.1:7424]	QUERY(12)	OK
+22:29:32.026	[127.0.0.1:7424]	EXEC(12)	OK
+22:33:33.199	Server was started.
+22:33:33.212	Unrecognized Windows Sockets error: 0: JVM_Bind
+22:33:38.528	Server was started.
+22:33:38.673	[127.0.0.1:7438]	LOGIN admin	OK
+22:33:38.704	[127.0.0.1:7438]	OPEN ffmapDatabase
+22:33:38.738	[127.0.0.1:7438]	OK	63.95 ms
+22:33:38.745	[127.0.0.1:7438]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:33:38.874	[127.0.0.1:7438]	OK	135.85 ms
+22:33:39.095	[127.0.0.1:7438]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:33:39.096	[127.0.0.1:7438]	QUERY(0)	OK
+22:33:39.124	[127.0.0.1:7438]	EXEC(0)	OK
+22:33:39.125	[127.0.0.1:7438]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:33:39.125	[127.0.0.1:7438]	QUERY(1)	OK
+22:33:39.126	[127.0.0.1:7438]	EXEC(1)	OK
+22:33:39.134	[127.0.0.1:7438]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:33:39.134	[127.0.0.1:7438]	QUERY(2)	OK
+22:33:39.150	[127.0.0.1:7438]	EXEC(2)	OK
+22:33:39.157	[127.0.0.1:7438]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:33:39.157	[127.0.0.1:7438]	QUERY(3)	OK
+22:33:39.162	[127.0.0.1:7438]	EXEC(3)	OK
+22:33:39.181	[127.0.0.1:7438]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:33:39.182	[127.0.0.1:7438]	QUERY(4)	OK
+22:33:39.187	[127.0.0.1:7438]	EXEC(4)	OK
+22:33:39.188	[127.0.0.1:7438]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:33:39.188	[127.0.0.1:7438]	QUERY(5)	OK
+22:33:39.190	[127.0.0.1:7438]	EXEC(5)	OK
+22:33:39.194	[127.0.0.1:7438]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:33:39.194	[127.0.0.1:7438]	QUERY(6)	OK
+22:33:39.196	[127.0.0.1:7438]	EXEC(6)	OK
+22:33:39.204	[127.0.0.1:7438]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:33:39.204	[127.0.0.1:7438]	QUERY(7)	OK
+22:33:39.206	[127.0.0.1:7438]	EXEC(7)	OK
+22:33:39.208	[127.0.0.1:7438]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:33:39.209	[127.0.0.1:7438]	QUERY(8)	OK
+22:33:39.211	[127.0.0.1:7438]	EXEC(8)	OK
+22:33:39.212	[127.0.0.1:7438]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:33:39.213	[127.0.0.1:7438]	QUERY(9)	OK
+22:33:39.213	[127.0.0.1:7438]	EXEC(9)	OK
+22:33:39.214	[127.0.0.1:7438]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:33:39.214	[127.0.0.1:7438]	QUERY(10)	OK
+22:33:39.218	[127.0.0.1:7438]	EXEC(10)	OK
+22:33:39.219	[127.0.0.1:7438]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:33:39.220	[127.0.0.1:7438]	QUERY(11)	OK
+22:33:39.222	[127.0.0.1:7438]	EXEC(11)	OK
+22:33:39.223	[127.0.0.1:7438]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:33:39.224	[127.0.0.1:7438]	QUERY(12)	OK
+22:33:39.224	[127.0.0.1:7438]	EXEC(12)	OK
+22:33:39.225	[127.0.0.1:7438]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:33:39.225	[127.0.0.1:7438]	QUERY(13)	OK
+22:33:39.229	[127.0.0.1:7438]	EXEC(13)	OK
+22:33:39.231	[127.0.0.1:7438]	QUERY(14)	for $user in /fastfood-database/users/user[@id = 2] return $user	OK
+22:33:39.232	[127.0.0.1:7438]	QUERY(14)	OK
+22:33:39.233	[127.0.0.1:7438]	EXEC(14)	OK
+22:36:49.037	Server was started.
+22:36:49.185	[127.0.0.1:7468]	LOGIN admin	OK
+22:36:49.216	[127.0.0.1:7468]	OPEN ffmapDatabase
+22:36:49.250	[127.0.0.1:7468]	OK	64.77 ms
+22:36:49.258	[127.0.0.1:7468]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:36:49.390	[127.0.0.1:7468]	OK	139.13 ms
+22:36:49.612	[127.0.0.1:7468]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:36:49.613	[127.0.0.1:7468]	QUERY(0)	OK
+22:36:49.640	[127.0.0.1:7468]	EXEC(0)	OK
+22:36:49.642	[127.0.0.1:7468]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:36:49.642	[127.0.0.1:7468]	QUERY(1)	OK
+22:36:49.643	[127.0.0.1:7468]	EXEC(1)	OK
+22:36:49.649	[127.0.0.1:7468]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:36:49.650	[127.0.0.1:7468]	QUERY(2)	OK
+22:36:49.665	[127.0.0.1:7468]	EXEC(2)	OK
+22:36:49.671	[127.0.0.1:7468]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:36:49.672	[127.0.0.1:7468]	QUERY(3)	OK
+22:36:49.677	[127.0.0.1:7468]	EXEC(3)	OK
+22:36:49.697	[127.0.0.1:7468]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:36:49.697	[127.0.0.1:7468]	QUERY(4)	OK
+22:36:49.701	[127.0.0.1:7468]	EXEC(4)	OK
+22:36:49.703	[127.0.0.1:7468]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:36:49.703	[127.0.0.1:7468]	QUERY(5)	OK
+22:36:49.704	[127.0.0.1:7468]	EXEC(5)	OK
+22:36:49.708	[127.0.0.1:7468]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:36:49.708	[127.0.0.1:7468]	QUERY(6)	OK
+22:36:49.710	[127.0.0.1:7468]	EXEC(6)	OK
+22:36:49.718	[127.0.0.1:7468]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:36:49.719	[127.0.0.1:7468]	QUERY(7)	OK
+22:36:49.720	[127.0.0.1:7468]	EXEC(7)	OK
+22:36:49.723	[127.0.0.1:7468]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:36:49.723	[127.0.0.1:7468]	QUERY(8)	OK
+22:36:49.727	[127.0.0.1:7468]	EXEC(8)	OK
+22:36:49.728	[127.0.0.1:7468]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:36:49.728	[127.0.0.1:7468]	QUERY(9)	OK
+22:36:49.729	[127.0.0.1:7468]	EXEC(9)	OK
+22:36:49.729	[127.0.0.1:7468]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:36:49.730	[127.0.0.1:7468]	QUERY(10)	OK
+22:36:49.733	[127.0.0.1:7468]	EXEC(10)	OK
+22:36:49.735	[127.0.0.1:7468]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:36:49.735	[127.0.0.1:7468]	QUERY(11)	OK
+22:36:49.737	[127.0.0.1:7468]	EXEC(11)	OK
+22:36:49.738	[127.0.0.1:7468]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:36:49.739	[127.0.0.1:7468]	QUERY(12)	OK
+22:36:49.739	[127.0.0.1:7468]	EXEC(12)	OK
+22:36:49.740	[127.0.0.1:7468]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:36:49.740	[127.0.0.1:7468]	QUERY(13)	OK
+22:36:49.744	[127.0.0.1:7468]	EXEC(13)	OK
+22:36:49.746	[127.0.0.1:7468]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:36:49.747	[127.0.0.1:7468]	QUERY(14)	OK
+22:36:49.748	[127.0.0.1:7468]	EXEC(14)	OK
+22:36:49.753	[127.0.0.1:7468]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of ($meal/@name) with "Podkozak" )	Error: Stopped at line 1, column 74: [XPST0003] Expecting "node", found "(".
+22:36:49.762	[127.0.0.1:7468]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:36:49.763	[127.0.0.1:7468]	QUERY(15)	OK
+22:36:49.765	[127.0.0.1:7468]	EXEC(15)	OK
+22:36:49.776	Server was stopped.
+22:38:40.608	Server was started.
+22:38:40.754	[127.0.0.1:7477]	LOGIN admin	OK
+22:38:40.785	[127.0.0.1:7477]	OPEN ffmapDatabase
+22:38:40.821	[127.0.0.1:7477]	OK	65.85 ms
+22:38:40.829	[127.0.0.1:7477]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:38:40.963	[127.0.0.1:7477]	OK	142.01 ms
+22:38:41.186	[127.0.0.1:7477]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:38:41.187	[127.0.0.1:7477]	QUERY(0)	OK
+22:38:41.215	[127.0.0.1:7477]	EXEC(0)	OK
+22:38:41.216	[127.0.0.1:7477]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:38:41.217	[127.0.0.1:7477]	QUERY(1)	OK
+22:38:41.218	[127.0.0.1:7477]	EXEC(1)	OK
+22:38:41.224	[127.0.0.1:7477]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:38:41.225	[127.0.0.1:7477]	QUERY(2)	OK
+22:38:41.240	[127.0.0.1:7477]	EXEC(2)	OK
+22:38:41.247	[127.0.0.1:7477]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:38:41.247	[127.0.0.1:7477]	QUERY(3)	OK
+22:38:41.252	[127.0.0.1:7477]	EXEC(3)	OK
+22:38:41.271	[127.0.0.1:7477]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:38:41.272	[127.0.0.1:7477]	QUERY(4)	OK
+22:38:41.276	[127.0.0.1:7477]	EXEC(4)	OK
+22:38:41.278	[127.0.0.1:7477]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:38:41.278	[127.0.0.1:7477]	QUERY(5)	OK
+22:38:41.279	[127.0.0.1:7477]	EXEC(5)	OK
+22:38:41.283	[127.0.0.1:7477]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:38:41.283	[127.0.0.1:7477]	QUERY(6)	OK
+22:38:41.285	[127.0.0.1:7477]	EXEC(6)	OK
+22:38:41.293	[127.0.0.1:7477]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:38:41.294	[127.0.0.1:7477]	QUERY(7)	OK
+22:38:41.295	[127.0.0.1:7477]	EXEC(7)	OK
+22:38:41.298	[127.0.0.1:7477]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:38:41.298	[127.0.0.1:7477]	QUERY(8)	OK
+22:38:41.301	[127.0.0.1:7477]	EXEC(8)	OK
+22:38:41.302	[127.0.0.1:7477]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:38:41.302	[127.0.0.1:7477]	QUERY(9)	OK
+22:38:41.303	[127.0.0.1:7477]	EXEC(9)	OK
+22:38:41.304	[127.0.0.1:7477]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:38:41.304	[127.0.0.1:7477]	QUERY(10)	OK
+22:38:41.308	[127.0.0.1:7477]	EXEC(10)	OK
+22:38:41.309	[127.0.0.1:7477]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:38:41.310	[127.0.0.1:7477]	QUERY(11)	OK
+22:38:41.312	[127.0.0.1:7477]	EXEC(11)	OK
+22:38:41.313	[127.0.0.1:7477]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:38:41.313	[127.0.0.1:7477]	QUERY(12)	OK
+22:38:41.314	[127.0.0.1:7477]	EXEC(12)	OK
+22:38:41.315	[127.0.0.1:7477]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:38:41.316	[127.0.0.1:7477]	QUERY(13)	OK
+22:38:41.320	[127.0.0.1:7477]	EXEC(13)	OK
+22:38:41.322	[127.0.0.1:7477]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:38:41.322	[127.0.0.1:7477]	QUERY(14)	OK
+22:38:41.323	[127.0.0.1:7477]	EXEC(14)	OK
+22:38:41.329	[127.0.0.1:7477]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of ($meal/@name) with "Podkozak" )	Error: Stopped at line 1, column 74: [XPST0003] Expecting "node", found "(".
+22:38:41.338	[127.0.0.1:7477]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:38:41.338	[127.0.0.1:7477]	QUERY(15)	OK
+22:38:41.339	[127.0.0.1:7477]	EXEC(15)	OK
+22:38:41.352	Server was stopped.
+22:39:24.235	Server was started.
+22:39:24.380	[127.0.0.1:7482]	LOGIN admin	OK
+22:39:24.410	[127.0.0.1:7482]	OPEN ffmapDatabase
+22:39:24.444	[127.0.0.1:7482]	OK	62.14 ms
+22:39:24.451	[127.0.0.1:7482]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:39:24.588	[127.0.0.1:7482]	OK	144.14 ms
+22:39:24.815	[127.0.0.1:7482]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:39:24.815	[127.0.0.1:7482]	QUERY(0)	OK
+22:39:24.844	[127.0.0.1:7482]	EXEC(0)	OK
+22:39:24.846	[127.0.0.1:7482]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:39:24.846	[127.0.0.1:7482]	QUERY(1)	OK
+22:39:24.847	[127.0.0.1:7482]	EXEC(1)	OK
+22:39:24.854	[127.0.0.1:7482]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:39:24.854	[127.0.0.1:7482]	QUERY(2)	OK
+22:39:24.870	[127.0.0.1:7482]	EXEC(2)	OK
+22:39:24.877	[127.0.0.1:7482]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:39:24.877	[127.0.0.1:7482]	QUERY(3)	OK
+22:39:24.881	[127.0.0.1:7482]	EXEC(3)	OK
+22:39:24.900	[127.0.0.1:7482]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:39:24.901	[127.0.0.1:7482]	QUERY(4)	OK
+22:39:24.906	[127.0.0.1:7482]	EXEC(4)	OK
+22:39:24.907	[127.0.0.1:7482]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:39:24.907	[127.0.0.1:7482]	QUERY(5)	OK
+22:39:24.909	[127.0.0.1:7482]	EXEC(5)	OK
+22:39:24.913	[127.0.0.1:7482]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:39:24.913	[127.0.0.1:7482]	QUERY(6)	OK
+22:39:24.914	[127.0.0.1:7482]	EXEC(6)	OK
+22:39:24.922	[127.0.0.1:7482]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:39:24.923	[127.0.0.1:7482]	QUERY(7)	OK
+22:39:24.924	[127.0.0.1:7482]	EXEC(7)	OK
+22:39:24.927	[127.0.0.1:7482]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:39:24.927	[127.0.0.1:7482]	QUERY(8)	OK
+22:39:24.930	[127.0.0.1:7482]	EXEC(8)	OK
+22:39:24.931	[127.0.0.1:7482]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:39:24.931	[127.0.0.1:7482]	QUERY(9)	OK
+22:39:24.932	[127.0.0.1:7482]	EXEC(9)	OK
+22:39:24.933	[127.0.0.1:7482]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:39:24.933	[127.0.0.1:7482]	QUERY(10)	OK
+22:39:24.937	[127.0.0.1:7482]	EXEC(10)	OK
+22:39:24.939	[127.0.0.1:7482]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:39:24.939	[127.0.0.1:7482]	QUERY(11)	OK
+22:39:24.941	[127.0.0.1:7482]	EXEC(11)	OK
+22:39:24.943	[127.0.0.1:7482]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:39:24.944	[127.0.0.1:7482]	QUERY(12)	OK
+22:39:24.944	[127.0.0.1:7482]	EXEC(12)	OK
+22:39:24.945	[127.0.0.1:7482]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:39:24.945	[127.0.0.1:7482]	QUERY(13)	OK
+22:39:24.948	[127.0.0.1:7482]	EXEC(13)	OK
+22:39:24.951	[127.0.0.1:7482]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:39:24.951	[127.0.0.1:7482]	QUERY(14)	OK
+22:39:24.952	[127.0.0.1:7482]	EXEC(14)	OK
+22:39:24.958	[127.0.0.1:7482]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of ($meal/@name) with "Podkozak" )	Error: Stopped at line 1, column 74: [XPST0003] Expecting "node", found "(".
+22:39:24.968	[127.0.0.1:7482]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:39:24.968	[127.0.0.1:7482]	QUERY(15)	OK
+22:39:24.970	[127.0.0.1:7482]	EXEC(15)	OK
+22:39:24.978	Server was stopped.
+22:40:07.634	Server was started.
+22:40:07.778	[127.0.0.1:7487]	LOGIN admin	OK
+22:40:07.809	[127.0.0.1:7487]	OPEN ffmapDatabase
+22:40:07.846	[127.0.0.1:7487]	OK	66.54 ms
+22:40:07.854	[127.0.0.1:7487]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:40:07.988	[127.0.0.1:7487]	OK	141.48 ms
+22:40:08.218	[127.0.0.1:7487]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:40:08.218	[127.0.0.1:7487]	QUERY(0)	OK
+22:40:08.248	[127.0.0.1:7487]	EXEC(0)	OK
+22:40:08.249	[127.0.0.1:7487]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:40:08.250	[127.0.0.1:7487]	QUERY(1)	OK
+22:40:08.251	[127.0.0.1:7487]	EXEC(1)	OK
+22:40:08.257	[127.0.0.1:7487]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:40:08.258	[127.0.0.1:7487]	QUERY(2)	OK
+22:40:08.274	[127.0.0.1:7487]	EXEC(2)	OK
+22:40:08.281	[127.0.0.1:7487]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:40:08.281	[127.0.0.1:7487]	QUERY(3)	OK
+22:40:08.286	[127.0.0.1:7487]	EXEC(3)	OK
+22:40:08.306	[127.0.0.1:7487]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:40:08.306	[127.0.0.1:7487]	QUERY(4)	OK
+22:40:08.310	[127.0.0.1:7487]	EXEC(4)	OK
+22:40:08.312	[127.0.0.1:7487]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:40:08.312	[127.0.0.1:7487]	QUERY(5)	OK
+22:40:08.313	[127.0.0.1:7487]	EXEC(5)	OK
+22:40:08.318	[127.0.0.1:7487]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:40:08.318	[127.0.0.1:7487]	QUERY(6)	OK
+22:40:08.319	[127.0.0.1:7487]	EXEC(6)	OK
+22:40:08.328	[127.0.0.1:7487]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:40:08.328	[127.0.0.1:7487]	QUERY(7)	OK
+22:40:08.330	[127.0.0.1:7487]	EXEC(7)	OK
+22:40:08.333	[127.0.0.1:7487]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:40:08.333	[127.0.0.1:7487]	QUERY(8)	OK
+22:40:08.335	[127.0.0.1:7487]	EXEC(8)	OK
+22:40:08.336	[127.0.0.1:7487]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:40:08.337	[127.0.0.1:7487]	QUERY(9)	OK
+22:40:08.337	[127.0.0.1:7487]	EXEC(9)	OK
+22:40:08.338	[127.0.0.1:7487]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:40:08.338	[127.0.0.1:7487]	QUERY(10)	OK
+22:40:08.342	[127.0.0.1:7487]	EXEC(10)	OK
+22:40:08.343	[127.0.0.1:7487]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:40:08.343	[127.0.0.1:7487]	QUERY(11)	OK
+22:40:08.346	[127.0.0.1:7487]	EXEC(11)	OK
+22:40:08.347	[127.0.0.1:7487]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:40:08.347	[127.0.0.1:7487]	QUERY(12)	OK
+22:40:08.348	[127.0.0.1:7487]	EXEC(12)	OK
+22:40:08.348	[127.0.0.1:7487]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:40:08.349	[127.0.0.1:7487]	QUERY(13)	OK
+22:40:08.352	[127.0.0.1:7487]	EXEC(13)	OK
+22:40:08.355	[127.0.0.1:7487]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:40:08.355	[127.0.0.1:7487]	QUERY(14)	OK
+22:40:08.356	[127.0.0.1:7487]	EXEC(14)	OK
+22:40:08.361	[127.0.0.1:7487]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" )	Error: Stopped at line 1, column 107: [XPST0003] Expecting ")".
+22:40:08.370	[127.0.0.1:7487]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:40:08.370	[127.0.0.1:7487]	QUERY(15)	OK
+22:40:08.372	[127.0.0.1:7487]	EXEC(15)	OK
+22:40:08.379	Server was stopped.
+22:45:23.133	Server was started.
+22:45:23.277	[127.0.0.1:7493]	LOGIN admin	OK
+22:45:23.308	[127.0.0.1:7493]	OPEN ffmapDatabase
+22:45:23.343	[127.0.0.1:7493]	OK	64.65 ms
+22:45:23.351	[127.0.0.1:7493]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:45:23.506	[127.0.0.1:7493]	OK	162.8 ms
+22:45:23.731	[127.0.0.1:7493]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:23.732	[127.0.0.1:7493]	QUERY(0)	OK
+22:45:23.760	[127.0.0.1:7493]	EXEC(0)	OK
+22:45:23.761	[127.0.0.1:7493]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:45:23.761	[127.0.0.1:7493]	QUERY(1)	OK
+22:45:23.762	[127.0.0.1:7493]	EXEC(1)	OK
+22:45:23.769	[127.0.0.1:7493]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:45:23.770	[127.0.0.1:7493]	QUERY(2)	OK
+22:45:23.786	[127.0.0.1:7493]	EXEC(2)	OK
+22:45:23.792	[127.0.0.1:7493]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:45:23.792	[127.0.0.1:7493]	QUERY(3)	OK
+22:45:23.797	[127.0.0.1:7493]	EXEC(3)	OK
+22:45:23.816	[127.0.0.1:7493]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:45:23.817	[127.0.0.1:7493]	QUERY(4)	OK
+22:45:23.822	[127.0.0.1:7493]	EXEC(4)	OK
+22:45:23.823	[127.0.0.1:7493]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:45:23.823	[127.0.0.1:7493]	QUERY(5)	OK
+22:45:23.825	[127.0.0.1:7493]	EXEC(5)	OK
+22:45:23.828	[127.0.0.1:7493]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:45:23.829	[127.0.0.1:7493]	QUERY(6)	OK
+22:45:23.831	[127.0.0.1:7493]	EXEC(6)	OK
+22:45:23.839	[127.0.0.1:7493]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:45:23.840	[127.0.0.1:7493]	QUERY(7)	OK
+22:45:23.841	[127.0.0.1:7493]	EXEC(7)	OK
+22:45:23.844	[127.0.0.1:7493]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:23.845	[127.0.0.1:7493]	QUERY(8)	OK
+22:45:23.848	[127.0.0.1:7493]	EXEC(8)	OK
+22:45:23.849	[127.0.0.1:7493]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:45:23.849	[127.0.0.1:7493]	QUERY(9)	OK
+22:45:23.849	[127.0.0.1:7493]	EXEC(9)	OK
+22:45:23.850	[127.0.0.1:7493]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:45:23.851	[127.0.0.1:7493]	QUERY(10)	OK
+22:45:23.854	[127.0.0.1:7493]	EXEC(10)	OK
+22:45:23.856	[127.0.0.1:7493]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:23.856	[127.0.0.1:7493]	QUERY(11)	OK
+22:45:23.858	[127.0.0.1:7493]	EXEC(11)	OK
+22:45:23.859	[127.0.0.1:7493]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:45:23.860	[127.0.0.1:7493]	QUERY(12)	OK
+22:45:23.860	[127.0.0.1:7493]	EXEC(12)	OK
+22:45:23.861	[127.0.0.1:7493]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:45:23.861	[127.0.0.1:7493]	QUERY(13)	OK
+22:45:23.866	[127.0.0.1:7493]	EXEC(13)	OK
+22:45:23.868	[127.0.0.1:7493]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:45:23.868	[127.0.0.1:7493]	QUERY(14)	OK
+22:45:23.869	[127.0.0.1:7493]	EXEC(14)	OK
+22:45:23.875	[127.0.0.1:7493]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" )	Error: Stopped at line 1, column 107: [XPST0003] Expecting ")".
+22:45:23.884	[127.0.0.1:7493]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:45:23.885	[127.0.0.1:7493]	QUERY(15)	OK
+22:45:23.886	[127.0.0.1:7493]	EXEC(15)	OK
+22:45:23.892	Server was stopped.
+22:45:45.957	Server was started.
+22:45:46.103	[127.0.0.1:7498]	LOGIN admin	OK
+22:45:46.134	[127.0.0.1:7498]	OPEN ffmapDatabase
+22:45:46.170	[127.0.0.1:7498]	OK	65.43 ms
+22:45:46.177	[127.0.0.1:7498]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:45:46.310	[127.0.0.1:7498]	OK	139.71 ms
+22:45:46.541	[127.0.0.1:7498]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:46.542	[127.0.0.1:7498]	QUERY(0)	OK
+22:45:46.572	[127.0.0.1:7498]	EXEC(0)	OK
+22:45:46.573	[127.0.0.1:7498]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:45:46.573	[127.0.0.1:7498]	QUERY(1)	OK
+22:45:46.574	[127.0.0.1:7498]	EXEC(1)	OK
+22:45:46.581	[127.0.0.1:7498]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:45:46.582	[127.0.0.1:7498]	QUERY(2)	OK
+22:45:46.597	[127.0.0.1:7498]	EXEC(2)	OK
+22:45:46.604	[127.0.0.1:7498]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:45:46.604	[127.0.0.1:7498]	QUERY(3)	OK
+22:45:46.609	[127.0.0.1:7498]	EXEC(3)	OK
+22:45:46.629	[127.0.0.1:7498]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:45:46.630	[127.0.0.1:7498]	QUERY(4)	OK
+22:45:46.634	[127.0.0.1:7498]	EXEC(4)	OK
+22:45:46.636	[127.0.0.1:7498]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:45:46.636	[127.0.0.1:7498]	QUERY(5)	OK
+22:45:46.637	[127.0.0.1:7498]	EXEC(5)	OK
+22:45:46.641	[127.0.0.1:7498]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:45:46.642	[127.0.0.1:7498]	QUERY(6)	OK
+22:45:46.644	[127.0.0.1:7498]	EXEC(6)	OK
+22:45:46.652	[127.0.0.1:7498]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:45:46.652	[127.0.0.1:7498]	QUERY(7)	OK
+22:45:46.654	[127.0.0.1:7498]	EXEC(7)	OK
+22:45:46.656	[127.0.0.1:7498]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:46.657	[127.0.0.1:7498]	QUERY(8)	OK
+22:45:46.660	[127.0.0.1:7498]	EXEC(8)	OK
+22:45:46.661	[127.0.0.1:7498]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:45:46.661	[127.0.0.1:7498]	QUERY(9)	OK
+22:45:46.662	[127.0.0.1:7498]	EXEC(9)	OK
+22:45:46.662	[127.0.0.1:7498]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:45:46.663	[127.0.0.1:7498]	QUERY(10)	OK
+22:45:46.667	[127.0.0.1:7498]	EXEC(10)	OK
+22:45:46.668	[127.0.0.1:7498]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:45:46.668	[127.0.0.1:7498]	QUERY(11)	OK
+22:45:46.671	[127.0.0.1:7498]	EXEC(11)	OK
+22:45:46.672	[127.0.0.1:7498]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:45:46.672	[127.0.0.1:7498]	QUERY(12)	OK
+22:45:46.673	[127.0.0.1:7498]	EXEC(12)	OK
+22:45:46.674	[127.0.0.1:7498]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:45:46.674	[127.0.0.1:7498]	QUERY(13)	OK
+22:45:46.677	[127.0.0.1:7498]	EXEC(13)	OK
+22:45:46.680	[127.0.0.1:7498]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:45:46.680	[127.0.0.1:7498]	QUERY(14)	OK
+22:45:46.681	[127.0.0.1:7498]	EXEC(14)	OK
+22:45:46.687	[127.0.0.1:7498]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" )	Error: Stopped at line 1, column 107: [XPST0003] Expecting ")".
+22:45:46.696	[127.0.0.1:7498]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:45:46.697	[127.0.0.1:7498]	QUERY(15)	OK
+22:45:46.698	[127.0.0.1:7498]	EXEC(15)	OK
+22:45:46.704	Server was stopped.
+22:46:50.393	Server was started.
+22:46:50.537	[127.0.0.1:7505]	LOGIN admin	OK
+22:46:50.567	[127.0.0.1:7505]	OPEN ffmapDatabase
+22:46:50.600	[127.0.0.1:7505]	OK	61.71 ms
+22:46:50.608	[127.0.0.1:7505]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:46:50.741	[127.0.0.1:7505]	OK	141.18 ms
+22:46:50.971	[127.0.0.1:7505]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:46:50.971	[127.0.0.1:7505]	QUERY(0)	OK
+22:46:50.999	[127.0.0.1:7505]	EXEC(0)	OK
+22:46:51.001	[127.0.0.1:7505]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:46:51.001	[127.0.0.1:7505]	QUERY(1)	OK
+22:46:51.002	[127.0.0.1:7505]	EXEC(1)	OK
+22:46:51.009	[127.0.0.1:7505]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:46:51.010	[127.0.0.1:7505]	QUERY(2)	OK
+22:46:51.026	[127.0.0.1:7505]	EXEC(2)	OK
+22:46:51.032	[127.0.0.1:7505]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:46:51.032	[127.0.0.1:7505]	QUERY(3)	OK
+22:46:51.037	[127.0.0.1:7505]	EXEC(3)	OK
+22:46:51.056	[127.0.0.1:7505]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:46:51.057	[127.0.0.1:7505]	QUERY(4)	OK
+22:46:51.062	[127.0.0.1:7505]	EXEC(4)	OK
+22:46:51.064	[127.0.0.1:7505]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:46:51.064	[127.0.0.1:7505]	QUERY(5)	OK
+22:46:51.065	[127.0.0.1:7505]	EXEC(5)	OK
+22:46:51.069	[127.0.0.1:7505]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:46:51.070	[127.0.0.1:7505]	QUERY(6)	OK
+22:46:51.071	[127.0.0.1:7505]	EXEC(6)	OK
+22:46:51.079	[127.0.0.1:7505]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:46:51.080	[127.0.0.1:7505]	QUERY(7)	OK
+22:46:51.081	[127.0.0.1:7505]	EXEC(7)	OK
+22:46:51.084	[127.0.0.1:7505]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:46:51.085	[127.0.0.1:7505]	QUERY(8)	OK
+22:46:51.088	[127.0.0.1:7505]	EXEC(8)	OK
+22:46:51.088	[127.0.0.1:7505]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:46:51.089	[127.0.0.1:7505]	QUERY(9)	OK
+22:46:51.089	[127.0.0.1:7505]	EXEC(9)	OK
+22:46:51.090	[127.0.0.1:7505]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:46:51.091	[127.0.0.1:7505]	QUERY(10)	OK
+22:46:51.094	[127.0.0.1:7505]	EXEC(10)	OK
+22:46:51.097	[127.0.0.1:7505]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:46:51.098	[127.0.0.1:7505]	QUERY(11)	OK
+22:46:51.102	[127.0.0.1:7505]	EXEC(11)	OK
+22:46:51.107	[127.0.0.1:7505]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:46:51.108	[127.0.0.1:7505]	QUERY(12)	OK
+22:46:51.109	[127.0.0.1:7505]	EXEC(12)	OK
+22:46:51.109	[127.0.0.1:7505]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:46:51.110	[127.0.0.1:7505]	QUERY(13)	OK
+22:46:51.115	[127.0.0.1:7505]	EXEC(13)	OK
+22:46:51.118	[127.0.0.1:7505]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:46:51.119	[127.0.0.1:7505]	QUERY(14)	OK
+22:46:51.120	[127.0.0.1:7505]	EXEC(14)	OK
+22:46:51.125	[127.0.0.1:7505]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" )	Error: Stopped at line 1, column 107: [XPST0003] Expecting ")".
+22:46:51.134	[127.0.0.1:7505]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:46:51.134	[127.0.0.1:7505]	QUERY(15)	OK
+22:46:51.136	[127.0.0.1:7505]	EXEC(15)	OK
+22:46:51.142	Server was stopped.
+22:48:31.638	Server was started.
+22:48:31.786	[127.0.0.1:7510]	LOGIN admin	OK
+22:48:31.818	[127.0.0.1:7510]	OPEN ffmapDatabase
+22:48:31.853	[127.0.0.1:7510]	OK	65.97 ms
+22:48:31.861	[127.0.0.1:7510]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:48:32.003	[127.0.0.1:7510]	OK	149.38 ms
+22:48:32.248	[127.0.0.1:7510]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:32.248	[127.0.0.1:7510]	QUERY(0)	OK
+22:48:32.277	[127.0.0.1:7510]	EXEC(0)	OK
+22:48:32.279	[127.0.0.1:7510]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:48:32.279	[127.0.0.1:7510]	QUERY(1)	OK
+22:48:32.280	[127.0.0.1:7510]	EXEC(1)	OK
+22:48:32.286	[127.0.0.1:7510]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:48:32.287	[127.0.0.1:7510]	QUERY(2)	OK
+22:48:32.303	[127.0.0.1:7510]	EXEC(2)	OK
+22:48:32.309	[127.0.0.1:7510]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:48:32.310	[127.0.0.1:7510]	QUERY(3)	OK
+22:48:32.314	[127.0.0.1:7510]	EXEC(3)	OK
+22:48:32.334	[127.0.0.1:7510]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:48:32.335	[127.0.0.1:7510]	QUERY(4)	OK
+22:48:32.339	[127.0.0.1:7510]	EXEC(4)	OK
+22:48:32.341	[127.0.0.1:7510]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:48:32.341	[127.0.0.1:7510]	QUERY(5)	OK
+22:48:32.342	[127.0.0.1:7510]	EXEC(5)	OK
+22:48:32.346	[127.0.0.1:7510]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:48:32.347	[127.0.0.1:7510]	QUERY(6)	OK
+22:48:32.348	[127.0.0.1:7510]	EXEC(6)	OK
+22:48:32.357	[127.0.0.1:7510]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:48:32.357	[127.0.0.1:7510]	QUERY(7)	OK
+22:48:32.359	[127.0.0.1:7510]	EXEC(7)	OK
+22:48:32.361	[127.0.0.1:7510]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:32.362	[127.0.0.1:7510]	QUERY(8)	OK
+22:48:32.364	[127.0.0.1:7510]	EXEC(8)	OK
+22:48:32.365	[127.0.0.1:7510]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:48:32.366	[127.0.0.1:7510]	QUERY(9)	OK
+22:48:32.367	[127.0.0.1:7510]	EXEC(9)	OK
+22:48:32.368	[127.0.0.1:7510]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:48:32.368	[127.0.0.1:7510]	QUERY(10)	OK
+22:48:32.372	[127.0.0.1:7510]	EXEC(10)	OK
+22:48:32.373	[127.0.0.1:7510]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:32.373	[127.0.0.1:7510]	QUERY(11)	OK
+22:48:32.376	[127.0.0.1:7510]	EXEC(11)	OK
+22:48:32.377	[127.0.0.1:7510]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:48:32.377	[127.0.0.1:7510]	QUERY(12)	OK
+22:48:32.379	[127.0.0.1:7510]	EXEC(12)	OK
+22:48:32.381	[127.0.0.1:7510]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:48:32.381	[127.0.0.1:7510]	QUERY(13)	OK
+22:48:32.387	[127.0.0.1:7510]	EXEC(13)	OK
+22:48:32.389	[127.0.0.1:7510]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:48:32.389	[127.0.0.1:7510]	QUERY(14)	OK
+22:48:32.390	[127.0.0.1:7510]	EXEC(14)	OK
+22:48:32.396	[127.0.0.1:7510]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , {if(exists($meal/description)) then delete node $meal/description}) )	Error: Stopped at line 1, column 109: [XPST0003] Incomplete expression.
+22:48:32.405	[127.0.0.1:7510]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:48:32.406	[127.0.0.1:7510]	QUERY(15)	OK
+22:48:32.408	[127.0.0.1:7510]	EXEC(15)	OK
+22:48:32.421	Server was stopped.
+22:48:58.403	Server was started.
+22:48:58.546	[127.0.0.1:7515]	LOGIN admin	OK
+22:48:58.577	[127.0.0.1:7515]	OPEN ffmapDatabase
+22:48:58.611	[127.0.0.1:7515]	OK	63.71 ms
+22:48:58.620	[127.0.0.1:7515]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:48:58.752	[127.0.0.1:7515]	OK	140.35 ms
+22:48:58.979	[127.0.0.1:7515]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:58.980	[127.0.0.1:7515]	QUERY(0)	OK
+22:48:59.008	[127.0.0.1:7515]	EXEC(0)	OK
+22:48:59.010	[127.0.0.1:7515]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:48:59.010	[127.0.0.1:7515]	QUERY(1)	OK
+22:48:59.012	[127.0.0.1:7515]	EXEC(1)	OK
+22:48:59.020	[127.0.0.1:7515]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:48:59.020	[127.0.0.1:7515]	QUERY(2)	OK
+22:48:59.036	[127.0.0.1:7515]	EXEC(2)	OK
+22:48:59.043	[127.0.0.1:7515]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:48:59.044	[127.0.0.1:7515]	QUERY(3)	OK
+22:48:59.048	[127.0.0.1:7515]	EXEC(3)	OK
+22:48:59.075	[127.0.0.1:7515]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:48:59.076	[127.0.0.1:7515]	QUERY(4)	OK
+22:48:59.080	[127.0.0.1:7515]	EXEC(4)	OK
+22:48:59.082	[127.0.0.1:7515]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:48:59.082	[127.0.0.1:7515]	QUERY(5)	OK
+22:48:59.083	[127.0.0.1:7515]	EXEC(5)	OK
+22:48:59.087	[127.0.0.1:7515]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:48:59.087	[127.0.0.1:7515]	QUERY(6)	OK
+22:48:59.090	[127.0.0.1:7515]	EXEC(6)	OK
+22:48:59.098	[127.0.0.1:7515]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:48:59.099	[127.0.0.1:7515]	QUERY(7)	OK
+22:48:59.101	[127.0.0.1:7515]	EXEC(7)	OK
+22:48:59.104	[127.0.0.1:7515]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:59.105	[127.0.0.1:7515]	QUERY(8)	OK
+22:48:59.108	[127.0.0.1:7515]	EXEC(8)	OK
+22:48:59.109	[127.0.0.1:7515]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:48:59.110	[127.0.0.1:7515]	QUERY(9)	OK
+22:48:59.110	[127.0.0.1:7515]	EXEC(9)	OK
+22:48:59.112	[127.0.0.1:7515]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:48:59.112	[127.0.0.1:7515]	QUERY(10)	OK
+22:48:59.119	[127.0.0.1:7515]	EXEC(10)	OK
+22:48:59.121	[127.0.0.1:7515]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:48:59.121	[127.0.0.1:7515]	QUERY(11)	OK
+22:48:59.124	[127.0.0.1:7515]	EXEC(11)	OK
+22:48:59.127	[127.0.0.1:7515]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:48:59.127	[127.0.0.1:7515]	QUERY(12)	OK
+22:48:59.128	[127.0.0.1:7515]	EXEC(12)	OK
+22:48:59.129	[127.0.0.1:7515]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:48:59.130	[127.0.0.1:7515]	QUERY(13)	OK
+22:48:59.135	[127.0.0.1:7515]	EXEC(13)	OK
+22:48:59.137	[127.0.0.1:7515]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:48:59.137	[127.0.0.1:7515]	QUERY(14)	OK
+22:48:59.138	[127.0.0.1:7515]	EXEC(14)	OK
+22:48:59.151	[127.0.0.1:7515]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then delete node $meal/description) )	Error: Stopped at line 1, column 173: [XPST0003] Incomplete 'if' expression.
+22:48:59.161	[127.0.0.1:7515]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:48:59.161	[127.0.0.1:7515]	QUERY(15)	OK
+22:48:59.163	[127.0.0.1:7515]	EXEC(15)	OK
+22:48:59.223	Server was stopped.
+22:49:34.734	Server was started.
+22:49:34.880	[127.0.0.1:7520]	LOGIN admin	OK
+22:49:34.911	[127.0.0.1:7520]	OPEN ffmapDatabase
+22:49:34.944	[127.0.0.1:7520]	OK	62.45 ms
+22:49:34.951	[127.0.0.1:7520]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:49:35.092	[127.0.0.1:7520]	OK	148.1 ms
+22:49:35.333	[127.0.0.1:7520]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:35.334	[127.0.0.1:7520]	QUERY(0)	OK
+22:49:35.363	[127.0.0.1:7520]	EXEC(0)	OK
+22:49:35.365	[127.0.0.1:7520]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:49:35.365	[127.0.0.1:7520]	QUERY(1)	OK
+22:49:35.366	[127.0.0.1:7520]	EXEC(1)	OK
+22:49:35.373	[127.0.0.1:7520]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:49:35.374	[127.0.0.1:7520]	QUERY(2)	OK
+22:49:35.389	[127.0.0.1:7520]	EXEC(2)	OK
+22:49:35.395	[127.0.0.1:7520]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:49:35.396	[127.0.0.1:7520]	QUERY(3)	OK
+22:49:35.400	[127.0.0.1:7520]	EXEC(3)	OK
+22:49:35.421	[127.0.0.1:7520]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:49:35.421	[127.0.0.1:7520]	QUERY(4)	OK
+22:49:35.426	[127.0.0.1:7520]	EXEC(4)	OK
+22:49:35.428	[127.0.0.1:7520]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:49:35.429	[127.0.0.1:7520]	QUERY(5)	OK
+22:49:35.430	[127.0.0.1:7520]	EXEC(5)	OK
+22:49:35.434	[127.0.0.1:7520]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:49:35.435	[127.0.0.1:7520]	QUERY(6)	OK
+22:49:35.438	[127.0.0.1:7520]	EXEC(6)	OK
+22:49:35.448	[127.0.0.1:7520]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:49:35.448	[127.0.0.1:7520]	QUERY(7)	OK
+22:49:35.450	[127.0.0.1:7520]	EXEC(7)	OK
+22:49:35.454	[127.0.0.1:7520]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:35.454	[127.0.0.1:7520]	QUERY(8)	OK
+22:49:35.458	[127.0.0.1:7520]	EXEC(8)	OK
+22:49:35.459	[127.0.0.1:7520]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:49:35.459	[127.0.0.1:7520]	QUERY(9)	OK
+22:49:35.460	[127.0.0.1:7520]	EXEC(9)	OK
+22:49:35.462	[127.0.0.1:7520]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:49:35.462	[127.0.0.1:7520]	QUERY(10)	OK
+22:49:35.468	[127.0.0.1:7520]	EXEC(10)	OK
+22:49:35.470	[127.0.0.1:7520]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:35.470	[127.0.0.1:7520]	QUERY(11)	OK
+22:49:35.473	[127.0.0.1:7520]	EXEC(11)	OK
+22:49:35.477	[127.0.0.1:7520]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:49:35.477	[127.0.0.1:7520]	QUERY(12)	OK
+22:49:35.478	[127.0.0.1:7520]	EXEC(12)	OK
+22:49:35.479	[127.0.0.1:7520]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:49:35.480	[127.0.0.1:7520]	QUERY(13)	OK
+22:49:35.485	[127.0.0.1:7520]	EXEC(13)	OK
+22:49:35.488	[127.0.0.1:7520]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:49:35.488	[127.0.0.1:7520]	QUERY(14)	OK
+22:49:35.489	[127.0.0.1:7520]	EXEC(14)	OK
+22:49:35.502	[127.0.0.1:7520]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then delete node $meal/description) else () )	Error: Stopped at line 1, column 173: [XPST0003] Incomplete 'if' expression.
+22:49:35.513	[127.0.0.1:7520]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:49:35.513	[127.0.0.1:7520]	QUERY(15)	OK
+22:49:35.514	[127.0.0.1:7520]	EXEC(15)	OK
+22:49:35.520	Server was stopped.
+22:49:58.723	Server was started.
+22:49:58.868	[127.0.0.1:7525]	LOGIN admin	OK
+22:49:58.898	[127.0.0.1:7525]	OPEN ffmapDatabase
+22:49:58.933	[127.0.0.1:7525]	OK	63.49 ms
+22:49:58.940	[127.0.0.1:7525]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:49:59.076	[127.0.0.1:7525]	OK	142.65 ms
+22:49:59.306	[127.0.0.1:7525]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:59.306	[127.0.0.1:7525]	QUERY(0)	OK
+22:49:59.335	[127.0.0.1:7525]	EXEC(0)	OK
+22:49:59.336	[127.0.0.1:7525]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:49:59.336	[127.0.0.1:7525]	QUERY(1)	OK
+22:49:59.337	[127.0.0.1:7525]	EXEC(1)	OK
+22:49:59.344	[127.0.0.1:7525]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:49:59.345	[127.0.0.1:7525]	QUERY(2)	OK
+22:49:59.360	[127.0.0.1:7525]	EXEC(2)	OK
+22:49:59.366	[127.0.0.1:7525]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:49:59.367	[127.0.0.1:7525]	QUERY(3)	OK
+22:49:59.371	[127.0.0.1:7525]	EXEC(3)	OK
+22:49:59.391	[127.0.0.1:7525]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:49:59.392	[127.0.0.1:7525]	QUERY(4)	OK
+22:49:59.396	[127.0.0.1:7525]	EXEC(4)	OK
+22:49:59.397	[127.0.0.1:7525]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:49:59.397	[127.0.0.1:7525]	QUERY(5)	OK
+22:49:59.399	[127.0.0.1:7525]	EXEC(5)	OK
+22:49:59.402	[127.0.0.1:7525]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:49:59.402	[127.0.0.1:7525]	QUERY(6)	OK
+22:49:59.404	[127.0.0.1:7525]	EXEC(6)	OK
+22:49:59.413	[127.0.0.1:7525]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:49:59.413	[127.0.0.1:7525]	QUERY(7)	OK
+22:49:59.414	[127.0.0.1:7525]	EXEC(7)	OK
+22:49:59.417	[127.0.0.1:7525]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:59.417	[127.0.0.1:7525]	QUERY(8)	OK
+22:49:59.420	[127.0.0.1:7525]	EXEC(8)	OK
+22:49:59.421	[127.0.0.1:7525]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:49:59.421	[127.0.0.1:7525]	QUERY(9)	OK
+22:49:59.422	[127.0.0.1:7525]	EXEC(9)	OK
+22:49:59.423	[127.0.0.1:7525]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:49:59.424	[127.0.0.1:7525]	QUERY(10)	OK
+22:49:59.429	[127.0.0.1:7525]	EXEC(10)	OK
+22:49:59.431	[127.0.0.1:7525]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:49:59.431	[127.0.0.1:7525]	QUERY(11)	OK
+22:49:59.434	[127.0.0.1:7525]	EXEC(11)	OK
+22:49:59.435	[127.0.0.1:7525]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:49:59.435	[127.0.0.1:7525]	QUERY(12)	OK
+22:49:59.436	[127.0.0.1:7525]	EXEC(12)	OK
+22:49:59.437	[127.0.0.1:7525]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:49:59.437	[127.0.0.1:7525]	QUERY(13)	OK
+22:49:59.441	[127.0.0.1:7525]	EXEC(13)	OK
+22:49:59.443	[127.0.0.1:7525]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:49:59.444	[127.0.0.1:7525]	QUERY(14)	OK
+22:49:59.445	[127.0.0.1:7525]	EXEC(14)	OK
+22:49:59.450	[127.0.0.1:7525]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , {if(exists($meal/description)) then delete node $meal/description) else ()} )	Error: Stopped at line 1, column 109: [XPST0003] Incomplete expression.
+22:49:59.459	[127.0.0.1:7525]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:49:59.459	[127.0.0.1:7525]	QUERY(15)	OK
+22:49:59.461	[127.0.0.1:7525]	EXEC(15)	OK
+22:49:59.467	Server was stopped.
+22:50:48.604	Server was started.
+22:50:48.750	[127.0.0.1:7537]	LOGIN admin	OK
+22:50:48.781	[127.0.0.1:7537]	OPEN ffmapDatabase
+22:50:48.814	[127.0.0.1:7537]	OK	62.88 ms
+22:50:48.822	[127.0.0.1:7537]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:50:48.959	[127.0.0.1:7537]	OK	144.37 ms
+22:50:49.195	[127.0.0.1:7537]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:50:49.195	[127.0.0.1:7537]	QUERY(0)	OK
+22:50:49.231	[127.0.0.1:7537]	EXEC(0)	OK
+22:50:49.232	[127.0.0.1:7537]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:50:49.232	[127.0.0.1:7537]	QUERY(1)	OK
+22:50:49.236	[127.0.0.1:7537]	EXEC(1)	OK
+22:50:49.244	[127.0.0.1:7537]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:50:49.245	[127.0.0.1:7537]	QUERY(2)	OK
+22:50:49.262	[127.0.0.1:7537]	EXEC(2)	OK
+22:50:49.269	[127.0.0.1:7537]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:50:49.270	[127.0.0.1:7537]	QUERY(3)	OK
+22:50:49.276	[127.0.0.1:7537]	EXEC(3)	OK
+22:50:49.301	[127.0.0.1:7537]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:50:49.303	[127.0.0.1:7537]	QUERY(4)	OK
+22:50:49.308	[127.0.0.1:7537]	EXEC(4)	OK
+22:50:49.309	[127.0.0.1:7537]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:50:49.309	[127.0.0.1:7537]	QUERY(5)	OK
+22:50:49.310	[127.0.0.1:7537]	EXEC(5)	OK
+22:50:49.315	[127.0.0.1:7537]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:50:49.315	[127.0.0.1:7537]	QUERY(6)	OK
+22:50:49.318	[127.0.0.1:7537]	EXEC(6)	OK
+22:50:49.328	[127.0.0.1:7537]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:50:49.328	[127.0.0.1:7537]	QUERY(7)	OK
+22:50:49.331	[127.0.0.1:7537]	EXEC(7)	OK
+22:50:49.334	[127.0.0.1:7537]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:50:49.334	[127.0.0.1:7537]	QUERY(8)	OK
+22:50:49.339	[127.0.0.1:7537]	EXEC(8)	OK
+22:50:49.340	[127.0.0.1:7537]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:50:49.340	[127.0.0.1:7537]	QUERY(9)	OK
+22:50:49.341	[127.0.0.1:7537]	EXEC(9)	OK
+22:50:49.342	[127.0.0.1:7537]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:50:49.343	[127.0.0.1:7537]	QUERY(10)	OK
+22:50:49.349	[127.0.0.1:7537]	EXEC(10)	OK
+22:50:49.351	[127.0.0.1:7537]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:50:49.351	[127.0.0.1:7537]	QUERY(11)	OK
+22:50:49.354	[127.0.0.1:7537]	EXEC(11)	OK
+22:50:49.355	[127.0.0.1:7537]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:50:49.355	[127.0.0.1:7537]	QUERY(12)	OK
+22:50:49.356	[127.0.0.1:7537]	EXEC(12)	OK
+22:50:49.357	[127.0.0.1:7537]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:50:49.357	[127.0.0.1:7537]	QUERY(13)	OK
+22:50:49.363	[127.0.0.1:7537]	EXEC(13)	OK
+22:50:49.366	[127.0.0.1:7537]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:50:49.366	[127.0.0.1:7537]	QUERY(14)	OK
+22:50:49.367	[127.0.0.1:7537]	EXEC(14)	OK
+22:50:49.379	[127.0.0.1:7537]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then delete node $meal/description) else ()) )	Error: Stopped at line 1, column 173: [XPST0003] Incomplete 'if' expression.
+22:50:49.390	[127.0.0.1:7537]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:50:49.390	[127.0.0.1:7537]	QUERY(15)	OK
+22:50:49.392	[127.0.0.1:7537]	EXEC(15)	OK
+22:50:49.505	Server was stopped.
+22:51:49.646	Server was started.
+22:51:49.792	[127.0.0.1:7570]	LOGIN admin	OK
+22:51:49.824	[127.0.0.1:7570]	OPEN ffmapDatabase
+22:51:49.861	[127.0.0.1:7570]	OK	67.57 ms
+22:51:49.870	[127.0.0.1:7570]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:51:50.007	[127.0.0.1:7570]	OK	145.89 ms
+22:51:50.238	[127.0.0.1:7570]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:51:50.238	[127.0.0.1:7570]	QUERY(0)	OK
+22:51:50.268	[127.0.0.1:7570]	EXEC(0)	OK
+22:51:50.269	[127.0.0.1:7570]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:51:50.270	[127.0.0.1:7570]	QUERY(1)	OK
+22:51:50.271	[127.0.0.1:7570]	EXEC(1)	OK
+22:51:50.278	[127.0.0.1:7570]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:51:50.278	[127.0.0.1:7570]	QUERY(2)	OK
+22:51:50.295	[127.0.0.1:7570]	EXEC(2)	OK
+22:51:50.302	[127.0.0.1:7570]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:51:50.302	[127.0.0.1:7570]	QUERY(3)	OK
+22:51:50.307	[127.0.0.1:7570]	EXEC(3)	OK
+22:51:50.326	[127.0.0.1:7570]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:51:50.327	[127.0.0.1:7570]	QUERY(4)	OK
+22:51:50.331	[127.0.0.1:7570]	EXEC(4)	OK
+22:51:50.333	[127.0.0.1:7570]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:51:50.333	[127.0.0.1:7570]	QUERY(5)	OK
+22:51:50.334	[127.0.0.1:7570]	EXEC(5)	OK
+22:51:50.338	[127.0.0.1:7570]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:51:50.338	[127.0.0.1:7570]	QUERY(6)	OK
+22:51:50.340	[127.0.0.1:7570]	EXEC(6)	OK
+22:51:50.348	[127.0.0.1:7570]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:51:50.349	[127.0.0.1:7570]	QUERY(7)	OK
+22:51:50.350	[127.0.0.1:7570]	EXEC(7)	OK
+22:51:50.353	[127.0.0.1:7570]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:51:50.353	[127.0.0.1:7570]	QUERY(8)	OK
+22:51:50.357	[127.0.0.1:7570]	EXEC(8)	OK
+22:51:50.358	[127.0.0.1:7570]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:51:50.358	[127.0.0.1:7570]	QUERY(9)	OK
+22:51:50.358	[127.0.0.1:7570]	EXEC(9)	OK
+22:51:50.359	[127.0.0.1:7570]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:51:50.359	[127.0.0.1:7570]	QUERY(10)	OK
+22:51:50.364	[127.0.0.1:7570]	EXEC(10)	OK
+22:51:50.365	[127.0.0.1:7570]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:51:50.365	[127.0.0.1:7570]	QUERY(11)	OK
+22:51:50.368	[127.0.0.1:7570]	EXEC(11)	OK
+22:51:50.369	[127.0.0.1:7570]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:51:50.369	[127.0.0.1:7570]	QUERY(12)	OK
+22:51:50.370	[127.0.0.1:7570]	EXEC(12)	OK
+22:51:50.370	[127.0.0.1:7570]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:51:50.371	[127.0.0.1:7570]	QUERY(13)	OK
+22:51:50.374	[127.0.0.1:7570]	EXEC(13)	OK
+22:51:50.377	[127.0.0.1:7570]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:51:50.377	[127.0.0.1:7570]	QUERY(14)	OK
+22:51:50.378	[127.0.0.1:7570]	EXEC(14)	OK
+22:51:50.390	[127.0.0.1:7570]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then (delete node $meal/description)) else () )	Error: Stopped at line 1, column 175: [XPST0003] Incomplete 'if' expression.
+22:51:50.399	[127.0.0.1:7570]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:51:50.399	[127.0.0.1:7570]	QUERY(15)	OK
+22:51:50.402	[127.0.0.1:7570]	EXEC(15)	OK
+22:51:50.407	Server was stopped.
+22:53:23.198	Server was started.
+22:53:23.342	[127.0.0.1:7610]	LOGIN admin	OK
+22:53:23.373	[127.0.0.1:7610]	OPEN ffmapDatabase
+22:53:23.408	[127.0.0.1:7610]	OK	65.13 ms
+22:53:23.416	[127.0.0.1:7610]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:53:23.551	[127.0.0.1:7610]	OK	142.75 ms
+22:53:23.777	[127.0.0.1:7610]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:23.778	[127.0.0.1:7610]	QUERY(0)	OK
+22:53:23.808	[127.0.0.1:7610]	EXEC(0)	OK
+22:53:23.809	[127.0.0.1:7610]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:53:23.809	[127.0.0.1:7610]	QUERY(1)	OK
+22:53:23.811	[127.0.0.1:7610]	EXEC(1)	OK
+22:53:23.818	[127.0.0.1:7610]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:53:23.819	[127.0.0.1:7610]	QUERY(2)	OK
+22:53:23.835	[127.0.0.1:7610]	EXEC(2)	OK
+22:53:23.842	[127.0.0.1:7610]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:53:23.842	[127.0.0.1:7610]	QUERY(3)	OK
+22:53:23.846	[127.0.0.1:7610]	EXEC(3)	OK
+22:53:23.867	[127.0.0.1:7610]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:53:23.869	[127.0.0.1:7610]	QUERY(4)	OK
+22:53:23.873	[127.0.0.1:7610]	EXEC(4)	OK
+22:53:23.874	[127.0.0.1:7610]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:53:23.875	[127.0.0.1:7610]	QUERY(5)	OK
+22:53:23.876	[127.0.0.1:7610]	EXEC(5)	OK
+22:53:23.880	[127.0.0.1:7610]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:53:23.880	[127.0.0.1:7610]	QUERY(6)	OK
+22:53:23.881	[127.0.0.1:7610]	EXEC(6)	OK
+22:53:23.890	[127.0.0.1:7610]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:53:23.890	[127.0.0.1:7610]	QUERY(7)	OK
+22:53:23.892	[127.0.0.1:7610]	EXEC(7)	OK
+22:53:23.894	[127.0.0.1:7610]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:23.895	[127.0.0.1:7610]	QUERY(8)	OK
+22:53:23.897	[127.0.0.1:7610]	EXEC(8)	OK
+22:53:23.899	[127.0.0.1:7610]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:53:23.899	[127.0.0.1:7610]	QUERY(9)	OK
+22:53:23.899	[127.0.0.1:7610]	EXEC(9)	OK
+22:53:23.900	[127.0.0.1:7610]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:53:23.900	[127.0.0.1:7610]	QUERY(10)	OK
+22:53:23.905	[127.0.0.1:7610]	EXEC(10)	OK
+22:53:23.906	[127.0.0.1:7610]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:23.906	[127.0.0.1:7610]	QUERY(11)	OK
+22:53:23.909	[127.0.0.1:7610]	EXEC(11)	OK
+22:53:23.910	[127.0.0.1:7610]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:53:23.910	[127.0.0.1:7610]	QUERY(12)	OK
+22:53:23.911	[127.0.0.1:7610]	EXEC(12)	OK
+22:53:23.912	[127.0.0.1:7610]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:53:23.912	[127.0.0.1:7610]	QUERY(13)	OK
+22:53:23.916	[127.0.0.1:7610]	EXEC(13)	OK
+22:53:23.918	[127.0.0.1:7610]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:53:23.919	[127.0.0.1:7610]	QUERY(14)	OK
+22:53:23.920	[127.0.0.1:7610]	EXEC(14)	OK
+22:53:23.925	[127.0.0.1:7610]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , {if(exists($meal/description)) then delete node $meal/description) else ()} )	Error: Stopped at line 1, column 109: [XPST0003] Incomplete expression.
+22:53:23.934	[127.0.0.1:7610]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:53:23.935	[127.0.0.1:7610]	QUERY(15)	OK
+22:53:23.936	[127.0.0.1:7610]	EXEC(15)	OK
+22:53:23.948	Server was stopped.
+22:53:51.147	Server was started.
+22:53:51.291	[127.0.0.1:7619]	LOGIN admin	OK
+22:53:51.323	[127.0.0.1:7619]	OPEN ffmapDatabase
+22:53:51.357	[127.0.0.1:7619]	OK	64.3 ms
+22:53:51.364	[127.0.0.1:7619]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:53:51.499	[127.0.0.1:7619]	OK	141.84 ms
+22:53:51.729	[127.0.0.1:7619]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:51.729	[127.0.0.1:7619]	QUERY(0)	OK
+22:53:51.759	[127.0.0.1:7619]	EXEC(0)	OK
+22:53:51.760	[127.0.0.1:7619]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:53:51.760	[127.0.0.1:7619]	QUERY(1)	OK
+22:53:51.761	[127.0.0.1:7619]	EXEC(1)	OK
+22:53:51.768	[127.0.0.1:7619]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:53:51.768	[127.0.0.1:7619]	QUERY(2)	OK
+22:53:51.784	[127.0.0.1:7619]	EXEC(2)	OK
+22:53:51.791	[127.0.0.1:7619]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:53:51.792	[127.0.0.1:7619]	QUERY(3)	OK
+22:53:51.796	[127.0.0.1:7619]	EXEC(3)	OK
+22:53:51.816	[127.0.0.1:7619]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:53:51.817	[127.0.0.1:7619]	QUERY(4)	OK
+22:53:51.822	[127.0.0.1:7619]	EXEC(4)	OK
+22:53:51.823	[127.0.0.1:7619]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:53:51.824	[127.0.0.1:7619]	QUERY(5)	OK
+22:53:51.825	[127.0.0.1:7619]	EXEC(5)	OK
+22:53:51.829	[127.0.0.1:7619]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:53:51.829	[127.0.0.1:7619]	QUERY(6)	OK
+22:53:51.830	[127.0.0.1:7619]	EXEC(6)	OK
+22:53:51.839	[127.0.0.1:7619]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:53:51.839	[127.0.0.1:7619]	QUERY(7)	OK
+22:53:51.841	[127.0.0.1:7619]	EXEC(7)	OK
+22:53:51.843	[127.0.0.1:7619]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:51.844	[127.0.0.1:7619]	QUERY(8)	OK
+22:53:51.847	[127.0.0.1:7619]	EXEC(8)	OK
+22:53:51.848	[127.0.0.1:7619]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:53:51.848	[127.0.0.1:7619]	QUERY(9)	OK
+22:53:51.848	[127.0.0.1:7619]	EXEC(9)	OK
+22:53:51.849	[127.0.0.1:7619]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:53:51.849	[127.0.0.1:7619]	QUERY(10)	OK
+22:53:51.854	[127.0.0.1:7619]	EXEC(10)	OK
+22:53:51.855	[127.0.0.1:7619]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:53:51.855	[127.0.0.1:7619]	QUERY(11)	OK
+22:53:51.858	[127.0.0.1:7619]	EXEC(11)	OK
+22:53:51.859	[127.0.0.1:7619]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:53:51.859	[127.0.0.1:7619]	QUERY(12)	OK
+22:53:51.860	[127.0.0.1:7619]	EXEC(12)	OK
+22:53:51.860	[127.0.0.1:7619]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:53:51.861	[127.0.0.1:7619]	QUERY(13)	OK
+22:53:51.865	[127.0.0.1:7619]	EXEC(13)	OK
+22:53:51.867	[127.0.0.1:7619]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:53:51.868	[127.0.0.1:7619]	QUERY(14)	OK
+22:53:51.869	[127.0.0.1:7619]	EXEC(14)	OK
+22:53:51.879	[127.0.0.1:7619]	QUERY(let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then {delete node $meal/description)} else () )	Error: Stopped at line 1, column 144: [XPST0003] Incomplete 'if' expression.
+22:53:51.888	[127.0.0.1:7619]	QUERY(15)	let $meals := /fastfood-database/meals return $meals	OK
+22:53:51.888	[127.0.0.1:7619]	QUERY(15)	OK
+22:53:51.891	[127.0.0.1:7619]	EXEC(15)	OK
+22:53:51.896	Server was stopped.
+22:54:47.138	Server was started.
+22:54:47.285	[127.0.0.1:7624]	LOGIN admin	OK
+22:54:47.318	[127.0.0.1:7624]	OPEN ffmapDatabase
+22:54:47.353	[127.0.0.1:7624]	OK	66.33 ms
+22:54:47.360	[127.0.0.1:7624]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:54:47.493	[127.0.0.1:7624]	OK	139.66 ms
+22:54:47.721	[127.0.0.1:7624]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:54:47.721	[127.0.0.1:7624]	QUERY(0)	OK
+22:54:47.749	[127.0.0.1:7624]	EXEC(0)	OK
+22:54:47.751	[127.0.0.1:7624]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:54:47.751	[127.0.0.1:7624]	QUERY(1)	OK
+22:54:47.752	[127.0.0.1:7624]	EXEC(1)	OK
+22:54:47.758	[127.0.0.1:7624]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:54:47.759	[127.0.0.1:7624]	QUERY(2)	OK
+22:54:47.775	[127.0.0.1:7624]	EXEC(2)	OK
+22:54:47.782	[127.0.0.1:7624]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:54:47.782	[127.0.0.1:7624]	QUERY(3)	OK
+22:54:47.787	[127.0.0.1:7624]	EXEC(3)	OK
+22:54:47.806	[127.0.0.1:7624]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:54:47.806	[127.0.0.1:7624]	QUERY(4)	OK
+22:54:47.811	[127.0.0.1:7624]	EXEC(4)	OK
+22:54:47.812	[127.0.0.1:7624]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:54:47.812	[127.0.0.1:7624]	QUERY(5)	OK
+22:54:47.814	[127.0.0.1:7624]	EXEC(5)	OK
+22:54:47.818	[127.0.0.1:7624]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:54:47.818	[127.0.0.1:7624]	QUERY(6)	OK
+22:54:47.820	[127.0.0.1:7624]	EXEC(6)	OK
+22:54:47.828	[127.0.0.1:7624]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:54:47.828	[127.0.0.1:7624]	QUERY(7)	OK
+22:54:47.830	[127.0.0.1:7624]	EXEC(7)	OK
+22:54:47.833	[127.0.0.1:7624]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:54:47.833	[127.0.0.1:7624]	QUERY(8)	OK
+22:54:47.836	[127.0.0.1:7624]	EXEC(8)	OK
+22:54:47.837	[127.0.0.1:7624]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:54:47.838	[127.0.0.1:7624]	QUERY(9)	OK
+22:54:47.838	[127.0.0.1:7624]	EXEC(9)	OK
+22:54:47.839	[127.0.0.1:7624]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:54:47.839	[127.0.0.1:7624]	QUERY(10)	OK
+22:54:47.843	[127.0.0.1:7624]	EXEC(10)	OK
+22:54:47.844	[127.0.0.1:7624]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:54:47.845	[127.0.0.1:7624]	QUERY(11)	OK
+22:54:47.847	[127.0.0.1:7624]	EXEC(11)	OK
+22:54:47.848	[127.0.0.1:7624]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:54:47.848	[127.0.0.1:7624]	QUERY(12)	OK
+22:54:47.849	[127.0.0.1:7624]	EXEC(12)	OK
+22:54:47.850	[127.0.0.1:7624]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:54:47.850	[127.0.0.1:7624]	QUERY(13)	OK
+22:54:47.854	[127.0.0.1:7624]	EXEC(13)	OK
+22:54:47.856	[127.0.0.1:7624]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+22:54:47.857	[127.0.0.1:7624]	QUERY(14)	OK
+22:54:47.858	[127.0.0.1:7624]	EXEC(14)	OK
+22:54:47.867	[127.0.0.1:7624]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then delete node $meal/description else () )	OK
+22:54:47.867	[127.0.0.1:7624]	QUERY(15)	OK
+22:54:47.871	[127.0.0.1:7624]	EXEC(15)	OK
+22:54:47.872	[127.0.0.1:7624]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+22:54:47.872	[127.0.0.1:7624]	QUERY(16)	OK
+22:54:47.873	[127.0.0.1:7624]	EXEC(16)	OK
+22:54:47.878	Server was stopped.
+22:56:29.707	Server was started.
+22:56:29.850	[127.0.0.1:7648]	LOGIN admin	OK
+22:56:29.880	[127.0.0.1:7648]	OPEN ffmapDatabase
+22:56:29.914	[127.0.0.1:7648]	OK	62.97 ms
+22:56:29.922	[127.0.0.1:7648]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+22:56:30.068	[127.0.0.1:7648]	OK	153.23 ms
+22:56:30.293	[127.0.0.1:7648]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:56:30.294	[127.0.0.1:7648]	QUERY(0)	OK
+22:56:30.322	[127.0.0.1:7648]	EXEC(0)	OK
+22:56:30.323	[127.0.0.1:7648]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+22:56:30.324	[127.0.0.1:7648]	QUERY(1)	OK
+22:56:30.325	[127.0.0.1:7648]	EXEC(1)	OK
+22:56:30.331	[127.0.0.1:7648]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+22:56:30.332	[127.0.0.1:7648]	QUERY(2)	OK
+22:56:30.348	[127.0.0.1:7648]	EXEC(2)	OK
+22:56:30.354	[127.0.0.1:7648]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+22:56:30.354	[127.0.0.1:7648]	QUERY(3)	OK
+22:56:30.359	[127.0.0.1:7648]	EXEC(3)	OK
+22:56:30.378	[127.0.0.1:7648]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+22:56:30.379	[127.0.0.1:7648]	QUERY(4)	OK
+22:56:30.384	[127.0.0.1:7648]	EXEC(4)	OK
+22:56:30.386	[127.0.0.1:7648]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+22:56:30.387	[127.0.0.1:7648]	QUERY(5)	OK
+22:56:30.388	[127.0.0.1:7648]	EXEC(5)	OK
+22:56:30.392	[127.0.0.1:7648]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+22:56:30.392	[127.0.0.1:7648]	QUERY(6)	OK
+22:56:30.394	[127.0.0.1:7648]	EXEC(6)	OK
+22:56:30.403	[127.0.0.1:7648]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+22:56:30.403	[127.0.0.1:7648]	QUERY(7)	OK
+22:56:30.404	[127.0.0.1:7648]	EXEC(7)	OK
+22:56:30.407	[127.0.0.1:7648]	QUERY(8)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:56:30.407	[127.0.0.1:7648]	QUERY(8)	OK
+22:56:30.411	[127.0.0.1:7648]	EXEC(8)	OK
+22:56:30.412	[127.0.0.1:7648]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:56:30.412	[127.0.0.1:7648]	QUERY(9)	OK
+22:56:30.412	[127.0.0.1:7648]	EXEC(9)	OK
+22:56:30.413	[127.0.0.1:7648]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+22:56:30.414	[127.0.0.1:7648]	QUERY(10)	OK
+22:56:30.418	[127.0.0.1:7648]	EXEC(10)	OK
+22:56:30.419	[127.0.0.1:7648]	QUERY(11)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+22:56:30.419	[127.0.0.1:7648]	QUERY(11)	OK
+22:56:30.422	[127.0.0.1:7648]	EXEC(11)	OK
+22:56:30.423	[127.0.0.1:7648]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+22:56:30.423	[127.0.0.1:7648]	QUERY(12)	OK
+22:56:30.424	[127.0.0.1:7648]	EXEC(12)	OK
+22:56:30.424	[127.0.0.1:7648]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="3" name="Vagintarian"> </meal> as last into $meals 	OK
+22:56:30.425	[127.0.0.1:7648]	QUERY(13)	OK
+22:56:30.429	[127.0.0.1:7648]	EXEC(13)	OK
+22:56:30.431	[127.0.0.1:7648]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:56:30.432	[127.0.0.1:7648]	QUERY(14)	OK
+22:56:30.433	[127.0.0.1:7648]	EXEC(14)	OK
+23:03:10.986	Server was started.
+23:03:11.142	[127.0.0.1:7667]	LOGIN admin	OK
+23:03:11.173	[127.0.0.1:7667]	OPEN ffmapDatabase
+23:03:11.174	[127.0.0.1:7667]	Error: Database 'ffmapDatabase' was not found.	30.87 ms
+23:03:11.225	[127.0.0.1:7667]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:03:11.368	[127.0.0.1:7667]	OK	159.0 ms
+23:03:11.369	[127.0.0.1:7667]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:03:11.416	[127.0.0.1:7667]	OK	47.49 ms
+23:03:11.652	[127.0.0.1:7667]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:11.652	[127.0.0.1:7667]	QUERY(0)	OK
+23:03:11.686	[127.0.0.1:7667]	EXEC(0)	OK
+23:03:11.687	[127.0.0.1:7667]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:03:11.687	[127.0.0.1:7667]	QUERY(1)	OK
+23:03:11.688	[127.0.0.1:7667]	EXEC(1)	OK
+23:03:11.694	[127.0.0.1:7667]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:03:11.695	[127.0.0.1:7667]	QUERY(2)	OK
+23:03:11.704	[127.0.0.1:7667]	EXEC(2)	OK
+23:03:11.711	[127.0.0.1:7667]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:03:11.711	[127.0.0.1:7667]	QUERY(3)	OK
+23:03:11.716	[127.0.0.1:7667]	EXEC(3)	OK
+23:03:11.734	[127.0.0.1:7667]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:03:11.735	[127.0.0.1:7667]	QUERY(4)	OK
+23:03:11.740	[127.0.0.1:7667]	EXEC(4)	OK
+23:03:11.741	[127.0.0.1:7667]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:03:11.741	[127.0.0.1:7667]	QUERY(5)	OK
+23:03:11.743	[127.0.0.1:7667]	EXEC(5)	OK
+23:03:11.747	[127.0.0.1:7667]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:03:11.747	[127.0.0.1:7667]	QUERY(6)	OK
+23:03:11.748	[127.0.0.1:7667]	EXEC(6)	OK
+23:03:11.757	[127.0.0.1:7667]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:03:11.757	[127.0.0.1:7667]	QUERY(7)	OK
+23:03:11.759	[127.0.0.1:7667]	EXEC(7)	OK
+23:03:11.762	[127.0.0.1:7667]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:11.762	[127.0.0.1:7667]	QUERY(8)	OK
+23:03:11.765	[127.0.0.1:7667]	EXEC(8)	OK
+23:03:11.766	[127.0.0.1:7667]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:03:11.766	[127.0.0.1:7667]	QUERY(9)	OK
+23:03:11.767	[127.0.0.1:7667]	EXEC(9)	OK
+23:03:11.769	[127.0.0.1:7667]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:03:11.770	[127.0.0.1:7667]	QUERY(10)	OK
+23:03:11.774	[127.0.0.1:7667]	EXEC(10)	OK
+23:03:11.775	[127.0.0.1:7667]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:11.775	[127.0.0.1:7667]	QUERY(11)	OK
+23:03:11.779	[127.0.0.1:7667]	EXEC(11)	OK
+23:03:11.780	[127.0.0.1:7667]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:03:11.781	[127.0.0.1:7667]	QUERY(12)	OK
+23:03:11.781	[127.0.0.1:7667]	EXEC(12)	OK
+23:03:11.782	[127.0.0.1:7667]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:03:11.782	[127.0.0.1:7667]	QUERY(13)	OK
+23:03:11.787	[127.0.0.1:7667]	EXEC(13)	OK
+23:03:11.789	[127.0.0.1:7667]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:03:11.789	[127.0.0.1:7667]	QUERY(14)	OK
+23:03:11.790	[127.0.0.1:7667]	EXEC(14)	OK
+23:03:11.799	[127.0.0.1:7667]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Hnis" else insert node <description>Hnis</description> into $meal)	OK
+23:03:11.799	[127.0.0.1:7667]	QUERY(15)	OK
+23:03:11.803	[127.0.0.1:7667]	EXEC(15)	OK
+23:03:11.804	[127.0.0.1:7667]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:03:11.805	[127.0.0.1:7667]	QUERY(16)	OK
+23:03:11.807	[127.0.0.1:7667]	EXEC(16)	OK
+23:03:11.811	Server was stopped.
+23:03:55.942	Server was started.
+23:03:56.088	[127.0.0.1:7679]	LOGIN admin	OK
+23:03:56.118	[127.0.0.1:7679]	OPEN ffmapDatabase
+23:03:56.152	[127.0.0.1:7679]	OK	63.12 ms
+23:03:56.160	[127.0.0.1:7679]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:03:56.309	[127.0.0.1:7679]	OK	157.05 ms
+23:03:56.549	[127.0.0.1:7679]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:56.549	[127.0.0.1:7679]	QUERY(0)	OK
+23:03:56.578	[127.0.0.1:7679]	EXEC(0)	OK
+23:03:56.579	[127.0.0.1:7679]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:03:56.579	[127.0.0.1:7679]	QUERY(1)	OK
+23:03:56.580	[127.0.0.1:7679]	EXEC(1)	OK
+23:03:56.588	[127.0.0.1:7679]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:03:56.588	[127.0.0.1:7679]	QUERY(2)	OK
+23:03:56.609	[127.0.0.1:7679]	EXEC(2)	OK
+23:03:56.617	[127.0.0.1:7679]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:03:56.617	[127.0.0.1:7679]	QUERY(3)	OK
+23:03:56.622	[127.0.0.1:7679]	EXEC(3)	OK
+23:03:56.650	[127.0.0.1:7679]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:03:56.652	[127.0.0.1:7679]	QUERY(4)	OK
+23:03:56.657	[127.0.0.1:7679]	EXEC(4)	OK
+23:03:56.659	[127.0.0.1:7679]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:03:56.659	[127.0.0.1:7679]	QUERY(5)	OK
+23:03:56.661	[127.0.0.1:7679]	EXEC(5)	OK
+23:03:56.665	[127.0.0.1:7679]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:03:56.665	[127.0.0.1:7679]	QUERY(6)	OK
+23:03:56.668	[127.0.0.1:7679]	EXEC(6)	OK
+23:03:56.678	[127.0.0.1:7679]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:03:56.679	[127.0.0.1:7679]	QUERY(7)	OK
+23:03:56.680	[127.0.0.1:7679]	EXEC(7)	OK
+23:03:56.684	[127.0.0.1:7679]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:56.685	[127.0.0.1:7679]	QUERY(8)	OK
+23:03:56.688	[127.0.0.1:7679]	EXEC(8)	OK
+23:03:56.690	[127.0.0.1:7679]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:03:56.690	[127.0.0.1:7679]	QUERY(9)	OK
+23:03:56.691	[127.0.0.1:7679]	EXEC(9)	OK
+23:03:56.692	[127.0.0.1:7679]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:03:56.693	[127.0.0.1:7679]	QUERY(10)	OK
+23:03:56.698	[127.0.0.1:7679]	EXEC(10)	OK
+23:03:56.702	[127.0.0.1:7679]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:03:56.702	[127.0.0.1:7679]	QUERY(11)	OK
+23:03:56.704	[127.0.0.1:7679]	EXEC(11)	OK
+23:03:56.708	[127.0.0.1:7679]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:03:56.708	[127.0.0.1:7679]	QUERY(12)	OK
+23:03:56.709	[127.0.0.1:7679]	EXEC(12)	OK
+23:03:56.710	[127.0.0.1:7679]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:03:56.710	[127.0.0.1:7679]	QUERY(13)	OK
+23:03:56.715	[127.0.0.1:7679]	EXEC(13)	OK
+23:03:56.718	[127.0.0.1:7679]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:03:56.719	[127.0.0.1:7679]	QUERY(14)	OK
+23:03:56.720	[127.0.0.1:7679]	EXEC(14)	OK
+23:03:56.729	[127.0.0.1:7679]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Drsnej prujem" else insert node <description>Drsnej prujem</description> into $meal)	OK
+23:03:56.730	[127.0.0.1:7679]	QUERY(15)	OK
+23:03:56.736	[127.0.0.1:7679]	EXEC(15)	OK
+23:03:56.737	[127.0.0.1:7679]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:03:56.738	[127.0.0.1:7679]	QUERY(16)	OK
+23:03:56.739	[127.0.0.1:7679]	EXEC(16)	OK
+23:03:56.745	Server was stopped.
+23:04:17.690	Server was started.
+23:04:17.836	[127.0.0.1:7684]	LOGIN admin	OK
+23:04:17.868	[127.0.0.1:7684]	OPEN ffmapDatabase
+23:04:17.900	[127.0.0.1:7684]	OK	60.86 ms
+23:04:17.908	[127.0.0.1:7684]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:04:18.042	[127.0.0.1:7684]	OK	141.82 ms
+23:04:18.280	[127.0.0.1:7684]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:18.281	[127.0.0.1:7684]	QUERY(0)	OK
+23:04:18.315	[127.0.0.1:7684]	EXEC(0)	OK
+23:04:18.317	[127.0.0.1:7684]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:04:18.317	[127.0.0.1:7684]	QUERY(1)	OK
+23:04:18.319	[127.0.0.1:7684]	EXEC(1)	OK
+23:04:18.328	[127.0.0.1:7684]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:04:18.329	[127.0.0.1:7684]	QUERY(2)	OK
+23:04:18.344	[127.0.0.1:7684]	EXEC(2)	OK
+23:04:18.350	[127.0.0.1:7684]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:04:18.351	[127.0.0.1:7684]	QUERY(3)	OK
+23:04:18.355	[127.0.0.1:7684]	EXEC(3)	OK
+23:04:18.376	[127.0.0.1:7684]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:04:18.376	[127.0.0.1:7684]	QUERY(4)	OK
+23:04:18.381	[127.0.0.1:7684]	EXEC(4)	OK
+23:04:18.382	[127.0.0.1:7684]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:04:18.383	[127.0.0.1:7684]	QUERY(5)	OK
+23:04:18.384	[127.0.0.1:7684]	EXEC(5)	OK
+23:04:18.388	[127.0.0.1:7684]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:04:18.388	[127.0.0.1:7684]	QUERY(6)	OK
+23:04:18.389	[127.0.0.1:7684]	EXEC(6)	OK
+23:04:18.397	[127.0.0.1:7684]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:04:18.398	[127.0.0.1:7684]	QUERY(7)	OK
+23:04:18.399	[127.0.0.1:7684]	EXEC(7)	OK
+23:04:18.402	[127.0.0.1:7684]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:18.402	[127.0.0.1:7684]	QUERY(8)	OK
+23:04:18.405	[127.0.0.1:7684]	EXEC(8)	OK
+23:04:18.406	[127.0.0.1:7684]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:04:18.406	[127.0.0.1:7684]	QUERY(9)	OK
+23:04:18.407	[127.0.0.1:7684]	EXEC(9)	OK
+23:04:18.408	[127.0.0.1:7684]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:04:18.408	[127.0.0.1:7684]	QUERY(10)	OK
+23:04:18.412	[127.0.0.1:7684]	EXEC(10)	OK
+23:04:18.413	[127.0.0.1:7684]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:18.414	[127.0.0.1:7684]	QUERY(11)	OK
+23:04:18.416	[127.0.0.1:7684]	EXEC(11)	OK
+23:04:18.417	[127.0.0.1:7684]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:04:18.417	[127.0.0.1:7684]	QUERY(12)	OK
+23:04:18.418	[127.0.0.1:7684]	EXEC(12)	OK
+23:04:18.419	[127.0.0.1:7684]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:04:18.419	[127.0.0.1:7684]	QUERY(13)	OK
+23:04:18.423	[127.0.0.1:7684]	EXEC(13)	OK
+23:04:18.425	[127.0.0.1:7684]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:04:18.425	[127.0.0.1:7684]	QUERY(14)	OK
+23:04:18.426	[127.0.0.1:7684]	EXEC(14)	OK
+23:04:42.940	Server was started.
+23:04:43.085	[127.0.0.1:7689]	LOGIN admin	OK
+23:04:43.116	[127.0.0.1:7689]	OPEN ffmapDatabase
+23:04:43.151	[127.0.0.1:7689]	OK	65.39 ms
+23:04:43.159	[127.0.0.1:7689]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:04:43.294	[127.0.0.1:7689]	OK	142.37 ms
+23:04:43.524	[127.0.0.1:7689]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:43.524	[127.0.0.1:7689]	QUERY(0)	OK
+23:04:43.554	[127.0.0.1:7689]	EXEC(0)	OK
+23:04:43.555	[127.0.0.1:7689]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:04:43.556	[127.0.0.1:7689]	QUERY(1)	OK
+23:04:43.557	[127.0.0.1:7689]	EXEC(1)	OK
+23:04:43.563	[127.0.0.1:7689]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:04:43.564	[127.0.0.1:7689]	QUERY(2)	OK
+23:04:43.579	[127.0.0.1:7689]	EXEC(2)	OK
+23:04:43.585	[127.0.0.1:7689]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:04:43.586	[127.0.0.1:7689]	QUERY(3)	OK
+23:04:43.590	[127.0.0.1:7689]	EXEC(3)	OK
+23:04:43.610	[127.0.0.1:7689]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:04:43.611	[127.0.0.1:7689]	QUERY(4)	OK
+23:04:43.615	[127.0.0.1:7689]	EXEC(4)	OK
+23:04:43.616	[127.0.0.1:7689]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:04:43.616	[127.0.0.1:7689]	QUERY(5)	OK
+23:04:43.617	[127.0.0.1:7689]	EXEC(5)	OK
+23:04:43.621	[127.0.0.1:7689]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:04:43.621	[127.0.0.1:7689]	QUERY(6)	OK
+23:04:43.624	[127.0.0.1:7689]	EXEC(6)	OK
+23:04:43.634	[127.0.0.1:7689]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:04:43.634	[127.0.0.1:7689]	QUERY(7)	OK
+23:04:43.635	[127.0.0.1:7689]	EXEC(7)	OK
+23:04:43.639	[127.0.0.1:7689]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:43.639	[127.0.0.1:7689]	QUERY(8)	OK
+23:04:43.642	[127.0.0.1:7689]	EXEC(8)	OK
+23:04:43.643	[127.0.0.1:7689]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:04:43.644	[127.0.0.1:7689]	QUERY(9)	OK
+23:04:43.644	[127.0.0.1:7689]	EXEC(9)	OK
+23:04:43.646	[127.0.0.1:7689]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:04:43.646	[127.0.0.1:7689]	QUERY(10)	OK
+23:04:43.651	[127.0.0.1:7689]	EXEC(10)	OK
+23:04:43.654	[127.0.0.1:7689]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:04:43.654	[127.0.0.1:7689]	QUERY(11)	OK
+23:04:43.657	[127.0.0.1:7689]	EXEC(11)	OK
+23:04:43.661	[127.0.0.1:7689]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:04:43.662	[127.0.0.1:7689]	QUERY(12)	OK
+23:04:43.662	[127.0.0.1:7689]	EXEC(12)	OK
+23:04:43.663	[127.0.0.1:7689]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:04:43.664	[127.0.0.1:7689]	QUERY(13)	OK
+23:04:43.669	[127.0.0.1:7689]	EXEC(13)	OK
+23:04:43.671	[127.0.0.1:7689]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:04:43.672	[127.0.0.1:7689]	QUERY(14)	OK
+23:04:43.673	[127.0.0.1:7689]	EXEC(14)	OK
+23:04:43.683	[127.0.0.1:7689]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then delete node $meal/description else () )	OK
+23:04:43.683	[127.0.0.1:7689]	QUERY(15)	OK
+23:04:43.689	[127.0.0.1:7689]	EXEC(15)	OK
+23:04:43.690	[127.0.0.1:7689]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:04:43.691	[127.0.0.1:7689]	QUERY(16)	OK
+23:04:43.692	[127.0.0.1:7689]	EXEC(16)	OK
+23:04:43.697	Server was stopped.
+23:05:03.003	Server was started.
+23:05:03.148	[127.0.0.1:7698]	LOGIN admin	OK
+23:05:03.178	[127.0.0.1:7698]	OPEN ffmapDatabase
+23:05:03.211	[127.0.0.1:7698]	OK	62.03 ms
+23:05:03.219	[127.0.0.1:7698]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:05:03.372	[127.0.0.1:7698]	OK	160.62 ms
+23:05:03.601	[127.0.0.1:7698]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:03.601	[127.0.0.1:7698]	QUERY(0)	OK
+23:05:03.636	[127.0.0.1:7698]	EXEC(0)	OK
+23:05:03.638	[127.0.0.1:7698]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:05:03.638	[127.0.0.1:7698]	QUERY(1)	OK
+23:05:03.640	[127.0.0.1:7698]	EXEC(1)	OK
+23:05:03.647	[127.0.0.1:7698]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:05:03.647	[127.0.0.1:7698]	QUERY(2)	OK
+23:05:03.664	[127.0.0.1:7698]	EXEC(2)	OK
+23:05:03.672	[127.0.0.1:7698]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:05:03.672	[127.0.0.1:7698]	QUERY(3)	OK
+23:05:03.677	[127.0.0.1:7698]	EXEC(3)	OK
+23:05:03.696	[127.0.0.1:7698]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:05:03.697	[127.0.0.1:7698]	QUERY(4)	OK
+23:05:03.701	[127.0.0.1:7698]	EXEC(4)	OK
+23:05:03.702	[127.0.0.1:7698]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:05:03.703	[127.0.0.1:7698]	QUERY(5)	OK
+23:05:03.704	[127.0.0.1:7698]	EXEC(5)	OK
+23:05:03.707	[127.0.0.1:7698]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:05:03.708	[127.0.0.1:7698]	QUERY(6)	OK
+23:05:03.709	[127.0.0.1:7698]	EXEC(6)	OK
+23:05:03.718	[127.0.0.1:7698]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:05:03.718	[127.0.0.1:7698]	QUERY(7)	OK
+23:05:03.720	[127.0.0.1:7698]	EXEC(7)	OK
+23:05:03.722	[127.0.0.1:7698]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:03.723	[127.0.0.1:7698]	QUERY(8)	OK
+23:05:03.726	[127.0.0.1:7698]	EXEC(8)	OK
+23:05:03.727	[127.0.0.1:7698]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:05:03.727	[127.0.0.1:7698]	QUERY(9)	OK
+23:05:03.727	[127.0.0.1:7698]	EXEC(9)	OK
+23:05:03.728	[127.0.0.1:7698]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:05:03.728	[127.0.0.1:7698]	QUERY(10)	OK
+23:05:03.733	[127.0.0.1:7698]	EXEC(10)	OK
+23:05:03.735	[127.0.0.1:7698]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:03.735	[127.0.0.1:7698]	QUERY(11)	OK
+23:05:03.738	[127.0.0.1:7698]	EXEC(11)	OK
+23:05:03.739	[127.0.0.1:7698]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:05:03.739	[127.0.0.1:7698]	QUERY(12)	OK
+23:05:03.740	[127.0.0.1:7698]	EXEC(12)	OK
+23:05:03.741	[127.0.0.1:7698]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:05:03.741	[127.0.0.1:7698]	QUERY(13)	OK
+23:05:03.745	[127.0.0.1:7698]	EXEC(13)	OK
+23:05:03.747	[127.0.0.1:7698]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:05:03.747	[127.0.0.1:7698]	QUERY(14)	OK
+23:05:03.748	[127.0.0.1:7698]	EXEC(14)	OK
+23:05:03.756	[127.0.0.1:7698]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:05:03.757	[127.0.0.1:7698]	QUERY(15)	OK
+23:05:03.760	[127.0.0.1:7698]	EXEC(15)	OK
+23:05:03.762	[127.0.0.1:7698]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:05:03.762	[127.0.0.1:7698]	QUERY(16)	OK
+23:05:03.763	[127.0.0.1:7698]	EXEC(16)	OK
+23:05:03.768	Server was stopped.
+23:05:33.620	Server was started.
+23:05:33.765	[127.0.0.1:7703]	LOGIN admin	OK
+23:05:33.795	[127.0.0.1:7703]	OPEN ffmapDatabase
+23:05:33.829	[127.0.0.1:7703]	OK	62.67 ms
+23:05:33.838	[127.0.0.1:7703]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:05:33.974	[127.0.0.1:7703]	OK	144.37 ms
+23:05:34.198	[127.0.0.1:7703]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:34.199	[127.0.0.1:7703]	QUERY(0)	OK
+23:05:34.227	[127.0.0.1:7703]	EXEC(0)	OK
+23:05:34.228	[127.0.0.1:7703]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:05:34.228	[127.0.0.1:7703]	QUERY(1)	OK
+23:05:34.229	[127.0.0.1:7703]	EXEC(1)	OK
+23:05:34.236	[127.0.0.1:7703]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:05:34.237	[127.0.0.1:7703]	QUERY(2)	OK
+23:05:34.253	[127.0.0.1:7703]	EXEC(2)	OK
+23:05:34.259	[127.0.0.1:7703]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:05:34.259	[127.0.0.1:7703]	QUERY(3)	OK
+23:05:34.264	[127.0.0.1:7703]	EXEC(3)	OK
+23:05:34.283	[127.0.0.1:7703]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:05:34.284	[127.0.0.1:7703]	QUERY(4)	OK
+23:05:34.289	[127.0.0.1:7703]	EXEC(4)	OK
+23:05:34.290	[127.0.0.1:7703]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:05:34.290	[127.0.0.1:7703]	QUERY(5)	OK
+23:05:34.292	[127.0.0.1:7703]	EXEC(5)	OK
+23:05:34.296	[127.0.0.1:7703]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:05:34.296	[127.0.0.1:7703]	QUERY(6)	OK
+23:05:34.298	[127.0.0.1:7703]	EXEC(6)	OK
+23:05:34.307	[127.0.0.1:7703]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:05:34.307	[127.0.0.1:7703]	QUERY(7)	OK
+23:05:34.309	[127.0.0.1:7703]	EXEC(7)	OK
+23:05:34.311	[127.0.0.1:7703]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:34.312	[127.0.0.1:7703]	QUERY(8)	OK
+23:05:34.315	[127.0.0.1:7703]	EXEC(8)	OK
+23:05:34.316	[127.0.0.1:7703]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:05:34.317	[127.0.0.1:7703]	QUERY(9)	OK
+23:05:34.317	[127.0.0.1:7703]	EXEC(9)	OK
+23:05:34.318	[127.0.0.1:7703]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:05:34.318	[127.0.0.1:7703]	QUERY(10)	OK
+23:05:34.322	[127.0.0.1:7703]	EXEC(10)	OK
+23:05:34.324	[127.0.0.1:7703]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:05:34.324	[127.0.0.1:7703]	QUERY(11)	OK
+23:05:34.326	[127.0.0.1:7703]	EXEC(11)	OK
+23:05:34.327	[127.0.0.1:7703]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:05:34.328	[127.0.0.1:7703]	QUERY(12)	OK
+23:05:34.328	[127.0.0.1:7703]	EXEC(12)	OK
+23:05:34.330	[127.0.0.1:7703]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:05:34.330	[127.0.0.1:7703]	QUERY(13)	OK
+23:05:34.334	[127.0.0.1:7703]	EXEC(13)	OK
+23:05:34.336	[127.0.0.1:7703]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:05:34.337	[127.0.0.1:7703]	QUERY(14)	OK
+23:05:34.338	[127.0.0.1:7703]	EXEC(14)	OK
+23:05:34.347	[127.0.0.1:7703]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:05:34.347	[127.0.0.1:7703]	QUERY(15)	OK
+23:05:34.351	[127.0.0.1:7703]	EXEC(15)	OK
+23:05:34.352	[127.0.0.1:7703]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:05:34.352	[127.0.0.1:7703]	QUERY(16)	OK
+23:05:34.353	[127.0.0.1:7703]	EXEC(16)	OK
+23:05:34.359	Server was stopped.
+23:17:59.110	Server was started.
+23:17:59.254	[127.0.0.1:7831]	LOGIN admin	OK
+23:17:59.287	[127.0.0.1:7831]	OPEN ffmapDatabase
+23:17:59.321	[127.0.0.1:7831]	OK	64.96 ms
+23:17:59.329	[127.0.0.1:7831]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:17:59.490	[127.0.0.1:7831]	OK	168.91 ms
+23:17:59.719	[127.0.0.1:7831]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:17:59.720	[127.0.0.1:7831]	QUERY(0)	OK
+23:17:59.748	[127.0.0.1:7831]	EXEC(0)	OK
+23:17:59.749	[127.0.0.1:7831]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:17:59.749	[127.0.0.1:7831]	QUERY(1)	OK
+23:17:59.750	[127.0.0.1:7831]	EXEC(1)	OK
+23:17:59.757	[127.0.0.1:7831]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:17:59.758	[127.0.0.1:7831]	QUERY(2)	OK
+23:17:59.774	[127.0.0.1:7831]	EXEC(2)	OK
+23:17:59.781	[127.0.0.1:7831]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:17:59.781	[127.0.0.1:7831]	QUERY(3)	OK
+23:17:59.786	[127.0.0.1:7831]	EXEC(3)	OK
+23:17:59.805	[127.0.0.1:7831]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:17:59.806	[127.0.0.1:7831]	QUERY(4)	OK
+23:17:59.810	[127.0.0.1:7831]	EXEC(4)	OK
+23:17:59.812	[127.0.0.1:7831]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:17:59.812	[127.0.0.1:7831]	QUERY(5)	OK
+23:17:59.813	[127.0.0.1:7831]	EXEC(5)	OK
+23:17:59.817	[127.0.0.1:7831]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:17:59.817	[127.0.0.1:7831]	QUERY(6)	OK
+23:17:59.819	[127.0.0.1:7831]	EXEC(6)	OK
+23:17:59.827	[127.0.0.1:7831]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:17:59.828	[127.0.0.1:7831]	QUERY(7)	OK
+23:17:59.829	[127.0.0.1:7831]	EXEC(7)	OK
+23:17:59.833	[127.0.0.1:7831]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:17:59.834	[127.0.0.1:7831]	QUERY(8)	OK
+23:17:59.838	[127.0.0.1:7831]	EXEC(8)	OK
+23:17:59.839	[127.0.0.1:7831]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:17:59.839	[127.0.0.1:7831]	QUERY(9)	OK
+23:17:59.840	[127.0.0.1:7831]	EXEC(9)	OK
+23:17:59.840	[127.0.0.1:7831]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:17:59.841	[127.0.0.1:7831]	QUERY(10)	OK
+23:17:59.845	[127.0.0.1:7831]	EXEC(10)	OK
+23:17:59.846	[127.0.0.1:7831]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:17:59.847	[127.0.0.1:7831]	QUERY(11)	OK
+23:17:59.849	[127.0.0.1:7831]	EXEC(11)	OK
+23:17:59.850	[127.0.0.1:7831]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:17:59.850	[127.0.0.1:7831]	QUERY(12)	OK
+23:17:59.851	[127.0.0.1:7831]	EXEC(12)	OK
+23:17:59.852	[127.0.0.1:7831]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:17:59.852	[127.0.0.1:7831]	QUERY(13)	OK
+23:17:59.856	[127.0.0.1:7831]	EXEC(13)	OK
+23:17:59.858	[127.0.0.1:7831]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:17:59.859	[127.0.0.1:7831]	QUERY(14)	OK
+23:17:59.860	[127.0.0.1:7831]	EXEC(14)	OK
+23:17:59.868	[127.0.0.1:7831]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:17:59.868	[127.0.0.1:7831]	QUERY(15)	OK
+23:17:59.872	[127.0.0.1:7831]	EXEC(15)	OK
+23:17:59.873	[127.0.0.1:7831]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:17:59.873	[127.0.0.1:7831]	QUERY(16)	OK
+23:17:59.875	[127.0.0.1:7831]	EXEC(16)	OK
+23:17:59.886	[127.0.0.1:7831]	QUERY(for $meal in /fastfood-database/meals/meal[lower-case(@name) = hot dog] return $meal )	Error: Stopped at line 1, column 67: [XPST0003] Expecting "]", found "d".
+23:20:22.820	Server was started.
+23:20:22.834	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:20:28.154	Server was started.
+23:20:28.300	[127.0.0.1:7836]	LOGIN admin	OK
+23:20:28.332	[127.0.0.1:7836]	OPEN ffmapDatabase
+23:20:28.372	[127.0.0.1:7836]	OK	70.77 ms
+23:20:28.384	[127.0.0.1:7836]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:20:28.515	[127.0.0.1:7836]	OK	142.44 ms
+23:20:28.745	[127.0.0.1:7836]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:28.746	[127.0.0.1:7836]	QUERY(0)	OK
+23:20:28.774	[127.0.0.1:7836]	EXEC(0)	OK
+23:20:28.776	[127.0.0.1:7836]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:20:28.776	[127.0.0.1:7836]	QUERY(1)	OK
+23:20:28.777	[127.0.0.1:7836]	EXEC(1)	OK
+23:20:28.784	[127.0.0.1:7836]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:20:28.785	[127.0.0.1:7836]	QUERY(2)	OK
+23:20:28.801	[127.0.0.1:7836]	EXEC(2)	OK
+23:20:28.808	[127.0.0.1:7836]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:20:28.808	[127.0.0.1:7836]	QUERY(3)	OK
+23:20:28.813	[127.0.0.1:7836]	EXEC(3)	OK
+23:20:28.839	[127.0.0.1:7836]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:20:28.841	[127.0.0.1:7836]	QUERY(4)	OK
+23:20:28.847	[127.0.0.1:7836]	EXEC(4)	OK
+23:20:28.848	[127.0.0.1:7836]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:20:28.848	[127.0.0.1:7836]	QUERY(5)	OK
+23:20:28.850	[127.0.0.1:7836]	EXEC(5)	OK
+23:20:28.853	[127.0.0.1:7836]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:20:28.854	[127.0.0.1:7836]	QUERY(6)	OK
+23:20:28.856	[127.0.0.1:7836]	EXEC(6)	OK
+23:20:28.866	[127.0.0.1:7836]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:20:28.866	[127.0.0.1:7836]	QUERY(7)	OK
+23:20:28.868	[127.0.0.1:7836]	EXEC(7)	OK
+23:20:28.871	[127.0.0.1:7836]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:28.871	[127.0.0.1:7836]	QUERY(8)	OK
+23:20:28.875	[127.0.0.1:7836]	EXEC(8)	OK
+23:20:28.875	[127.0.0.1:7836]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:20:28.876	[127.0.0.1:7836]	QUERY(9)	OK
+23:20:28.876	[127.0.0.1:7836]	EXEC(9)	OK
+23:20:28.878	[127.0.0.1:7836]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:20:28.878	[127.0.0.1:7836]	QUERY(10)	OK
+23:20:28.884	[127.0.0.1:7836]	EXEC(10)	OK
+23:20:28.886	[127.0.0.1:7836]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:28.886	[127.0.0.1:7836]	QUERY(11)	OK
+23:20:28.889	[127.0.0.1:7836]	EXEC(11)	OK
+23:20:28.892	[127.0.0.1:7836]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:20:28.893	[127.0.0.1:7836]	QUERY(12)	OK
+23:20:28.894	[127.0.0.1:7836]	EXEC(12)	OK
+23:20:28.895	[127.0.0.1:7836]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:20:28.895	[127.0.0.1:7836]	QUERY(13)	OK
+23:20:28.900	[127.0.0.1:7836]	EXEC(13)	OK
+23:20:28.903	[127.0.0.1:7836]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:20:28.904	[127.0.0.1:7836]	QUERY(14)	OK
+23:20:28.905	[127.0.0.1:7836]	EXEC(14)	OK
+23:20:28.914	[127.0.0.1:7836]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:20:28.915	[127.0.0.1:7836]	QUERY(15)	OK
+23:20:28.920	[127.0.0.1:7836]	EXEC(15)	OK
+23:20:28.921	[127.0.0.1:7836]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:20:28.921	[127.0.0.1:7836]	QUERY(16)	OK
+23:20:28.922	[127.0.0.1:7836]	EXEC(16)	OK
+23:20:28.932	[127.0.0.1:7836]	QUERY(17)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "hot dog"] return $meal 	OK
+23:20:28.932	[127.0.0.1:7836]	QUERY(17)	OK
+23:20:28.934	[127.0.0.1:7836]	EXEC(17)	OK
+23:20:28.938	Server was stopped.
+23:20:45.103	Server was started.
+23:20:45.247	[127.0.0.1:7841]	LOGIN admin	OK
+23:20:45.278	[127.0.0.1:7841]	OPEN ffmapDatabase
+23:20:45.310	[127.0.0.1:7841]	OK	61.5 ms
+23:20:45.318	[127.0.0.1:7841]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:20:45.448	[127.0.0.1:7841]	OK	138.55 ms
+23:20:45.687	[127.0.0.1:7841]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:45.687	[127.0.0.1:7841]	QUERY(0)	OK
+23:20:45.719	[127.0.0.1:7841]	EXEC(0)	OK
+23:20:45.720	[127.0.0.1:7841]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:20:45.720	[127.0.0.1:7841]	QUERY(1)	OK
+23:20:45.722	[127.0.0.1:7841]	EXEC(1)	OK
+23:20:45.729	[127.0.0.1:7841]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:20:45.730	[127.0.0.1:7841]	QUERY(2)	OK
+23:20:45.747	[127.0.0.1:7841]	EXEC(2)	OK
+23:20:45.753	[127.0.0.1:7841]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:20:45.754	[127.0.0.1:7841]	QUERY(3)	OK
+23:20:45.758	[127.0.0.1:7841]	EXEC(3)	OK
+23:20:45.782	[127.0.0.1:7841]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:20:45.783	[127.0.0.1:7841]	QUERY(4)	OK
+23:20:45.789	[127.0.0.1:7841]	EXEC(4)	OK
+23:20:45.791	[127.0.0.1:7841]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:20:45.792	[127.0.0.1:7841]	QUERY(5)	OK
+23:20:45.793	[127.0.0.1:7841]	EXEC(5)	OK
+23:20:45.798	[127.0.0.1:7841]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:20:45.798	[127.0.0.1:7841]	QUERY(6)	OK
+23:20:45.800	[127.0.0.1:7841]	EXEC(6)	OK
+23:20:45.811	[127.0.0.1:7841]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:20:45.811	[127.0.0.1:7841]	QUERY(7)	OK
+23:20:45.813	[127.0.0.1:7841]	EXEC(7)	OK
+23:20:45.815	[127.0.0.1:7841]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:45.816	[127.0.0.1:7841]	QUERY(8)	OK
+23:20:45.819	[127.0.0.1:7841]	EXEC(8)	OK
+23:20:45.820	[127.0.0.1:7841]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:20:45.820	[127.0.0.1:7841]	QUERY(9)	OK
+23:20:45.821	[127.0.0.1:7841]	EXEC(9)	OK
+23:20:45.821	[127.0.0.1:7841]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:20:45.822	[127.0.0.1:7841]	QUERY(10)	OK
+23:20:45.826	[127.0.0.1:7841]	EXEC(10)	OK
+23:20:45.828	[127.0.0.1:7841]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:20:45.828	[127.0.0.1:7841]	QUERY(11)	OK
+23:20:45.831	[127.0.0.1:7841]	EXEC(11)	OK
+23:20:45.835	[127.0.0.1:7841]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:20:45.835	[127.0.0.1:7841]	QUERY(12)	OK
+23:20:45.836	[127.0.0.1:7841]	EXEC(12)	OK
+23:20:45.837	[127.0.0.1:7841]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:20:45.837	[127.0.0.1:7841]	QUERY(13)	OK
+23:20:45.841	[127.0.0.1:7841]	EXEC(13)	OK
+23:20:45.844	[127.0.0.1:7841]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:20:45.844	[127.0.0.1:7841]	QUERY(14)	OK
+23:20:45.845	[127.0.0.1:7841]	EXEC(14)	OK
+23:20:45.853	[127.0.0.1:7841]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:20:45.854	[127.0.0.1:7841]	QUERY(15)	OK
+23:20:45.857	[127.0.0.1:7841]	EXEC(15)	OK
+23:20:45.859	[127.0.0.1:7841]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:20:45.859	[127.0.0.1:7841]	QUERY(16)	OK
+23:20:45.861	[127.0.0.1:7841]	EXEC(16)	OK
+23:20:45.870	[127.0.0.1:7841]	QUERY(17)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "podkozak"] return $meal 	OK
+23:20:45.870	[127.0.0.1:7841]	QUERY(17)	OK
+23:20:45.872	[127.0.0.1:7841]	EXEC(17)	OK
+23:20:45.875	Server was stopped.
+23:22:48.218	Server was started.
+23:22:48.362	[127.0.0.1:7859]	LOGIN admin	OK
+23:22:48.393	[127.0.0.1:7859]	OPEN ffmapDatabase
+23:22:48.427	[127.0.0.1:7859]	OK	63.08 ms
+23:22:48.434	[127.0.0.1:7859]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:22:48.602	[127.0.0.1:7859]	OK	175.39 ms
+23:22:48.843	[127.0.0.1:7859]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:22:48.844	[127.0.0.1:7859]	QUERY(0)	OK
+23:22:48.874	[127.0.0.1:7859]	EXEC(0)	OK
+23:22:48.875	[127.0.0.1:7859]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
+23:22:48.876	[127.0.0.1:7859]	QUERY(1)	OK
+23:22:48.878	[127.0.0.1:7859]	EXEC(1)	OK
+23:22:48.887	[127.0.0.1:7859]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>user</username> <password>5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</password> <role>user</role> <first-name>Mother</first-name> <surname>Fucker</surname> <date-registered>2011-5-25</date-registered> <active>true</active> </user> as last into $users	OK
+23:22:48.887	[127.0.0.1:7859]	QUERY(2)	OK
+23:22:48.903	[127.0.0.1:7859]	EXEC(2)	OK
+23:22:48.909	[127.0.0.1:7859]	QUERY(3)	for $user in /fastfood-database/users/user[@id=2]return $user	OK
+23:22:48.910	[127.0.0.1:7859]	QUERY(3)	OK
+23:22:48.914	[127.0.0.1:7859]	EXEC(3)	OK
+23:22:48.934	[127.0.0.1:7859]	QUERY(4)	let $user := /fastfood-database/users/user[@id=2]return (replace value of node $user/username with "user", replace value of node $user/password with "353e8061f2befecb6818ba0c034c632fb0bcae1b", replace value of node $user/role with "user", replace value of node $user/first-name with "Petr", replace value of node $user/surname with "Kobliha", replace value of node $user/active with "true" )	OK
+23:22:48.934	[127.0.0.1:7859]	QUERY(4)	OK
+23:22:48.939	[127.0.0.1:7859]	EXEC(4)	OK
+23:22:48.940	[127.0.0.1:7859]	QUERY(5)	let $user := /fastfood-database/users/user[username="user"]return $user	OK
+23:22:48.940	[127.0.0.1:7859]	QUERY(5)	OK
+23:22:48.942	[127.0.0.1:7859]	EXEC(5)	OK
+23:22:48.945	[127.0.0.1:7859]	QUERY(6)	let $user := /fastfood-database/users/user[username="admin"]return $user	OK
+23:22:48.946	[127.0.0.1:7859]	QUERY(6)	OK
+23:22:48.947	[127.0.0.1:7859]	EXEC(6)	OK
+23:22:48.955	[127.0.0.1:7859]	QUERY(7)	let $users := /fastfood-database/users/user return count($users)	OK
+23:22:48.956	[127.0.0.1:7859]	QUERY(7)	OK
+23:22:48.957	[127.0.0.1:7859]	EXEC(7)	OK
+23:22:48.960	[127.0.0.1:7859]	QUERY(8)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:22:48.960	[127.0.0.1:7859]	QUERY(8)	OK
+23:22:48.963	[127.0.0.1:7859]	EXEC(8)	OK
+23:22:48.964	[127.0.0.1:7859]	QUERY(9)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:22:48.964	[127.0.0.1:7859]	QUERY(9)	OK
+23:22:48.965	[127.0.0.1:7859]	EXEC(9)	OK
+23:22:48.966	[127.0.0.1:7859]	QUERY(10)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:22:48.966	[127.0.0.1:7859]	QUERY(10)	OK
+23:22:48.970	[127.0.0.1:7859]	EXEC(10)	OK
+23:22:48.971	[127.0.0.1:7859]	QUERY(11)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:22:48.972	[127.0.0.1:7859]	QUERY(11)	OK
+23:22:48.974	[127.0.0.1:7859]	EXEC(11)	OK
+23:22:48.975	[127.0.0.1:7859]	QUERY(12)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:22:48.976	[127.0.0.1:7859]	QUERY(12)	OK
+23:22:48.976	[127.0.0.1:7859]	EXEC(12)	OK
+23:22:48.977	[127.0.0.1:7859]	QUERY(13)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:22:48.977	[127.0.0.1:7859]	QUERY(13)	OK
+23:22:48.981	[127.0.0.1:7859]	EXEC(13)	OK
+23:22:48.983	[127.0.0.1:7859]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:22:48.983	[127.0.0.1:7859]	QUERY(14)	OK
+23:22:48.984	[127.0.0.1:7859]	EXEC(14)	OK
+23:22:48.993	[127.0.0.1:7859]	QUERY(15)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:22:48.993	[127.0.0.1:7859]	QUERY(15)	OK
+23:22:48.997	[127.0.0.1:7859]	EXEC(15)	OK
+23:22:48.998	[127.0.0.1:7859]	QUERY(16)	let $meals := /fastfood-database/meals return $meals	OK
+23:22:48.998	[127.0.0.1:7859]	QUERY(16)	OK
+23:22:48.999	[127.0.0.1:7859]	EXEC(16)	OK
+23:22:49.008	[127.0.0.1:7859]	QUERY(17)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "podkozak"] return $meal 	OK
+23:22:49.009	[127.0.0.1:7859]	QUERY(17)	OK
+23:22:49.010	[127.0.0.1:7859]	EXEC(17)	OK
+23:22:49.013	[127.0.0.1:7859]	QUERY(18)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:22:49.013	[127.0.0.1:7859]	QUERY(18)	OK
+23:22:49.014	[127.0.0.1:7859]	EXEC(18)	OK
+23:22:49.015	Server was stopped.
+23:23:05.543	Server was started.
+23:23:05.689	[127.0.0.1:7864]	LOGIN admin	OK
+23:23:05.720	[127.0.0.1:7864]	OPEN ffmapDatabase
+23:23:05.755	[127.0.0.1:7864]	OK	65.41 ms
+23:23:05.992	[127.0.0.1:7864]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:23:05.992	[127.0.0.1:7864]	QUERY(0)	OK
+23:23:06.025	[127.0.0.1:7864]	EXEC(0)	OK
+23:23:06.026	[127.0.0.1:7864]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:23:06.027	[127.0.0.1:7864]	QUERY(1)	OK
+23:23:06.027	[127.0.0.1:7864]	EXEC(1)	OK
+23:23:06.033	[127.0.0.1:7864]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="6" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:23:06.034	[127.0.0.1:7864]	QUERY(2)	OK
+23:23:06.045	[127.0.0.1:7864]	EXEC(2)	OK
+23:23:06.047	[127.0.0.1:7864]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:23:06.047	[127.0.0.1:7864]	QUERY(3)	OK
+23:23:06.050	[127.0.0.1:7864]	EXEC(3)	OK
+23:23:06.051	[127.0.0.1:7864]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:23:06.052	[127.0.0.1:7864]	QUERY(4)	OK
+23:23:06.052	[127.0.0.1:7864]	EXEC(4)	OK
+23:23:06.053	[127.0.0.1:7864]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="7" name="Vagintarian"> </meal> as last into $meals 	OK
+23:23:06.054	[127.0.0.1:7864]	QUERY(5)	OK
+23:23:06.058	[127.0.0.1:7864]	EXEC(5)	OK
+23:23:06.065	[127.0.0.1:7864]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:23:06.065	[127.0.0.1:7864]	QUERY(6)	OK
+23:23:06.070	[127.0.0.1:7864]	EXEC(6)	OK
+23:23:06.136	[127.0.0.1:7864]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:23:06.136	[127.0.0.1:7864]	QUERY(7)	OK
+23:23:06.140	[127.0.0.1:7864]	EXEC(7)	OK
+23:23:06.141	[127.0.0.1:7864]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:23:06.142	[127.0.0.1:7864]	QUERY(8)	OK
+23:23:06.143	[127.0.0.1:7864]	EXEC(8)	OK
+23:23:06.154	[127.0.0.1:7864]	QUERY(9)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "podkozak"] return $meal 	OK
+23:23:06.154	[127.0.0.1:7864]	QUERY(9)	OK
+23:23:06.156	[127.0.0.1:7864]	EXEC(9)	OK
+23:23:06.163	[127.0.0.1:7864]	QUERY(10)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:23:06.163	[127.0.0.1:7864]	QUERY(10)	OK
+23:23:06.165	[127.0.0.1:7864]	EXEC(10)	OK
+23:23:06.166	Server was stopped.
+23:23:13.624	Server was started.
+23:23:13.768	[127.0.0.1:7865]	LOGIN admin	OK
+23:23:13.798	[127.0.0.1:7865]	OPEN ffmapDatabase
+23:23:13.833	[127.0.0.1:7865]	OK	65.35 ms
+23:23:14.067	[127.0.0.1:7865]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:23:14.068	[127.0.0.1:7865]	QUERY(0)	OK
+23:23:14.098	[127.0.0.1:7865]	EXEC(0)	OK
+23:23:14.099	[127.0.0.1:7865]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:23:14.100	[127.0.0.1:7865]	QUERY(1)	OK
+23:23:14.101	[127.0.0.1:7865]	EXEC(1)	OK
+23:23:14.107	[127.0.0.1:7865]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="8" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:23:14.107	[127.0.0.1:7865]	QUERY(2)	OK
+23:23:14.118	[127.0.0.1:7865]	EXEC(2)	OK
+23:23:14.120	[127.0.0.1:7865]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:23:14.120	[127.0.0.1:7865]	QUERY(3)	OK
+23:23:14.123	[127.0.0.1:7865]	EXEC(3)	OK
+23:23:14.125	[127.0.0.1:7865]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:23:14.125	[127.0.0.1:7865]	QUERY(4)	OK
+23:23:14.126	[127.0.0.1:7865]	EXEC(4)	OK
+23:23:14.127	[127.0.0.1:7865]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="9" name="Vagintarian"> </meal> as last into $meals 	OK
+23:23:14.127	[127.0.0.1:7865]	QUERY(5)	OK
+23:23:14.131	[127.0.0.1:7865]	EXEC(5)	OK
+23:23:14.138	[127.0.0.1:7865]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:23:14.138	[127.0.0.1:7865]	QUERY(6)	OK
+23:23:14.143	[127.0.0.1:7865]	EXEC(6)	OK
+23:23:14.210	[127.0.0.1:7865]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:23:14.211	[127.0.0.1:7865]	QUERY(7)	OK
+23:23:14.215	[127.0.0.1:7865]	EXEC(7)	OK
+23:23:14.216	[127.0.0.1:7865]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:23:14.217	[127.0.0.1:7865]	QUERY(8)	OK
+23:23:14.219	[127.0.0.1:7865]	EXEC(8)	OK
+23:23:14.230	[127.0.0.1:7865]	QUERY(9)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "podkozak"] return $meal 	OK
+23:23:14.230	[127.0.0.1:7865]	QUERY(9)	OK
+23:23:14.232	[127.0.0.1:7865]	EXEC(9)	OK
+23:23:14.239	[127.0.0.1:7865]	QUERY(10)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:23:14.240	[127.0.0.1:7865]	QUERY(10)	OK
+23:23:14.241	[127.0.0.1:7865]	EXEC(10)	OK
+23:23:14.243	Server was stopped.
+23:35:58.614	Server was started.
+23:35:58.628	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:36:38.667	Server was started.
+23:36:38.869	[127.0.0.1:7939]	LOGIN admin	OK
+23:36:38.899	[127.0.0.1:7939]	OPEN ffmapDatabase
+23:36:38.978	[127.0.0.1:7939]	OK	108.11 ms
+23:36:39.452	[127.0.0.1:7939]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:36:39.452	[127.0.0.1:7939]	QUERY(0)	OK
+23:36:39.483	[127.0.0.1:7939]	EXEC(0)	OK
+23:36:39.484	[127.0.0.1:7939]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:36:39.485	[127.0.0.1:7939]	QUERY(1)	OK
+23:36:39.486	[127.0.0.1:7939]	EXEC(1)	OK
+23:36:39.492	[127.0.0.1:7939]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="10" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:36:39.492	[127.0.0.1:7939]	QUERY(2)	OK
+23:36:39.506	[127.0.0.1:7939]	EXEC(2)	OK
+23:36:39.509	[127.0.0.1:7939]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:36:39.510	[127.0.0.1:7939]	QUERY(3)	OK
+23:36:39.513	[127.0.0.1:7939]	EXEC(3)	OK
+23:36:39.515	[127.0.0.1:7939]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:36:39.515	[127.0.0.1:7939]	QUERY(4)	OK
+23:36:39.516	[127.0.0.1:7939]	EXEC(4)	OK
+23:36:39.517	[127.0.0.1:7939]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="11" name="Vagintarian"> </meal> as last into $meals 	OK
+23:36:39.517	[127.0.0.1:7939]	QUERY(5)	OK
+23:36:39.522	[127.0.0.1:7939]	EXEC(5)	OK
+23:36:39.529	[127.0.0.1:7939]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:36:39.529	[127.0.0.1:7939]	QUERY(6)	OK
+23:36:39.534	[127.0.0.1:7939]	EXEC(6)	OK
+23:36:39.606	[127.0.0.1:7939]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:36:39.607	[127.0.0.1:7939]	QUERY(7)	OK
+23:36:39.612	[127.0.0.1:7939]	EXEC(7)	OK
+23:36:39.614	[127.0.0.1:7939]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:36:39.614	[127.0.0.1:7939]	QUERY(8)	OK
+23:36:39.616	[127.0.0.1:7939]	EXEC(8)	OK
+23:36:39.632	[127.0.0.1:7939]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 3] return delete node $meal	OK
+23:36:39.633	[127.0.0.1:7939]	QUERY(9)	OK
+23:36:39.643	[127.0.0.1:7939]	EXEC(9)	OK
+23:36:39.650	[127.0.0.1:7939]	QUERY(10)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "podkozak"] return $meal 	OK
+23:36:39.650	[127.0.0.1:7939]	QUERY(10)	OK
+23:36:39.652	[127.0.0.1:7939]	EXEC(10)	OK
+23:36:59.021	Server was started.
+23:36:59.166	[127.0.0.1:7941]	LOGIN admin	OK
+23:36:59.197	[127.0.0.1:7941]	OPEN ffmapDatabase
+23:36:59.231	[127.0.0.1:7941]	OK	63.36 ms
+23:36:59.462	[127.0.0.1:7941]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:36:59.462	[127.0.0.1:7941]	QUERY(0)	OK
+23:36:59.493	[127.0.0.1:7941]	EXEC(0)	OK
+23:36:59.495	[127.0.0.1:7941]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:36:59.495	[127.0.0.1:7941]	QUERY(1)	OK
+23:36:59.496	[127.0.0.1:7941]	EXEC(1)	OK
+23:36:59.502	[127.0.0.1:7941]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="12" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:36:59.502	[127.0.0.1:7941]	QUERY(2)	OK
+23:36:59.513	[127.0.0.1:7941]	EXEC(2)	OK
+23:36:59.515	[127.0.0.1:7941]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:36:59.515	[127.0.0.1:7941]	QUERY(3)	OK
+23:36:59.518	[127.0.0.1:7941]	EXEC(3)	OK
+23:36:59.519	[127.0.0.1:7941]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:36:59.520	[127.0.0.1:7941]	QUERY(4)	OK
+23:36:59.520	[127.0.0.1:7941]	EXEC(4)	OK
+23:36:59.521	[127.0.0.1:7941]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="13" name="Vagintarian"> </meal> as last into $meals 	OK
+23:36:59.522	[127.0.0.1:7941]	QUERY(5)	OK
+23:36:59.525	[127.0.0.1:7941]	EXEC(5)	OK
+23:36:59.532	[127.0.0.1:7941]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:36:59.532	[127.0.0.1:7941]	QUERY(6)	OK
+23:36:59.536	[127.0.0.1:7941]	EXEC(6)	OK
+23:37:22.841	Server was started.
+23:37:22.854	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:37:27.494	Server was started.
+23:37:27.639	[127.0.0.1:7943]	LOGIN admin	OK
+23:37:27.672	[127.0.0.1:7943]	OPEN ffmapDatabase
+23:37:27.710	[127.0.0.1:7943]	OK	69.52 ms
+23:37:27.947	[127.0.0.1:7943]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:37:27.948	[127.0.0.1:7943]	QUERY(0)	OK
+23:37:27.978	[127.0.0.1:7943]	EXEC(0)	OK
+23:37:27.979	[127.0.0.1:7943]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:37:27.980	[127.0.0.1:7943]	QUERY(1)	OK
+23:37:27.980	[127.0.0.1:7943]	EXEC(1)	OK
+23:37:27.987	[127.0.0.1:7943]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="14" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:37:27.987	[127.0.0.1:7943]	QUERY(2)	OK
+23:37:27.998	[127.0.0.1:7943]	EXEC(2)	OK
+23:37:28.000	[127.0.0.1:7943]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:37:28.000	[127.0.0.1:7943]	QUERY(3)	OK
+23:37:28.003	[127.0.0.1:7943]	EXEC(3)	OK
+23:37:28.004	[127.0.0.1:7943]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:37:28.004	[127.0.0.1:7943]	QUERY(4)	OK
+23:37:28.005	[127.0.0.1:7943]	EXEC(4)	OK
+23:37:28.006	[127.0.0.1:7943]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="15" name="Vagintarian"> </meal> as last into $meals 	OK
+23:37:28.006	[127.0.0.1:7943]	QUERY(5)	OK
+23:37:28.011	[127.0.0.1:7943]	EXEC(5)	OK
+23:37:28.017	[127.0.0.1:7943]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+23:37:28.018	[127.0.0.1:7943]	QUERY(6)	OK
+23:37:28.023	[127.0.0.1:7943]	EXEC(6)	OK
+23:37:28.091	[127.0.0.1:7943]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=2]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:37:28.092	[127.0.0.1:7943]	QUERY(7)	OK
+23:37:28.097	[127.0.0.1:7943]	EXEC(7)	OK
+23:37:28.099	[127.0.0.1:7943]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:37:28.099	[127.0.0.1:7943]	QUERY(8)	OK
+23:37:28.101	[127.0.0.1:7943]	EXEC(8)	OK
+23:37:28.112	[127.0.0.1:7943]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 2] return delete node $meal	OK
+23:37:28.112	[127.0.0.1:7943]	QUERY(9)	OK
+23:37:28.119	[127.0.0.1:7943]	EXEC(9)	OK
+23:37:28.125	[127.0.0.1:7943]	QUERY(10)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "fakt kentus"] return $meal 	OK
+23:37:28.126	[127.0.0.1:7943]	QUERY(10)	OK
+23:37:28.128	[127.0.0.1:7943]	EXEC(10)	OK
+23:38:12.587	Server was started.
+23:38:12.730	[127.0.0.1:7945]	LOGIN admin	OK
+23:38:12.760	[127.0.0.1:7945]	OPEN ffmapDatabase
+23:38:12.794	[127.0.0.1:7945]	OK	62.28 ms
+23:38:13.021	[127.0.0.1:7945]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:38:13.021	[127.0.0.1:7945]	QUERY(0)	OK
+23:38:13.052	[127.0.0.1:7945]	EXEC(0)	OK
+23:38:13.053	[127.0.0.1:7945]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:38:13.054	[127.0.0.1:7945]	QUERY(1)	OK
+23:38:13.054	[127.0.0.1:7945]	EXEC(1)	OK
+23:38:13.061	[127.0.0.1:7945]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="16" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:38:13.061	[127.0.0.1:7945]	QUERY(2)	OK
+23:38:13.072	[127.0.0.1:7945]	EXEC(2)	OK
+23:38:13.074	[127.0.0.1:7945]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:38:13.075	[127.0.0.1:7945]	QUERY(3)	OK
+23:38:13.078	[127.0.0.1:7945]	EXEC(3)	OK
+23:38:13.079	[127.0.0.1:7945]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:38:13.079	[127.0.0.1:7945]	QUERY(4)	OK
+23:38:13.080	[127.0.0.1:7945]	EXEC(4)	OK
+23:38:13.081	[127.0.0.1:7945]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="17" name="Vagintarian"> </meal> as last into $meals 	OK
+23:38:13.081	[127.0.0.1:7945]	QUERY(5)	OK
+23:38:13.085	[127.0.0.1:7945]	EXEC(5)	OK
+23:38:13.091	[127.0.0.1:7945]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+23:38:13.092	[127.0.0.1:7945]	QUERY(6)	OK
+23:38:13.096	[127.0.0.1:7945]	EXEC(6)	OK
+23:38:26.436	Server was started.
+23:38:26.448	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:38:30.734	Server was started.
+23:38:30.881	[127.0.0.1:7947]	LOGIN admin	OK
+23:38:30.912	[127.0.0.1:7947]	OPEN ffmapDatabase
+23:38:30.947	[127.0.0.1:7947]	OK	65.37 ms
+23:38:31.177	[127.0.0.1:7947]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:38:31.178	[127.0.0.1:7947]	QUERY(0)	OK
+23:38:31.209	[127.0.0.1:7947]	EXEC(0)	OK
+23:38:31.211	[127.0.0.1:7947]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:38:31.211	[127.0.0.1:7947]	QUERY(1)	OK
+23:38:31.212	[127.0.0.1:7947]	EXEC(1)	OK
+23:38:31.219	[127.0.0.1:7947]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="18" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:38:31.219	[127.0.0.1:7947]	QUERY(2)	OK
+23:38:31.232	[127.0.0.1:7947]	EXEC(2)	OK
+23:38:31.234	[127.0.0.1:7947]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:38:31.234	[127.0.0.1:7947]	QUERY(3)	OK
+23:38:31.238	[127.0.0.1:7947]	EXEC(3)	OK
+23:38:31.239	[127.0.0.1:7947]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:38:31.239	[127.0.0.1:7947]	QUERY(4)	OK
+23:38:31.240	[127.0.0.1:7947]	EXEC(4)	OK
+23:38:31.241	[127.0.0.1:7947]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="19" name="Vagintarian"> </meal> as last into $meals 	OK
+23:38:31.241	[127.0.0.1:7947]	QUERY(5)	OK
+23:38:31.245	[127.0.0.1:7947]	EXEC(5)	OK
+23:38:31.252	[127.0.0.1:7947]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+23:38:31.253	[127.0.0.1:7947]	QUERY(6)	OK
+23:38:31.259	[127.0.0.1:7947]	EXEC(6)	OK
+23:38:31.328	[127.0.0.1:7947]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=1]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:38:31.329	[127.0.0.1:7947]	QUERY(7)	OK
+23:38:31.334	[127.0.0.1:7947]	EXEC(7)	OK
+23:38:31.336	[127.0.0.1:7947]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:38:31.336	[127.0.0.1:7947]	QUERY(8)	OK
+23:38:31.339	[127.0.0.1:7947]	EXEC(8)	OK
+23:38:31.354	[127.0.0.1:7947]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 1] return delete node $meal	OK
+23:38:31.354	[127.0.0.1:7947]	QUERY(9)	OK
+23:38:31.359	[127.0.0.1:7947]	EXEC(9)	OK
+23:38:31.365	[127.0.0.1:7947]	QUERY(10)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "grcka"] return $meal 	OK
+23:38:31.366	[127.0.0.1:7947]	QUERY(10)	OK
+23:38:31.367	[127.0.0.1:7947]	EXEC(10)	OK
+23:39:00.967	Server was started.
+23:39:00.979	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:39:06.020	Server was started.
+23:39:06.165	[127.0.0.1:7949]	LOGIN admin	OK
+23:39:06.197	[127.0.0.1:7949]	OPEN ffmapDatabase
+23:39:06.232	[127.0.0.1:7949]	OK	65.54 ms
+23:39:06.462	[127.0.0.1:7949]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:39:06.462	[127.0.0.1:7949]	QUERY(0)	OK
+23:39:06.494	[127.0.0.1:7949]	EXEC(0)	OK
+23:39:06.495	[127.0.0.1:7949]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:39:06.496	[127.0.0.1:7949]	QUERY(1)	OK
+23:39:06.496	[127.0.0.1:7949]	EXEC(1)	OK
+23:39:06.503	[127.0.0.1:7949]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="20" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:39:06.504	[127.0.0.1:7949]	QUERY(2)	OK
+23:39:06.515	[127.0.0.1:7949]	EXEC(2)	OK
+23:39:06.517	[127.0.0.1:7949]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:39:06.518	[127.0.0.1:7949]	QUERY(3)	OK
+23:39:06.521	[127.0.0.1:7949]	EXEC(3)	OK
+23:39:06.522	[127.0.0.1:7949]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:39:06.523	[127.0.0.1:7949]	QUERY(4)	OK
+23:39:06.524	[127.0.0.1:7949]	EXEC(4)	OK
+23:39:06.525	[127.0.0.1:7949]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="21" name="Vagintarian"> </meal> as last into $meals 	OK
+23:39:06.526	[127.0.0.1:7949]	QUERY(5)	OK
+23:39:06.530	[127.0.0.1:7949]	EXEC(5)	OK
+23:39:06.537	[127.0.0.1:7949]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+23:39:06.537	[127.0.0.1:7949]	QUERY(6)	OK
+23:39:06.543	[127.0.0.1:7949]	EXEC(6)	OK
+23:39:18.846	Server was started.
+23:39:18.859	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:39:26.615	Server was started.
+23:39:26.760	[127.0.0.1:7951]	LOGIN admin	OK
+23:39:26.792	[127.0.0.1:7951]	OPEN ffmapDatabase
+23:39:26.827	[127.0.0.1:7951]	OK	65.82 ms
+23:39:27.062	[127.0.0.1:7951]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:39:27.062	[127.0.0.1:7951]	QUERY(0)	OK
+23:39:27.094	[127.0.0.1:7951]	EXEC(0)	OK
+23:39:27.096	[127.0.0.1:7951]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:39:27.096	[127.0.0.1:7951]	QUERY(1)	OK
+23:39:27.097	[127.0.0.1:7951]	EXEC(1)	OK
+23:39:27.103	[127.0.0.1:7951]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="22" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:39:27.104	[127.0.0.1:7951]	QUERY(2)	OK
+23:39:27.116	[127.0.0.1:7951]	EXEC(2)	OK
+23:39:27.117	[127.0.0.1:7951]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:39:27.118	[127.0.0.1:7951]	QUERY(3)	OK
+23:39:27.121	[127.0.0.1:7951]	EXEC(3)	OK
+23:39:27.123	[127.0.0.1:7951]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:39:27.123	[127.0.0.1:7951]	QUERY(4)	OK
+23:39:27.124	[127.0.0.1:7951]	EXEC(4)	OK
+23:39:27.124	[127.0.0.1:7951]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="23" name="Vagintarian"> </meal> as last into $meals 	OK
+23:39:27.125	[127.0.0.1:7951]	QUERY(5)	OK
+23:39:27.128	[127.0.0.1:7951]	EXEC(5)	OK
+23:39:27.135	[127.0.0.1:7951]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+23:39:27.135	[127.0.0.1:7951]	QUERY(6)	OK
+23:39:27.140	[127.0.0.1:7951]	EXEC(6)	OK
+23:39:27.209	[127.0.0.1:7951]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=6]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:39:27.210	[127.0.0.1:7951]	QUERY(7)	OK
+23:39:27.216	[127.0.0.1:7951]	EXEC(7)	OK
+23:39:27.217	[127.0.0.1:7951]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:39:27.217	[127.0.0.1:7951]	QUERY(8)	OK
+23:39:27.221	[127.0.0.1:7951]	EXEC(8)	OK
+23:39:27.236	[127.0.0.1:7951]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 6] return delete node $meal	OK
+23:39:27.237	[127.0.0.1:7951]	QUERY(9)	OK
+23:39:27.242	[127.0.0.1:7951]	EXEC(9)	OK
+23:39:27.248	[127.0.0.1:7951]	QUERY(10)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
+23:39:27.248	[127.0.0.1:7951]	QUERY(10)	OK
+23:39:27.252	[127.0.0.1:7951]	EXEC(10)	OK
+23:40:55.470	Server was started.
+23:40:55.615	[127.0.0.1:7952]	LOGIN admin	OK
+23:40:55.645	[127.0.0.1:7952]	OPEN ffmapDatabase
+23:40:55.646	[127.0.0.1:7952]	Error: Database 'ffmapDatabase' was not found.	31.37 ms
+23:40:55.944	[127.0.0.1:7952]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:40:56.074	[127.0.0.1:7952]	OK	140.56 ms
+23:40:56.297	[127.0.0.1:7952]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:40:56.298	[127.0.0.1:7952]	QUERY(0)	OK
+23:40:56.328	[127.0.0.1:7952]	EXEC(0)	OK
+23:40:56.329	[127.0.0.1:7952]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:40:56.329	[127.0.0.1:7952]	QUERY(1)	OK
+23:40:56.331	[127.0.0.1:7952]	EXEC(1)	OK
+23:40:56.337	[127.0.0.1:7952]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:40:56.338	[127.0.0.1:7952]	QUERY(2)	OK
+23:40:56.352	[127.0.0.1:7952]	EXEC(2)	OK
+23:40:56.355	[127.0.0.1:7952]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:40:56.355	[127.0.0.1:7952]	QUERY(3)	OK
+23:40:56.359	[127.0.0.1:7952]	EXEC(3)	OK
+23:40:56.360	[127.0.0.1:7952]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:40:56.360	[127.0.0.1:7952]	QUERY(4)	OK
+23:40:56.361	[127.0.0.1:7952]	EXEC(4)	OK
+23:40:56.362	[127.0.0.1:7952]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:40:56.363	[127.0.0.1:7952]	QUERY(5)	OK
+23:40:56.366	[127.0.0.1:7952]	EXEC(5)	OK
+23:40:56.373	[127.0.0.1:7952]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+23:40:56.374	[127.0.0.1:7952]	QUERY(6)	OK
+23:40:56.378	[127.0.0.1:7952]	EXEC(6)	OK
+23:41:10.081	Server was started.
+23:41:10.227	[127.0.0.1:7954]	LOGIN admin	OK
+23:41:10.258	[127.0.0.1:7954]	OPEN ffmapDatabase
+23:41:10.296	[127.0.0.1:7954]	OK	70.46 ms
+23:41:10.546	[127.0.0.1:7954]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:41:10.546	[127.0.0.1:7954]	QUERY(0)	OK
+23:41:10.577	[127.0.0.1:7954]	EXEC(0)	OK
+23:41:10.579	[127.0.0.1:7954]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:41:10.579	[127.0.0.1:7954]	QUERY(1)	OK
+23:41:10.580	[127.0.0.1:7954]	EXEC(1)	OK
+23:41:10.586	[127.0.0.1:7954]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="6" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:41:10.586	[127.0.0.1:7954]	QUERY(2)	OK
+23:41:10.596	[127.0.0.1:7954]	EXEC(2)	OK
+23:41:10.598	[127.0.0.1:7954]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:41:10.599	[127.0.0.1:7954]	QUERY(3)	OK
+23:41:10.602	[127.0.0.1:7954]	EXEC(3)	OK
+23:41:10.603	[127.0.0.1:7954]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:41:10.604	[127.0.0.1:7954]	QUERY(4)	OK
+23:41:10.604	[127.0.0.1:7954]	EXEC(4)	OK
+23:41:10.605	[127.0.0.1:7954]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="7" name="Vagintarian"> </meal> as last into $meals 	OK
+23:41:10.605	[127.0.0.1:7954]	QUERY(5)	OK
+23:41:10.609	[127.0.0.1:7954]	EXEC(5)	OK
+23:41:10.615	[127.0.0.1:7954]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:41:10.615	[127.0.0.1:7954]	QUERY(6)	OK
+23:41:10.620	[127.0.0.1:7954]	EXEC(6)	OK
+23:41:10.690	[127.0.0.1:7954]	QUERY(7)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:41:10.691	[127.0.0.1:7954]	QUERY(7)	OK
+23:41:10.696	[127.0.0.1:7954]	EXEC(7)	OK
+23:41:10.697	[127.0.0.1:7954]	QUERY(8)	let $meals := /fastfood-database/meals return $meals	OK
+23:41:10.697	[127.0.0.1:7954]	QUERY(8)	OK
+23:41:10.699	[127.0.0.1:7954]	EXEC(8)	OK
+23:41:10.711	[127.0.0.1:7954]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 3] return delete node $meal	OK
+23:41:10.712	[127.0.0.1:7954]	QUERY(9)	OK
+23:41:10.717	[127.0.0.1:7954]	EXEC(9)	OK
+23:41:10.724	[127.0.0.1:7954]	QUERY(10)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
+23:41:10.724	[127.0.0.1:7954]	QUERY(10)	OK
+23:41:10.726	[127.0.0.1:7954]	EXEC(10)	OK
+23:41:38.904	Server was started.
+23:41:39.047	[127.0.0.1:7955]	LOGIN admin	OK
+23:41:39.078	[127.0.0.1:7955]	OPEN ffmapDatabase
+23:41:39.113	[127.0.0.1:7955]	OK	64.02 ms
+23:41:39.341	[127.0.0.1:7955]	QUERY(0)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:41:39.341	[127.0.0.1:7955]	QUERY(0)	OK
+23:41:39.373	[127.0.0.1:7955]	EXEC(0)	OK
+23:41:39.375	[127.0.0.1:7955]	QUERY(1)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:41:39.375	[127.0.0.1:7955]	QUERY(1)	OK
+23:41:39.376	[127.0.0.1:7955]	EXEC(1)	OK
+23:41:39.382	[127.0.0.1:7955]	QUERY(2)	let $meals := /fastfood-database/meals return insert node <meal id="8" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:41:39.382	[127.0.0.1:7955]	QUERY(2)	OK
+23:41:39.393	[127.0.0.1:7955]	EXEC(2)	OK
+23:41:39.395	[127.0.0.1:7955]	QUERY(3)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:41:39.396	[127.0.0.1:7955]	QUERY(3)	OK
+23:41:39.399	[127.0.0.1:7955]	EXEC(3)	OK
+23:41:39.400	[127.0.0.1:7955]	QUERY(4)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:41:39.400	[127.0.0.1:7955]	QUERY(4)	OK
+23:41:39.401	[127.0.0.1:7955]	EXEC(4)	OK
+23:41:39.403	[127.0.0.1:7955]	QUERY(5)	let $meals := /fastfood-database/meals return insert node <meal id="9" name="Vagintarian"> </meal> as last into $meals 	OK
+23:41:39.403	[127.0.0.1:7955]	QUERY(5)	OK
+23:41:39.406	[127.0.0.1:7955]	EXEC(5)	OK
+23:41:39.413	[127.0.0.1:7955]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:41:39.413	[127.0.0.1:7955]	QUERY(6)	OK
+23:41:39.417	[127.0.0.1:7955]	EXEC(6)	OK
+23:54:14.933	Server was started.
+23:54:15.078	[127.0.0.1:7982]	LOGIN admin	OK
+23:54:15.108	[127.0.0.1:7982]	OPEN ffmapDatabase
+23:54:15.141	[127.0.0.1:7982]	OK	62.05 ms
+23:54:15.373	[127.0.0.1:7982]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:54:15.373	[127.0.0.1:7982]	QUERY(0)	OK
+23:54:15.398	[127.0.0.1:7982]	EXEC(0)	OK
+23:54:15.401	[127.0.0.1:7982]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:54:15.402	[127.0.0.1:7982]	QUERY(1)	OK
+23:54:15.403	[127.0.0.1:7982]	EXEC(1)	OK
+23:54:15.405	[127.0.0.1:7982]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:54:15.406	[127.0.0.1:7982]	QUERY(2)	OK
+23:54:15.407	[127.0.0.1:7982]	EXEC(2)	OK
+23:54:35.288	Server was started.
+23:54:35.435	[127.0.0.1:7983]	LOGIN admin	OK
+23:54:35.466	[127.0.0.1:7983]	OPEN ffmapDatabase
+23:54:35.487	[127.0.0.1:7983]	Error: Database 'ffmapDatabase' was not found.	52.01 ms
+23:54:35.517	[127.0.0.1:7983]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+23:54:35.677	[127.0.0.1:7983]	OK	168.71 ms
+23:54:35.900	[127.0.0.1:7983]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:54:35.901	[127.0.0.1:7983]	QUERY(0)	OK
+23:54:35.927	[127.0.0.1:7983]	EXEC(0)	OK
+23:54:35.939	[127.0.0.1:7983]	QUERY(1)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:54:35.941	[127.0.0.1:7983]	QUERY(1)	OK
+23:54:35.959	[127.0.0.1:7983]	EXEC(1)	OK
+23:54:35.961	[127.0.0.1:7983]	QUERY(2)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:54:35.962	[127.0.0.1:7983]	QUERY(2)	OK
+23:54:35.963	[127.0.0.1:7983]	EXEC(2)	OK
+23:54:35.968	[127.0.0.1:7983]	QUERY(3)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
+23:54:35.968	[127.0.0.1:7983]	QUERY(3)	OK
+23:54:35.977	[127.0.0.1:7983]	EXEC(3)	OK
+23:54:35.983	[127.0.0.1:7983]	QUERY(4)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:54:35.983	[127.0.0.1:7983]	QUERY(4)	OK
+23:54:35.984	[127.0.0.1:7983]	EXEC(4)	OK
+23:54:35.986	[127.0.0.1:7983]	QUERY(5)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
+23:54:35.986	[127.0.0.1:7983]	QUERY(5)	OK
+23:54:35.989	[127.0.0.1:7983]	EXEC(5)	OK
+23:54:35.991	[127.0.0.1:7983]	QUERY(6)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
+23:54:35.992	[127.0.0.1:7983]	QUERY(6)	OK
+23:54:35.993	[127.0.0.1:7983]	EXEC(6)	OK
+23:54:35.995	[127.0.0.1:7983]	QUERY(7)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
+23:54:35.995	[127.0.0.1:7983]	QUERY(7)	OK
+23:54:35.999	[127.0.0.1:7983]	EXEC(7)	OK
+23:54:36.001	[127.0.0.1:7983]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:54:36.001	[127.0.0.1:7983]	QUERY(8)	OK
+23:54:36.003	[127.0.0.1:7983]	EXEC(8)	OK
+23:54:36.022	[127.0.0.1:7983]	QUERY(9)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
+23:54:36.023	[127.0.0.1:7983]	QUERY(9)	OK
+23:54:36.027	[127.0.0.1:7983]	EXEC(9)	OK
+23:54:36.028	[127.0.0.1:7983]	QUERY(10)	let $meals := /fastfood-database/meals return $meals	OK
+23:54:36.028	[127.0.0.1:7983]	QUERY(10)	OK
+23:54:36.029	[127.0.0.1:7983]	EXEC(10)	OK
+23:54:36.034	[127.0.0.1:7983]	QUERY(11)	for $meal in /fastfood-database/meals/meal[@id = 3] return delete node $meal	OK
+23:54:36.035	[127.0.0.1:7983]	QUERY(11)	OK
+23:54:36.039	[127.0.0.1:7983]	EXEC(11)	OK
+23:54:36.040	[127.0.0.1:7983]	QUERY(12)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
+23:54:36.043	[127.0.0.1:7983]	QUERY(12)	OK
+23:54:36.044	[127.0.0.1:7983]	EXEC(12)	OK
+23:54:36.047	[127.0.0.1:7983]	QUERY(13)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:54:36.047	[127.0.0.1:7983]	QUERY(13)	OK
+23:54:36.051	[127.0.0.1:7983]	EXEC(13)	OK
+23:54:36.056	Server was stopped.
+23:54:56.776	Server was started.
+23:54:56.924	[127.0.0.1:7992]	LOGIN admin	OK
+23:54:56.955	[127.0.0.1:7992]	OPEN ffmapDatabase
+23:54:56.989	[127.0.0.1:7992]	OK	61.97 ms
+23:54:57.227	[127.0.0.1:7992]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:54:57.228	[127.0.0.1:7992]	QUERY(0)	OK
+23:54:57.252	[127.0.0.1:7992]	EXEC(0)	OK
+23:54:57.255	[127.0.0.1:7992]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:54:57.255	[127.0.0.1:7992]	QUERY(1)	OK
+23:54:57.256	[127.0.0.1:7992]	EXEC(1)	OK
+23:54:57.259	[127.0.0.1:7992]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:54:57.259	[127.0.0.1:7992]	QUERY(2)	OK
+23:54:57.260	[127.0.0.1:7992]	EXEC(2)	OK
+23:55:26.099	Server was started.
+23:55:26.243	[127.0.0.1:8001]	LOGIN admin	OK
+23:55:26.273	[127.0.0.1:8001]	OPEN ffmapDatabase
+23:55:26.307	[127.0.0.1:8001]	OK	62.85 ms
+23:55:26.543	[127.0.0.1:8001]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:55:26.543	[127.0.0.1:8001]	QUERY(0)	OK
+23:55:26.570	[127.0.0.1:8001]	EXEC(0)	OK
+23:55:26.573	[127.0.0.1:8001]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:55:26.573	[127.0.0.1:8001]	QUERY(1)	OK
+23:55:26.574	[127.0.0.1:8001]	EXEC(1)	OK
+23:55:26.576	[127.0.0.1:8001]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:55:26.577	[127.0.0.1:8001]	QUERY(2)	OK
+23:55:26.578	[127.0.0.1:8001]	EXEC(2)	OK
+23:55:46.910	Server was started.
+23:55:47.056	[127.0.0.1:8003]	LOGIN admin	OK
+23:55:47.090	[127.0.0.1:8003]	OPEN ffmapDatabase
+23:55:47.128	[127.0.0.1:8003]	OK	71.02 ms
+23:55:47.378	[127.0.0.1:8003]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:55:47.378	[127.0.0.1:8003]	QUERY(0)	OK
+23:55:47.405	[127.0.0.1:8003]	EXEC(0)	OK
+23:55:47.408	[127.0.0.1:8003]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:55:47.409	[127.0.0.1:8003]	QUERY(1)	OK
+23:55:47.410	[127.0.0.1:8003]	EXEC(1)	OK
+23:55:47.412	[127.0.0.1:8003]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:55:47.412	[127.0.0.1:8003]	QUERY(2)	OK
+23:55:47.414	[127.0.0.1:8003]	EXEC(2)	OK
+23:55:47.415	[127.0.0.1:8003]	QUERY(3)	let $meals := /fastfood-database/meals return $meals	OK
+23:55:47.415	[127.0.0.1:8003]	QUERY(3)	OK
+23:55:47.417	[127.0.0.1:8003]	EXEC(3)	OK
+23:56:12.543	Server was started.
+23:56:12.555	Unrecognized Windows Sockets error: 0: JVM_Bind
+23:56:32.692	Server was started.
+23:56:32.837	[127.0.0.1:8006]	LOGIN admin	OK
+23:56:32.868	[127.0.0.1:8006]	OPEN ffmapDatabase
+23:56:32.901	[127.0.0.1:8006]	OK	62.71 ms
+23:56:33.136	[127.0.0.1:8006]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:56:33.136	[127.0.0.1:8006]	QUERY(0)	OK
+23:56:33.163	[127.0.0.1:8006]	EXEC(0)	OK
+23:56:33.166	[127.0.0.1:8006]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:56:33.166	[127.0.0.1:8006]	QUERY(1)	OK
+23:56:33.168	[127.0.0.1:8006]	EXEC(1)	OK
+23:56:33.170	[127.0.0.1:8006]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:56:33.170	[127.0.0.1:8006]	QUERY(2)	OK
+23:56:33.172	[127.0.0.1:8006]	EXEC(2)	OK
+23:56:33.173	[127.0.0.1:8006]	QUERY(3)	let $meals := /fastfood-database/meals return $meals	OK
+23:56:33.173	[127.0.0.1:8006]	QUERY(3)	OK
+23:56:33.175	[127.0.0.1:8006]	EXEC(3)	OK
+23:56:33.241	[127.0.0.1:8006]	QUERY(4)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
+23:56:33.241	[127.0.0.1:8006]	QUERY(4)	OK
+23:56:33.242	[127.0.0.1:8006]	EXEC(4)	OK
+23:56:33.246	[127.0.0.1:8006]	QUERY(5)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:56:33.246	[127.0.0.1:8006]	QUERY(5)	OK
+23:56:33.247	[127.0.0.1:8006]	EXEC(5)	OK
+23:56:33.248	Server was stopped.
+23:57:12.346	Server was started.
+23:57:12.491	[127.0.0.1:8009]	LOGIN admin	OK
+23:57:12.522	[127.0.0.1:8009]	OPEN ffmapDatabase
+23:57:12.557	[127.0.0.1:8009]	OK	63.82 ms
+23:57:12.789	[127.0.0.1:8009]	QUERY(0)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
+23:57:12.789	[127.0.0.1:8009]	QUERY(0)	OK
+23:57:12.813	[127.0.0.1:8009]	EXEC(0)	OK
+23:57:12.817	[127.0.0.1:8009]	QUERY(1)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
+23:57:12.818	[127.0.0.1:8009]	QUERY(1)	OK
+23:57:12.819	[127.0.0.1:8009]	EXEC(1)	OK
+23:57:12.822	[127.0.0.1:8009]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:57:12.822	[127.0.0.1:8009]	QUERY(2)	OK
+23:57:12.823	[127.0.0.1:8009]	EXEC(2)	OK
+23:57:12.825	[127.0.0.1:8009]	QUERY(3)	let $meals := /fastfood-database/meals return $meals	OK
+23:57:12.826	[127.0.0.1:8009]	QUERY(3)	OK
+23:57:12.828	[127.0.0.1:8009]	EXEC(3)	OK
+23:57:12.896	[127.0.0.1:8009]	QUERY(4)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
+23:57:12.896	[127.0.0.1:8009]	QUERY(4)	OK
+23:57:12.897	[127.0.0.1:8009]	EXEC(4)	OK
+23:57:12.900	[127.0.0.1:8009]	QUERY(5)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
+23:57:12.901	[127.0.0.1:8009]	QUERY(5)	OK
+23:57:12.902	[127.0.0.1:8009]	EXEC(5)	OK
+23:57:12.908	Server was stopped.

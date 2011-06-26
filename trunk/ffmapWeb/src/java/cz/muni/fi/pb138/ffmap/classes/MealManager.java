@@ -38,27 +38,100 @@ public class MealManager implements IDatabaseManager {
     }
 
     public IDatabaseStoreable find(long id) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    public List<? extends IDatabaseStoreable> getAll() {
-        throw new UnsupportedOperationException();
-        /*List<Meal> result = new ArrayList<Meal>();
+        if(id <= 0) throw new IllegalArgumentException("Id must be greater than zero!");
 
-        Document queryResult = XQueryResultController.getDocument(database.XQueryCommand("/fastfood-database/meals"));*/
+        String query = "for $meal in /fastfood-database/meals/meal[@id = " + id + "] " +
+                       "return $meal";
+
+        try{
+            String queryResult = database.XQueryCommand(query);
+            if((queryResult == null) || (queryResult.equals(""))) return null;
+            Document document = XQueryResultController.getDocument(queryResult);
+            return parseMeal(document.getDocumentElement());
+        } catch (Exception ex){
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return null;
+    }
+
+    public IDatabaseStoreable find(String name){
+
+        String query = "for $meal in /fastfood-database/meals/meal[lower-case(@name) = \"" + name.toLowerCase() + "\"] return $meal ";
+        try {
+            String queryResult = database.XQueryCommand(query);
+            if((queryResult == null) || (queryResult.equals(""))) return null;
+            Document document = XQueryResultController.getDocument(queryResult);
+            return parseMeal(document.getDocumentElement());
+        } catch (Exception ex) {
+            Logger.getLogger(MealManager.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
+    public List<? extends IDatabaseStoreable> getAll() {
+        List<Meal> meals = null;
+        
+        String query = "let $meals := /fastfood-database/meals " +
+                       "return $meals";
+        try{
+            String queryResult = database.XQueryCommand(query);
+            Document document = XQueryResultController.getDocument(queryResult);
+            meals = new ArrayList<Meal>();
+
+            for(int i = 0; i < document.getDocumentElement().getElementsByTagName("meal").getLength(); i++){
+                Meal meal = parseMeal((Element)document.getDocumentElement().getElementsByTagName("meal").item(i));
+                if(meal != null){
+                    meals.add(meal);
+                }
+            }
+        } catch (Exception ex){
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return meals;
+
     }
     public long count() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-    /*private parseMeal(Element meal, NodeList prices){
-        throw new UnsupportedOperationException();
+        long result = -1;
+        String query = "let $meals := /fastfood-database/meals/meal return count($meals)";
+        try {
+            String queryResult = database.XQueryCommand(query);
+            if((queryResult == null) || (queryResult.equals(""))) return result;
+            result = Long.valueOf(queryResult);
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
         
-        Meal result = null;
+        return result;
+    }
+
+    private Meal parseMeal(Element meal){
 
         Long _id = Long.valueOf(meal.getAttribute("id"));
         String _name = meal.getAttribute("name");
+        String _description = null;
         if(meal.hasChildNodes()){
-            String _description = meal.getElementsByTagName("description").item(0).getTextContent();
+            _description = meal.getElementsByTagName("description").item(0).getTextContent();
         }
-    }*/
+
+        return Meal.loadMeal(_id, _name, _description);
+    }
+
+    public boolean checkNameAvalilability(String name){
+        String query = "let $meals := /fastfood-database/meals/meal" +
+                       " return count($meals[lower-case(@name) = \"" + name.toLowerCase() + "\"])";
+        try {
+            long result = Long.valueOf(database.XQueryCommand(query));
+            if(result != 0){
+                return false;
+            }
+            return true;
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return false;
+    }
 
 }

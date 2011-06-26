@@ -8,6 +8,18 @@
         <servlet-name>viewUser</servlet-name>
         <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewAllMeals</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewAllMealsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewMeal</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewMealServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registerUserServlet</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.registerNewUserServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>viewAllUsers</servlet-name>
         <url-pattern>/users</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>viewUser</servlet-name>
         <url-pattern>/user/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewAllMeals</servlet-name>
+        <url-pattern>/meals</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewMeal</servlet-name>
+        <url-pattern>/meal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registerUserServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
