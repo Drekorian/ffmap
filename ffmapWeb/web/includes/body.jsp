@@ -51,6 +51,9 @@
                                     <li><a href="<c:url value="/allJointsMap" />">
                                             na mapě!
                                     </a></li>
+                                    <li><a href="<c:url value="/cheapestMap" />">
+                                            nejlevnější na mapě!
+                                    </a></li>
                                     <li><a href="<c:url value="/joints" />">
                                             výpis!
                                     </a></li>

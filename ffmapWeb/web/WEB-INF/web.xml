@@ -56,6 +56,10 @@
         <servlet-name>deleteUser</servlet-name>
         <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.deleteUserServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>viewCheapestMap</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewCheapestJointsMapServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>viewAllUsers</servlet-name>
         <url-pattern>/users</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>deleteUser</servlet-name>
         <url-pattern>/deleteUser/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewCheapestMap</servlet-name>
+        <url-pattern>/cheapestMap</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

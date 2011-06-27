@@ -507,3 +507,2469 @@
 06:24:22.158	[127.0.0.1:30735]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
 06:24:22.288	[127.0.0.1:30735]	OK	139.79 ms
 06:24:22.289	Server was stopped.
+10:14:59.763	Server was started.
+10:14:59.779	Address already in use: JVM_Bind
+10:15:05.845	Server was started.
+10:15:06.032	[127.0.0.1:33881]	LOGIN admin	OK
+10:15:06.074	[127.0.0.1:33881]	OPEN ffmapDatabase
+10:15:06.117	[127.0.0.1:33881]	OK	83.2 ms
+10:15:06.127	[127.0.0.1:33881]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:15:06.252	[127.0.0.1:33881]	OK	133.98 ms
+10:15:06.443	[127.0.0.1:33881]	QUERY(for $prices := //pricereturn min(price)/../../..)	Error: Stopped at line 1, column 12: [XPST0003] Expecting "in", found ":".
+10:15:18.602	Server was started.
+10:15:18.617	Address already in use: JVM_Bind
+10:15:24.023	Server was started.
+10:15:24.208	[127.0.0.1:33883]	LOGIN admin	OK
+10:15:24.250	[127.0.0.1:33883]	OPEN ffmapDatabase
+10:15:24.290	[127.0.0.1:33883]	OK	80.31 ms
+10:15:24.301	[127.0.0.1:33883]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:15:24.417	[127.0.0.1:33883]	OK	127.18 ms
+10:15:24.639	[127.0.0.1:33883]	QUERY(for $prices in //pricereturn min(price)/../../..)	Error: Stopped at line 1, column 29: [XPST0003] Expecting 'where', 'order' or 'return' expression.
+10:16:04.513	Server was started.
+10:16:04.691	[127.0.0.1:33905]	LOGIN admin	OK
+10:16:04.734	[127.0.0.1:33905]	OPEN ffmapDatabase
+10:16:04.774	[127.0.0.1:33905]	OK	81.11 ms
+10:16:04.786	[127.0.0.1:33905]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:16:04.904	[127.0.0.1:33905]	OK	128.09 ms
+10:16:05.192	[127.0.0.1:33905]	QUERY(0)	for $prices in //price return min(price)/../../..	OK
+10:16:05.192	[127.0.0.1:33905]	QUERY(0)	OK
+10:16:05.219	[127.0.0.1:33905]	EXEC(0)	OK
+10:16:05.220	[127.0.0.1:33905]	CLOSE(0)	OK
+10:16:29.674	Server was started.
+10:16:29.858	[127.0.0.1:33906]	LOGIN admin	OK
+10:16:29.901	[127.0.0.1:33906]	OPEN ffmapDatabase
+10:16:29.940	[127.0.0.1:33906]	OK	80.52 ms
+10:16:29.951	[127.0.0.1:33906]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:16:30.097	[127.0.0.1:33906]	OK	155.42 ms
+10:16:30.382	[127.0.0.1:33906]	QUERY(0)	for $prices in //price return min($prices)/../../..	OK
+10:16:30.382	[127.0.0.1:33906]	QUERY(0)	OK
+10:16:30.412	[127.0.0.1:33906]	EXEC(0)	Error: Stopped at line 2, column 22: [XPTY0019] Context node required for ..; xs:double found.
+10:17:17.904	Server was started.
+10:17:17.919	Address already in use: JVM_Bind
+10:17:23.416	Server was started.
+10:17:23.592	[127.0.0.1:33908]	LOGIN admin	OK
+10:17:23.633	[127.0.0.1:33908]	OPEN ffmapDatabase
+10:17:23.672	[127.0.0.1:33908]	OK	78.43 ms
+10:17:23.682	[127.0.0.1:33908]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:17:23.801	[127.0.0.1:33908]	OK	129.54 ms
+10:17:24.087	[127.0.0.1:33908]	QUERY(0)	for $prices in //price let $min_price := min($prices) return min($prices)/../../..	OK
+10:17:24.088	[127.0.0.1:33908]	QUERY(0)	OK
+10:17:24.118	[127.0.0.1:33908]	EXEC(0)	Error: Stopped at line 3, column 22: [XPTY0019] Context node required for ..; xs:double found.
+10:18:34.818	Server was started.
+10:18:34.832	Address already in use: JVM_Bind
+10:18:40.122	Server was started.
+10:18:40.294	[127.0.0.1:33915]	LOGIN admin	OK
+10:18:40.335	[127.0.0.1:33915]	OPEN ffmapDatabase
+10:18:40.373	[127.0.0.1:33915]	OK	78.14 ms
+10:18:40.383	[127.0.0.1:33915]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:18:40.497	[127.0.0.1:33915]	OK	123.86 ms
+10:18:40.789	[127.0.0.1:33915]	QUERY(0)	for $prices in //price let $min_price := min($prices) return //joint[//price=$min_price]	OK
+10:18:40.789	[127.0.0.1:33915]	QUERY(0)	OK
+10:18:40.839	[127.0.0.1:33915]	EXEC(0)	OK
+10:18:40.850	[127.0.0.1:33915]	CLOSE(0)	OK
+10:19:45.920	Server was started.
+10:19:45.936	Address already in use: JVM_Bind
+10:19:54.443	Server was started.
+10:19:54.629	[127.0.0.1:33918]	LOGIN admin	OK
+10:19:54.676	[127.0.0.1:33918]	OPEN ffmapDatabase
+10:19:54.729	[127.0.0.1:33918]	OK	98.64 ms
+10:19:54.742	[127.0.0.1:33918]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:19:54.928	[127.0.0.1:33918]	OK	195.59 ms
+10:19:55.233	[127.0.0.1:33918]	QUERY(0)	for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..	OK
+10:19:55.234	[127.0.0.1:33918]	QUERY(0)	OK
+10:19:55.299	[127.0.0.1:33918]	EXEC(0)	OK
+10:19:55.308	[127.0.0.1:33918]	CLOSE(0)	OK
+10:23:27.388	Server was started.
+10:23:27.577	[127.0.0.1:33922]	LOGIN admin	OK
+10:23:27.621	[127.0.0.1:33922]	OPEN ffmapDatabase
+10:23:27.664	[127.0.0.1:33922]	OK	84.39 ms
+10:23:27.674	[127.0.0.1:33922]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:23:27.805	[127.0.0.1:33922]	OK	140.96 ms
+10:23:28.014	[127.0.0.1:33922]	QUERY(0)	<joints>for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..</joints>	OK
+10:23:28.015	[127.0.0.1:33922]	QUERY(0)	OK
+10:23:28.047	[127.0.0.1:33922]	EXEC(0)	OK
+10:23:28.048	[127.0.0.1:33922]	CLOSE(0)	OK
+10:24:16.419	Server was started.
+10:24:16.434	Address already in use: JVM_Bind
+10:24:22.181	Server was started.
+10:24:22.381	[127.0.0.1:33927]	LOGIN admin	OK
+10:24:22.424	[127.0.0.1:33927]	OPEN ffmapDatabase
+10:24:22.464	[127.0.0.1:33927]	OK	80.78 ms
+10:24:22.475	[127.0.0.1:33927]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:24:22.595	[127.0.0.1:33927]	OK	130.02 ms
+10:24:22.798	[127.0.0.1:33927]	QUERY(0)	<joints>for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..</joints>	OK
+10:24:22.799	[127.0.0.1:33927]	QUERY(0)	OK
+10:24:22.830	[127.0.0.1:33927]	EXEC(0)	OK
+10:24:22.831	[127.0.0.1:33927]	CLOSE(0)	OK
+10:24:42.257	Server was started.
+10:24:42.271	Address already in use: JVM_Bind
+10:24:48.632	Server was started.
+10:24:48.818	[127.0.0.1:33928]	LOGIN admin	OK
+10:24:48.860	[127.0.0.1:33928]	OPEN ffmapDatabase
+10:24:48.897	[127.0.0.1:33928]	OK	77.44 ms
+10:24:48.907	[127.0.0.1:33928]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:24:49.026	[127.0.0.1:33928]	OK	128.99 ms
+10:24:49.249	[127.0.0.1:33928]	QUERY(0)	<joints>for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..</joints>	OK
+10:24:49.249	[127.0.0.1:33928]	QUERY(0)	OK
+10:24:49.282	[127.0.0.1:33928]	EXEC(0)	OK
+10:24:49.283	[127.0.0.1:33928]	CLOSE(0)	OK
+10:24:49.296	Server was stopped.
+10:25:01.738	Server was started.
+10:25:01.901	[127.0.0.1:33930]	LOGIN admin	OK
+10:25:01.941	[127.0.0.1:33930]	OPEN ffmapDatabase
+10:25:01.983	[127.0.0.1:33930]	OK	80.87 ms
+10:25:01.993	[127.0.0.1:33930]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:25:02.112	[127.0.0.1:33930]	OK	129.43 ms
+10:25:02.311	[127.0.0.1:33930]	QUERY(0)	<joints>for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..</joints>	OK
+10:25:02.312	[127.0.0.1:33930]	QUERY(0)	OK
+10:25:02.344	[127.0.0.1:33930]	EXEC(0)	OK
+10:25:02.344	[127.0.0.1:33930]	CLOSE(0)	OK
+10:25:02.357	Server was stopped.
+10:25:20.353	Server was started.
+10:25:20.535	[127.0.0.1:33933]	LOGIN admin	OK
+10:25:20.576	[127.0.0.1:33933]	OPEN ffmapDatabase
+10:25:20.622	[127.0.0.1:33933]	OK	86.41 ms
+10:25:20.661	[127.0.0.1:33933]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:25:20.785	[127.0.0.1:33933]	OK	135.27 ms
+10:25:21.081	[127.0.0.1:33933]	QUERY(0)	<joints> {for $prices in //price let $min_price := min($prices) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:25:21.082	[127.0.0.1:33933]	QUERY(0)	OK
+10:25:21.143	[127.0.0.1:33933]	EXEC(0)	OK
+10:25:21.150	[127.0.0.1:33933]	CLOSE(0)	OK
+10:25:21.194	[127.0.0.1:33933]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.195	[127.0.0.1:33933]	QUERY(1)	OK
+10:25:21.196	[127.0.0.1:33933]	EXEC(1)	OK
+10:25:21.197	[127.0.0.1:33933]	CLOSE(1)	OK
+10:25:21.202	[127.0.0.1:33933]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.203	[127.0.0.1:33933]	QUERY(2)	OK
+10:25:21.204	[127.0.0.1:33933]	EXEC(2)	OK
+10:25:21.205	[127.0.0.1:33933]	CLOSE(2)	OK
+10:25:21.215	[127.0.0.1:33933]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.215	[127.0.0.1:33933]	QUERY(3)	OK
+10:25:21.216	[127.0.0.1:33933]	EXEC(3)	OK
+10:25:21.217	[127.0.0.1:33933]	CLOSE(3)	OK
+10:25:21.221	[127.0.0.1:33933]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.221	[127.0.0.1:33933]	QUERY(4)	OK
+10:25:21.223	[127.0.0.1:33933]	EXEC(4)	OK
+10:25:21.224	[127.0.0.1:33933]	CLOSE(4)	OK
+10:25:21.230	[127.0.0.1:33933]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.231	[127.0.0.1:33933]	QUERY(5)	OK
+10:25:21.232	[127.0.0.1:33933]	EXEC(5)	OK
+10:25:21.233	[127.0.0.1:33933]	CLOSE(5)	OK
+10:25:21.236	[127.0.0.1:33933]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.237	[127.0.0.1:33933]	QUERY(6)	OK
+10:25:21.238	[127.0.0.1:33933]	EXEC(6)	OK
+10:25:21.238	[127.0.0.1:33933]	CLOSE(6)	OK
+10:25:21.243	[127.0.0.1:33933]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.244	[127.0.0.1:33933]	QUERY(7)	OK
+10:25:21.245	[127.0.0.1:33933]	EXEC(7)	OK
+10:25:21.246	[127.0.0.1:33933]	CLOSE(7)	OK
+10:25:21.249	[127.0.0.1:33933]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.250	[127.0.0.1:33933]	QUERY(8)	OK
+10:25:21.251	[127.0.0.1:33933]	EXEC(8)	OK
+10:25:21.252	[127.0.0.1:33933]	CLOSE(8)	OK
+10:25:21.257	[127.0.0.1:33933]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.258	[127.0.0.1:33933]	QUERY(9)	OK
+10:25:21.259	[127.0.0.1:33933]	EXEC(9)	OK
+10:25:21.260	[127.0.0.1:33933]	CLOSE(9)	OK
+10:25:21.263	[127.0.0.1:33933]	QUERY(10)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.263	[127.0.0.1:33933]	QUERY(10)	OK
+10:25:21.265	[127.0.0.1:33933]	EXEC(10)	OK
+10:25:21.265	[127.0.0.1:33933]	CLOSE(10)	OK
+10:25:21.270	[127.0.0.1:33933]	QUERY(11)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.270	[127.0.0.1:33933]	QUERY(11)	OK
+10:25:21.272	[127.0.0.1:33933]	EXEC(11)	OK
+10:25:21.272	[127.0.0.1:33933]	CLOSE(11)	OK
+10:25:21.276	[127.0.0.1:33933]	QUERY(12)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.276	[127.0.0.1:33933]	QUERY(12)	OK
+10:25:21.277	[127.0.0.1:33933]	EXEC(12)	OK
+10:25:21.278	[127.0.0.1:33933]	CLOSE(12)	OK
+10:25:21.282	[127.0.0.1:33933]	QUERY(13)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.283	[127.0.0.1:33933]	QUERY(13)	OK
+10:25:21.284	[127.0.0.1:33933]	EXEC(13)	OK
+10:25:21.285	[127.0.0.1:33933]	CLOSE(13)	OK
+10:25:21.288	[127.0.0.1:33933]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.289	[127.0.0.1:33933]	QUERY(14)	OK
+10:25:21.290	[127.0.0.1:33933]	EXEC(14)	OK
+10:25:21.291	[127.0.0.1:33933]	CLOSE(14)	OK
+10:25:21.299	[127.0.0.1:33933]	QUERY(15)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:25:21.300	[127.0.0.1:33933]	QUERY(15)	OK
+10:25:21.301	[127.0.0.1:33933]	EXEC(15)	OK
+10:25:21.302	[127.0.0.1:33933]	CLOSE(15)	OK
+10:25:21.307	[127.0.0.1:33933]	QUERY(16)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:25:21.307	[127.0.0.1:33933]	QUERY(16)	OK
+10:25:21.308	[127.0.0.1:33933]	EXEC(16)	OK
+10:25:21.309	[127.0.0.1:33933]	CLOSE(16)	OK
+10:25:21.319	Server was stopped.
+10:36:25.004	Server was started.
+10:36:25.019	Address already in use: JVM_Bind
+10:36:30.855	Server was started.
+10:36:31.021	[127.0.0.1:34100]	LOGIN admin	OK
+10:36:31.064	[127.0.0.1:34100]	OPEN ffmapDatabase
+10:36:31.115	[127.0.0.1:34100]	OK	92.47 ms
+10:36:31.126	[127.0.0.1:34100]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:36:31.248	[127.0.0.1:34100]	OK	132.68 ms
+10:36:31.559	[127.0.0.1:34100]	QUERY(0)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return min($min_price)} </joints>	OK
+10:36:31.559	[127.0.0.1:34100]	QUERY(0)	OK
+10:36:31.596	[127.0.0.1:34100]	EXEC(0)	OK
+10:36:31.596	[127.0.0.1:34100]	CLOSE(0)	OK
+10:36:31.610	Server was stopped.
+10:38:43.385	Server was started.
+10:38:43.551	[127.0.0.1:34126]	LOGIN admin	OK
+10:38:43.594	[127.0.0.1:34126]	OPEN ffmapDatabase
+10:38:43.644	[127.0.0.1:34126]	OK	91.25 ms
+10:38:43.655	[127.0.0.1:34126]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:38:43.781	[127.0.0.1:34126]	OK	137.17 ms
+10:38:44.090	[127.0.0.1:34126]	QUERY(0)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:38:44.090	[127.0.0.1:34126]	QUERY(0)	OK
+10:38:44.141	[127.0.0.1:34126]	EXEC(0)	OK
+10:38:44.145	[127.0.0.1:34126]	CLOSE(0)	OK
+10:38:44.180	[127.0.0.1:34126]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:38:44.180	[127.0.0.1:34126]	QUERY(1)	OK
+10:38:44.182	[127.0.0.1:34126]	EXEC(1)	OK
+10:38:44.182	[127.0.0.1:34126]	CLOSE(1)	OK
+10:38:44.188	[127.0.0.1:34126]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:38:44.189	[127.0.0.1:34126]	QUERY(2)	OK
+10:38:44.190	[127.0.0.1:34126]	EXEC(2)	OK
+10:38:44.191	[127.0.0.1:34126]	CLOSE(2)	OK
+10:38:44.200	[127.0.0.1:34126]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:38:44.201	[127.0.0.1:34126]	QUERY(3)	OK
+10:38:44.202	[127.0.0.1:34126]	EXEC(3)	OK
+10:38:44.203	[127.0.0.1:34126]	CLOSE(3)	OK
+10:38:44.207	[127.0.0.1:34126]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:38:44.208	[127.0.0.1:34126]	QUERY(4)	OK
+10:38:44.210	[127.0.0.1:34126]	EXEC(4)	OK
+10:38:44.211	[127.0.0.1:34126]	CLOSE(4)	OK
+10:38:44.218	[127.0.0.1:34126]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:38:44.219	[127.0.0.1:34126]	QUERY(5)	OK
+10:38:44.221	[127.0.0.1:34126]	EXEC(5)	OK
+10:38:44.222	[127.0.0.1:34126]	CLOSE(5)	OK
+10:38:44.225	[127.0.0.1:34126]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:38:44.226	[127.0.0.1:34126]	QUERY(6)	OK
+10:38:44.227	[127.0.0.1:34126]	EXEC(6)	OK
+10:38:44.228	[127.0.0.1:34126]	CLOSE(6)	OK
+10:38:44.235	[127.0.0.1:34126]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:38:44.236	[127.0.0.1:34126]	QUERY(7)	OK
+10:38:44.237	[127.0.0.1:34126]	EXEC(7)	OK
+10:38:44.239	[127.0.0.1:34126]	CLOSE(7)	OK
+10:38:44.243	[127.0.0.1:34126]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:38:44.244	[127.0.0.1:34126]	QUERY(8)	OK
+10:38:44.245	[127.0.0.1:34126]	EXEC(8)	OK
+10:38:44.246	[127.0.0.1:34126]	CLOSE(8)	OK
+10:38:44.254	Server was stopped.
+10:42:22.525	Server was started.
+10:42:22.541	Address already in use: JVM_Bind
+10:42:32.796	Server was started.
+10:42:32.975	[127.0.0.1:34201]	LOGIN admin	OK
+10:42:33.017	[127.0.0.1:34201]	OPEN ffmapDatabase
+10:42:33.061	[127.0.0.1:34201]	OK	84.14 ms
+10:42:33.072	[127.0.0.1:34201]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+10:42:33.190	[127.0.0.1:34201]	OK	127.52 ms
+10:42:33.510	[127.0.0.1:34201]	QUERY(0)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:33.511	[127.0.0.1:34201]	QUERY(0)	OK
+10:42:33.567	[127.0.0.1:34201]	EXEC(0)	OK
+10:42:33.572	[127.0.0.1:34201]	CLOSE(0)	OK
+10:42:33.608	[127.0.0.1:34201]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.609	[127.0.0.1:34201]	QUERY(1)	OK
+10:42:33.611	[127.0.0.1:34201]	EXEC(1)	OK
+10:42:33.613	[127.0.0.1:34201]	CLOSE(1)	OK
+10:42:33.618	[127.0.0.1:34201]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.618	[127.0.0.1:34201]	QUERY(2)	OK
+10:42:33.620	[127.0.0.1:34201]	EXEC(2)	OK
+10:42:33.621	[127.0.0.1:34201]	CLOSE(2)	OK
+10:42:33.630	[127.0.0.1:34201]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.630	[127.0.0.1:34201]	QUERY(3)	OK
+10:42:33.632	[127.0.0.1:34201]	EXEC(3)	OK
+10:42:33.632	[127.0.0.1:34201]	CLOSE(3)	OK
+10:42:33.639	[127.0.0.1:34201]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.640	[127.0.0.1:34201]	QUERY(4)	OK
+10:42:33.641	[127.0.0.1:34201]	EXEC(4)	OK
+10:42:33.642	[127.0.0.1:34201]	CLOSE(4)	OK
+10:42:33.655	[127.0.0.1:34201]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.656	[127.0.0.1:34201]	QUERY(5)	OK
+10:42:33.657	[127.0.0.1:34201]	EXEC(5)	OK
+10:42:33.658	[127.0.0.1:34201]	CLOSE(5)	OK
+10:42:33.661	[127.0.0.1:34201]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.663	[127.0.0.1:34201]	QUERY(6)	OK
+10:42:33.664	[127.0.0.1:34201]	EXEC(6)	OK
+10:42:33.665	[127.0.0.1:34201]	CLOSE(6)	OK
+10:42:33.680	[127.0.0.1:34201]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.681	[127.0.0.1:34201]	QUERY(7)	OK
+10:42:33.682	[127.0.0.1:34201]	EXEC(7)	OK
+10:42:33.685	[127.0.0.1:34201]	CLOSE(7)	OK
+10:42:33.688	[127.0.0.1:34201]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.689	[127.0.0.1:34201]	QUERY(8)	OK
+10:42:33.690	[127.0.0.1:34201]	EXEC(8)	OK
+10:42:33.691	[127.0.0.1:34201]	CLOSE(8)	OK
+10:42:33.695	[127.0.0.1:34201]	QUERY(9)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:33.696	[127.0.0.1:34201]	QUERY(9)	OK
+10:42:33.709	[127.0.0.1:34201]	EXEC(9)	OK
+10:42:33.715	[127.0.0.1:34201]	CLOSE(9)	OK
+10:42:33.729	[127.0.0.1:34201]	QUERY(10)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.730	[127.0.0.1:34201]	QUERY(10)	OK
+10:42:33.731	[127.0.0.1:34201]	EXEC(10)	OK
+10:42:33.738	[127.0.0.1:34201]	CLOSE(10)	OK
+10:42:33.741	[127.0.0.1:34201]	QUERY(11)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.742	[127.0.0.1:34201]	QUERY(11)	OK
+10:42:33.746	[127.0.0.1:34201]	EXEC(11)	OK
+10:42:33.747	[127.0.0.1:34201]	CLOSE(11)	OK
+10:42:33.751	[127.0.0.1:34201]	QUERY(12)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.752	[127.0.0.1:34201]	QUERY(12)	OK
+10:42:33.753	[127.0.0.1:34201]	EXEC(12)	OK
+10:42:33.754	[127.0.0.1:34201]	CLOSE(12)	OK
+10:42:33.757	[127.0.0.1:34201]	QUERY(13)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.758	[127.0.0.1:34201]	QUERY(13)	OK
+10:42:33.759	[127.0.0.1:34201]	EXEC(13)	OK
+10:42:33.760	[127.0.0.1:34201]	CLOSE(13)	OK
+10:42:33.764	[127.0.0.1:34201]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.765	[127.0.0.1:34201]	QUERY(14)	OK
+10:42:33.766	[127.0.0.1:34201]	EXEC(14)	OK
+10:42:33.767	[127.0.0.1:34201]	CLOSE(14)	OK
+10:42:33.774	[127.0.0.1:34201]	QUERY(15)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.775	[127.0.0.1:34201]	QUERY(15)	OK
+10:42:33.776	[127.0.0.1:34201]	EXEC(15)	OK
+10:42:33.777	[127.0.0.1:34201]	CLOSE(15)	OK
+10:42:33.782	[127.0.0.1:34201]	QUERY(16)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.783	[127.0.0.1:34201]	QUERY(16)	OK
+10:42:33.784	[127.0.0.1:34201]	EXEC(16)	OK
+10:42:33.785	[127.0.0.1:34201]	CLOSE(16)	OK
+10:42:33.788	[127.0.0.1:34201]	QUERY(17)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.789	[127.0.0.1:34201]	QUERY(17)	OK
+10:42:33.790	[127.0.0.1:34201]	EXEC(17)	OK
+10:42:33.791	[127.0.0.1:34201]	CLOSE(17)	OK
+10:42:33.797	[127.0.0.1:34201]	QUERY(18)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:33.798	[127.0.0.1:34201]	QUERY(18)	OK
+10:42:33.809	[127.0.0.1:34201]	EXEC(18)	OK
+10:42:33.810	[127.0.0.1:34201]	CLOSE(18)	OK
+10:42:33.829	[127.0.0.1:34201]	QUERY(19)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.829	[127.0.0.1:34201]	QUERY(19)	OK
+10:42:33.831	[127.0.0.1:34201]	EXEC(19)	OK
+10:42:33.831	[127.0.0.1:34201]	CLOSE(19)	OK
+10:42:33.835	[127.0.0.1:34201]	QUERY(20)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.835	[127.0.0.1:34201]	QUERY(20)	OK
+10:42:33.837	[127.0.0.1:34201]	EXEC(20)	OK
+10:42:33.837	[127.0.0.1:34201]	CLOSE(20)	OK
+10:42:33.841	[127.0.0.1:34201]	QUERY(21)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.842	[127.0.0.1:34201]	QUERY(21)	OK
+10:42:33.843	[127.0.0.1:34201]	EXEC(21)	OK
+10:42:33.844	[127.0.0.1:34201]	CLOSE(21)	OK
+10:42:33.847	[127.0.0.1:34201]	QUERY(22)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.848	[127.0.0.1:34201]	QUERY(22)	OK
+10:42:33.849	[127.0.0.1:34201]	EXEC(22)	OK
+10:42:33.850	[127.0.0.1:34201]	CLOSE(22)	OK
+10:42:33.855	[127.0.0.1:34201]	QUERY(23)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.855	[127.0.0.1:34201]	QUERY(23)	OK
+10:42:33.856	[127.0.0.1:34201]	EXEC(23)	OK
+10:42:33.857	[127.0.0.1:34201]	CLOSE(23)	OK
+10:42:33.861	[127.0.0.1:34201]	QUERY(24)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.861	[127.0.0.1:34201]	QUERY(24)	OK
+10:42:33.863	[127.0.0.1:34201]	EXEC(24)	OK
+10:42:33.864	[127.0.0.1:34201]	CLOSE(24)	OK
+10:42:33.873	[127.0.0.1:34201]	QUERY(25)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.874	[127.0.0.1:34201]	QUERY(25)	OK
+10:42:33.876	[127.0.0.1:34201]	EXEC(25)	OK
+10:42:33.876	[127.0.0.1:34201]	CLOSE(25)	OK
+10:42:33.880	[127.0.0.1:34201]	QUERY(26)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.880	[127.0.0.1:34201]	QUERY(26)	OK
+10:42:33.881	[127.0.0.1:34201]	EXEC(26)	OK
+10:42:33.882	[127.0.0.1:34201]	CLOSE(26)	OK
+10:42:33.886	[127.0.0.1:34201]	QUERY(27)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:33.886	[127.0.0.1:34201]	QUERY(27)	OK
+10:42:33.893	[127.0.0.1:34201]	EXEC(27)	OK
+10:42:33.895	[127.0.0.1:34201]	CLOSE(27)	OK
+10:42:33.907	[127.0.0.1:34201]	QUERY(28)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.908	[127.0.0.1:34201]	QUERY(28)	OK
+10:42:33.909	[127.0.0.1:34201]	EXEC(28)	OK
+10:42:33.910	[127.0.0.1:34201]	CLOSE(28)	OK
+10:42:33.913	[127.0.0.1:34201]	QUERY(29)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.913	[127.0.0.1:34201]	QUERY(29)	OK
+10:42:33.914	[127.0.0.1:34201]	EXEC(29)	OK
+10:42:33.915	[127.0.0.1:34201]	CLOSE(29)	OK
+10:42:33.919	[127.0.0.1:34201]	QUERY(30)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.920	[127.0.0.1:34201]	QUERY(30)	OK
+10:42:33.921	[127.0.0.1:34201]	EXEC(30)	OK
+10:42:33.922	[127.0.0.1:34201]	CLOSE(30)	OK
+10:42:33.925	[127.0.0.1:34201]	QUERY(31)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.925	[127.0.0.1:34201]	QUERY(31)	OK
+10:42:33.926	[127.0.0.1:34201]	EXEC(31)	OK
+10:42:33.927	[127.0.0.1:34201]	CLOSE(31)	OK
+10:42:33.932	[127.0.0.1:34201]	QUERY(32)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.932	[127.0.0.1:34201]	QUERY(32)	OK
+10:42:33.933	[127.0.0.1:34201]	EXEC(32)	OK
+10:42:33.934	[127.0.0.1:34201]	CLOSE(32)	OK
+10:42:33.937	[127.0.0.1:34201]	QUERY(33)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.938	[127.0.0.1:34201]	QUERY(33)	OK
+10:42:33.939	[127.0.0.1:34201]	EXEC(33)	OK
+10:42:33.940	[127.0.0.1:34201]	CLOSE(33)	OK
+10:42:33.944	[127.0.0.1:34201]	QUERY(34)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.944	[127.0.0.1:34201]	QUERY(34)	OK
+10:42:33.946	[127.0.0.1:34201]	EXEC(34)	OK
+10:42:33.952	[127.0.0.1:34201]	CLOSE(34)	OK
+10:42:33.955	[127.0.0.1:34201]	QUERY(35)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.955	[127.0.0.1:34201]	QUERY(35)	OK
+10:42:33.957	[127.0.0.1:34201]	EXEC(35)	OK
+10:42:33.958	[127.0.0.1:34201]	CLOSE(35)	OK
+10:42:33.961	[127.0.0.1:34201]	QUERY(36)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:33.963	[127.0.0.1:34201]	QUERY(36)	OK
+10:42:33.970	[127.0.0.1:34201]	EXEC(36)	OK
+10:42:33.970	[127.0.0.1:34201]	CLOSE(36)	OK
+10:42:33.986	[127.0.0.1:34201]	QUERY(37)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.986	[127.0.0.1:34201]	QUERY(37)	OK
+10:42:33.987	[127.0.0.1:34201]	EXEC(37)	OK
+10:42:33.988	[127.0.0.1:34201]	CLOSE(37)	OK
+10:42:33.991	[127.0.0.1:34201]	QUERY(38)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:33.992	[127.0.0.1:34201]	QUERY(38)	OK
+10:42:33.993	[127.0.0.1:34201]	EXEC(38)	OK
+10:42:33.993	[127.0.0.1:34201]	CLOSE(38)	OK
+10:42:33.997	[127.0.0.1:34201]	QUERY(39)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:33.998	[127.0.0.1:34201]	QUERY(39)	OK
+10:42:33.999	[127.0.0.1:34201]	EXEC(39)	OK
+10:42:34.000	[127.0.0.1:34201]	CLOSE(39)	OK
+10:42:34.003	[127.0.0.1:34201]	QUERY(40)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.003	[127.0.0.1:34201]	QUERY(40)	OK
+10:42:34.004	[127.0.0.1:34201]	EXEC(40)	OK
+10:42:34.005	[127.0.0.1:34201]	CLOSE(40)	OK
+10:42:34.010	[127.0.0.1:34201]	QUERY(41)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.010	[127.0.0.1:34201]	QUERY(41)	OK
+10:42:34.011	[127.0.0.1:34201]	EXEC(41)	OK
+10:42:34.012	[127.0.0.1:34201]	CLOSE(41)	OK
+10:42:34.019	[127.0.0.1:34201]	QUERY(42)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.019	[127.0.0.1:34201]	QUERY(42)	OK
+10:42:34.023	[127.0.0.1:34201]	EXEC(42)	OK
+10:42:34.023	[127.0.0.1:34201]	CLOSE(42)	OK
+10:42:34.027	[127.0.0.1:34201]	QUERY(43)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.027	[127.0.0.1:34201]	QUERY(43)	OK
+10:42:34.028	[127.0.0.1:34201]	EXEC(43)	OK
+10:42:34.029	[127.0.0.1:34201]	CLOSE(43)	OK
+10:42:34.032	[127.0.0.1:34201]	QUERY(44)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.033	[127.0.0.1:34201]	QUERY(44)	OK
+10:42:34.034	[127.0.0.1:34201]	EXEC(44)	OK
+10:42:34.034	[127.0.0.1:34201]	CLOSE(44)	OK
+10:42:34.038	[127.0.0.1:34201]	QUERY(45)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:34.038	[127.0.0.1:34201]	QUERY(45)	OK
+10:42:34.045	[127.0.0.1:34201]	EXEC(45)	OK
+10:42:34.045	[127.0.0.1:34201]	CLOSE(45)	OK
+10:42:34.057	[127.0.0.1:34201]	QUERY(46)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.057	[127.0.0.1:34201]	QUERY(46)	OK
+10:42:34.059	[127.0.0.1:34201]	EXEC(46)	OK
+10:42:34.059	[127.0.0.1:34201]	CLOSE(46)	OK
+10:42:34.062	[127.0.0.1:34201]	QUERY(47)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.062	[127.0.0.1:34201]	QUERY(47)	OK
+10:42:34.064	[127.0.0.1:34201]	EXEC(47)	OK
+10:42:34.064	[127.0.0.1:34201]	CLOSE(47)	OK
+10:42:34.068	[127.0.0.1:34201]	QUERY(48)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.069	[127.0.0.1:34201]	QUERY(48)	OK
+10:42:34.070	[127.0.0.1:34201]	EXEC(48)	OK
+10:42:34.071	[127.0.0.1:34201]	CLOSE(48)	OK
+10:42:34.074	[127.0.0.1:34201]	QUERY(49)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.074	[127.0.0.1:34201]	QUERY(49)	OK
+10:42:34.075	[127.0.0.1:34201]	EXEC(49)	OK
+10:42:34.076	[127.0.0.1:34201]	CLOSE(49)	OK
+10:42:34.079	[127.0.0.1:34201]	QUERY(50)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.080	[127.0.0.1:34201]	QUERY(50)	OK
+10:42:34.081	[127.0.0.1:34201]	EXEC(50)	OK
+10:42:34.082	[127.0.0.1:34201]	CLOSE(50)	OK
+10:42:34.085	[127.0.0.1:34201]	QUERY(51)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.086	[127.0.0.1:34201]	QUERY(51)	OK
+10:42:34.087	[127.0.0.1:34201]	EXEC(51)	OK
+10:42:34.088	[127.0.0.1:34201]	CLOSE(51)	OK
+10:42:34.094	[127.0.0.1:34201]	QUERY(52)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.095	[127.0.0.1:34201]	QUERY(52)	OK
+10:42:34.096	[127.0.0.1:34201]	EXEC(52)	OK
+10:42:34.096	[127.0.0.1:34201]	CLOSE(52)	OK
+10:42:34.099	[127.0.0.1:34201]	QUERY(53)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.100	[127.0.0.1:34201]	QUERY(53)	OK
+10:42:34.101	[127.0.0.1:34201]	EXEC(53)	OK
+10:42:34.101	[127.0.0.1:34201]	CLOSE(53)	OK
+10:42:34.105	[127.0.0.1:34201]	QUERY(54)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:34.106	[127.0.0.1:34201]	QUERY(54)	OK
+10:42:34.112	[127.0.0.1:34201]	EXEC(54)	OK
+10:42:34.112	[127.0.0.1:34201]	CLOSE(54)	OK
+10:42:34.123	[127.0.0.1:34201]	QUERY(55)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.124	[127.0.0.1:34201]	QUERY(55)	OK
+10:42:34.125	[127.0.0.1:34201]	EXEC(55)	OK
+10:42:34.125	[127.0.0.1:34201]	CLOSE(55)	OK
+10:42:34.128	[127.0.0.1:34201]	QUERY(56)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.128	[127.0.0.1:34201]	QUERY(56)	OK
+10:42:34.130	[127.0.0.1:34201]	EXEC(56)	OK
+10:42:34.130	[127.0.0.1:34201]	CLOSE(56)	OK
+10:42:34.134	[127.0.0.1:34201]	QUERY(57)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.135	[127.0.0.1:34201]	QUERY(57)	OK
+10:42:34.136	[127.0.0.1:34201]	EXEC(57)	OK
+10:42:34.137	[127.0.0.1:34201]	CLOSE(57)	OK
+10:42:34.140	[127.0.0.1:34201]	QUERY(58)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.140	[127.0.0.1:34201]	QUERY(58)	OK
+10:42:34.141	[127.0.0.1:34201]	EXEC(58)	OK
+10:42:34.142	[127.0.0.1:34201]	CLOSE(58)	OK
+10:42:34.145	[127.0.0.1:34201]	QUERY(59)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.146	[127.0.0.1:34201]	QUERY(59)	OK
+10:42:34.147	[127.0.0.1:34201]	EXEC(59)	OK
+10:42:34.147	[127.0.0.1:34201]	CLOSE(59)	OK
+10:42:34.150	[127.0.0.1:34201]	QUERY(60)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.150	[127.0.0.1:34201]	QUERY(60)	OK
+10:42:34.151	[127.0.0.1:34201]	EXEC(60)	OK
+10:42:34.152	[127.0.0.1:34201]	CLOSE(60)	OK
+10:42:34.156	[127.0.0.1:34201]	QUERY(61)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.156	[127.0.0.1:34201]	QUERY(61)	OK
+10:42:34.157	[127.0.0.1:34201]	EXEC(61)	OK
+10:42:34.158	[127.0.0.1:34201]	CLOSE(61)	OK
+10:42:34.161	[127.0.0.1:34201]	QUERY(62)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.161	[127.0.0.1:34201]	QUERY(62)	OK
+10:42:34.163	[127.0.0.1:34201]	EXEC(62)	OK
+10:42:34.164	[127.0.0.1:34201]	CLOSE(62)	OK
+10:42:34.168	[127.0.0.1:34201]	QUERY(63)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:34.168	[127.0.0.1:34201]	QUERY(63)	OK
+10:42:34.182	[127.0.0.1:34201]	EXEC(63)	OK
+10:42:34.182	[127.0.0.1:34201]	CLOSE(63)	OK
+10:42:34.217	[127.0.0.1:34201]	QUERY(64)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.225	[127.0.0.1:34201]	QUERY(64)	OK
+10:42:34.228	[127.0.0.1:34201]	EXEC(64)	OK
+10:42:34.230	[127.0.0.1:34201]	CLOSE(64)	OK
+10:42:34.233	[127.0.0.1:34201]	QUERY(65)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.233	[127.0.0.1:34201]	QUERY(65)	OK
+10:42:34.235	[127.0.0.1:34201]	EXEC(65)	OK
+10:42:34.236	[127.0.0.1:34201]	CLOSE(65)	OK
+10:42:34.239	[127.0.0.1:34201]	QUERY(66)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.240	[127.0.0.1:34201]	QUERY(66)	OK
+10:42:34.241	[127.0.0.1:34201]	EXEC(66)	OK
+10:42:34.241	[127.0.0.1:34201]	CLOSE(66)	OK
+10:42:34.244	[127.0.0.1:34201]	QUERY(67)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.244	[127.0.0.1:34201]	QUERY(67)	OK
+10:42:34.245	[127.0.0.1:34201]	EXEC(67)	OK
+10:42:34.246	[127.0.0.1:34201]	CLOSE(67)	OK
+10:42:34.249	[127.0.0.1:34201]	QUERY(68)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.250	[127.0.0.1:34201]	QUERY(68)	OK
+10:42:34.251	[127.0.0.1:34201]	EXEC(68)	OK
+10:42:34.251	[127.0.0.1:34201]	CLOSE(68)	OK
+10:42:34.258	[127.0.0.1:34201]	QUERY(69)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.259	[127.0.0.1:34201]	QUERY(69)	OK
+10:42:34.260	[127.0.0.1:34201]	EXEC(69)	OK
+10:42:34.260	[127.0.0.1:34201]	CLOSE(69)	OK
+10:42:34.266	[127.0.0.1:34201]	QUERY(70)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.267	[127.0.0.1:34201]	QUERY(70)	OK
+10:42:34.269	[127.0.0.1:34201]	EXEC(70)	OK
+10:42:34.270	[127.0.0.1:34201]	CLOSE(70)	OK
+10:42:34.273	[127.0.0.1:34201]	QUERY(71)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.273	[127.0.0.1:34201]	QUERY(71)	OK
+10:42:34.274	[127.0.0.1:34201]	EXEC(71)	OK
+10:42:34.276	[127.0.0.1:34201]	CLOSE(71)	OK
+10:42:34.281	[127.0.0.1:34201]	QUERY(72)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:42:34.281	[127.0.0.1:34201]	QUERY(72)	OK
+10:42:34.313	[127.0.0.1:34201]	EXEC(72)	OK
+10:42:34.321	[127.0.0.1:34201]	CLOSE(72)	OK
+10:42:34.341	[127.0.0.1:34201]	QUERY(73)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.342	[127.0.0.1:34201]	QUERY(73)	OK
+10:42:34.343	[127.0.0.1:34201]	EXEC(73)	OK
+10:42:34.343	[127.0.0.1:34201]	CLOSE(73)	OK
+10:42:34.346	[127.0.0.1:34201]	QUERY(74)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.347	[127.0.0.1:34201]	QUERY(74)	OK
+10:42:34.348	[127.0.0.1:34201]	EXEC(74)	OK
+10:42:34.348	[127.0.0.1:34201]	CLOSE(74)	OK
+10:42:34.352	[127.0.0.1:34201]	QUERY(75)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.352	[127.0.0.1:34201]	QUERY(75)	OK
+10:42:34.354	[127.0.0.1:34201]	EXEC(75)	OK
+10:42:34.354	[127.0.0.1:34201]	CLOSE(75)	OK
+10:42:34.357	[127.0.0.1:34201]	QUERY(76)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.357	[127.0.0.1:34201]	QUERY(76)	OK
+10:42:34.358	[127.0.0.1:34201]	EXEC(76)	OK
+10:42:34.359	[127.0.0.1:34201]	CLOSE(76)	OK
+10:42:34.363	[127.0.0.1:34201]	QUERY(77)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.363	[127.0.0.1:34201]	QUERY(77)	OK
+10:42:34.365	[127.0.0.1:34201]	EXEC(77)	OK
+10:42:34.365	[127.0.0.1:34201]	CLOSE(77)	OK
+10:42:34.368	[127.0.0.1:34201]	QUERY(78)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.368	[127.0.0.1:34201]	QUERY(78)	OK
+10:42:34.370	[127.0.0.1:34201]	EXEC(78)	OK
+10:42:34.370	[127.0.0.1:34201]	CLOSE(78)	OK
+10:42:34.374	[127.0.0.1:34201]	QUERY(79)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:42:34.374	[127.0.0.1:34201]	QUERY(79)	OK
+10:42:34.376	[127.0.0.1:34201]	EXEC(79)	OK
+10:42:34.376	[127.0.0.1:34201]	CLOSE(79)	OK
+10:42:34.379	[127.0.0.1:34201]	QUERY(80)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:42:34.379	[127.0.0.1:34201]	QUERY(80)	OK
+10:42:34.380	[127.0.0.1:34201]	EXEC(80)	OK
+10:42:34.381	[127.0.0.1:34201]	CLOSE(80)	OK
+10:42:34.386	Server was stopped.
+10:44:04.651	Server was started.
+10:44:04.926	[127.0.0.1:34203]	LOGIN admin	OK
+10:44:04.972	[127.0.0.1:34203]	OPEN ffmapDatabase
+10:44:05.016	[127.0.0.1:34203]	OK	88.11 ms
+10:44:05.066	[127.0.0.1:34203]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+10:44:05.209	[127.0.0.1:34203]	OK	153.9 ms
+10:44:05.567	[127.0.0.1:34203]	QUERY(0)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:05.567	[127.0.0.1:34203]	QUERY(0)	OK
+10:44:05.618	[127.0.0.1:34203]	EXEC(0)	OK
+10:44:05.623	[127.0.0.1:34203]	CLOSE(0)	OK
+10:44:05.654	[127.0.0.1:34203]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:05.655	[127.0.0.1:34203]	QUERY(1)	OK
+10:44:05.657	[127.0.0.1:34203]	EXEC(1)	OK
+10:44:05.657	[127.0.0.1:34203]	CLOSE(1)	OK
+10:44:05.663	[127.0.0.1:34203]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:05.663	[127.0.0.1:34203]	QUERY(2)	OK
+10:44:05.664	[127.0.0.1:34203]	EXEC(2)	OK
+10:44:05.665	[127.0.0.1:34203]	CLOSE(2)	OK
+10:44:05.675	[127.0.0.1:34203]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:05.677	[127.0.0.1:34203]	QUERY(3)	OK
+10:44:05.679	[127.0.0.1:34203]	EXEC(3)	OK
+10:44:05.679	[127.0.0.1:34203]	CLOSE(3)	OK
+10:44:05.686	[127.0.0.1:34203]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.687	[127.0.0.1:34203]	QUERY(4)	OK
+10:44:05.692	[127.0.0.1:34203]	EXEC(4)	OK
+10:44:05.692	[127.0.0.1:34203]	CLOSE(4)	OK
+10:44:05.704	[127.0.0.1:34203]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:05.704	[127.0.0.1:34203]	QUERY(5)	OK
+10:44:05.706	[127.0.0.1:34203]	EXEC(5)	OK
+10:44:05.706	[127.0.0.1:34203]	CLOSE(5)	OK
+10:44:05.724	[127.0.0.1:34203]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.725	[127.0.0.1:34203]	QUERY(6)	OK
+10:44:05.726	[127.0.0.1:34203]	EXEC(6)	OK
+10:44:05.726	[127.0.0.1:34203]	CLOSE(6)	OK
+10:44:05.730	[127.0.0.1:34203]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:05.730	[127.0.0.1:34203]	QUERY(7)	OK
+10:44:05.731	[127.0.0.1:34203]	EXEC(7)	OK
+10:44:05.732	[127.0.0.1:34203]	CLOSE(7)	OK
+10:44:05.736	[127.0.0.1:34203]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:05.737	[127.0.0.1:34203]	QUERY(8)	OK
+10:44:05.738	[127.0.0.1:34203]	EXEC(8)	OK
+10:44:05.739	[127.0.0.1:34203]	CLOSE(8)	OK
+10:44:05.743	[127.0.0.1:34203]	QUERY(9)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:05.744	[127.0.0.1:34203]	QUERY(9)	OK
+10:44:05.762	[127.0.0.1:34203]	EXEC(9)	OK
+10:44:05.779	[127.0.0.1:34203]	CLOSE(9)	OK
+10:44:05.813	[127.0.0.1:34203]	QUERY(10)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:05.813	[127.0.0.1:34203]	QUERY(10)	OK
+10:44:05.815	[127.0.0.1:34203]	EXEC(10)	OK
+10:44:05.829	[127.0.0.1:34203]	CLOSE(10)	OK
+10:44:05.836	[127.0.0.1:34203]	QUERY(11)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:05.836	[127.0.0.1:34203]	QUERY(11)	OK
+10:44:05.838	[127.0.0.1:34203]	EXEC(11)	OK
+10:44:05.842	[127.0.0.1:34203]	CLOSE(11)	OK
+10:44:05.847	[127.0.0.1:34203]	QUERY(12)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:05.847	[127.0.0.1:34203]	QUERY(12)	OK
+10:44:05.849	[127.0.0.1:34203]	EXEC(12)	OK
+10:44:05.849	[127.0.0.1:34203]	CLOSE(12)	OK
+10:44:05.852	[127.0.0.1:34203]	QUERY(13)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.853	[127.0.0.1:34203]	QUERY(13)	OK
+10:44:05.860	[127.0.0.1:34203]	EXEC(13)	OK
+10:44:05.860	[127.0.0.1:34203]	CLOSE(13)	OK
+10:44:05.863	[127.0.0.1:34203]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:05.864	[127.0.0.1:34203]	QUERY(14)	OK
+10:44:05.865	[127.0.0.1:34203]	EXEC(14)	OK
+10:44:05.866	[127.0.0.1:34203]	CLOSE(14)	OK
+10:44:05.875	[127.0.0.1:34203]	QUERY(15)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.875	[127.0.0.1:34203]	QUERY(15)	OK
+10:44:05.880	[127.0.0.1:34203]	EXEC(15)	OK
+10:44:05.881	[127.0.0.1:34203]	CLOSE(15)	OK
+10:44:05.889	[127.0.0.1:34203]	QUERY(16)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:05.890	[127.0.0.1:34203]	QUERY(16)	OK
+10:44:05.891	[127.0.0.1:34203]	EXEC(16)	OK
+10:44:05.892	[127.0.0.1:34203]	CLOSE(16)	OK
+10:44:05.901	[127.0.0.1:34203]	QUERY(17)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:05.901	[127.0.0.1:34203]	QUERY(17)	OK
+10:44:05.903	[127.0.0.1:34203]	EXEC(17)	OK
+10:44:05.903	[127.0.0.1:34203]	CLOSE(17)	OK
+10:44:05.917	[127.0.0.1:34203]	QUERY(18)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:05.917	[127.0.0.1:34203]	QUERY(18)	OK
+10:44:05.942	[127.0.0.1:34203]	EXEC(18)	OK
+10:44:05.944	[127.0.0.1:34203]	CLOSE(18)	OK
+10:44:05.954	[127.0.0.1:34203]	QUERY(19)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:05.955	[127.0.0.1:34203]	QUERY(19)	OK
+10:44:05.956	[127.0.0.1:34203]	EXEC(19)	OK
+10:44:05.956	[127.0.0.1:34203]	CLOSE(19)	OK
+10:44:05.960	[127.0.0.1:34203]	QUERY(20)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:05.960	[127.0.0.1:34203]	QUERY(20)	OK
+10:44:05.961	[127.0.0.1:34203]	EXEC(20)	OK
+10:44:05.962	[127.0.0.1:34203]	CLOSE(20)	OK
+10:44:05.966	[127.0.0.1:34203]	QUERY(21)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:05.966	[127.0.0.1:34203]	QUERY(21)	OK
+10:44:05.968	[127.0.0.1:34203]	EXEC(21)	OK
+10:44:05.968	[127.0.0.1:34203]	CLOSE(21)	OK
+10:44:05.971	[127.0.0.1:34203]	QUERY(22)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.971	[127.0.0.1:34203]	QUERY(22)	OK
+10:44:05.972	[127.0.0.1:34203]	EXEC(22)	OK
+10:44:05.974	[127.0.0.1:34203]	CLOSE(22)	OK
+10:44:05.977	[127.0.0.1:34203]	QUERY(23)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:05.977	[127.0.0.1:34203]	QUERY(23)	OK
+10:44:05.978	[127.0.0.1:34203]	EXEC(23)	OK
+10:44:05.979	[127.0.0.1:34203]	CLOSE(23)	OK
+10:44:05.992	[127.0.0.1:34203]	QUERY(24)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:05.993	[127.0.0.1:34203]	QUERY(24)	OK
+10:44:05.994	[127.0.0.1:34203]	EXEC(24)	OK
+10:44:05.995	[127.0.0.1:34203]	CLOSE(24)	OK
+10:44:05.998	[127.0.0.1:34203]	QUERY(25)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:05.998	[127.0.0.1:34203]	QUERY(25)	OK
+10:44:05.999	[127.0.0.1:34203]	EXEC(25)	OK
+10:44:06.000	[127.0.0.1:34203]	CLOSE(25)	OK
+10:44:06.009	[127.0.0.1:34203]	QUERY(26)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.009	[127.0.0.1:34203]	QUERY(26)	OK
+10:44:06.011	[127.0.0.1:34203]	EXEC(26)	OK
+10:44:06.011	[127.0.0.1:34203]	CLOSE(26)	OK
+10:44:06.015	[127.0.0.1:34203]	QUERY(27)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:06.015	[127.0.0.1:34203]	QUERY(27)	OK
+10:44:06.023	[127.0.0.1:34203]	EXEC(27)	OK
+10:44:06.027	[127.0.0.1:34203]	CLOSE(27)	OK
+10:44:06.037	[127.0.0.1:34203]	QUERY(28)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:06.038	[127.0.0.1:34203]	QUERY(28)	OK
+10:44:06.039	[127.0.0.1:34203]	EXEC(28)	OK
+10:44:06.040	[127.0.0.1:34203]	CLOSE(28)	OK
+10:44:06.044	[127.0.0.1:34203]	QUERY(29)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:06.044	[127.0.0.1:34203]	QUERY(29)	OK
+10:44:06.045	[127.0.0.1:34203]	EXEC(29)	OK
+10:44:06.046	[127.0.0.1:34203]	CLOSE(29)	OK
+10:44:06.052	[127.0.0.1:34203]	QUERY(30)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:06.053	[127.0.0.1:34203]	QUERY(30)	OK
+10:44:06.054	[127.0.0.1:34203]	EXEC(30)	OK
+10:44:06.054	[127.0.0.1:34203]	CLOSE(30)	OK
+10:44:06.057	[127.0.0.1:34203]	QUERY(31)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.058	[127.0.0.1:34203]	QUERY(31)	OK
+10:44:06.059	[127.0.0.1:34203]	EXEC(31)	OK
+10:44:06.059	[127.0.0.1:34203]	CLOSE(31)	OK
+10:44:06.062	[127.0.0.1:34203]	QUERY(32)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.063	[127.0.0.1:34203]	QUERY(32)	OK
+10:44:06.064	[127.0.0.1:34203]	EXEC(32)	OK
+10:44:06.064	[127.0.0.1:34203]	CLOSE(32)	OK
+10:44:06.068	[127.0.0.1:34203]	QUERY(33)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.069	[127.0.0.1:34203]	QUERY(33)	OK
+10:44:06.070	[127.0.0.1:34203]	EXEC(33)	OK
+10:44:06.070	[127.0.0.1:34203]	CLOSE(33)	OK
+10:44:06.083	[127.0.0.1:34203]	QUERY(34)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:06.084	[127.0.0.1:34203]	QUERY(34)	OK
+10:44:06.088	[127.0.0.1:34203]	EXEC(34)	OK
+10:44:06.089	[127.0.0.1:34203]	CLOSE(34)	OK
+10:44:06.091	[127.0.0.1:34203]	QUERY(35)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.092	[127.0.0.1:34203]	QUERY(35)	OK
+10:44:06.093	[127.0.0.1:34203]	EXEC(35)	OK
+10:44:06.094	[127.0.0.1:34203]	CLOSE(35)	OK
+10:44:06.099	[127.0.0.1:34203]	QUERY(36)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:06.099	[127.0.0.1:34203]	QUERY(36)	OK
+10:44:06.109	[127.0.0.1:34203]	EXEC(36)	OK
+10:44:06.110	[127.0.0.1:34203]	CLOSE(36)	OK
+10:44:06.120	[127.0.0.1:34203]	QUERY(37)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:06.120	[127.0.0.1:34203]	QUERY(37)	OK
+10:44:06.122	[127.0.0.1:34203]	EXEC(37)	OK
+10:44:06.122	[127.0.0.1:34203]	CLOSE(37)	OK
+10:44:06.125	[127.0.0.1:34203]	QUERY(38)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:06.126	[127.0.0.1:34203]	QUERY(38)	OK
+10:44:06.127	[127.0.0.1:34203]	EXEC(38)	OK
+10:44:06.128	[127.0.0.1:34203]	CLOSE(38)	OK
+10:44:06.132	[127.0.0.1:34203]	QUERY(39)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:06.132	[127.0.0.1:34203]	QUERY(39)	OK
+10:44:06.134	[127.0.0.1:34203]	EXEC(39)	OK
+10:44:06.134	[127.0.0.1:34203]	CLOSE(39)	OK
+10:44:06.137	[127.0.0.1:34203]	QUERY(40)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.138	[127.0.0.1:34203]	QUERY(40)	OK
+10:44:06.139	[127.0.0.1:34203]	EXEC(40)	OK
+10:44:06.140	[127.0.0.1:34203]	CLOSE(40)	OK
+10:44:06.143	[127.0.0.1:34203]	QUERY(41)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.144	[127.0.0.1:34203]	QUERY(41)	OK
+10:44:06.148	[127.0.0.1:34203]	EXEC(41)	OK
+10:44:06.149	[127.0.0.1:34203]	CLOSE(41)	OK
+10:44:06.153	[127.0.0.1:34203]	QUERY(42)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.153	[127.0.0.1:34203]	QUERY(42)	OK
+10:44:06.155	[127.0.0.1:34203]	EXEC(42)	OK
+10:44:06.156	[127.0.0.1:34203]	CLOSE(42)	OK
+10:44:06.161	[127.0.0.1:34203]	QUERY(43)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:06.161	[127.0.0.1:34203]	QUERY(43)	OK
+10:44:06.163	[127.0.0.1:34203]	EXEC(43)	OK
+10:44:06.164	[127.0.0.1:34203]	CLOSE(43)	OK
+10:44:06.167	[127.0.0.1:34203]	QUERY(44)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.168	[127.0.0.1:34203]	QUERY(44)	OK
+10:44:06.169	[127.0.0.1:34203]	EXEC(44)	OK
+10:44:06.170	[127.0.0.1:34203]	CLOSE(44)	OK
+10:44:06.173	[127.0.0.1:34203]	QUERY(45)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:06.174	[127.0.0.1:34203]	QUERY(45)	OK
+10:44:06.181	[127.0.0.1:34203]	EXEC(45)	OK
+10:44:06.183	[127.0.0.1:34203]	CLOSE(45)	OK
+10:44:06.194	[127.0.0.1:34203]	QUERY(46)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:06.194	[127.0.0.1:34203]	QUERY(46)	OK
+10:44:06.196	[127.0.0.1:34203]	EXEC(46)	OK
+10:44:06.196	[127.0.0.1:34203]	CLOSE(46)	OK
+10:44:06.199	[127.0.0.1:34203]	QUERY(47)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:06.199	[127.0.0.1:34203]	QUERY(47)	OK
+10:44:06.201	[127.0.0.1:34203]	EXEC(47)	OK
+10:44:06.202	[127.0.0.1:34203]	CLOSE(47)	OK
+10:44:06.206	[127.0.0.1:34203]	QUERY(48)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:06.207	[127.0.0.1:34203]	QUERY(48)	OK
+10:44:06.208	[127.0.0.1:34203]	EXEC(48)	OK
+10:44:06.209	[127.0.0.1:34203]	CLOSE(48)	OK
+10:44:06.212	[127.0.0.1:34203]	QUERY(49)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.212	[127.0.0.1:34203]	QUERY(49)	OK
+10:44:06.214	[127.0.0.1:34203]	EXEC(49)	OK
+10:44:06.214	[127.0.0.1:34203]	CLOSE(49)	OK
+10:44:06.218	[127.0.0.1:34203]	QUERY(50)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.218	[127.0.0.1:34203]	QUERY(50)	OK
+10:44:06.219	[127.0.0.1:34203]	EXEC(50)	OK
+10:44:06.220	[127.0.0.1:34203]	CLOSE(50)	OK
+10:44:06.224	[127.0.0.1:34203]	QUERY(51)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.224	[127.0.0.1:34203]	QUERY(51)	OK
+10:44:06.231	[127.0.0.1:34203]	EXEC(51)	OK
+10:44:06.233	[127.0.0.1:34203]	CLOSE(51)	OK
+10:44:06.238	[127.0.0.1:34203]	QUERY(52)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:06.238	[127.0.0.1:34203]	QUERY(52)	OK
+10:44:06.240	[127.0.0.1:34203]	EXEC(52)	OK
+10:44:06.242	[127.0.0.1:34203]	CLOSE(52)	OK
+10:44:06.284	[127.0.0.1:34203]	QUERY(53)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.284	[127.0.0.1:34203]	QUERY(53)	OK
+10:44:06.286	[127.0.0.1:34203]	EXEC(53)	OK
+10:44:06.286	[127.0.0.1:34203]	CLOSE(53)	OK
+10:44:06.293	[127.0.0.1:34203]	QUERY(54)	<joints> {for $joints in (//joint)let $min_price := min($joints//price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:44:06.293	[127.0.0.1:34203]	QUERY(54)	OK
+10:44:06.307	[127.0.0.1:34203]	EXEC(54)	OK
+10:44:06.307	[127.0.0.1:34203]	CLOSE(54)	OK
+10:44:06.317	[127.0.0.1:34203]	QUERY(55)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:44:06.317	[127.0.0.1:34203]	QUERY(55)	OK
+10:44:06.318	[127.0.0.1:34203]	EXEC(55)	OK
+10:44:06.319	[127.0.0.1:34203]	CLOSE(55)	OK
+10:44:06.322	[127.0.0.1:34203]	QUERY(56)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:44:06.322	[127.0.0.1:34203]	QUERY(56)	OK
+10:44:06.358	[127.0.0.1:34203]	EXEC(56)	OK
+10:44:06.360	[127.0.0.1:34203]	CLOSE(56)	OK
+10:44:06.365	[127.0.0.1:34203]	QUERY(57)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:44:06.366	[127.0.0.1:34203]	QUERY(57)	OK
+10:44:06.367	[127.0.0.1:34203]	EXEC(57)	OK
+10:44:06.373	[127.0.0.1:34203]	CLOSE(57)	OK
+10:44:06.378	[127.0.0.1:34203]	QUERY(58)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.378	[127.0.0.1:34203]	QUERY(58)	OK
+10:44:06.379	[127.0.0.1:34203]	EXEC(58)	OK
+10:44:06.380	[127.0.0.1:34203]	CLOSE(58)	OK
+10:44:06.383	[127.0.0.1:34203]	QUERY(59)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.383	[127.0.0.1:34203]	QUERY(59)	OK
+10:44:06.385	[127.0.0.1:34203]	EXEC(59)	OK
+10:44:06.385	[127.0.0.1:34203]	CLOSE(59)	OK
+10:44:06.389	[127.0.0.1:34203]	QUERY(60)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:44:06.389	[127.0.0.1:34203]	QUERY(60)	OK
+10:44:06.390	[127.0.0.1:34203]	EXEC(60)	OK
+10:44:06.391	[127.0.0.1:34203]	CLOSE(60)	OK
+10:44:06.394	[127.0.0.1:34203]	QUERY(61)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:44:06.394	[127.0.0.1:34203]	QUERY(61)	OK
+10:44:06.396	[127.0.0.1:34203]	EXEC(61)	OK
+10:44:06.396	[127.0.0.1:34203]	CLOSE(61)	OK
+10:44:06.399	[127.0.0.1:34203]	QUERY(62)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:44:06.399	[127.0.0.1:34203]	QUERY(62)	OK
+10:44:06.401	[127.0.0.1:34203]	EXEC(62)	OK
+10:44:06.401	[127.0.0.1:34203]	CLOSE(62)	OK
+10:44:06.404	Server was stopped.
+10:50:29.913	Server was started.
+10:50:30.102	[127.0.0.1:34246]	LOGIN admin	OK
+10:50:30.145	[127.0.0.1:34246]	OPEN ffmapDatabase
+10:50:30.190	[127.0.0.1:34246]	OK	87.03 ms
+10:50:30.201	[127.0.0.1:34246]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+10:50:30.361	[127.0.0.1:34246]	OK	170.38 ms
+10:50:30.700	[127.0.0.1:34246]	QUERY(0)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return distinct-values(//menu-item[price=$min_price]/../..) } </joints>	OK
+10:50:30.701	[127.0.0.1:34246]	QUERY(0)	OK
+10:50:30.760	[127.0.0.1:34246]	EXEC(0)	OK
+10:50:30.763	[127.0.0.1:34246]	CLOSE(0)	OK
+10:50:30.778	Server was stopped.
+10:50:54.767	Server was started.
+10:50:54.948	[127.0.0.1:34247]	LOGIN admin	OK
+10:50:54.993	[127.0.0.1:34247]	OPEN ffmapDatabase
+10:50:55.037	[127.0.0.1:34247]	OK	86.85 ms
+10:50:55.050	[127.0.0.1:34247]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+10:50:55.175	[127.0.0.1:34247]	OK	137.08 ms
+10:50:55.484	[127.0.0.1:34247]	QUERY(0)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:55.484	[127.0.0.1:34247]	QUERY(0)	OK
+10:50:55.573	[127.0.0.1:34247]	EXEC(0)	OK
+10:50:55.594	[127.0.0.1:34247]	CLOSE(0)	OK
+10:50:55.661	[127.0.0.1:34247]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:55.662	[127.0.0.1:34247]	QUERY(1)	OK
+10:50:55.664	[127.0.0.1:34247]	EXEC(1)	OK
+10:50:55.678	[127.0.0.1:34247]	CLOSE(1)	OK
+10:50:55.683	[127.0.0.1:34247]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:55.684	[127.0.0.1:34247]	QUERY(2)	OK
+10:50:55.685	[127.0.0.1:34247]	EXEC(2)	OK
+10:50:55.686	[127.0.0.1:34247]	CLOSE(2)	OK
+10:50:55.697	[127.0.0.1:34247]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:55.697	[127.0.0.1:34247]	QUERY(3)	OK
+10:50:55.699	[127.0.0.1:34247]	EXEC(3)	OK
+10:50:55.699	[127.0.0.1:34247]	CLOSE(3)	OK
+10:50:55.706	[127.0.0.1:34247]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:55.707	[127.0.0.1:34247]	QUERY(4)	OK
+10:50:55.709	[127.0.0.1:34247]	EXEC(4)	OK
+10:50:55.709	[127.0.0.1:34247]	CLOSE(4)	OK
+10:50:55.734	[127.0.0.1:34247]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:55.734	[127.0.0.1:34247]	QUERY(5)	OK
+10:50:55.736	[127.0.0.1:34247]	EXEC(5)	OK
+10:50:55.736	[127.0.0.1:34247]	CLOSE(5)	OK
+10:50:55.741	[127.0.0.1:34247]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.742	[127.0.0.1:34247]	QUERY(6)	OK
+10:50:55.743	[127.0.0.1:34247]	EXEC(6)	OK
+10:50:55.744	[127.0.0.1:34247]	CLOSE(6)	OK
+10:50:55.747	[127.0.0.1:34247]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.748	[127.0.0.1:34247]	QUERY(7)	OK
+10:50:55.749	[127.0.0.1:34247]	EXEC(7)	OK
+10:50:55.750	[127.0.0.1:34247]	CLOSE(7)	OK
+10:50:55.755	[127.0.0.1:34247]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:55.755	[127.0.0.1:34247]	QUERY(8)	OK
+10:50:55.757	[127.0.0.1:34247]	EXEC(8)	OK
+10:50:55.764	[127.0.0.1:34247]	CLOSE(8)	OK
+10:50:55.767	[127.0.0.1:34247]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.768	[127.0.0.1:34247]	QUERY(9)	OK
+10:50:55.769	[127.0.0.1:34247]	EXEC(9)	OK
+10:50:55.769	[127.0.0.1:34247]	CLOSE(9)	OK
+10:50:55.773	[127.0.0.1:34247]	QUERY(10)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.773	[127.0.0.1:34247]	QUERY(10)	OK
+10:50:55.775	[127.0.0.1:34247]	EXEC(10)	OK
+10:50:55.775	[127.0.0.1:34247]	CLOSE(10)	OK
+10:50:55.779	[127.0.0.1:34247]	QUERY(11)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:55.784	[127.0.0.1:34247]	QUERY(11)	OK
+10:50:55.785	[127.0.0.1:34247]	EXEC(11)	OK
+10:50:55.785	[127.0.0.1:34247]	CLOSE(11)	OK
+10:50:55.792	[127.0.0.1:34247]	QUERY(12)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.793	[127.0.0.1:34247]	QUERY(12)	OK
+10:50:55.794	[127.0.0.1:34247]	EXEC(12)	OK
+10:50:55.794	[127.0.0.1:34247]	CLOSE(12)	OK
+10:50:55.798	[127.0.0.1:34247]	QUERY(13)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.798	[127.0.0.1:34247]	QUERY(13)	OK
+10:50:55.803	[127.0.0.1:34247]	EXEC(13)	OK
+10:50:55.803	[127.0.0.1:34247]	CLOSE(13)	OK
+10:50:55.807	[127.0.0.1:34247]	QUERY(14)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.808	[127.0.0.1:34247]	QUERY(14)	OK
+10:50:55.809	[127.0.0.1:34247]	EXEC(14)	OK
+10:50:55.810	[127.0.0.1:34247]	CLOSE(14)	OK
+10:50:55.817	[127.0.0.1:34247]	QUERY(15)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:55.818	[127.0.0.1:34247]	QUERY(15)	OK
+10:50:55.823	[127.0.0.1:34247]	EXEC(15)	OK
+10:50:55.823	[127.0.0.1:34247]	CLOSE(15)	OK
+10:50:55.828	[127.0.0.1:34247]	QUERY(16)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.828	[127.0.0.1:34247]	QUERY(16)	OK
+10:50:55.830	[127.0.0.1:34247]	EXEC(16)	OK
+10:50:55.830	[127.0.0.1:34247]	CLOSE(16)	OK
+10:50:55.839	[127.0.0.1:34247]	QUERY(17)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.839	[127.0.0.1:34247]	QUERY(17)	OK
+10:50:55.841	[127.0.0.1:34247]	EXEC(17)	OK
+10:50:55.841	[127.0.0.1:34247]	CLOSE(17)	OK
+10:50:55.851	[127.0.0.1:34247]	QUERY(18)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:55.851	[127.0.0.1:34247]	QUERY(18)	OK
+10:50:55.852	[127.0.0.1:34247]	EXEC(18)	OK
+10:50:55.853	[127.0.0.1:34247]	CLOSE(18)	OK
+10:50:55.856	[127.0.0.1:34247]	QUERY(19)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.863	[127.0.0.1:34247]	QUERY(19)	OK
+10:50:55.864	[127.0.0.1:34247]	EXEC(19)	OK
+10:50:55.865	[127.0.0.1:34247]	CLOSE(19)	OK
+10:50:55.869	[127.0.0.1:34247]	QUERY(20)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.870	[127.0.0.1:34247]	QUERY(20)	OK
+10:50:55.871	[127.0.0.1:34247]	EXEC(20)	OK
+10:50:55.871	[127.0.0.1:34247]	CLOSE(20)	OK
+10:50:55.874	[127.0.0.1:34247]	QUERY(21)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:55.875	[127.0.0.1:34247]	QUERY(21)	OK
+10:50:55.876	[127.0.0.1:34247]	EXEC(21)	OK
+10:50:55.877	[127.0.0.1:34247]	CLOSE(21)	OK
+10:50:55.882	[127.0.0.1:34247]	QUERY(22)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.882	[127.0.0.1:34247]	QUERY(22)	OK
+10:50:55.883	[127.0.0.1:34247]	EXEC(22)	OK
+10:50:55.885	[127.0.0.1:34247]	CLOSE(22)	OK
+10:50:55.889	[127.0.0.1:34247]	QUERY(23)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:55.890	[127.0.0.1:34247]	QUERY(23)	OK
+10:50:55.931	[127.0.0.1:34247]	EXEC(23)	OK
+10:50:55.931	[127.0.0.1:34247]	CLOSE(23)	OK
+10:50:55.957	[127.0.0.1:34247]	QUERY(24)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:55.958	[127.0.0.1:34247]	QUERY(24)	OK
+10:50:55.959	[127.0.0.1:34247]	EXEC(24)	OK
+10:50:55.960	[127.0.0.1:34247]	CLOSE(24)	OK
+10:50:55.962	[127.0.0.1:34247]	QUERY(25)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:55.963	[127.0.0.1:34247]	QUERY(25)	OK
+10:50:55.964	[127.0.0.1:34247]	EXEC(25)	OK
+10:50:55.964	[127.0.0.1:34247]	CLOSE(25)	OK
+10:50:55.969	[127.0.0.1:34247]	QUERY(26)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:55.969	[127.0.0.1:34247]	QUERY(26)	OK
+10:50:55.970	[127.0.0.1:34247]	EXEC(26)	OK
+10:50:55.971	[127.0.0.1:34247]	CLOSE(26)	OK
+10:50:55.974	[127.0.0.1:34247]	QUERY(27)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:55.974	[127.0.0.1:34247]	QUERY(27)	OK
+10:50:55.976	[127.0.0.1:34247]	EXEC(27)	OK
+10:50:55.976	[127.0.0.1:34247]	CLOSE(27)	OK
+10:50:55.980	[127.0.0.1:34247]	QUERY(28)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:55.981	[127.0.0.1:34247]	QUERY(28)	OK
+10:50:55.982	[127.0.0.1:34247]	EXEC(28)	OK
+10:50:55.983	[127.0.0.1:34247]	CLOSE(28)	OK
+10:50:55.985	[127.0.0.1:34247]	QUERY(29)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:55.986	[127.0.0.1:34247]	QUERY(29)	OK
+10:50:55.987	[127.0.0.1:34247]	EXEC(29)	OK
+10:50:55.987	[127.0.0.1:34247]	CLOSE(29)	OK
+10:50:55.991	[127.0.0.1:34247]	QUERY(30)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:55.991	[127.0.0.1:34247]	QUERY(30)	OK
+10:50:55.992	[127.0.0.1:34247]	EXEC(30)	OK
+10:50:55.993	[127.0.0.1:34247]	CLOSE(30)	OK
+10:50:55.997	[127.0.0.1:34247]	QUERY(31)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:55.997	[127.0.0.1:34247]	QUERY(31)	OK
+10:50:55.999	[127.0.0.1:34247]	EXEC(31)	OK
+10:50:55.999	[127.0.0.1:34247]	CLOSE(31)	OK
+10:50:56.002	[127.0.0.1:34247]	QUERY(32)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.003	[127.0.0.1:34247]	QUERY(32)	OK
+10:50:56.004	[127.0.0.1:34247]	EXEC(32)	OK
+10:50:56.004	[127.0.0.1:34247]	CLOSE(32)	OK
+10:50:56.007	[127.0.0.1:34247]	QUERY(33)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.007	[127.0.0.1:34247]	QUERY(33)	OK
+10:50:56.009	[127.0.0.1:34247]	EXEC(33)	OK
+10:50:56.010	[127.0.0.1:34247]	CLOSE(33)	OK
+10:50:56.014	[127.0.0.1:34247]	QUERY(34)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.014	[127.0.0.1:34247]	QUERY(34)	OK
+10:50:56.015	[127.0.0.1:34247]	EXEC(34)	OK
+10:50:56.016	[127.0.0.1:34247]	CLOSE(34)	OK
+10:50:56.025	[127.0.0.1:34247]	QUERY(35)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.025	[127.0.0.1:34247]	QUERY(35)	OK
+10:50:56.027	[127.0.0.1:34247]	EXEC(35)	OK
+10:50:56.027	[127.0.0.1:34247]	CLOSE(35)	OK
+10:50:56.030	[127.0.0.1:34247]	QUERY(36)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.030	[127.0.0.1:34247]	QUERY(36)	OK
+10:50:56.032	[127.0.0.1:34247]	EXEC(36)	OK
+10:50:56.032	[127.0.0.1:34247]	CLOSE(36)	OK
+10:50:56.036	[127.0.0.1:34247]	QUERY(37)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.036	[127.0.0.1:34247]	QUERY(37)	OK
+10:50:56.038	[127.0.0.1:34247]	EXEC(37)	OK
+10:50:56.040	[127.0.0.1:34247]	CLOSE(37)	OK
+10:50:56.043	[127.0.0.1:34247]	QUERY(38)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.043	[127.0.0.1:34247]	QUERY(38)	OK
+10:50:56.044	[127.0.0.1:34247]	EXEC(38)	OK
+10:50:56.045	[127.0.0.1:34247]	CLOSE(38)	OK
+10:50:56.048	[127.0.0.1:34247]	QUERY(39)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.048	[127.0.0.1:34247]	QUERY(39)	OK
+10:50:56.049	[127.0.0.1:34247]	EXEC(39)	OK
+10:50:56.050	[127.0.0.1:34247]	CLOSE(39)	OK
+10:50:56.054	[127.0.0.1:34247]	QUERY(40)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.054	[127.0.0.1:34247]	QUERY(40)	OK
+10:50:56.055	[127.0.0.1:34247]	EXEC(40)	OK
+10:50:56.056	[127.0.0.1:34247]	CLOSE(40)	OK
+10:50:56.059	[127.0.0.1:34247]	QUERY(41)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.059	[127.0.0.1:34247]	QUERY(41)	OK
+10:50:56.060	[127.0.0.1:34247]	EXEC(41)	OK
+10:50:56.061	[127.0.0.1:34247]	CLOSE(41)	OK
+10:50:56.075	[127.0.0.1:34247]	QUERY(42)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.075	[127.0.0.1:34247]	QUERY(42)	OK
+10:50:56.076	[127.0.0.1:34247]	EXEC(42)	OK
+10:50:56.077	[127.0.0.1:34247]	CLOSE(42)	OK
+10:50:56.081	[127.0.0.1:34247]	QUERY(43)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.081	[127.0.0.1:34247]	QUERY(43)	OK
+10:50:56.083	[127.0.0.1:34247]	EXEC(43)	OK
+10:50:56.083	[127.0.0.1:34247]	CLOSE(43)	OK
+10:50:56.086	[127.0.0.1:34247]	QUERY(44)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.087	[127.0.0.1:34247]	QUERY(44)	OK
+10:50:56.088	[127.0.0.1:34247]	EXEC(44)	OK
+10:50:56.089	[127.0.0.1:34247]	CLOSE(44)	OK
+10:50:56.092	[127.0.0.1:34247]	QUERY(45)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.092	[127.0.0.1:34247]	QUERY(45)	OK
+10:50:56.093	[127.0.0.1:34247]	EXEC(45)	OK
+10:50:56.094	[127.0.0.1:34247]	CLOSE(45)	OK
+10:50:56.098	[127.0.0.1:34247]	QUERY(46)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:56.099	[127.0.0.1:34247]	QUERY(46)	OK
+10:50:56.117	[127.0.0.1:34247]	EXEC(46)	OK
+10:50:56.118	[127.0.0.1:34247]	CLOSE(46)	OK
+10:50:56.142	[127.0.0.1:34247]	QUERY(47)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.142	[127.0.0.1:34247]	QUERY(47)	OK
+10:50:56.143	[127.0.0.1:34247]	EXEC(47)	OK
+10:50:56.144	[127.0.0.1:34247]	CLOSE(47)	OK
+10:50:56.146	[127.0.0.1:34247]	QUERY(48)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.147	[127.0.0.1:34247]	QUERY(48)	OK
+10:50:56.148	[127.0.0.1:34247]	EXEC(48)	OK
+10:50:56.149	[127.0.0.1:34247]	CLOSE(48)	OK
+10:50:56.153	[127.0.0.1:34247]	QUERY(49)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.154	[127.0.0.1:34247]	QUERY(49)	OK
+10:50:56.155	[127.0.0.1:34247]	EXEC(49)	OK
+10:50:56.156	[127.0.0.1:34247]	CLOSE(49)	OK
+10:50:56.158	[127.0.0.1:34247]	QUERY(50)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.159	[127.0.0.1:34247]	QUERY(50)	OK
+10:50:56.160	[127.0.0.1:34247]	EXEC(50)	OK
+10:50:56.161	[127.0.0.1:34247]	CLOSE(50)	OK
+10:50:56.165	[127.0.0.1:34247]	QUERY(51)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.165	[127.0.0.1:34247]	QUERY(51)	OK
+10:50:56.166	[127.0.0.1:34247]	EXEC(51)	OK
+10:50:56.167	[127.0.0.1:34247]	CLOSE(51)	OK
+10:50:56.170	[127.0.0.1:34247]	QUERY(52)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.170	[127.0.0.1:34247]	QUERY(52)	OK
+10:50:56.171	[127.0.0.1:34247]	EXEC(52)	OK
+10:50:56.172	[127.0.0.1:34247]	CLOSE(52)	OK
+10:50:56.179	[127.0.0.1:34247]	QUERY(53)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.179	[127.0.0.1:34247]	QUERY(53)	OK
+10:50:56.180	[127.0.0.1:34247]	EXEC(53)	OK
+10:50:56.181	[127.0.0.1:34247]	CLOSE(53)	OK
+10:50:56.185	[127.0.0.1:34247]	QUERY(54)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.186	[127.0.0.1:34247]	QUERY(54)	OK
+10:50:56.187	[127.0.0.1:34247]	EXEC(54)	OK
+10:50:56.188	[127.0.0.1:34247]	CLOSE(54)	OK
+10:50:56.190	[127.0.0.1:34247]	QUERY(55)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.191	[127.0.0.1:34247]	QUERY(55)	OK
+10:50:56.192	[127.0.0.1:34247]	EXEC(55)	OK
+10:50:56.193	[127.0.0.1:34247]	CLOSE(55)	OK
+10:50:56.195	[127.0.0.1:34247]	QUERY(56)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.196	[127.0.0.1:34247]	QUERY(56)	OK
+10:50:56.197	[127.0.0.1:34247]	EXEC(56)	OK
+10:50:56.197	[127.0.0.1:34247]	CLOSE(56)	OK
+10:50:56.202	[127.0.0.1:34247]	QUERY(57)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.202	[127.0.0.1:34247]	QUERY(57)	OK
+10:50:56.204	[127.0.0.1:34247]	EXEC(57)	OK
+10:50:56.212	[127.0.0.1:34247]	CLOSE(57)	OK
+10:50:56.216	[127.0.0.1:34247]	QUERY(58)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.216	[127.0.0.1:34247]	QUERY(58)	OK
+10:50:56.217	[127.0.0.1:34247]	EXEC(58)	OK
+10:50:56.218	[127.0.0.1:34247]	CLOSE(58)	OK
+10:50:56.221	[127.0.0.1:34247]	QUERY(59)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.221	[127.0.0.1:34247]	QUERY(59)	OK
+10:50:56.222	[127.0.0.1:34247]	EXEC(59)	OK
+10:50:56.223	[127.0.0.1:34247]	CLOSE(59)	OK
+10:50:56.227	[127.0.0.1:34247]	QUERY(60)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.227	[127.0.0.1:34247]	QUERY(60)	OK
+10:50:56.228	[127.0.0.1:34247]	EXEC(60)	OK
+10:50:56.228	[127.0.0.1:34247]	CLOSE(60)	OK
+10:50:56.231	[127.0.0.1:34247]	QUERY(61)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.232	[127.0.0.1:34247]	QUERY(61)	OK
+10:50:56.233	[127.0.0.1:34247]	EXEC(61)	OK
+10:50:56.233	[127.0.0.1:34247]	CLOSE(61)	OK
+10:50:56.236	[127.0.0.1:34247]	QUERY(62)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.237	[127.0.0.1:34247]	QUERY(62)	OK
+10:50:56.238	[127.0.0.1:34247]	EXEC(62)	OK
+10:50:56.239	[127.0.0.1:34247]	CLOSE(62)	OK
+10:50:56.243	[127.0.0.1:34247]	QUERY(63)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.243	[127.0.0.1:34247]	QUERY(63)	OK
+10:50:56.245	[127.0.0.1:34247]	EXEC(63)	OK
+10:50:56.245	[127.0.0.1:34247]	CLOSE(63)	OK
+10:50:56.248	[127.0.0.1:34247]	QUERY(64)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.248	[127.0.0.1:34247]	QUERY(64)	OK
+10:50:56.250	[127.0.0.1:34247]	EXEC(64)	OK
+10:50:56.251	[127.0.0.1:34247]	CLOSE(64)	OK
+10:50:56.254	[127.0.0.1:34247]	QUERY(65)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.254	[127.0.0.1:34247]	QUERY(65)	OK
+10:50:56.256	[127.0.0.1:34247]	EXEC(65)	OK
+10:50:56.256	[127.0.0.1:34247]	CLOSE(65)	OK
+10:50:56.260	[127.0.0.1:34247]	QUERY(66)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.260	[127.0.0.1:34247]	QUERY(66)	OK
+10:50:56.263	[127.0.0.1:34247]	EXEC(66)	OK
+10:50:56.265	[127.0.0.1:34247]	CLOSE(66)	OK
+10:50:56.268	[127.0.0.1:34247]	QUERY(67)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.268	[127.0.0.1:34247]	QUERY(67)	OK
+10:50:56.269	[127.0.0.1:34247]	EXEC(67)	OK
+10:50:56.270	[127.0.0.1:34247]	CLOSE(67)	OK
+10:50:56.272	[127.0.0.1:34247]	QUERY(68)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.273	[127.0.0.1:34247]	QUERY(68)	OK
+10:50:56.274	[127.0.0.1:34247]	EXEC(68)	OK
+10:50:56.274	[127.0.0.1:34247]	CLOSE(68)	OK
+10:50:56.278	[127.0.0.1:34247]	QUERY(69)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:56.278	[127.0.0.1:34247]	QUERY(69)	OK
+10:50:56.291	[127.0.0.1:34247]	EXEC(69)	OK
+10:50:56.292	[127.0.0.1:34247]	CLOSE(69)	OK
+10:50:56.312	[127.0.0.1:34247]	QUERY(70)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.313	[127.0.0.1:34247]	QUERY(70)	OK
+10:50:56.319	[127.0.0.1:34247]	EXEC(70)	OK
+10:50:56.319	[127.0.0.1:34247]	CLOSE(70)	OK
+10:50:56.322	[127.0.0.1:34247]	QUERY(71)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.323	[127.0.0.1:34247]	QUERY(71)	OK
+10:50:56.325	[127.0.0.1:34247]	EXEC(71)	OK
+10:50:56.326	[127.0.0.1:34247]	CLOSE(71)	OK
+10:50:56.330	[127.0.0.1:34247]	QUERY(72)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.330	[127.0.0.1:34247]	QUERY(72)	OK
+10:50:56.331	[127.0.0.1:34247]	EXEC(72)	OK
+10:50:56.332	[127.0.0.1:34247]	CLOSE(72)	OK
+10:50:56.336	[127.0.0.1:34247]	QUERY(73)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.336	[127.0.0.1:34247]	QUERY(73)	OK
+10:50:56.337	[127.0.0.1:34247]	EXEC(73)	OK
+10:50:56.337	[127.0.0.1:34247]	CLOSE(73)	OK
+10:50:56.342	[127.0.0.1:34247]	QUERY(74)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.342	[127.0.0.1:34247]	QUERY(74)	OK
+10:50:56.343	[127.0.0.1:34247]	EXEC(74)	OK
+10:50:56.344	[127.0.0.1:34247]	CLOSE(74)	OK
+10:50:56.360	[127.0.0.1:34247]	QUERY(75)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.360	[127.0.0.1:34247]	QUERY(75)	OK
+10:50:56.361	[127.0.0.1:34247]	EXEC(75)	OK
+10:50:56.362	[127.0.0.1:34247]	CLOSE(75)	OK
+10:50:56.365	[127.0.0.1:34247]	QUERY(76)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.365	[127.0.0.1:34247]	QUERY(76)	OK
+10:50:56.366	[127.0.0.1:34247]	EXEC(76)	OK
+10:50:56.367	[127.0.0.1:34247]	CLOSE(76)	OK
+10:50:56.371	[127.0.0.1:34247]	QUERY(77)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.371	[127.0.0.1:34247]	QUERY(77)	OK
+10:50:56.372	[127.0.0.1:34247]	EXEC(77)	OK
+10:50:56.373	[127.0.0.1:34247]	CLOSE(77)	OK
+10:50:56.375	[127.0.0.1:34247]	QUERY(78)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.376	[127.0.0.1:34247]	QUERY(78)	OK
+10:50:56.378	[127.0.0.1:34247]	EXEC(78)	OK
+10:50:56.378	[127.0.0.1:34247]	CLOSE(78)	OK
+10:50:56.381	[127.0.0.1:34247]	QUERY(79)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.381	[127.0.0.1:34247]	QUERY(79)	OK
+10:50:56.382	[127.0.0.1:34247]	EXEC(79)	OK
+10:50:56.383	[127.0.0.1:34247]	CLOSE(79)	OK
+10:50:56.387	[127.0.0.1:34247]	QUERY(80)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.387	[127.0.0.1:34247]	QUERY(80)	OK
+10:50:56.388	[127.0.0.1:34247]	EXEC(80)	OK
+10:50:56.389	[127.0.0.1:34247]	CLOSE(80)	OK
+10:50:56.392	[127.0.0.1:34247]	QUERY(81)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.392	[127.0.0.1:34247]	QUERY(81)	OK
+10:50:56.393	[127.0.0.1:34247]	EXEC(81)	OK
+10:50:56.394	[127.0.0.1:34247]	CLOSE(81)	OK
+10:50:56.396	[127.0.0.1:34247]	QUERY(82)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.397	[127.0.0.1:34247]	QUERY(82)	OK
+10:50:56.398	[127.0.0.1:34247]	EXEC(82)	OK
+10:50:56.399	[127.0.0.1:34247]	CLOSE(82)	OK
+10:50:56.402	[127.0.0.1:34247]	QUERY(83)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.403	[127.0.0.1:34247]	QUERY(83)	OK
+10:50:56.404	[127.0.0.1:34247]	EXEC(83)	OK
+10:50:56.404	[127.0.0.1:34247]	CLOSE(83)	OK
+10:50:56.407	[127.0.0.1:34247]	QUERY(84)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.407	[127.0.0.1:34247]	QUERY(84)	OK
+10:50:56.409	[127.0.0.1:34247]	EXEC(84)	OK
+10:50:56.409	[127.0.0.1:34247]	CLOSE(84)	OK
+10:50:56.412	[127.0.0.1:34247]	QUERY(85)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.412	[127.0.0.1:34247]	QUERY(85)	OK
+10:50:56.413	[127.0.0.1:34247]	EXEC(85)	OK
+10:50:56.414	[127.0.0.1:34247]	CLOSE(85)	OK
+10:50:56.417	[127.0.0.1:34247]	QUERY(86)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.418	[127.0.0.1:34247]	QUERY(86)	OK
+10:50:56.419	[127.0.0.1:34247]	EXEC(86)	OK
+10:50:56.420	[127.0.0.1:34247]	CLOSE(86)	OK
+10:50:56.422	[127.0.0.1:34247]	QUERY(87)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.423	[127.0.0.1:34247]	QUERY(87)	OK
+10:50:56.424	[127.0.0.1:34247]	EXEC(87)	OK
+10:50:56.424	[127.0.0.1:34247]	CLOSE(87)	OK
+10:50:56.427	[127.0.0.1:34247]	QUERY(88)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.427	[127.0.0.1:34247]	QUERY(88)	OK
+10:50:56.429	[127.0.0.1:34247]	EXEC(88)	OK
+10:50:56.429	[127.0.0.1:34247]	CLOSE(88)	OK
+10:50:56.432	[127.0.0.1:34247]	QUERY(89)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.433	[127.0.0.1:34247]	QUERY(89)	OK
+10:50:56.434	[127.0.0.1:34247]	EXEC(89)	OK
+10:50:56.435	[127.0.0.1:34247]	CLOSE(89)	OK
+10:50:56.437	[127.0.0.1:34247]	QUERY(90)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.437	[127.0.0.1:34247]	QUERY(90)	OK
+10:50:56.439	[127.0.0.1:34247]	EXEC(90)	OK
+10:50:56.439	[127.0.0.1:34247]	CLOSE(90)	OK
+10:50:56.442	[127.0.0.1:34247]	QUERY(91)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.442	[127.0.0.1:34247]	QUERY(91)	OK
+10:50:56.444	[127.0.0.1:34247]	EXEC(91)	OK
+10:50:56.444	[127.0.0.1:34247]	CLOSE(91)	OK
+10:50:56.457	[127.0.0.1:34247]	QUERY(92)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:56.457	[127.0.0.1:34247]	QUERY(92)	OK
+10:50:56.470	[127.0.0.1:34247]	EXEC(92)	OK
+10:50:56.471	[127.0.0.1:34247]	CLOSE(92)	OK
+10:50:56.489	[127.0.0.1:34247]	QUERY(93)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.489	[127.0.0.1:34247]	QUERY(93)	OK
+10:50:56.491	[127.0.0.1:34247]	EXEC(93)	OK
+10:50:56.491	[127.0.0.1:34247]	CLOSE(93)	OK
+10:50:56.494	[127.0.0.1:34247]	QUERY(94)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.494	[127.0.0.1:34247]	QUERY(94)	OK
+10:50:56.496	[127.0.0.1:34247]	EXEC(94)	OK
+10:50:56.496	[127.0.0.1:34247]	CLOSE(94)	OK
+10:50:56.500	[127.0.0.1:34247]	QUERY(95)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.500	[127.0.0.1:34247]	QUERY(95)	OK
+10:50:56.501	[127.0.0.1:34247]	EXEC(95)	OK
+10:50:56.502	[127.0.0.1:34247]	CLOSE(95)	OK
+10:50:56.505	[127.0.0.1:34247]	QUERY(96)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.505	[127.0.0.1:34247]	QUERY(96)	OK
+10:50:56.506	[127.0.0.1:34247]	EXEC(96)	OK
+10:50:56.507	[127.0.0.1:34247]	CLOSE(96)	OK
+10:50:56.510	[127.0.0.1:34247]	QUERY(97)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.511	[127.0.0.1:34247]	QUERY(97)	OK
+10:50:56.512	[127.0.0.1:34247]	EXEC(97)	OK
+10:50:56.512	[127.0.0.1:34247]	CLOSE(97)	OK
+10:50:56.515	[127.0.0.1:34247]	QUERY(98)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.515	[127.0.0.1:34247]	QUERY(98)	OK
+10:50:56.516	[127.0.0.1:34247]	EXEC(98)	OK
+10:50:56.517	[127.0.0.1:34247]	CLOSE(98)	OK
+10:50:56.520	[127.0.0.1:34247]	QUERY(99)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.520	[127.0.0.1:34247]	QUERY(99)	OK
+10:50:56.521	[127.0.0.1:34247]	EXEC(99)	OK
+10:50:56.522	[127.0.0.1:34247]	CLOSE(99)	OK
+10:50:56.526	[127.0.0.1:34247]	QUERY(100)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.526	[127.0.0.1:34247]	QUERY(100)	OK
+10:50:56.527	[127.0.0.1:34247]	EXEC(100)	OK
+10:50:56.527	[127.0.0.1:34247]	CLOSE(100)	OK
+10:50:56.530	[127.0.0.1:34247]	QUERY(101)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.530	[127.0.0.1:34247]	QUERY(101)	OK
+10:50:56.531	[127.0.0.1:34247]	EXEC(101)	OK
+10:50:56.532	[127.0.0.1:34247]	CLOSE(101)	OK
+10:50:56.535	[127.0.0.1:34247]	QUERY(102)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.535	[127.0.0.1:34247]	QUERY(102)	OK
+10:50:56.536	[127.0.0.1:34247]	EXEC(102)	OK
+10:50:56.536	[127.0.0.1:34247]	CLOSE(102)	OK
+10:50:56.540	[127.0.0.1:34247]	QUERY(103)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.540	[127.0.0.1:34247]	QUERY(103)	OK
+10:50:56.541	[127.0.0.1:34247]	EXEC(103)	OK
+10:50:56.542	[127.0.0.1:34247]	CLOSE(103)	OK
+10:50:56.544	[127.0.0.1:34247]	QUERY(104)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.545	[127.0.0.1:34247]	QUERY(104)	OK
+10:50:56.546	[127.0.0.1:34247]	EXEC(104)	OK
+10:50:56.546	[127.0.0.1:34247]	CLOSE(104)	OK
+10:50:56.549	[127.0.0.1:34247]	QUERY(105)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.549	[127.0.0.1:34247]	QUERY(105)	OK
+10:50:56.550	[127.0.0.1:34247]	EXEC(105)	OK
+10:50:56.550	[127.0.0.1:34247]	CLOSE(105)	OK
+10:50:56.554	[127.0.0.1:34247]	QUERY(106)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.554	[127.0.0.1:34247]	QUERY(106)	OK
+10:50:56.555	[127.0.0.1:34247]	EXEC(106)	OK
+10:50:56.556	[127.0.0.1:34247]	CLOSE(106)	OK
+10:50:56.558	[127.0.0.1:34247]	QUERY(107)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.559	[127.0.0.1:34247]	QUERY(107)	OK
+10:50:56.560	[127.0.0.1:34247]	EXEC(107)	OK
+10:50:56.560	[127.0.0.1:34247]	CLOSE(107)	OK
+10:50:56.563	[127.0.0.1:34247]	QUERY(108)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.563	[127.0.0.1:34247]	QUERY(108)	OK
+10:50:56.564	[127.0.0.1:34247]	EXEC(108)	OK
+10:50:56.565	[127.0.0.1:34247]	CLOSE(108)	OK
+10:50:56.568	[127.0.0.1:34247]	QUERY(109)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.568	[127.0.0.1:34247]	QUERY(109)	OK
+10:50:56.569	[127.0.0.1:34247]	EXEC(109)	OK
+10:50:56.570	[127.0.0.1:34247]	CLOSE(109)	OK
+10:50:56.573	[127.0.0.1:34247]	QUERY(110)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.573	[127.0.0.1:34247]	QUERY(110)	OK
+10:50:56.574	[127.0.0.1:34247]	EXEC(110)	OK
+10:50:56.574	[127.0.0.1:34247]	CLOSE(110)	OK
+10:50:56.613	[127.0.0.1:34247]	QUERY(111)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.613	[127.0.0.1:34247]	QUERY(111)	OK
+10:50:56.615	[127.0.0.1:34247]	EXEC(111)	OK
+10:50:56.616	[127.0.0.1:34247]	CLOSE(111)	OK
+10:50:56.619	[127.0.0.1:34247]	QUERY(112)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.620	[127.0.0.1:34247]	QUERY(112)	OK
+10:50:56.621	[127.0.0.1:34247]	EXEC(112)	OK
+10:50:56.622	[127.0.0.1:34247]	CLOSE(112)	OK
+10:50:56.624	[127.0.0.1:34247]	QUERY(113)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.624	[127.0.0.1:34247]	QUERY(113)	OK
+10:50:56.626	[127.0.0.1:34247]	EXEC(113)	OK
+10:50:56.626	[127.0.0.1:34247]	CLOSE(113)	OK
+10:50:56.629	[127.0.0.1:34247]	QUERY(114)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.629	[127.0.0.1:34247]	QUERY(114)	OK
+10:50:56.630	[127.0.0.1:34247]	EXEC(114)	OK
+10:50:56.631	[127.0.0.1:34247]	CLOSE(114)	OK
+10:50:56.634	[127.0.0.1:34247]	QUERY(115)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:56.634	[127.0.0.1:34247]	QUERY(115)	OK
+10:50:56.648	[127.0.0.1:34247]	EXEC(115)	OK
+10:50:56.649	[127.0.0.1:34247]	CLOSE(115)	OK
+10:50:56.664	[127.0.0.1:34247]	QUERY(116)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.664	[127.0.0.1:34247]	QUERY(116)	OK
+10:50:56.678	[127.0.0.1:34247]	EXEC(116)	OK
+10:50:56.678	[127.0.0.1:34247]	CLOSE(116)	OK
+10:50:56.687	[127.0.0.1:34247]	QUERY(117)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.688	[127.0.0.1:34247]	QUERY(117)	OK
+10:50:56.690	[127.0.0.1:34247]	EXEC(117)	OK
+10:50:56.691	[127.0.0.1:34247]	CLOSE(117)	OK
+10:50:56.694	[127.0.0.1:34247]	QUERY(118)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.695	[127.0.0.1:34247]	QUERY(118)	OK
+10:50:56.696	[127.0.0.1:34247]	EXEC(118)	OK
+10:50:56.696	[127.0.0.1:34247]	CLOSE(118)	OK
+10:50:56.699	[127.0.0.1:34247]	QUERY(119)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.699	[127.0.0.1:34247]	QUERY(119)	OK
+10:50:56.701	[127.0.0.1:34247]	EXEC(119)	OK
+10:50:56.702	[127.0.0.1:34247]	CLOSE(119)	OK
+10:50:56.705	[127.0.0.1:34247]	QUERY(120)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.706	[127.0.0.1:34247]	QUERY(120)	OK
+10:50:56.707	[127.0.0.1:34247]	EXEC(120)	OK
+10:50:56.708	[127.0.0.1:34247]	CLOSE(120)	OK
+10:50:56.710	[127.0.0.1:34247]	QUERY(121)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.711	[127.0.0.1:34247]	QUERY(121)	OK
+10:50:56.712	[127.0.0.1:34247]	EXEC(121)	OK
+10:50:56.712	[127.0.0.1:34247]	CLOSE(121)	OK
+10:50:56.715	[127.0.0.1:34247]	QUERY(122)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.715	[127.0.0.1:34247]	QUERY(122)	OK
+10:50:56.716	[127.0.0.1:34247]	EXEC(122)	OK
+10:50:56.717	[127.0.0.1:34247]	CLOSE(122)	OK
+10:50:56.752	[127.0.0.1:34247]	QUERY(123)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.752	[127.0.0.1:34247]	QUERY(123)	OK
+10:50:56.754	[127.0.0.1:34247]	EXEC(123)	OK
+10:50:56.754	[127.0.0.1:34247]	CLOSE(123)	OK
+10:50:56.757	[127.0.0.1:34247]	QUERY(124)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.757	[127.0.0.1:34247]	QUERY(124)	OK
+10:50:56.758	[127.0.0.1:34247]	EXEC(124)	OK
+10:50:56.759	[127.0.0.1:34247]	CLOSE(124)	OK
+10:50:56.765	[127.0.0.1:34247]	QUERY(125)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.765	[127.0.0.1:34247]	QUERY(125)	OK
+10:50:56.767	[127.0.0.1:34247]	EXEC(125)	OK
+10:50:56.768	[127.0.0.1:34247]	CLOSE(125)	OK
+10:50:56.771	[127.0.0.1:34247]	QUERY(126)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.771	[127.0.0.1:34247]	QUERY(126)	OK
+10:50:56.772	[127.0.0.1:34247]	EXEC(126)	OK
+10:50:56.773	[127.0.0.1:34247]	CLOSE(126)	OK
+10:50:56.780	[127.0.0.1:34247]	QUERY(127)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.780	[127.0.0.1:34247]	QUERY(127)	OK
+10:50:56.781	[127.0.0.1:34247]	EXEC(127)	OK
+10:50:56.782	[127.0.0.1:34247]	CLOSE(127)	OK
+10:50:56.784	[127.0.0.1:34247]	QUERY(128)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.784	[127.0.0.1:34247]	QUERY(128)	OK
+10:50:56.786	[127.0.0.1:34247]	EXEC(128)	OK
+10:50:56.786	[127.0.0.1:34247]	CLOSE(128)	OK
+10:50:56.790	[127.0.0.1:34247]	QUERY(129)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.790	[127.0.0.1:34247]	QUERY(129)	OK
+10:50:56.791	[127.0.0.1:34247]	EXEC(129)	OK
+10:50:56.792	[127.0.0.1:34247]	CLOSE(129)	OK
+10:50:56.794	[127.0.0.1:34247]	QUERY(130)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.794	[127.0.0.1:34247]	QUERY(130)	OK
+10:50:56.796	[127.0.0.1:34247]	EXEC(130)	OK
+10:50:56.796	[127.0.0.1:34247]	CLOSE(130)	OK
+10:50:56.798	[127.0.0.1:34247]	QUERY(131)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.799	[127.0.0.1:34247]	QUERY(131)	OK
+10:50:56.800	[127.0.0.1:34247]	EXEC(131)	OK
+10:50:56.801	[127.0.0.1:34247]	CLOSE(131)	OK
+10:50:56.804	[127.0.0.1:34247]	QUERY(132)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.804	[127.0.0.1:34247]	QUERY(132)	OK
+10:50:56.806	[127.0.0.1:34247]	EXEC(132)	OK
+10:50:56.806	[127.0.0.1:34247]	CLOSE(132)	OK
+10:50:56.808	[127.0.0.1:34247]	QUERY(133)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.809	[127.0.0.1:34247]	QUERY(133)	OK
+10:50:56.810	[127.0.0.1:34247]	EXEC(133)	OK
+10:50:56.810	[127.0.0.1:34247]	CLOSE(133)	OK
+10:50:56.813	[127.0.0.1:34247]	QUERY(134)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.813	[127.0.0.1:34247]	QUERY(134)	OK
+10:50:56.814	[127.0.0.1:34247]	EXEC(134)	OK
+10:50:56.815	[127.0.0.1:34247]	CLOSE(134)	OK
+10:50:56.818	[127.0.0.1:34247]	QUERY(135)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.818	[127.0.0.1:34247]	QUERY(135)	OK
+10:50:56.820	[127.0.0.1:34247]	EXEC(135)	OK
+10:50:56.820	[127.0.0.1:34247]	CLOSE(135)	OK
+10:50:56.823	[127.0.0.1:34247]	QUERY(136)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.823	[127.0.0.1:34247]	QUERY(136)	OK
+10:50:56.824	[127.0.0.1:34247]	EXEC(136)	OK
+10:50:56.825	[127.0.0.1:34247]	CLOSE(136)	OK
+10:50:56.833	[127.0.0.1:34247]	QUERY(137)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.834	[127.0.0.1:34247]	QUERY(137)	OK
+10:50:56.835	[127.0.0.1:34247]	EXEC(137)	OK
+10:50:56.835	[127.0.0.1:34247]	CLOSE(137)	OK
+10:50:56.843	[127.0.0.1:34247]	QUERY(138)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:56.844	[127.0.0.1:34247]	QUERY(138)	OK
+10:50:56.856	[127.0.0.1:34247]	EXEC(138)	OK
+10:50:56.857	[127.0.0.1:34247]	CLOSE(138)	OK
+10:50:56.889	[127.0.0.1:34247]	QUERY(139)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.889	[127.0.0.1:34247]	QUERY(139)	OK
+10:50:56.891	[127.0.0.1:34247]	EXEC(139)	OK
+10:50:56.891	[127.0.0.1:34247]	CLOSE(139)	OK
+10:50:56.894	[127.0.0.1:34247]	QUERY(140)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.894	[127.0.0.1:34247]	QUERY(140)	OK
+10:50:56.895	[127.0.0.1:34247]	EXEC(140)	OK
+10:50:56.896	[127.0.0.1:34247]	CLOSE(140)	OK
+10:50:56.899	[127.0.0.1:34247]	QUERY(141)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:56.899	[127.0.0.1:34247]	QUERY(141)	OK
+10:50:56.900	[127.0.0.1:34247]	EXEC(141)	OK
+10:50:56.901	[127.0.0.1:34247]	CLOSE(141)	OK
+10:50:56.903	[127.0.0.1:34247]	QUERY(142)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:56.903	[127.0.0.1:34247]	QUERY(142)	OK
+10:50:56.905	[127.0.0.1:34247]	EXEC(142)	OK
+10:50:56.905	[127.0.0.1:34247]	CLOSE(142)	OK
+10:50:56.908	[127.0.0.1:34247]	QUERY(143)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.908	[127.0.0.1:34247]	QUERY(143)	OK
+10:50:56.910	[127.0.0.1:34247]	EXEC(143)	OK
+10:50:56.910	[127.0.0.1:34247]	CLOSE(143)	OK
+10:50:56.913	[127.0.0.1:34247]	QUERY(144)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.913	[127.0.0.1:34247]	QUERY(144)	OK
+10:50:56.914	[127.0.0.1:34247]	EXEC(144)	OK
+10:50:56.914	[127.0.0.1:34247]	CLOSE(144)	OK
+10:50:56.917	[127.0.0.1:34247]	QUERY(145)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.917	[127.0.0.1:34247]	QUERY(145)	OK
+10:50:56.919	[127.0.0.1:34247]	EXEC(145)	OK
+10:50:56.919	[127.0.0.1:34247]	CLOSE(145)	OK
+10:50:56.929	[127.0.0.1:34247]	QUERY(146)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.929	[127.0.0.1:34247]	QUERY(146)	OK
+10:50:56.931	[127.0.0.1:34247]	EXEC(146)	OK
+10:50:56.931	[127.0.0.1:34247]	CLOSE(146)	OK
+10:50:56.934	[127.0.0.1:34247]	QUERY(147)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.934	[127.0.0.1:34247]	QUERY(147)	OK
+10:50:56.935	[127.0.0.1:34247]	EXEC(147)	OK
+10:50:56.936	[127.0.0.1:34247]	CLOSE(147)	OK
+10:50:56.938	[127.0.0.1:34247]	QUERY(148)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.938	[127.0.0.1:34247]	QUERY(148)	OK
+10:50:56.940	[127.0.0.1:34247]	EXEC(148)	OK
+10:50:56.940	[127.0.0.1:34247]	CLOSE(148)	OK
+10:50:56.943	[127.0.0.1:34247]	QUERY(149)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:56.944	[127.0.0.1:34247]	QUERY(149)	OK
+10:50:56.945	[127.0.0.1:34247]	EXEC(149)	OK
+10:50:56.946	[127.0.0.1:34247]	CLOSE(149)	OK
+10:50:56.951	[127.0.0.1:34247]	QUERY(150)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.952	[127.0.0.1:34247]	QUERY(150)	OK
+10:50:56.953	[127.0.0.1:34247]	EXEC(150)	OK
+10:50:56.953	[127.0.0.1:34247]	CLOSE(150)	OK
+10:50:56.956	[127.0.0.1:34247]	QUERY(151)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.956	[127.0.0.1:34247]	QUERY(151)	OK
+10:50:56.957	[127.0.0.1:34247]	EXEC(151)	OK
+10:50:56.958	[127.0.0.1:34247]	CLOSE(151)	OK
+10:50:56.961	[127.0.0.1:34247]	QUERY(152)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.961	[127.0.0.1:34247]	QUERY(152)	OK
+10:50:56.962	[127.0.0.1:34247]	EXEC(152)	OK
+10:50:56.963	[127.0.0.1:34247]	CLOSE(152)	OK
+10:50:56.966	[127.0.0.1:34247]	QUERY(153)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.966	[127.0.0.1:34247]	QUERY(153)	OK
+10:50:56.967	[127.0.0.1:34247]	EXEC(153)	OK
+10:50:56.967	[127.0.0.1:34247]	CLOSE(153)	OK
+10:50:56.970	[127.0.0.1:34247]	QUERY(154)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.970	[127.0.0.1:34247]	QUERY(154)	OK
+10:50:56.971	[127.0.0.1:34247]	EXEC(154)	OK
+10:50:56.972	[127.0.0.1:34247]	CLOSE(154)	OK
+10:50:56.975	[127.0.0.1:34247]	QUERY(155)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.975	[127.0.0.1:34247]	QUERY(155)	OK
+10:50:56.976	[127.0.0.1:34247]	EXEC(155)	OK
+10:50:56.977	[127.0.0.1:34247]	CLOSE(155)	OK
+10:50:56.979	[127.0.0.1:34247]	QUERY(156)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.979	[127.0.0.1:34247]	QUERY(156)	OK
+10:50:56.980	[127.0.0.1:34247]	EXEC(156)	OK
+10:50:56.981	[127.0.0.1:34247]	CLOSE(156)	OK
+10:50:56.983	[127.0.0.1:34247]	QUERY(157)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.984	[127.0.0.1:34247]	QUERY(157)	OK
+10:50:56.985	[127.0.0.1:34247]	EXEC(157)	OK
+10:50:56.986	[127.0.0.1:34247]	CLOSE(157)	OK
+10:50:56.989	[127.0.0.1:34247]	QUERY(158)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:56.989	[127.0.0.1:34247]	QUERY(158)	OK
+10:50:56.990	[127.0.0.1:34247]	EXEC(158)	OK
+10:50:56.991	[127.0.0.1:34247]	CLOSE(158)	OK
+10:50:56.993	[127.0.0.1:34247]	QUERY(159)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:56.994	[127.0.0.1:34247]	QUERY(159)	OK
+10:50:56.995	[127.0.0.1:34247]	EXEC(159)	OK
+10:50:56.995	[127.0.0.1:34247]	CLOSE(159)	OK
+10:50:56.998	[127.0.0.1:34247]	QUERY(160)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:56.998	[127.0.0.1:34247]	QUERY(160)	OK
+10:50:56.999	[127.0.0.1:34247]	EXEC(160)	OK
+10:50:57.000	[127.0.0.1:34247]	CLOSE(160)	OK
+10:50:57.003	[127.0.0.1:34247]	QUERY(161)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:57.003	[127.0.0.1:34247]	QUERY(161)	OK
+10:50:57.014	[127.0.0.1:34247]	EXEC(161)	OK
+10:50:57.048	[127.0.0.1:34247]	CLOSE(161)	OK
+10:50:57.081	[127.0.0.1:34247]	QUERY(162)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.081	[127.0.0.1:34247]	QUERY(162)	OK
+10:50:57.091	[127.0.0.1:34247]	EXEC(162)	OK
+10:50:57.124	[127.0.0.1:34247]	CLOSE(162)	OK
+10:50:57.157	[127.0.0.1:34247]	QUERY(163)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.158	[127.0.0.1:34247]	QUERY(163)	OK
+10:50:57.160	[127.0.0.1:34247]	EXEC(163)	OK
+10:50:57.162	[127.0.0.1:34247]	CLOSE(163)	OK
+10:50:57.166	[127.0.0.1:34247]	QUERY(164)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.166	[127.0.0.1:34247]	QUERY(164)	OK
+10:50:57.168	[127.0.0.1:34247]	EXEC(164)	OK
+10:50:57.173	[127.0.0.1:34247]	CLOSE(164)	OK
+10:50:57.176	[127.0.0.1:34247]	QUERY(165)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.176	[127.0.0.1:34247]	QUERY(165)	OK
+10:50:57.177	[127.0.0.1:34247]	EXEC(165)	OK
+10:50:57.177	[127.0.0.1:34247]	CLOSE(165)	OK
+10:50:57.244	[127.0.0.1:34247]	QUERY(166)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.244	[127.0.0.1:34247]	QUERY(166)	OK
+10:50:57.277	[127.0.0.1:34247]	EXEC(166)	OK
+10:50:57.281	[127.0.0.1:34247]	CLOSE(166)	OK
+10:50:57.283	[127.0.0.1:34247]	QUERY(167)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.284	[127.0.0.1:34247]	QUERY(167)	OK
+10:50:57.285	[127.0.0.1:34247]	EXEC(167)	OK
+10:50:57.285	[127.0.0.1:34247]	CLOSE(167)	OK
+10:50:57.288	[127.0.0.1:34247]	QUERY(168)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.288	[127.0.0.1:34247]	QUERY(168)	OK
+10:50:57.289	[127.0.0.1:34247]	EXEC(168)	OK
+10:50:57.289	[127.0.0.1:34247]	CLOSE(168)	OK
+10:50:57.293	[127.0.0.1:34247]	QUERY(169)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.293	[127.0.0.1:34247]	QUERY(169)	OK
+10:50:57.294	[127.0.0.1:34247]	EXEC(169)	OK
+10:50:57.294	[127.0.0.1:34247]	CLOSE(169)	OK
+10:50:57.298	[127.0.0.1:34247]	QUERY(170)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.298	[127.0.0.1:34247]	QUERY(170)	OK
+10:50:57.300	[127.0.0.1:34247]	EXEC(170)	OK
+10:50:57.301	[127.0.0.1:34247]	CLOSE(170)	OK
+10:50:57.303	[127.0.0.1:34247]	QUERY(171)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.304	[127.0.0.1:34247]	QUERY(171)	OK
+10:50:57.305	[127.0.0.1:34247]	EXEC(171)	OK
+10:50:57.305	[127.0.0.1:34247]	CLOSE(171)	OK
+10:50:57.309	[127.0.0.1:34247]	QUERY(172)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.310	[127.0.0.1:34247]	QUERY(172)	OK
+10:50:57.311	[127.0.0.1:34247]	EXEC(172)	OK
+10:50:57.312	[127.0.0.1:34247]	CLOSE(172)	OK
+10:50:57.315	[127.0.0.1:34247]	QUERY(173)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.315	[127.0.0.1:34247]	QUERY(173)	OK
+10:50:57.316	[127.0.0.1:34247]	EXEC(173)	OK
+10:50:57.316	[127.0.0.1:34247]	CLOSE(173)	OK
+10:50:57.319	[127.0.0.1:34247]	QUERY(174)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.319	[127.0.0.1:34247]	QUERY(174)	OK
+10:50:57.320	[127.0.0.1:34247]	EXEC(174)	OK
+10:50:57.321	[127.0.0.1:34247]	CLOSE(174)	OK
+10:50:57.324	[127.0.0.1:34247]	QUERY(175)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.325	[127.0.0.1:34247]	QUERY(175)	OK
+10:50:57.326	[127.0.0.1:34247]	EXEC(175)	OK
+10:50:57.326	[127.0.0.1:34247]	CLOSE(175)	OK
+10:50:57.329	[127.0.0.1:34247]	QUERY(176)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.329	[127.0.0.1:34247]	QUERY(176)	OK
+10:50:57.330	[127.0.0.1:34247]	EXEC(176)	OK
+10:50:57.330	[127.0.0.1:34247]	CLOSE(176)	OK
+10:50:57.333	[127.0.0.1:34247]	QUERY(177)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.334	[127.0.0.1:34247]	QUERY(177)	OK
+10:50:57.345	[127.0.0.1:34247]	EXEC(177)	OK
+10:50:57.346	[127.0.0.1:34247]	CLOSE(177)	OK
+10:50:57.353	[127.0.0.1:34247]	QUERY(178)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.353	[127.0.0.1:34247]	QUERY(178)	OK
+10:50:57.354	[127.0.0.1:34247]	EXEC(178)	OK
+10:50:57.355	[127.0.0.1:34247]	CLOSE(178)	OK
+10:50:57.357	[127.0.0.1:34247]	QUERY(179)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.357	[127.0.0.1:34247]	QUERY(179)	OK
+10:50:57.359	[127.0.0.1:34247]	EXEC(179)	OK
+10:50:57.360	[127.0.0.1:34247]	CLOSE(179)	OK
+10:50:57.362	[127.0.0.1:34247]	QUERY(180)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.362	[127.0.0.1:34247]	QUERY(180)	OK
+10:50:57.363	[127.0.0.1:34247]	EXEC(180)	OK
+10:50:57.364	[127.0.0.1:34247]	CLOSE(180)	OK
+10:50:57.367	[127.0.0.1:34247]	QUERY(181)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.367	[127.0.0.1:34247]	QUERY(181)	OK
+10:50:57.368	[127.0.0.1:34247]	EXEC(181)	OK
+10:50:57.368	[127.0.0.1:34247]	CLOSE(181)	OK
+10:50:57.371	[127.0.0.1:34247]	QUERY(182)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.371	[127.0.0.1:34247]	QUERY(182)	OK
+10:50:57.372	[127.0.0.1:34247]	EXEC(182)	OK
+10:50:57.373	[127.0.0.1:34247]	CLOSE(182)	OK
+10:50:57.377	[127.0.0.1:34247]	QUERY(183)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.377	[127.0.0.1:34247]	QUERY(183)	OK
+10:50:57.378	[127.0.0.1:34247]	EXEC(183)	OK
+10:50:57.379	[127.0.0.1:34247]	CLOSE(183)	OK
+10:50:57.382	[127.0.0.1:34247]	QUERY(184)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:57.382	[127.0.0.1:34247]	QUERY(184)	OK
+10:50:57.410	[127.0.0.1:34247]	EXEC(184)	OK
+10:50:57.412	[127.0.0.1:34247]	CLOSE(184)	OK
+10:50:57.445	[127.0.0.1:34247]	QUERY(185)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.445	[127.0.0.1:34247]	QUERY(185)	OK
+10:50:57.447	[127.0.0.1:34247]	EXEC(185)	OK
+10:50:57.447	[127.0.0.1:34247]	CLOSE(185)	OK
+10:50:57.449	[127.0.0.1:34247]	QUERY(186)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.450	[127.0.0.1:34247]	QUERY(186)	OK
+10:50:57.451	[127.0.0.1:34247]	EXEC(186)	OK
+10:50:57.451	[127.0.0.1:34247]	CLOSE(186)	OK
+10:50:57.456	[127.0.0.1:34247]	QUERY(187)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.456	[127.0.0.1:34247]	QUERY(187)	OK
+10:50:57.458	[127.0.0.1:34247]	EXEC(187)	OK
+10:50:57.460	[127.0.0.1:34247]	CLOSE(187)	OK
+10:50:57.462	[127.0.0.1:34247]	QUERY(188)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.462	[127.0.0.1:34247]	QUERY(188)	OK
+10:50:57.463	[127.0.0.1:34247]	EXEC(188)	OK
+10:50:57.464	[127.0.0.1:34247]	CLOSE(188)	OK
+10:50:57.472	[127.0.0.1:34247]	QUERY(189)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.472	[127.0.0.1:34247]	QUERY(189)	OK
+10:50:57.473	[127.0.0.1:34247]	EXEC(189)	OK
+10:50:57.473	[127.0.0.1:34247]	CLOSE(189)	OK
+10:50:57.476	[127.0.0.1:34247]	QUERY(190)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.476	[127.0.0.1:34247]	QUERY(190)	OK
+10:50:57.477	[127.0.0.1:34247]	EXEC(190)	OK
+10:50:57.477	[127.0.0.1:34247]	CLOSE(190)	OK
+10:50:57.509	[127.0.0.1:34247]	QUERY(191)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.509	[127.0.0.1:34247]	QUERY(191)	OK
+10:50:57.510	[127.0.0.1:34247]	EXEC(191)	OK
+10:50:57.510	[127.0.0.1:34247]	CLOSE(191)	OK
+10:50:57.513	[127.0.0.1:34247]	QUERY(192)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.514	[127.0.0.1:34247]	QUERY(192)	OK
+10:50:57.516	[127.0.0.1:34247]	EXEC(192)	OK
+10:50:57.516	[127.0.0.1:34247]	CLOSE(192)	OK
+10:50:57.518	[127.0.0.1:34247]	QUERY(193)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.518	[127.0.0.1:34247]	QUERY(193)	OK
+10:50:57.519	[127.0.0.1:34247]	EXEC(193)	OK
+10:50:57.520	[127.0.0.1:34247]	CLOSE(193)	OK
+10:50:57.522	[127.0.0.1:34247]	QUERY(194)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.523	[127.0.0.1:34247]	QUERY(194)	OK
+10:50:57.524	[127.0.0.1:34247]	EXEC(194)	OK
+10:50:57.524	[127.0.0.1:34247]	CLOSE(194)	OK
+10:50:57.527	[127.0.0.1:34247]	QUERY(195)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.527	[127.0.0.1:34247]	QUERY(195)	OK
+10:50:57.528	[127.0.0.1:34247]	EXEC(195)	OK
+10:50:57.529	[127.0.0.1:34247]	CLOSE(195)	OK
+10:50:57.531	[127.0.0.1:34247]	QUERY(196)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.532	[127.0.0.1:34247]	QUERY(196)	OK
+10:50:57.533	[127.0.0.1:34247]	EXEC(196)	OK
+10:50:57.533	[127.0.0.1:34247]	CLOSE(196)	OK
+10:50:57.536	[127.0.0.1:34247]	QUERY(197)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.536	[127.0.0.1:34247]	QUERY(197)	OK
+10:50:57.537	[127.0.0.1:34247]	EXEC(197)	OK
+10:50:57.537	[127.0.0.1:34247]	CLOSE(197)	OK
+10:50:57.540	[127.0.0.1:34247]	QUERY(198)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.541	[127.0.0.1:34247]	QUERY(198)	OK
+10:50:57.542	[127.0.0.1:34247]	EXEC(198)	OK
+10:50:57.542	[127.0.0.1:34247]	CLOSE(198)	OK
+10:50:57.544	[127.0.0.1:34247]	QUERY(199)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.544	[127.0.0.1:34247]	QUERY(199)	OK
+10:50:57.545	[127.0.0.1:34247]	EXEC(199)	OK
+10:50:57.546	[127.0.0.1:34247]	CLOSE(199)	OK
+10:50:57.567	[127.0.0.1:34247]	QUERY(200)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.568	[127.0.0.1:34247]	QUERY(200)	OK
+10:50:57.569	[127.0.0.1:34247]	EXEC(200)	OK
+10:50:57.569	[127.0.0.1:34247]	CLOSE(200)	OK
+10:50:57.572	[127.0.0.1:34247]	QUERY(201)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.572	[127.0.0.1:34247]	QUERY(201)	OK
+10:50:57.573	[127.0.0.1:34247]	EXEC(201)	OK
+10:50:57.574	[127.0.0.1:34247]	CLOSE(201)	OK
+10:50:57.576	[127.0.0.1:34247]	QUERY(202)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.577	[127.0.0.1:34247]	QUERY(202)	OK
+10:50:57.578	[127.0.0.1:34247]	EXEC(202)	OK
+10:50:57.578	[127.0.0.1:34247]	CLOSE(202)	OK
+10:50:57.580	[127.0.0.1:34247]	QUERY(203)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.581	[127.0.0.1:34247]	QUERY(203)	OK
+10:50:57.581	[127.0.0.1:34247]	EXEC(203)	OK
+10:50:57.582	[127.0.0.1:34247]	CLOSE(203)	OK
+10:50:57.585	[127.0.0.1:34247]	QUERY(204)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.586	[127.0.0.1:34247]	QUERY(204)	OK
+10:50:57.587	[127.0.0.1:34247]	EXEC(204)	OK
+10:50:57.597	[127.0.0.1:34247]	CLOSE(204)	OK
+10:50:57.599	[127.0.0.1:34247]	QUERY(205)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.600	[127.0.0.1:34247]	QUERY(205)	OK
+10:50:57.602	[127.0.0.1:34247]	EXEC(205)	OK
+10:50:57.603	[127.0.0.1:34247]	CLOSE(205)	OK
+10:50:57.605	[127.0.0.1:34247]	QUERY(206)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.605	[127.0.0.1:34247]	QUERY(206)	OK
+10:50:57.606	[127.0.0.1:34247]	EXEC(206)	OK
+10:50:57.607	[127.0.0.1:34247]	CLOSE(206)	OK
+10:50:57.610	[127.0.0.1:34247]	QUERY(207)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:57.610	[127.0.0.1:34247]	QUERY(207)	OK
+10:50:57.618	[127.0.0.1:34247]	EXEC(207)	OK
+10:50:57.618	[127.0.0.1:34247]	CLOSE(207)	OK
+10:50:57.626	[127.0.0.1:34247]	QUERY(208)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.626	[127.0.0.1:34247]	QUERY(208)	OK
+10:50:57.627	[127.0.0.1:34247]	EXEC(208)	OK
+10:50:57.628	[127.0.0.1:34247]	CLOSE(208)	OK
+10:50:57.630	[127.0.0.1:34247]	QUERY(209)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.630	[127.0.0.1:34247]	QUERY(209)	OK
+10:50:57.631	[127.0.0.1:34247]	EXEC(209)	OK
+10:50:57.632	[127.0.0.1:34247]	CLOSE(209)	OK
+10:50:57.636	[127.0.0.1:34247]	QUERY(210)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.636	[127.0.0.1:34247]	QUERY(210)	OK
+10:50:57.637	[127.0.0.1:34247]	EXEC(210)	OK
+10:50:57.638	[127.0.0.1:34247]	CLOSE(210)	OK
+10:50:57.640	[127.0.0.1:34247]	QUERY(211)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.640	[127.0.0.1:34247]	QUERY(211)	OK
+10:50:57.641	[127.0.0.1:34247]	EXEC(211)	OK
+10:50:57.642	[127.0.0.1:34247]	CLOSE(211)	OK
+10:50:57.644	[127.0.0.1:34247]	QUERY(212)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.645	[127.0.0.1:34247]	QUERY(212)	OK
+10:50:57.646	[127.0.0.1:34247]	EXEC(212)	OK
+10:50:57.646	[127.0.0.1:34247]	CLOSE(212)	OK
+10:50:57.648	[127.0.0.1:34247]	QUERY(213)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.648	[127.0.0.1:34247]	QUERY(213)	OK
+10:50:57.649	[127.0.0.1:34247]	EXEC(213)	OK
+10:50:57.650	[127.0.0.1:34247]	CLOSE(213)	OK
+10:50:57.652	[127.0.0.1:34247]	QUERY(214)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.652	[127.0.0.1:34247]	QUERY(214)	OK
+10:50:57.653	[127.0.0.1:34247]	EXEC(214)	OK
+10:50:57.654	[127.0.0.1:34247]	CLOSE(214)	OK
+10:50:57.657	[127.0.0.1:34247]	QUERY(215)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.657	[127.0.0.1:34247]	QUERY(215)	OK
+10:50:57.658	[127.0.0.1:34247]	EXEC(215)	OK
+10:50:57.658	[127.0.0.1:34247]	CLOSE(215)	OK
+10:50:57.661	[127.0.0.1:34247]	QUERY(216)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.661	[127.0.0.1:34247]	QUERY(216)	OK
+10:50:57.662	[127.0.0.1:34247]	EXEC(216)	OK
+10:50:57.663	[127.0.0.1:34247]	CLOSE(216)	OK
+10:50:57.665	[127.0.0.1:34247]	QUERY(217)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.665	[127.0.0.1:34247]	QUERY(217)	OK
+10:50:57.666	[127.0.0.1:34247]	EXEC(217)	OK
+10:50:57.667	[127.0.0.1:34247]	CLOSE(217)	OK
+10:50:57.670	[127.0.0.1:34247]	QUERY(218)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.670	[127.0.0.1:34247]	QUERY(218)	OK
+10:50:57.671	[127.0.0.1:34247]	EXEC(218)	OK
+10:50:57.671	[127.0.0.1:34247]	CLOSE(218)	OK
+10:50:57.674	[127.0.0.1:34247]	QUERY(219)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.674	[127.0.0.1:34247]	QUERY(219)	OK
+10:50:57.676	[127.0.0.1:34247]	EXEC(219)	OK
+10:50:57.676	[127.0.0.1:34247]	CLOSE(219)	OK
+10:50:57.679	[127.0.0.1:34247]	QUERY(220)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.679	[127.0.0.1:34247]	QUERY(220)	OK
+10:50:57.680	[127.0.0.1:34247]	EXEC(220)	OK
+10:50:57.680	[127.0.0.1:34247]	CLOSE(220)	OK
+10:50:57.684	[127.0.0.1:34247]	QUERY(221)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.684	[127.0.0.1:34247]	QUERY(221)	OK
+10:50:57.685	[127.0.0.1:34247]	EXEC(221)	OK
+10:50:57.685	[127.0.0.1:34247]	CLOSE(221)	OK
+10:50:57.687	[127.0.0.1:34247]	QUERY(222)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.688	[127.0.0.1:34247]	QUERY(222)	OK
+10:50:57.689	[127.0.0.1:34247]	EXEC(222)	OK
+10:50:57.689	[127.0.0.1:34247]	CLOSE(222)	OK
+10:50:57.691	[127.0.0.1:34247]	QUERY(223)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.692	[127.0.0.1:34247]	QUERY(223)	OK
+10:50:57.693	[127.0.0.1:34247]	EXEC(223)	OK
+10:50:57.693	[127.0.0.1:34247]	CLOSE(223)	OK
+10:50:57.696	[127.0.0.1:34247]	QUERY(224)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.696	[127.0.0.1:34247]	QUERY(224)	OK
+10:50:57.697	[127.0.0.1:34247]	EXEC(224)	OK
+10:50:57.697	[127.0.0.1:34247]	CLOSE(224)	OK
+10:50:57.701	[127.0.0.1:34247]	QUERY(225)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.701	[127.0.0.1:34247]	QUERY(225)	OK
+10:50:57.702	[127.0.0.1:34247]	EXEC(225)	OK
+10:50:57.703	[127.0.0.1:34247]	CLOSE(225)	OK
+10:50:57.705	[127.0.0.1:34247]	QUERY(226)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.705	[127.0.0.1:34247]	QUERY(226)	OK
+10:50:57.706	[127.0.0.1:34247]	EXEC(226)	OK
+10:50:57.706	[127.0.0.1:34247]	CLOSE(226)	OK
+10:50:57.710	[127.0.0.1:34247]	QUERY(227)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.710	[127.0.0.1:34247]	QUERY(227)	OK
+10:50:57.712	[127.0.0.1:34247]	EXEC(227)	OK
+10:50:57.713	[127.0.0.1:34247]	CLOSE(227)	OK
+10:50:57.716	[127.0.0.1:34247]	QUERY(228)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.716	[127.0.0.1:34247]	QUERY(228)	OK
+10:50:57.717	[127.0.0.1:34247]	EXEC(228)	OK
+10:50:57.717	[127.0.0.1:34247]	CLOSE(228)	OK
+10:50:57.719	[127.0.0.1:34247]	QUERY(229)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.720	[127.0.0.1:34247]	QUERY(229)	OK
+10:50:57.721	[127.0.0.1:34247]	EXEC(229)	OK
+10:50:57.725	[127.0.0.1:34247]	CLOSE(229)	OK
+10:50:57.778	[127.0.0.1:34247]	QUERY(230)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:57.778	[127.0.0.1:34247]	QUERY(230)	OK
+10:50:57.794	[127.0.0.1:34247]	EXEC(230)	OK
+10:50:57.795	[127.0.0.1:34247]	CLOSE(230)	OK
+10:50:57.808	[127.0.0.1:34247]	QUERY(231)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.808	[127.0.0.1:34247]	QUERY(231)	OK
+10:50:57.809	[127.0.0.1:34247]	EXEC(231)	OK
+10:50:57.809	[127.0.0.1:34247]	CLOSE(231)	OK
+10:50:57.832	[127.0.0.1:34247]	QUERY(232)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.832	[127.0.0.1:34247]	QUERY(232)	OK
+10:50:57.834	[127.0.0.1:34247]	EXEC(232)	OK
+10:50:57.834	[127.0.0.1:34247]	CLOSE(232)	OK
+10:50:57.837	[127.0.0.1:34247]	QUERY(233)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.837	[127.0.0.1:34247]	QUERY(233)	OK
+10:50:57.838	[127.0.0.1:34247]	EXEC(233)	OK
+10:50:57.839	[127.0.0.1:34247]	CLOSE(233)	OK
+10:50:57.841	[127.0.0.1:34247]	QUERY(234)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.841	[127.0.0.1:34247]	QUERY(234)	OK
+10:50:57.842	[127.0.0.1:34247]	EXEC(234)	OK
+10:50:57.843	[127.0.0.1:34247]	CLOSE(234)	OK
+10:50:57.846	[127.0.0.1:34247]	QUERY(235)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.846	[127.0.0.1:34247]	QUERY(235)	OK
+10:50:57.847	[127.0.0.1:34247]	EXEC(235)	OK
+10:50:57.847	[127.0.0.1:34247]	CLOSE(235)	OK
+10:50:57.850	[127.0.0.1:34247]	QUERY(236)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.850	[127.0.0.1:34247]	QUERY(236)	OK
+10:50:57.851	[127.0.0.1:34247]	EXEC(236)	OK
+10:50:57.851	[127.0.0.1:34247]	CLOSE(236)	OK
+10:50:57.855	[127.0.0.1:34247]	QUERY(237)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.855	[127.0.0.1:34247]	QUERY(237)	OK
+10:50:57.856	[127.0.0.1:34247]	EXEC(237)	OK
+10:50:57.856	[127.0.0.1:34247]	CLOSE(237)	OK
+10:50:57.860	[127.0.0.1:34247]	QUERY(238)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.860	[127.0.0.1:34247]	QUERY(238)	OK
+10:50:57.861	[127.0.0.1:34247]	EXEC(238)	OK
+10:50:57.862	[127.0.0.1:34247]	CLOSE(238)	OK
+10:50:57.871	[127.0.0.1:34247]	QUERY(239)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.871	[127.0.0.1:34247]	QUERY(239)	OK
+10:50:57.872	[127.0.0.1:34247]	EXEC(239)	OK
+10:50:57.873	[127.0.0.1:34247]	CLOSE(239)	OK
+10:50:57.875	[127.0.0.1:34247]	QUERY(240)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.875	[127.0.0.1:34247]	QUERY(240)	OK
+10:50:57.876	[127.0.0.1:34247]	EXEC(240)	OK
+10:50:57.878	[127.0.0.1:34247]	CLOSE(240)	OK
+10:50:57.892	[127.0.0.1:34247]	QUERY(241)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.893	[127.0.0.1:34247]	QUERY(241)	OK
+10:50:57.893	[127.0.0.1:34247]	EXEC(241)	OK
+10:50:57.894	[127.0.0.1:34247]	CLOSE(241)	OK
+10:50:57.896	[127.0.0.1:34247]	QUERY(242)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.896	[127.0.0.1:34247]	QUERY(242)	OK
+10:50:57.897	[127.0.0.1:34247]	EXEC(242)	OK
+10:50:57.897	[127.0.0.1:34247]	CLOSE(242)	OK
+10:50:57.900	[127.0.0.1:34247]	QUERY(243)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.900	[127.0.0.1:34247]	QUERY(243)	OK
+10:50:57.901	[127.0.0.1:34247]	EXEC(243)	OK
+10:50:57.901	[127.0.0.1:34247]	CLOSE(243)	OK
+10:50:57.912	[127.0.0.1:34247]	QUERY(244)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.913	[127.0.0.1:34247]	QUERY(244)	OK
+10:50:57.914	[127.0.0.1:34247]	EXEC(244)	OK
+10:50:57.914	[127.0.0.1:34247]	CLOSE(244)	OK
+10:50:57.916	[127.0.0.1:34247]	QUERY(245)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.917	[127.0.0.1:34247]	QUERY(245)	OK
+10:50:57.917	[127.0.0.1:34247]	EXEC(245)	OK
+10:50:57.918	[127.0.0.1:34247]	CLOSE(245)	OK
+10:50:57.920	[127.0.0.1:34247]	QUERY(246)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.920	[127.0.0.1:34247]	QUERY(246)	OK
+10:50:57.921	[127.0.0.1:34247]	EXEC(246)	OK
+10:50:57.922	[127.0.0.1:34247]	CLOSE(246)	OK
+10:50:57.925	[127.0.0.1:34247]	QUERY(247)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.925	[127.0.0.1:34247]	QUERY(247)	OK
+10:50:57.926	[127.0.0.1:34247]	EXEC(247)	OK
+10:50:57.927	[127.0.0.1:34247]	CLOSE(247)	OK
+10:50:57.929	[127.0.0.1:34247]	QUERY(248)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.929	[127.0.0.1:34247]	QUERY(248)	OK
+10:50:57.932	[127.0.0.1:34247]	EXEC(248)	OK
+10:50:57.932	[127.0.0.1:34247]	CLOSE(248)	OK
+10:50:57.936	[127.0.0.1:34247]	QUERY(249)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.937	[127.0.0.1:34247]	QUERY(249)	OK
+10:50:57.938	[127.0.0.1:34247]	EXEC(249)	OK
+10:50:57.939	[127.0.0.1:34247]	CLOSE(249)	OK
+10:50:57.942	[127.0.0.1:34247]	QUERY(250)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.942	[127.0.0.1:34247]	QUERY(250)	OK
+10:50:57.943	[127.0.0.1:34247]	EXEC(250)	OK
+10:50:57.943	[127.0.0.1:34247]	CLOSE(250)	OK
+10:50:57.946	[127.0.0.1:34247]	QUERY(251)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:57.946	[127.0.0.1:34247]	QUERY(251)	OK
+10:50:57.947	[127.0.0.1:34247]	EXEC(251)	OK
+10:50:57.948	[127.0.0.1:34247]	CLOSE(251)	OK
+10:50:57.951	[127.0.0.1:34247]	QUERY(252)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.951	[127.0.0.1:34247]	QUERY(252)	OK
+10:50:57.952	[127.0.0.1:34247]	EXEC(252)	OK
+10:50:57.952	[127.0.0.1:34247]	CLOSE(252)	OK
+10:50:57.955	[127.0.0.1:34247]	QUERY(253)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:57.955	[127.0.0.1:34247]	QUERY(253)	OK
+10:50:57.962	[127.0.0.1:34247]	EXEC(253)	OK
+10:50:57.962	[127.0.0.1:34247]	CLOSE(253)	OK
+10:50:57.969	[127.0.0.1:34247]	QUERY(254)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.970	[127.0.0.1:34247]	QUERY(254)	OK
+10:50:57.971	[127.0.0.1:34247]	EXEC(254)	OK
+10:50:57.971	[127.0.0.1:34247]	CLOSE(254)	OK
+10:50:57.973	[127.0.0.1:34247]	QUERY(255)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.974	[127.0.0.1:34247]	QUERY(255)	OK
+10:50:57.975	[127.0.0.1:34247]	EXEC(255)	OK
+10:50:57.975	[127.0.0.1:34247]	CLOSE(255)	OK
+10:50:57.978	[127.0.0.1:34247]	QUERY(256)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:57.978	[127.0.0.1:34247]	QUERY(256)	OK
+10:50:57.979	[127.0.0.1:34247]	EXEC(256)	OK
+10:50:57.980	[127.0.0.1:34247]	CLOSE(256)	OK
+10:50:57.982	[127.0.0.1:34247]	QUERY(257)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:57.983	[127.0.0.1:34247]	QUERY(257)	OK
+10:50:57.984	[127.0.0.1:34247]	EXEC(257)	OK
+10:50:57.984	[127.0.0.1:34247]	CLOSE(257)	OK
+10:50:57.987	[127.0.0.1:34247]	QUERY(258)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:57.987	[127.0.0.1:34247]	QUERY(258)	OK
+10:50:57.988	[127.0.0.1:34247]	EXEC(258)	OK
+10:50:57.989	[127.0.0.1:34247]	CLOSE(258)	OK
+10:50:57.991	[127.0.0.1:34247]	QUERY(259)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:57.991	[127.0.0.1:34247]	QUERY(259)	OK
+10:50:57.992	[127.0.0.1:34247]	EXEC(259)	OK
+10:50:57.993	[127.0.0.1:34247]	CLOSE(259)	OK
+10:50:57.995	[127.0.0.1:34247]	QUERY(260)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:57.996	[127.0.0.1:34247]	QUERY(260)	OK
+10:50:57.997	[127.0.0.1:34247]	EXEC(260)	OK
+10:50:57.997	[127.0.0.1:34247]	CLOSE(260)	OK
+10:50:58.000	[127.0.0.1:34247]	QUERY(261)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.000	[127.0.0.1:34247]	QUERY(261)	OK
+10:50:58.001	[127.0.0.1:34247]	EXEC(261)	OK
+10:50:58.002	[127.0.0.1:34247]	CLOSE(261)	OK
+10:50:58.004	[127.0.0.1:34247]	QUERY(262)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.004	[127.0.0.1:34247]	QUERY(262)	OK
+10:50:58.007	[127.0.0.1:34247]	EXEC(262)	OK
+10:50:58.007	[127.0.0.1:34247]	CLOSE(262)	OK
+10:50:58.010	[127.0.0.1:34247]	QUERY(263)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.010	[127.0.0.1:34247]	QUERY(263)	OK
+10:50:58.011	[127.0.0.1:34247]	EXEC(263)	OK
+10:50:58.011	[127.0.0.1:34247]	CLOSE(263)	OK
+10:50:58.014	[127.0.0.1:34247]	QUERY(264)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.014	[127.0.0.1:34247]	QUERY(264)	OK
+10:50:58.015	[127.0.0.1:34247]	EXEC(264)	OK
+10:50:58.016	[127.0.0.1:34247]	CLOSE(264)	OK
+10:50:58.018	[127.0.0.1:34247]	QUERY(265)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.019	[127.0.0.1:34247]	QUERY(265)	OK
+10:50:58.020	[127.0.0.1:34247]	EXEC(265)	OK
+10:50:58.020	[127.0.0.1:34247]	CLOSE(265)	OK
+10:50:58.022	[127.0.0.1:34247]	QUERY(266)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.023	[127.0.0.1:34247]	QUERY(266)	OK
+10:50:58.024	[127.0.0.1:34247]	EXEC(266)	OK
+10:50:58.024	[127.0.0.1:34247]	CLOSE(266)	OK
+10:50:58.027	[127.0.0.1:34247]	QUERY(267)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.027	[127.0.0.1:34247]	QUERY(267)	OK
+10:50:58.028	[127.0.0.1:34247]	EXEC(267)	OK
+10:50:58.028	[127.0.0.1:34247]	CLOSE(267)	OK
+10:50:58.031	[127.0.0.1:34247]	QUERY(268)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.031	[127.0.0.1:34247]	QUERY(268)	OK
+10:50:58.032	[127.0.0.1:34247]	EXEC(268)	OK
+10:50:58.032	[127.0.0.1:34247]	CLOSE(268)	OK
+10:50:58.035	[127.0.0.1:34247]	QUERY(269)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.035	[127.0.0.1:34247]	QUERY(269)	OK
+10:50:58.036	[127.0.0.1:34247]	EXEC(269)	OK
+10:50:58.036	[127.0.0.1:34247]	CLOSE(269)	OK
+10:50:58.039	[127.0.0.1:34247]	QUERY(270)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.039	[127.0.0.1:34247]	QUERY(270)	OK
+10:50:58.040	[127.0.0.1:34247]	EXEC(270)	OK
+10:50:58.041	[127.0.0.1:34247]	CLOSE(270)	OK
+10:50:58.043	[127.0.0.1:34247]	QUERY(271)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.043	[127.0.0.1:34247]	QUERY(271)	OK
+10:50:58.045	[127.0.0.1:34247]	EXEC(271)	OK
+10:50:58.045	[127.0.0.1:34247]	CLOSE(271)	OK
+10:50:58.047	[127.0.0.1:34247]	QUERY(272)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.048	[127.0.0.1:34247]	QUERY(272)	OK
+10:50:58.049	[127.0.0.1:34247]	EXEC(272)	OK
+10:50:58.049	[127.0.0.1:34247]	CLOSE(272)	OK
+10:50:58.052	[127.0.0.1:34247]	QUERY(273)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.052	[127.0.0.1:34247]	QUERY(273)	OK
+10:50:58.053	[127.0.0.1:34247]	EXEC(273)	OK
+10:50:58.053	[127.0.0.1:34247]	CLOSE(273)	OK
+10:50:58.056	[127.0.0.1:34247]	QUERY(274)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.056	[127.0.0.1:34247]	QUERY(274)	OK
+10:50:58.057	[127.0.0.1:34247]	EXEC(274)	OK
+10:50:58.057	[127.0.0.1:34247]	CLOSE(274)	OK
+10:50:58.060	[127.0.0.1:34247]	QUERY(275)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.060	[127.0.0.1:34247]	QUERY(275)	OK
+10:50:58.061	[127.0.0.1:34247]	EXEC(275)	OK
+10:50:58.061	[127.0.0.1:34247]	CLOSE(275)	OK
+10:50:58.064	[127.0.0.1:34247]	QUERY(276)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:58.064	[127.0.0.1:34247]	QUERY(276)	OK
+10:50:58.070	[127.0.0.1:34247]	EXEC(276)	OK
+10:50:58.073	[127.0.0.1:34247]	CLOSE(276)	OK
+10:50:58.091	[127.0.0.1:34247]	QUERY(277)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.091	[127.0.0.1:34247]	QUERY(277)	OK
+10:50:58.092	[127.0.0.1:34247]	EXEC(277)	OK
+10:50:58.092	[127.0.0.1:34247]	CLOSE(277)	OK
+10:50:58.097	[127.0.0.1:34247]	QUERY(278)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.098	[127.0.0.1:34247]	QUERY(278)	OK
+10:50:58.105	[127.0.0.1:34247]	EXEC(278)	OK
+10:50:58.105	[127.0.0.1:34247]	CLOSE(278)	OK
+10:50:58.109	[127.0.0.1:34247]	QUERY(279)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.109	[127.0.0.1:34247]	QUERY(279)	OK
+10:50:58.110	[127.0.0.1:34247]	EXEC(279)	OK
+10:50:58.110	[127.0.0.1:34247]	CLOSE(279)	OK
+10:50:58.113	[127.0.0.1:34247]	QUERY(280)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.113	[127.0.0.1:34247]	QUERY(280)	OK
+10:50:58.114	[127.0.0.1:34247]	EXEC(280)	OK
+10:50:58.114	[127.0.0.1:34247]	CLOSE(280)	OK
+10:50:58.117	[127.0.0.1:34247]	QUERY(281)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.117	[127.0.0.1:34247]	QUERY(281)	OK
+10:50:58.118	[127.0.0.1:34247]	EXEC(281)	OK
+10:50:58.119	[127.0.0.1:34247]	CLOSE(281)	OK
+10:50:58.121	[127.0.0.1:34247]	QUERY(282)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.121	[127.0.0.1:34247]	QUERY(282)	OK
+10:50:58.122	[127.0.0.1:34247]	EXEC(282)	OK
+10:50:58.123	[127.0.0.1:34247]	CLOSE(282)	OK
+10:50:58.125	[127.0.0.1:34247]	QUERY(283)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.125	[127.0.0.1:34247]	QUERY(283)	OK
+10:50:58.126	[127.0.0.1:34247]	EXEC(283)	OK
+10:50:58.127	[127.0.0.1:34247]	CLOSE(283)	OK
+10:50:58.129	[127.0.0.1:34247]	QUERY(284)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.130	[127.0.0.1:34247]	QUERY(284)	OK
+10:50:58.131	[127.0.0.1:34247]	EXEC(284)	OK
+10:50:58.131	[127.0.0.1:34247]	CLOSE(284)	OK
+10:50:58.134	[127.0.0.1:34247]	QUERY(285)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.134	[127.0.0.1:34247]	QUERY(285)	OK
+10:50:58.135	[127.0.0.1:34247]	EXEC(285)	OK
+10:50:58.136	[127.0.0.1:34247]	CLOSE(285)	OK
+10:50:58.138	[127.0.0.1:34247]	QUERY(286)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.138	[127.0.0.1:34247]	QUERY(286)	OK
+10:50:58.139	[127.0.0.1:34247]	EXEC(286)	OK
+10:50:58.140	[127.0.0.1:34247]	CLOSE(286)	OK
+10:50:58.143	[127.0.0.1:34247]	QUERY(287)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.143	[127.0.0.1:34247]	QUERY(287)	OK
+10:50:58.144	[127.0.0.1:34247]	EXEC(287)	OK
+10:50:58.144	[127.0.0.1:34247]	CLOSE(287)	OK
+10:50:58.147	[127.0.0.1:34247]	QUERY(288)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.147	[127.0.0.1:34247]	QUERY(288)	OK
+10:50:58.148	[127.0.0.1:34247]	EXEC(288)	OK
+10:50:58.148	[127.0.0.1:34247]	CLOSE(288)	OK
+10:50:58.150	[127.0.0.1:34247]	QUERY(289)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.151	[127.0.0.1:34247]	QUERY(289)	OK
+10:50:58.152	[127.0.0.1:34247]	EXEC(289)	OK
+10:50:58.152	[127.0.0.1:34247]	CLOSE(289)	OK
+10:50:58.155	[127.0.0.1:34247]	QUERY(290)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.156	[127.0.0.1:34247]	QUERY(290)	OK
+10:50:58.157	[127.0.0.1:34247]	EXEC(290)	OK
+10:50:58.157	[127.0.0.1:34247]	CLOSE(290)	OK
+10:50:58.159	[127.0.0.1:34247]	QUERY(291)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.160	[127.0.0.1:34247]	QUERY(291)	OK
+10:50:58.161	[127.0.0.1:34247]	EXEC(291)	OK
+10:50:58.161	[127.0.0.1:34247]	CLOSE(291)	OK
+10:50:58.163	[127.0.0.1:34247]	QUERY(292)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.163	[127.0.0.1:34247]	QUERY(292)	OK
+10:50:58.164	[127.0.0.1:34247]	EXEC(292)	OK
+10:50:58.165	[127.0.0.1:34247]	CLOSE(292)	OK
+10:50:58.168	[127.0.0.1:34247]	QUERY(293)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.169	[127.0.0.1:34247]	QUERY(293)	OK
+10:50:58.170	[127.0.0.1:34247]	EXEC(293)	OK
+10:50:58.170	[127.0.0.1:34247]	CLOSE(293)	OK
+10:50:58.172	[127.0.0.1:34247]	QUERY(294)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.173	[127.0.0.1:34247]	QUERY(294)	OK
+10:50:58.174	[127.0.0.1:34247]	EXEC(294)	OK
+10:50:58.174	[127.0.0.1:34247]	CLOSE(294)	OK
+10:50:58.176	[127.0.0.1:34247]	QUERY(295)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.176	[127.0.0.1:34247]	QUERY(295)	OK
+10:50:58.177	[127.0.0.1:34247]	EXEC(295)	OK
+10:50:58.178	[127.0.0.1:34247]	CLOSE(295)	OK
+10:50:58.183	[127.0.0.1:34247]	QUERY(296)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.183	[127.0.0.1:34247]	QUERY(296)	OK
+10:50:58.184	[127.0.0.1:34247]	EXEC(296)	OK
+10:50:58.184	[127.0.0.1:34247]	CLOSE(296)	OK
+10:50:58.187	[127.0.0.1:34247]	QUERY(297)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.187	[127.0.0.1:34247]	QUERY(297)	OK
+10:50:58.188	[127.0.0.1:34247]	EXEC(297)	OK
+10:50:58.188	[127.0.0.1:34247]	CLOSE(297)	OK
+10:50:58.190	[127.0.0.1:34247]	QUERY(298)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.191	[127.0.0.1:34247]	QUERY(298)	OK
+10:50:58.192	[127.0.0.1:34247]	EXEC(298)	OK
+10:50:58.192	[127.0.0.1:34247]	CLOSE(298)	OK
+10:50:58.195	[127.0.0.1:34247]	QUERY(299)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:58.195	[127.0.0.1:34247]	QUERY(299)	OK
+10:50:58.201	[127.0.0.1:34247]	EXEC(299)	OK
+10:50:58.204	[127.0.0.1:34247]	CLOSE(299)	OK
+10:50:58.211	[127.0.0.1:34247]	QUERY(300)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.211	[127.0.0.1:34247]	QUERY(300)	OK
+10:50:58.220	[127.0.0.1:34247]	EXEC(300)	OK
+10:50:58.221	[127.0.0.1:34247]	CLOSE(300)	OK
+10:50:58.223	[127.0.0.1:34247]	QUERY(301)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.223	[127.0.0.1:34247]	QUERY(301)	OK
+10:50:58.224	[127.0.0.1:34247]	EXEC(301)	OK
+10:50:58.224	[127.0.0.1:34247]	CLOSE(301)	OK
+10:50:58.227	[127.0.0.1:34247]	QUERY(302)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.227	[127.0.0.1:34247]	QUERY(302)	OK
+10:50:58.228	[127.0.0.1:34247]	EXEC(302)	OK
+10:50:58.228	[127.0.0.1:34247]	CLOSE(302)	OK
+10:50:58.230	[127.0.0.1:34247]	QUERY(303)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.231	[127.0.0.1:34247]	QUERY(303)	OK
+10:50:58.232	[127.0.0.1:34247]	EXEC(303)	OK
+10:50:58.233	[127.0.0.1:34247]	CLOSE(303)	OK
+10:50:58.235	[127.0.0.1:34247]	QUERY(304)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.235	[127.0.0.1:34247]	QUERY(304)	OK
+10:50:58.236	[127.0.0.1:34247]	EXEC(304)	OK
+10:50:58.237	[127.0.0.1:34247]	CLOSE(304)	OK
+10:50:58.242	[127.0.0.1:34247]	QUERY(305)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.242	[127.0.0.1:34247]	QUERY(305)	OK
+10:50:58.243	[127.0.0.1:34247]	EXEC(305)	OK
+10:50:58.243	[127.0.0.1:34247]	CLOSE(305)	OK
+10:50:58.245	[127.0.0.1:34247]	QUERY(306)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.246	[127.0.0.1:34247]	QUERY(306)	OK
+10:50:58.246	[127.0.0.1:34247]	EXEC(306)	OK
+10:50:58.247	[127.0.0.1:34247]	CLOSE(306)	OK
+10:50:58.249	[127.0.0.1:34247]	QUERY(307)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.250	[127.0.0.1:34247]	QUERY(307)	OK
+10:50:58.251	[127.0.0.1:34247]	EXEC(307)	OK
+10:50:58.251	[127.0.0.1:34247]	CLOSE(307)	OK
+10:50:58.253	[127.0.0.1:34247]	QUERY(308)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.253	[127.0.0.1:34247]	QUERY(308)	OK
+10:50:58.254	[127.0.0.1:34247]	EXEC(308)	OK
+10:50:58.255	[127.0.0.1:34247]	CLOSE(308)	OK
+10:50:58.257	[127.0.0.1:34247]	QUERY(309)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.257	[127.0.0.1:34247]	QUERY(309)	OK
+10:50:58.258	[127.0.0.1:34247]	EXEC(309)	OK
+10:50:58.258	[127.0.0.1:34247]	CLOSE(309)	OK
+10:50:58.261	[127.0.0.1:34247]	QUERY(310)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.262	[127.0.0.1:34247]	QUERY(310)	OK
+10:50:58.263	[127.0.0.1:34247]	EXEC(310)	OK
+10:50:58.263	[127.0.0.1:34247]	CLOSE(310)	OK
+10:50:58.265	[127.0.0.1:34247]	QUERY(311)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.266	[127.0.0.1:34247]	QUERY(311)	OK
+10:50:58.267	[127.0.0.1:34247]	EXEC(311)	OK
+10:50:58.267	[127.0.0.1:34247]	CLOSE(311)	OK
+10:50:58.269	[127.0.0.1:34247]	QUERY(312)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.270	[127.0.0.1:34247]	QUERY(312)	OK
+10:50:58.271	[127.0.0.1:34247]	EXEC(312)	OK
+10:50:58.271	[127.0.0.1:34247]	CLOSE(312)	OK
+10:50:58.276	[127.0.0.1:34247]	QUERY(313)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.276	[127.0.0.1:34247]	QUERY(313)	OK
+10:50:58.277	[127.0.0.1:34247]	EXEC(313)	OK
+10:50:58.278	[127.0.0.1:34247]	CLOSE(313)	OK
+10:50:58.280	[127.0.0.1:34247]	QUERY(314)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.280	[127.0.0.1:34247]	QUERY(314)	OK
+10:50:58.281	[127.0.0.1:34247]	EXEC(314)	OK
+10:50:58.282	[127.0.0.1:34247]	CLOSE(314)	OK
+10:50:58.284	[127.0.0.1:34247]	QUERY(315)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.284	[127.0.0.1:34247]	QUERY(315)	OK
+10:50:58.285	[127.0.0.1:34247]	EXEC(315)	OK
+10:50:58.285	[127.0.0.1:34247]	CLOSE(315)	OK
+10:50:58.288	[127.0.0.1:34247]	QUERY(316)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.289	[127.0.0.1:34247]	QUERY(316)	OK
+10:50:58.290	[127.0.0.1:34247]	EXEC(316)	OK
+10:50:58.290	[127.0.0.1:34247]	CLOSE(316)	OK
+10:50:58.292	[127.0.0.1:34247]	QUERY(317)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.292	[127.0.0.1:34247]	QUERY(317)	OK
+10:50:58.293	[127.0.0.1:34247]	EXEC(317)	OK
+10:50:58.294	[127.0.0.1:34247]	CLOSE(317)	OK
+10:50:58.296	[127.0.0.1:34247]	QUERY(318)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.296	[127.0.0.1:34247]	QUERY(318)	OK
+10:50:58.297	[127.0.0.1:34247]	EXEC(318)	OK
+10:50:58.298	[127.0.0.1:34247]	CLOSE(318)	OK
+10:50:58.300	[127.0.0.1:34247]	QUERY(319)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.301	[127.0.0.1:34247]	QUERY(319)	OK
+10:50:58.302	[127.0.0.1:34247]	EXEC(319)	OK
+10:50:58.302	[127.0.0.1:34247]	CLOSE(319)	OK
+10:50:58.304	[127.0.0.1:34247]	QUERY(320)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.304	[127.0.0.1:34247]	QUERY(320)	OK
+10:50:58.305	[127.0.0.1:34247]	EXEC(320)	OK
+10:50:58.306	[127.0.0.1:34247]	CLOSE(320)	OK
+10:50:58.308	[127.0.0.1:34247]	QUERY(321)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.308	[127.0.0.1:34247]	QUERY(321)	OK
+10:50:58.309	[127.0.0.1:34247]	EXEC(321)	OK
+10:50:58.310	[127.0.0.1:34247]	CLOSE(321)	OK
+10:50:58.313	[127.0.0.1:34247]	QUERY(322)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:58.313	[127.0.0.1:34247]	QUERY(322)	OK
+10:50:58.319	[127.0.0.1:34247]	EXEC(322)	OK
+10:50:58.319	[127.0.0.1:34247]	CLOSE(322)	OK
+10:50:58.325	[127.0.0.1:34247]	QUERY(323)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.325	[127.0.0.1:34247]	QUERY(323)	OK
+10:50:58.326	[127.0.0.1:34247]	EXEC(323)	OK
+10:50:58.327	[127.0.0.1:34247]	CLOSE(323)	OK
+10:50:58.329	[127.0.0.1:34247]	QUERY(324)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.329	[127.0.0.1:34247]	QUERY(324)	OK
+10:50:58.330	[127.0.0.1:34247]	EXEC(324)	OK
+10:50:58.330	[127.0.0.1:34247]	CLOSE(324)	OK
+10:50:58.333	[127.0.0.1:34247]	QUERY(325)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.334	[127.0.0.1:34247]	QUERY(325)	OK
+10:50:58.335	[127.0.0.1:34247]	EXEC(325)	OK
+10:50:58.335	[127.0.0.1:34247]	CLOSE(325)	OK
+10:50:58.337	[127.0.0.1:34247]	QUERY(326)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.338	[127.0.0.1:34247]	QUERY(326)	OK
+10:50:58.339	[127.0.0.1:34247]	EXEC(326)	OK
+10:50:58.339	[127.0.0.1:34247]	CLOSE(326)	OK
+10:50:58.342	[127.0.0.1:34247]	QUERY(327)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.342	[127.0.0.1:34247]	QUERY(327)	OK
+10:50:58.343	[127.0.0.1:34247]	EXEC(327)	OK
+10:50:58.344	[127.0.0.1:34247]	CLOSE(327)	OK
+10:50:58.346	[127.0.0.1:34247]	QUERY(328)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.346	[127.0.0.1:34247]	QUERY(328)	OK
+10:50:58.347	[127.0.0.1:34247]	EXEC(328)	OK
+10:50:58.348	[127.0.0.1:34247]	CLOSE(328)	OK
+10:50:58.350	[127.0.0.1:34247]	QUERY(329)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.350	[127.0.0.1:34247]	QUERY(329)	OK
+10:50:58.351	[127.0.0.1:34247]	EXEC(329)	OK
+10:50:58.351	[127.0.0.1:34247]	CLOSE(329)	OK
+10:50:58.354	[127.0.0.1:34247]	QUERY(330)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.354	[127.0.0.1:34247]	QUERY(330)	OK
+10:50:58.355	[127.0.0.1:34247]	EXEC(330)	OK
+10:50:58.356	[127.0.0.1:34247]	CLOSE(330)	OK
+10:50:58.358	[127.0.0.1:34247]	QUERY(331)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.358	[127.0.0.1:34247]	QUERY(331)	OK
+10:50:58.359	[127.0.0.1:34247]	EXEC(331)	OK
+10:50:58.360	[127.0.0.1:34247]	CLOSE(331)	OK
+10:50:58.362	[127.0.0.1:34247]	QUERY(332)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.362	[127.0.0.1:34247]	QUERY(332)	OK
+10:50:58.363	[127.0.0.1:34247]	EXEC(332)	OK
+10:50:58.363	[127.0.0.1:34247]	CLOSE(332)	OK
+10:50:58.366	[127.0.0.1:34247]	QUERY(333)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.366	[127.0.0.1:34247]	QUERY(333)	OK
+10:50:58.369	[127.0.0.1:34247]	EXEC(333)	OK
+10:50:58.369	[127.0.0.1:34247]	CLOSE(333)	OK
+10:50:58.371	[127.0.0.1:34247]	QUERY(334)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.372	[127.0.0.1:34247]	QUERY(334)	OK
+10:50:58.373	[127.0.0.1:34247]	EXEC(334)	OK
+10:50:58.373	[127.0.0.1:34247]	CLOSE(334)	OK
+10:50:58.378	[127.0.0.1:34247]	QUERY(335)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.378	[127.0.0.1:34247]	QUERY(335)	OK
+10:50:58.379	[127.0.0.1:34247]	EXEC(335)	OK
+10:50:58.380	[127.0.0.1:34247]	CLOSE(335)	OK
+10:50:58.383	[127.0.0.1:34247]	QUERY(336)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.383	[127.0.0.1:34247]	QUERY(336)	OK
+10:50:58.384	[127.0.0.1:34247]	EXEC(336)	OK
+10:50:58.384	[127.0.0.1:34247]	CLOSE(336)	OK
+10:50:58.386	[127.0.0.1:34247]	QUERY(337)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.387	[127.0.0.1:34247]	QUERY(337)	OK
+10:50:58.388	[127.0.0.1:34247]	EXEC(337)	OK
+10:50:58.388	[127.0.0.1:34247]	CLOSE(337)	OK
+10:50:58.390	[127.0.0.1:34247]	QUERY(338)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.390	[127.0.0.1:34247]	QUERY(338)	OK
+10:50:58.391	[127.0.0.1:34247]	EXEC(338)	OK
+10:50:58.392	[127.0.0.1:34247]	CLOSE(338)	OK
+10:50:58.394	[127.0.0.1:34247]	QUERY(339)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.395	[127.0.0.1:34247]	QUERY(339)	OK
+10:50:58.396	[127.0.0.1:34247]	EXEC(339)	OK
+10:50:58.396	[127.0.0.1:34247]	CLOSE(339)	OK
+10:50:58.398	[127.0.0.1:34247]	QUERY(340)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.399	[127.0.0.1:34247]	QUERY(340)	OK
+10:50:58.400	[127.0.0.1:34247]	EXEC(340)	OK
+10:50:58.400	[127.0.0.1:34247]	CLOSE(340)	OK
+10:50:58.402	[127.0.0.1:34247]	QUERY(341)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.402	[127.0.0.1:34247]	QUERY(341)	OK
+10:50:58.403	[127.0.0.1:34247]	EXEC(341)	OK
+10:50:58.404	[127.0.0.1:34247]	CLOSE(341)	OK
+10:50:58.406	[127.0.0.1:34247]	QUERY(342)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.407	[127.0.0.1:34247]	QUERY(342)	OK
+10:50:58.408	[127.0.0.1:34247]	EXEC(342)	OK
+10:50:58.408	[127.0.0.1:34247]	CLOSE(342)	OK
+10:50:58.410	[127.0.0.1:34247]	QUERY(343)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.410	[127.0.0.1:34247]	QUERY(343)	OK
+10:50:58.411	[127.0.0.1:34247]	EXEC(343)	OK
+10:50:58.412	[127.0.0.1:34247]	CLOSE(343)	OK
+10:50:58.414	[127.0.0.1:34247]	QUERY(344)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.414	[127.0.0.1:34247]	QUERY(344)	OK
+10:50:58.415	[127.0.0.1:34247]	EXEC(344)	OK
+10:50:58.416	[127.0.0.1:34247]	CLOSE(344)	OK
+10:50:58.419	[127.0.0.1:34247]	QUERY(345)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:58.419	[127.0.0.1:34247]	QUERY(345)	OK
+10:50:58.425	[127.0.0.1:34247]	EXEC(345)	OK
+10:50:58.439	[127.0.0.1:34247]	CLOSE(345)	OK
+10:50:58.445	[127.0.0.1:34247]	QUERY(346)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.445	[127.0.0.1:34247]	QUERY(346)	OK
+10:50:58.446	[127.0.0.1:34247]	EXEC(346)	OK
+10:50:58.446	[127.0.0.1:34247]	CLOSE(346)	OK
+10:50:58.448	[127.0.0.1:34247]	QUERY(347)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.449	[127.0.0.1:34247]	QUERY(347)	OK
+10:50:58.450	[127.0.0.1:34247]	EXEC(347)	OK
+10:50:58.450	[127.0.0.1:34247]	CLOSE(347)	OK
+10:50:58.453	[127.0.0.1:34247]	QUERY(348)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.453	[127.0.0.1:34247]	QUERY(348)	OK
+10:50:58.454	[127.0.0.1:34247]	EXEC(348)	OK
+10:50:58.454	[127.0.0.1:34247]	CLOSE(348)	OK
+10:50:58.456	[127.0.0.1:34247]	QUERY(349)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.457	[127.0.0.1:34247]	QUERY(349)	OK
+10:50:58.458	[127.0.0.1:34247]	EXEC(349)	OK
+10:50:58.458	[127.0.0.1:34247]	CLOSE(349)	OK
+10:50:58.461	[127.0.0.1:34247]	QUERY(350)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.461	[127.0.0.1:34247]	QUERY(350)	OK
+10:50:58.462	[127.0.0.1:34247]	EXEC(350)	OK
+10:50:58.463	[127.0.0.1:34247]	CLOSE(350)	OK
+10:50:58.465	[127.0.0.1:34247]	QUERY(351)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.465	[127.0.0.1:34247]	QUERY(351)	OK
+10:50:58.466	[127.0.0.1:34247]	EXEC(351)	OK
+10:50:58.466	[127.0.0.1:34247]	CLOSE(351)	OK
+10:50:58.469	[127.0.0.1:34247]	QUERY(352)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.469	[127.0.0.1:34247]	QUERY(352)	OK
+10:50:58.470	[127.0.0.1:34247]	EXEC(352)	OK
+10:50:58.471	[127.0.0.1:34247]	CLOSE(352)	OK
+10:50:58.473	[127.0.0.1:34247]	QUERY(353)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.474	[127.0.0.1:34247]	QUERY(353)	OK
+10:50:58.475	[127.0.0.1:34247]	EXEC(353)	OK
+10:50:58.475	[127.0.0.1:34247]	CLOSE(353)	OK
+10:50:58.477	[127.0.0.1:34247]	QUERY(354)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.478	[127.0.0.1:34247]	QUERY(354)	OK
+10:50:58.478	[127.0.0.1:34247]	EXEC(354)	OK
+10:50:58.479	[127.0.0.1:34247]	CLOSE(354)	OK
+10:50:58.481	[127.0.0.1:34247]	QUERY(355)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.481	[127.0.0.1:34247]	QUERY(355)	OK
+10:50:58.484	[127.0.0.1:34247]	EXEC(355)	OK
+10:50:58.520	[127.0.0.1:34247]	CLOSE(355)	OK
+10:50:58.524	[127.0.0.1:34247]	QUERY(356)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.524	[127.0.0.1:34247]	QUERY(356)	OK
+10:50:58.526	[127.0.0.1:34247]	EXEC(356)	OK
+10:50:58.534	[127.0.0.1:34247]	CLOSE(356)	OK
+10:50:58.543	[127.0.0.1:34247]	QUERY(357)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.543	[127.0.0.1:34247]	QUERY(357)	OK
+10:50:58.544	[127.0.0.1:34247]	EXEC(357)	OK
+10:50:58.545	[127.0.0.1:34247]	CLOSE(357)	OK
+10:50:58.547	[127.0.0.1:34247]	QUERY(358)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.548	[127.0.0.1:34247]	QUERY(358)	OK
+10:50:58.563	[127.0.0.1:34247]	EXEC(358)	OK
+10:50:58.565	[127.0.0.1:34247]	CLOSE(358)	OK
+10:50:58.568	[127.0.0.1:34247]	QUERY(359)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.568	[127.0.0.1:34247]	QUERY(359)	OK
+10:50:58.569	[127.0.0.1:34247]	EXEC(359)	OK
+10:50:58.570	[127.0.0.1:34247]	CLOSE(359)	OK
+10:50:58.572	[127.0.0.1:34247]	QUERY(360)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.572	[127.0.0.1:34247]	QUERY(360)	OK
+10:50:58.573	[127.0.0.1:34247]	EXEC(360)	OK
+10:50:58.573	[127.0.0.1:34247]	CLOSE(360)	OK
+10:50:58.575	[127.0.0.1:34247]	QUERY(361)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.575	[127.0.0.1:34247]	QUERY(361)	OK
+10:50:58.576	[127.0.0.1:34247]	EXEC(361)	OK
+10:50:58.577	[127.0.0.1:34247]	CLOSE(361)	OK
+10:50:58.579	[127.0.0.1:34247]	QUERY(362)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.579	[127.0.0.1:34247]	QUERY(362)	OK
+10:50:58.580	[127.0.0.1:34247]	EXEC(362)	OK
+10:50:58.580	[127.0.0.1:34247]	CLOSE(362)	OK
+10:50:58.582	[127.0.0.1:34247]	QUERY(363)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.583	[127.0.0.1:34247]	QUERY(363)	OK
+10:50:58.583	[127.0.0.1:34247]	EXEC(363)	OK
+10:50:58.584	[127.0.0.1:34247]	CLOSE(363)	OK
+10:50:58.587	[127.0.0.1:34247]	QUERY(364)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.587	[127.0.0.1:34247]	QUERY(364)	OK
+10:50:58.588	[127.0.0.1:34247]	EXEC(364)	OK
+10:50:58.588	[127.0.0.1:34247]	CLOSE(364)	OK
+10:50:58.591	[127.0.0.1:34247]	QUERY(365)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.591	[127.0.0.1:34247]	QUERY(365)	OK
+10:50:58.592	[127.0.0.1:34247]	EXEC(365)	OK
+10:50:58.592	[127.0.0.1:34247]	CLOSE(365)	OK
+10:50:58.594	[127.0.0.1:34247]	QUERY(366)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.595	[127.0.0.1:34247]	QUERY(366)	OK
+10:50:58.595	[127.0.0.1:34247]	EXEC(366)	OK
+10:50:58.596	[127.0.0.1:34247]	CLOSE(366)	OK
+10:50:58.598	[127.0.0.1:34247]	QUERY(367)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.598	[127.0.0.1:34247]	QUERY(367)	OK
+10:50:58.600	[127.0.0.1:34247]	EXEC(367)	OK
+10:50:58.601	[127.0.0.1:34247]	CLOSE(367)	OK
+10:50:58.608	[127.0.0.1:34247]	QUERY(368)	<joints> {for $menu-items in (//menu-item) let $min_price := min($menu-items/price) return //menu-item[price=$min_price]/../..} </joints>	OK
+10:50:58.608	[127.0.0.1:34247]	QUERY(368)	OK
+10:50:58.622	[127.0.0.1:34247]	EXEC(368)	OK
+10:50:58.623	[127.0.0.1:34247]	CLOSE(368)	OK
+10:50:58.658	[127.0.0.1:34247]	QUERY(369)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.659	[127.0.0.1:34247]	QUERY(369)	OK
+10:50:58.660	[127.0.0.1:34247]	EXEC(369)	OK
+10:50:58.661	[127.0.0.1:34247]	CLOSE(369)	OK
+10:50:58.663	[127.0.0.1:34247]	QUERY(370)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.664	[127.0.0.1:34247]	QUERY(370)	OK
+10:50:58.665	[127.0.0.1:34247]	EXEC(370)	OK
+10:50:58.665	[127.0.0.1:34247]	CLOSE(370)	OK
+10:50:58.668	[127.0.0.1:34247]	QUERY(371)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:50:58.668	[127.0.0.1:34247]	QUERY(371)	OK
+10:50:58.670	[127.0.0.1:34247]	EXEC(371)	OK
+10:50:58.670	[127.0.0.1:34247]	CLOSE(371)	OK
+10:50:58.672	[127.0.0.1:34247]	QUERY(372)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:50:58.672	[127.0.0.1:34247]	QUERY(372)	OK
+10:50:58.673	[127.0.0.1:34247]	EXEC(372)	OK
+10:50:58.674	[127.0.0.1:34247]	CLOSE(372)	OK
+10:50:58.676	[127.0.0.1:34247]	QUERY(373)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.677	[127.0.0.1:34247]	QUERY(373)	OK
+10:50:58.677	[127.0.0.1:34247]	EXEC(373)	OK
+10:50:58.678	[127.0.0.1:34247]	CLOSE(373)	OK
+10:50:58.680	[127.0.0.1:34247]	QUERY(374)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.680	[127.0.0.1:34247]	QUERY(374)	OK
+10:50:58.683	[127.0.0.1:34247]	EXEC(374)	OK
+10:50:58.683	[127.0.0.1:34247]	CLOSE(374)	OK
+10:50:58.687	[127.0.0.1:34247]	QUERY(375)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.687	[127.0.0.1:34247]	QUERY(375)	OK
+10:50:58.688	[127.0.0.1:34247]	EXEC(375)	OK
+10:50:58.688	[127.0.0.1:34247]	CLOSE(375)	OK
+10:50:58.691	[127.0.0.1:34247]	QUERY(376)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.691	[127.0.0.1:34247]	QUERY(376)	OK
+10:50:58.692	[127.0.0.1:34247]	EXEC(376)	OK
+10:50:58.692	[127.0.0.1:34247]	CLOSE(376)	OK
+10:50:58.694	[127.0.0.1:34247]	QUERY(377)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.695	[127.0.0.1:34247]	QUERY(377)	OK
+10:50:58.696	[127.0.0.1:34247]	EXEC(377)	OK
+10:50:58.697	[127.0.0.1:34247]	CLOSE(377)	OK
+10:50:58.700	[127.0.0.1:34247]	QUERY(378)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.700	[127.0.0.1:34247]	QUERY(378)	OK
+10:50:58.701	[127.0.0.1:34247]	EXEC(378)	OK
+10:50:58.701	[127.0.0.1:34247]	CLOSE(378)	OK
+10:50:58.704	[127.0.0.1:34247]	QUERY(379)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+10:50:58.704	[127.0.0.1:34247]	QUERY(379)	OK
+10:50:58.705	[127.0.0.1:34247]	EXEC(379)	OK
+10:50:58.705	[127.0.0.1:34247]	CLOSE(379)	OK
+10:50:58.708	[127.0.0.1:34247]	QUERY(380)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.709	[127.0.0.1:34247]	QUERY(380)	OK
+10:50:58.710	[127.0.0.1:34247]	EXEC(380)	OK
+10:50:58.711	[127.0.0.1:34247]	CLOSE(380)	OK
+10:50:58.713	[127.0.0.1:34247]	QUERY(381)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.713	[127.0.0.1:34247]	QUERY(381)	OK
+10:50:58.714	[127.0.0.1:34247]	EXEC(381)	OK
+10:50:58.715	[127.0.0.1:34247]	CLOSE(381)	OK
+10:50:58.717	[127.0.0.1:34247]	QUERY(382)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.718	[127.0.0.1:34247]	QUERY(382)	OK
+10:50:58.718	[127.0.0.1:34247]	EXEC(382)	OK
+10:50:58.722	[127.0.0.1:34247]	CLOSE(382)	OK
+10:50:58.724	[127.0.0.1:34247]	QUERY(383)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.724	[127.0.0.1:34247]	QUERY(383)	OK
+10:50:58.725	[127.0.0.1:34247]	EXEC(383)	OK
+10:50:58.726	[127.0.0.1:34247]	CLOSE(383)	OK
+10:50:58.728	[127.0.0.1:34247]	QUERY(384)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.728	[127.0.0.1:34247]	QUERY(384)	OK
+10:50:58.729	[127.0.0.1:34247]	EXEC(384)	OK
+10:50:58.729	[127.0.0.1:34247]	CLOSE(384)	OK
+10:50:58.732	[127.0.0.1:34247]	QUERY(385)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.732	[127.0.0.1:34247]	QUERY(385)	OK
+10:50:58.733	[127.0.0.1:34247]	EXEC(385)	OK
+10:50:58.734	[127.0.0.1:34247]	CLOSE(385)	OK
+10:50:58.736	[127.0.0.1:34247]	QUERY(386)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.736	[127.0.0.1:34247]	QUERY(386)	OK
+10:50:58.737	[127.0.0.1:34247]	EXEC(386)	OK
+10:50:58.738	[127.0.0.1:34247]	CLOSE(386)	OK
+10:50:58.740	[127.0.0.1:34247]	QUERY(387)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.740	[127.0.0.1:34247]	QUERY(387)	OK
+10:50:58.741	[127.0.0.1:34247]	EXEC(387)	OK
+10:50:58.741	[127.0.0.1:34247]	CLOSE(387)	OK
+10:50:58.744	[127.0.0.1:34247]	QUERY(388)	for $meal in /fastfood-database/meals/meal[@id = 4] return $meal	OK
+10:50:58.744	[127.0.0.1:34247]	QUERY(388)	OK
+10:50:58.745	[127.0.0.1:34247]	EXEC(388)	OK
+10:50:58.745	[127.0.0.1:34247]	CLOSE(388)	OK
+10:50:58.747	[127.0.0.1:34247]	QUERY(389)	for $meal in /fastfood-database/meals/meal[@id = 5] return $meal	OK
+10:50:58.747	[127.0.0.1:34247]	QUERY(389)	OK
+10:50:58.748	[127.0.0.1:34247]	EXEC(389)	OK
+10:50:58.749	[127.0.0.1:34247]	CLOSE(389)	OK
+10:50:58.750	[127.0.0.1:34247]	QUERY(390)	for $meal in /fastfood-database/meals/meal[@id = 6] return $meal	OK
+10:50:58.751	[127.0.0.1:34247]	QUERY(390)	OK
+10:50:58.751	[127.0.0.1:34247]	EXEC(390)	OK
+10:50:58.752	[127.0.0.1:34247]	CLOSE(390)	OK
+10:50:58.754	Server was stopped.
+10:52:06.749	Server was started.
+10:52:06.940	[127.0.0.1:34249]	LOGIN admin	OK
+10:52:06.982	[127.0.0.1:34249]	OPEN ffmapDatabase
+10:52:07.025	[127.0.0.1:34249]	OK	83.01 ms
+10:52:07.035	[127.0.0.1:34249]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+10:52:07.166	[127.0.0.1:34249]	OK	140.86 ms
+10:52:07.458	[127.0.0.1:34249]	QUERY(0)	<joints> {let $min_price := min(//menu-item/price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:52:07.459	[127.0.0.1:34249]	QUERY(0)	OK
+10:52:07.502	[127.0.0.1:34249]	EXEC(0)	OK
+10:52:07.504	[127.0.0.1:34249]	CLOSE(0)	OK
+10:52:07.532	[127.0.0.1:34249]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:52:07.533	[127.0.0.1:34249]	QUERY(1)	OK
+10:52:07.535	[127.0.0.1:34249]	EXEC(1)	OK
+10:52:07.535	[127.0.0.1:34249]	CLOSE(1)	OK
+10:52:07.541	[127.0.0.1:34249]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:52:07.542	[127.0.0.1:34249]	QUERY(2)	OK
+10:52:07.543	[127.0.0.1:34249]	EXEC(2)	OK
+10:52:07.544	[127.0.0.1:34249]	CLOSE(2)	OK
+10:52:07.553	[127.0.0.1:34249]	QUERY(3)	<joints> {let $min_price := min(//menu-item/price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:52:07.553	[127.0.0.1:34249]	QUERY(3)	OK
+10:52:07.559	[127.0.0.1:34249]	EXEC(3)	OK
+10:52:07.560	[127.0.0.1:34249]	CLOSE(3)	OK
+10:52:07.568	[127.0.0.1:34249]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:52:07.569	[127.0.0.1:34249]	QUERY(4)	OK
+10:52:07.572	[127.0.0.1:34249]	EXEC(4)	OK
+10:52:07.573	[127.0.0.1:34249]	CLOSE(4)	OK
+10:52:07.577	[127.0.0.1:34249]	QUERY(5)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:52:07.578	[127.0.0.1:34249]	QUERY(5)	OK
+10:52:07.579	[127.0.0.1:34249]	EXEC(5)	OK
+10:52:07.580	[127.0.0.1:34249]	CLOSE(5)	OK
+10:52:07.586	[127.0.0.1:34249]	QUERY(6)	<joints> {let $min_price := min(//menu-item/price)return //menu-item[price=$min_price]/../..} </joints>	OK
+10:52:07.587	[127.0.0.1:34249]	QUERY(6)	OK
+10:52:07.593	[127.0.0.1:34249]	EXEC(6)	OK
+10:52:07.594	[127.0.0.1:34249]	CLOSE(6)	OK
+10:52:07.602	[127.0.0.1:34249]	QUERY(7)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+10:52:07.603	[127.0.0.1:34249]	QUERY(7)	OK
+10:52:07.604	[127.0.0.1:34249]	EXEC(7)	OK
+10:52:07.605	[127.0.0.1:34249]	CLOSE(7)	OK
+10:52:07.608	[127.0.0.1:34249]	QUERY(8)	for $meal in /fastfood-database/meals/meal[@id = 2] return $meal	OK
+10:52:07.609	[127.0.0.1:34249]	QUERY(8)	OK
+10:52:07.610	[127.0.0.1:34249]	EXEC(8)	OK
+10:52:07.611	[127.0.0.1:34249]	CLOSE(8)	OK
+10:52:07.615	Server was stopped.
