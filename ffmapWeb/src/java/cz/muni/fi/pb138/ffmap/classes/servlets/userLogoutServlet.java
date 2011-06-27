@@ -5,24 +5,18 @@
 
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
-import cz.muni.fi.pb138.ffmap.classes.User;
-import cz.muni.fi.pb138.ffmap.classes.UserManager;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.basex.server.Session;
-import org.omg.PortableInterceptor.DISCARDING;
 
 /**
  *
  * @author Stash
  */
-public class userLoginServlet extends HttpServlet {
+public class userLogoutServlet extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -39,10 +33,10 @@ public class userLoginServlet extends HttpServlet {
             /* TODO output your page here
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet userLoginServlet</title>");  
+            out.println("<title>Servlet userLogoutServlet</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet userLoginServlet at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet userLogoutServlet at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
             */
@@ -62,7 +56,9 @@ public class userLoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getSession().invalidate();
+        response.setHeader("Cache-Control", "must-revalidate");
+        response.sendRedirect("/index.jsp");
     } 
 
     /** 
@@ -75,19 +71,7 @@ public class userLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.setContentType("text/html");
-        RequestDispatcher disp = getServletContext().getRequestDispatcher("/index.jsp");
-        response.setCharacterEncoding("UTF-8");
-        request.setCharacterEncoding("UTF-8");
-        String _username = request.getParameter("username");
-        String _password = request.getParameter("password");
-        if(User.authenticate(_username, _password)){
-            request.getSession(true).setAttribute("logged_user", UserManager.getInstance().findByUserName(_username));
-            disp.forward(request, response);
-        } else {
-            request.setAttribute("login_error", "Zadan jméno nebo heslo není správné!");
-            disp.forward(request, response);
-        }
+        processRequest(request, response);
     }
 
     /** 

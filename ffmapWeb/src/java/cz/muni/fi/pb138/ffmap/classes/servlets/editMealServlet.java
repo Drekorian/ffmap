@@ -5,25 +5,27 @@
 
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
-import cz.muni.fi.pb138.ffmap.classes.User;
-import cz.muni.fi.pb138.ffmap.classes.UserManager;
+import cz.muni.fi.pb138.ffmap.classes.Meal;
+import cz.muni.fi.pb138.ffmap.classes.MealManager;
+import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.basex.server.Session;
-import org.omg.PortableInterceptor.DISCARDING;
 
 /**
  *
  * @author Stash
  */
-public class userLoginServlet extends HttpServlet {
-   
+public class editMealServlet extends HttpServlet {
+
+    private static final String URL = "/ffmap/editMeal/";
+    private static Long _id;
+
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
      * @param request servlet request
@@ -39,10 +41,10 @@ public class userLoginServlet extends HttpServlet {
             /* TODO output your page here
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet userLoginServlet</title>");  
+            out.println("<title>Servlet editMealServlet</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet userLoginServlet at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet editMealServlet at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
             */
@@ -62,7 +64,16 @@ public class userLoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        Long id = null;
+        id = Long.valueOf(request.getRequestURI().substring(URL.length()));
+        _id = id;
+        try {
+            Meal meal = (Meal) MealManager.getInstance().find(id);
+            request.setAttribute("meal", meal);
+            request.getRequestDispatcher("/editMeal.jsp").forward(request, response);
+        } catch (DatabaseInitException ex) {
+            Logger.getLogger(editMealServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     } 
 
     /** 
@@ -75,18 +86,29 @@ public class userLoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        response.setContentType("text/html");
-        RequestDispatcher disp = getServletContext().getRequestDispatcher("/index.jsp");
-        response.setCharacterEncoding("UTF-8");
-        request.setCharacterEncoding("UTF-8");
-        String _username = request.getParameter("username");
-        String _password = request.getParameter("password");
-        if(User.authenticate(_username, _password)){
-            request.getSession(true).setAttribute("logged_user", UserManager.getInstance().findByUserName(_username));
-            disp.forward(request, response);
-        } else {
-            request.setAttribute("login_error", "Zadan jméno nebo heslo není správné!");
-            disp.forward(request, response);
+         try {
+            Meal meal = (Meal) MealManager.getInstance().find(_id);
+            if(meal != null){
+                String _newName = request.getParameter("mname");
+                String _newDesc = request.getParameter("desc");
+                if((_newName == null) || _newName.equals("")){
+                    request.setAttribute("errName", "Jméno musí být vyplněno");
+                    request.getRequestDispatcher("/editMeal.jsp").forward(request, response);
+                    return;
+                }
+                if(!MealManager.getInstance().checkNameAvalilability(_newName)){
+                    request.setAttribute("errName", "Tento pokrm již v databázi existuje!");
+                    request.getRequestDispatcher("/editMeal.jsp").forward(request, response);
+                    return;
+                }
+                meal.setName(_newName);
+                meal.setDescription(_newDesc);
+                meal.save();
+                request.setAttribute("msg", "Změna byla úspěšně provedena!");
+                request.getRequestDispatcher("/meals").forward(request, response);
+            }
+        } catch (DatabaseInitException ex) {
+            Logger.getLogger(editMealServlet.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

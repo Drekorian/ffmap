@@ -20,7 +20,7 @@ import org.basex.core.BaseXException;
  * @version 2011.0621
  */
 
-public class User implements IDatabaseStoreable {
+public class User implements IDatabaseStoreable, Comparable<User> {
     private Long id;
     private String userName;
     private String password;
@@ -299,5 +299,9 @@ public class User implements IDatabaseStoreable {
             Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
+    }
+
+    public int compareTo(User o) {
+        return userName.compareToIgnoreCase(o.getUserName());
     }
 }

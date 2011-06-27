@@ -24,6 +24,26 @@
         <servlet-name>userLogin</servlet-name>
         <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.userLoginServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.userLogoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addMeal</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.addMealServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deleteMeal</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.deleteMealServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>editMeal</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.editMealServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>deleteUser</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.deleteUserServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>viewAllUsers</servlet-name>
         <url-pattern>/users</url-pattern>
@@ -47,6 +67,26 @@
     <servlet-mapping>
         <servlet-name>userLogin</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addMeal</servlet-name>
+        <url-pattern>/addMeal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deleteMeal</servlet-name>
+        <url-pattern>/deleteMeal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>editMeal</servlet-name>
+        <url-pattern>/editMeal/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>deleteUser</servlet-name>
+        <url-pattern>/deleteUser/*</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

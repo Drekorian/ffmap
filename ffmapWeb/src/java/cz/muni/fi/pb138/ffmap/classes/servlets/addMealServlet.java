@@ -5,24 +5,24 @@
 
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
-import cz.muni.fi.pb138.ffmap.classes.User;
-import cz.muni.fi.pb138.ffmap.classes.UserManager;
+import cz.muni.fi.pb138.ffmap.classes.Meal;
+import cz.muni.fi.pb138.ffmap.classes.MealManager;
+import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import org.basex.server.Session;
-import org.omg.PortableInterceptor.DISCARDING;
 
 /**
  *
  * @author Stash
  */
-public class userLoginServlet extends HttpServlet {
+public class addMealServlet extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -39,10 +39,10 @@ public class userLoginServlet extends HttpServlet {
             /* TODO output your page here
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet userLoginServlet</title>");  
+            out.println("<title>Servlet addMealServlet</title>");  
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet userLoginServlet at " + request.getContextPath () + "</h1>");
+            out.println("<h1>Servlet addMealServlet at " + request.getContextPath () + "</h1>");
             out.println("</body>");
             out.println("</html>");
             */
@@ -62,7 +62,7 @@ public class userLoginServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
-        request.getRequestDispatcher("/index.jsp").forward(request, response);
+        request.getRequestDispatcher("/addMeal.jsp").forward(request, response);
     } 
 
     /** 
@@ -76,18 +76,30 @@ public class userLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html");
-        RequestDispatcher disp = getServletContext().getRequestDispatcher("/index.jsp");
+        RequestDispatcher err = getServletContext().getRequestDispatcher("/addMeal.jsp");
+        RequestDispatcher suc = getServletContext().getRequestDispatcher("/meals");
         response.setCharacterEncoding("UTF-8");
         request.setCharacterEncoding("UTF-8");
-        String _username = request.getParameter("username");
-        String _password = request.getParameter("password");
-        if(User.authenticate(_username, _password)){
-            request.getSession(true).setAttribute("logged_user", UserManager.getInstance().findByUserName(_username));
-            disp.forward(request, response);
-        } else {
-            request.setAttribute("login_error", "Zadan jméno nebo heslo není správné!");
-            disp.forward(request, response);
+        String _name = request.getParameter("mealname");
+        String _desc = request.getParameter("desc");
+        if((_name == null) || _name.isEmpty()){
+            request.setAttribute("mealname_error", "Musíte vyplnit jméno!");
+            err.forward(request, response);
+            return;
         }
+        try {
+            if (!MealManager.getInstance().checkNameAvalilability(_name)) {
+                request.setAttribute("mealname_error", "Toto jídlo již v databázi existuje!");
+                err.forward(request, response);
+                return;
+            }
+        } catch (DatabaseInitException ex) {
+            Logger.getLogger(addMealServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        Meal meal = new Meal(_name, _desc);
+        meal.save();
+        request.setAttribute("msg", "Pokrm " + _name + " úspěšně přidán!");
+        suc.forward(request, response);
     }
 
     /** 

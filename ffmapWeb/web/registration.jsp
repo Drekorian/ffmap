@@ -25,17 +25,17 @@
             <table border="0">
                 <tr>
                     <td><b>Uživatelské jméno: </b></td>
-                    <td><input type="text" name="username" value="${uname}" size="20" maxlength="15"></td>
+                    <td><input type="text" name="username" value="${uname}" size="20" maxlength="20"></td>
                     <td><c:out value="${username_error}"></c:out></td>
                 </tr>
                 <tr>
                     <td><b>Heslo: </b></td>
-                    <td><input type="password" name="pass" value="" size="20" maxlength="15"></td>
+                    <td><input type="password" name="pass" size="20" maxlength="20"></td>
                     <td><c:out value="${pass_error}"></c:out></td>
                 </tr>
                 <tr>
                     <td><b>Potvrzení hesla: </b></td>
-                    <td><input type="password" name="passconf" value="" size="20" maxlength="15"></td>
+                    <td><input type="password" name="passconf" size="20" maxlength="20"></td>
                     <td><c:out value="${passconf_error}"></c:out></td>
                 </tr>
                 <tr>
@@ -49,7 +49,7 @@
                     <td><c:out value="${lastname_error}"></c:out></td>
                 </tr>
             </table>
-            <input type="submit" value="Submit" align="center">
+            <input type="submit" value="Register" align="center">
         </form>
     </body>
 </html>

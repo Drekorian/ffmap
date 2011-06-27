@@ -14,7 +14,7 @@ import org.basex.core.BaseXException;
  * @version 2011.0621
  */
 
-public class Meal implements IDatabaseStoreable {
+public class Meal implements IDatabaseStoreable, Comparable<Meal> {
     private Long id;
     private String name;
     private String description;
@@ -156,6 +156,10 @@ public class Meal implements IDatabaseStoreable {
             Logger.getLogger(Meal.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
+    }
+
+    public int compareTo(Meal o) {
+        return name.compareToIgnoreCase(o.getName());
     }
 
     
