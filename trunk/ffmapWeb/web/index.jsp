@@ -8,8 +8,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="/includes/header_full.jsp" %>
 
-<% DBHandler.getInstance().createHack(); %>
-
 <div id="text_wrapper">
     <div id="text">
         <h2>Vítej!</h2>

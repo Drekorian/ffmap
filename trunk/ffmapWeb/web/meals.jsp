@@ -38,6 +38,10 @@
         <p>
             Celkem jídel: ${fn:length(meals)}
         </p>
+
+        <p>
+            <a href="<c:url value="/addMeal" />">Přidat jídlo</a>
+        </p>
     </div>
 </div>
 

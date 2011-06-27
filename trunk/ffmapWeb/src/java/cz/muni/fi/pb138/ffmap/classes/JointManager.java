@@ -138,4 +138,29 @@ public class JointManager implements IDatabaseManager {
         
         return result;
     }
+
+    public List<Joint> getCheapest() {
+        List<Joint> result = null;
+        String query = "<joints> {" +
+                       "let $min_price := min(//menu-item/price)" +
+                       "return //menu-item[price=$min_price]/../.." +
+                       "} </joints>";
+
+        try {
+            String queryResult = DBHandler.getInstance().XQueryCommand(query);
+            Document document = XQueryResultController.getDocument(queryResult);
+            result = new ArrayList<Joint>();
+
+            for (int i = 0; i < document.getDocumentElement().getElementsByTagName("joint").getLength(); i++) {
+                Joint joint = parseJoint((Element)document.getDocumentElement().getElementsByTagName("joint").item(i));
+                if (joint != null) {
+                    result.add(joint);
+                }
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(UserManager.class.getName()).log(Level.SEVERE, ex.getMessage(), ex);
+        }
+
+        return result;
+    }
 }
