@@ -58,7 +58,7 @@ public class userLogoutServlet extends HttpServlet {
     throws ServletException, IOException {
         request.getSession().invalidate();
         response.setHeader("Cache-Control", "must-revalidate");
-        response.sendRedirect("/index.jsp");
+        response.sendRedirect("/ffmap");
     } 
 
     /** 

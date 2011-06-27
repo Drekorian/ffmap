@@ -1,27 +1,22 @@
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
-import cz.muni.fi.pb138.ffmap.classes.DBHandler;
-import cz.muni.fi.pb138.ffmap.enums.Role;
 import cz.muni.fi.pb138.ffmap.classes.User;
 import cz.muni.fi.pb138.ffmap.classes.UserManager;
 import cz.muni.fi.pb138.ffmap.classes.comparators.UserFirstnameComparator;
 import cz.muni.fi.pb138.ffmap.classes.comparators.UserSurnameComparator;
-import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
-import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * Servlet for viewing all users.
  *
- * @author Marek
+ * @author Marek Osvald
+ * @version 2011.0627
  */
 
 public class viewAllUsersServlet extends HttpServlet {
@@ -53,7 +48,7 @@ public class viewAllUsersServlet extends HttpServlet {
         request.getRequestDispatcher("/users.jsp").forward(request, response);
     }
 
-        @Override
+    @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         List<User> users = (List<User>) UserManager.getInstance().getAll();

@@ -1,0 +1,509 @@
+02:25:41.008	Server was started.
+02:25:41.026	Address already in use: JVM_Bind
+03:02:24.752	Server was started.
+03:02:24.800	Address already in use: JVM_Bind
+03:02:52.442	Server was started.
+03:02:52.746	[127.0.0.1:27962]	LOGIN admin	OK
+03:02:52.793	[127.0.0.1:27962]	OPEN ffmapDatabase
+03:02:52.941	[127.0.0.1:27962]	OK	194.04 ms
+03:02:52.942	[127.0.0.1:27962]	DROP DB ffmapDatabase
+03:02:52.945	[127.0.0.1:27962]	Error: Database 'ffmapDatabase' could not be dropped.	3.87 ms
+03:02:53.235	[127.0.0.1:27962]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:02:53.236	[127.0.0.1:27962]	QUERY(0)	OK
+03:02:53.244	[127.0.0.1:27962]	EXEC(0)	Error: Stopped at line 1, column 34: [XPDY0002] No context item set for 'root()'.
+03:02:53.259	Server was stopped.
+03:03:03.220	Server was started.
+03:03:03.401	[127.0.0.1:27964]	LOGIN admin	OK
+03:03:03.444	[127.0.0.1:27964]	OPEN ffmapDatabase
+03:03:03.499	[127.0.0.1:27964]	OK	96.83 ms
+03:03:03.757	[127.0.0.1:27964]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:03:03.757	[127.0.0.1:27964]	QUERY(0)	OK
+03:03:03.836	[127.0.0.1:27964]	EXEC(0)	OK
+03:03:03.839	[127.0.0.1:27964]	CLOSE(0)	OK
+03:03:03.942	[127.0.0.1:27964]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:03:03.943	[127.0.0.1:27964]	QUERY(1)	OK
+03:03:03.948	[127.0.0.1:27964]	EXEC(1)	OK
+03:03:03.948	[127.0.0.1:27964]	CLOSE(1)	OK
+03:03:03.954	[127.0.0.1:27964]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:03:03.955	[127.0.0.1:27964]	QUERY(2)	OK
+03:03:03.956	[127.0.0.1:27964]	EXEC(2)	OK
+03:03:03.957	[127.0.0.1:27964]	CLOSE(2)	OK
+03:03:04.046	Server was stopped.
+03:03:55.212	Server was started.
+03:03:55.402	[127.0.0.1:27967]	LOGIN admin	OK
+03:03:55.451	[127.0.0.1:27967]	OPEN ffmapDatabase
+03:03:55.567	[127.0.0.1:27967]	OK	164.03 ms
+03:03:55.817	[127.0.0.1:27967]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:03:55.817	[127.0.0.1:27967]	QUERY(0)	OK
+03:03:55.891	[127.0.0.1:27967]	EXEC(0)	OK
+03:03:55.893	[127.0.0.1:27967]	CLOSE(0)	OK
+03:03:55.998	[127.0.0.1:27967]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:03:55.998	[127.0.0.1:27967]	QUERY(1)	OK
+03:03:56.004	[127.0.0.1:27967]	EXEC(1)	OK
+03:03:56.005	[127.0.0.1:27967]	CLOSE(1)	OK
+03:03:56.012	[127.0.0.1:27967]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:03:56.012	[127.0.0.1:27967]	QUERY(2)	OK
+03:03:56.013	[127.0.0.1:27967]	EXEC(2)	OK
+03:03:56.014	[127.0.0.1:27967]	CLOSE(2)	OK
+03:03:56.088	Server was stopped.
+03:06:40.140	Server was started.
+03:06:40.325	[127.0.0.1:27992]	LOGIN admin	OK
+03:06:40.368	[127.0.0.1:27992]	OPEN ffmapDatabase
+03:06:40.414	[127.0.0.1:27992]	OK	87.33 ms
+03:06:40.655	[127.0.0.1:27992]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:06:40.655	[127.0.0.1:27992]	QUERY(0)	OK
+03:06:40.733	[127.0.0.1:27992]	EXEC(0)	OK
+03:06:40.739	[127.0.0.1:27992]	CLOSE(0)	OK
+03:06:40.830	[127.0.0.1:27992]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:06:40.830	[127.0.0.1:27992]	QUERY(1)	OK
+03:06:40.835	[127.0.0.1:27992]	EXEC(1)	OK
+03:06:40.836	[127.0.0.1:27992]	CLOSE(1)	OK
+03:06:40.841	[127.0.0.1:27992]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:06:40.842	[127.0.0.1:27992]	QUERY(2)	OK
+03:06:40.843	[127.0.0.1:27992]	EXEC(2)	OK
+03:06:40.844	[127.0.0.1:27992]	CLOSE(2)	OK
+03:06:40.914	Server was stopped.
+03:08:15.503	Server was started.
+03:08:15.696	[127.0.0.1:27995]	LOGIN admin	OK
+03:08:15.740	[127.0.0.1:27995]	OPEN ffmapDatabase
+03:08:15.787	[127.0.0.1:27995]	OK	90.38 ms
+03:08:16.030	[127.0.0.1:27995]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:08:16.030	[127.0.0.1:27995]	QUERY(0)	OK
+03:08:16.103	[127.0.0.1:27995]	EXEC(0)	OK
+03:08:16.105	[127.0.0.1:27995]	CLOSE(0)	OK
+03:08:16.183	[127.0.0.1:27995]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:08:16.183	[127.0.0.1:27995]	QUERY(1)	OK
+03:08:16.188	[127.0.0.1:27995]	EXEC(1)	OK
+03:08:16.189	[127.0.0.1:27995]	CLOSE(1)	OK
+03:08:16.194	[127.0.0.1:27995]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:08:16.195	[127.0.0.1:27995]	QUERY(2)	OK
+03:08:16.197	[127.0.0.1:27995]	EXEC(2)	OK
+03:08:16.197	[127.0.0.1:27995]	CLOSE(2)	OK
+03:08:16.271	Server was stopped.
+03:08:17.254	Server was started.
+03:08:17.448	[127.0.0.1:27996]	LOGIN admin	OK
+03:08:17.490	[127.0.0.1:27996]	OPEN ffmapDatabase
+03:08:17.535	[127.0.0.1:27996]	OK	85.71 ms
+03:08:17.763	[127.0.0.1:27996]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:08:17.763	[127.0.0.1:27996]	QUERY(0)	OK
+03:08:17.838	[127.0.0.1:27996]	EXEC(0)	OK
+03:08:17.840	[127.0.0.1:27996]	CLOSE(0)	OK
+03:08:17.931	[127.0.0.1:27996]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:08:17.931	[127.0.0.1:27996]	QUERY(1)	OK
+03:08:17.936	[127.0.0.1:27996]	EXEC(1)	OK
+03:08:17.937	[127.0.0.1:27996]	CLOSE(1)	OK
+03:08:17.942	[127.0.0.1:27996]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:08:17.943	[127.0.0.1:27996]	QUERY(2)	OK
+03:08:17.944	[127.0.0.1:27996]	EXEC(2)	OK
+03:08:17.945	[127.0.0.1:27996]	CLOSE(2)	OK
+03:08:18.021	Server was stopped.
+03:09:41.453	Server was started.
+03:09:41.644	[127.0.0.1:28003]	LOGIN admin	OK
+03:09:41.685	[127.0.0.1:28003]	OPEN ffmapDatabase
+03:09:41.727	[127.0.0.1:28003]	OK	81.55 ms
+03:09:41.955	[127.0.0.1:28003]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:09:41.955	[127.0.0.1:28003]	QUERY(0)	OK
+03:09:42.026	[127.0.0.1:28003]	EXEC(0)	OK
+03:09:42.029	[127.0.0.1:28003]	CLOSE(0)	OK
+03:09:42.106	[127.0.0.1:28003]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:09:42.106	[127.0.0.1:28003]	QUERY(1)	OK
+03:09:42.111	[127.0.0.1:28003]	EXEC(1)	OK
+03:09:42.112	[127.0.0.1:28003]	CLOSE(1)	OK
+03:09:42.117	[127.0.0.1:28003]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:09:42.118	[127.0.0.1:28003]	QUERY(2)	OK
+03:09:42.119	[127.0.0.1:28003]	EXEC(2)	OK
+03:09:42.120	[127.0.0.1:28003]	CLOSE(2)	OK
+03:09:42.191	Server was stopped.
+03:14:12.234	Server was started.
+03:14:12.249	Address already in use: JVM_Bind
+03:14:19.647	Server was started.
+03:14:19.828	[127.0.0.1:28075]	LOGIN admin	OK
+03:14:19.871	[127.0.0.1:28075]	OPEN ffmapDatabase
+03:14:19.914	[127.0.0.1:28075]	OK	84.37 ms
+03:14:19.924	[127.0.0.1:28075]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+03:14:20.046	[127.0.0.1:28075]	OK	131.7 ms
+03:14:20.272	[127.0.0.1:28075]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:14:20.273	[127.0.0.1:28075]	QUERY(0)	OK
+03:14:20.344	[127.0.0.1:28075]	EXEC(0)	OK
+03:14:20.347	[127.0.0.1:28075]	CLOSE(0)	OK
+03:14:20.380	[127.0.0.1:28075]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:14:20.380	[127.0.0.1:28075]	QUERY(1)	OK
+03:14:20.385	[127.0.0.1:28075]	EXEC(1)	OK
+03:14:20.386	[127.0.0.1:28075]	CLOSE(1)	OK
+03:14:20.391	[127.0.0.1:28075]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:14:20.391	[127.0.0.1:28075]	QUERY(2)	OK
+03:14:20.393	[127.0.0.1:28075]	EXEC(2)	OK
+03:14:20.393	[127.0.0.1:28075]	CLOSE(2)	OK
+03:14:20.416	Server was stopped.
+03:14:31.348	Server was started.
+03:14:31.607	[127.0.0.1:28077]	LOGIN admin	OK
+03:14:31.650	[127.0.0.1:28077]	OPEN ffmapDatabase
+03:14:31.693	[127.0.0.1:28077]	OK	84.44 ms
+03:14:31.706	[127.0.0.1:28077]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+03:14:31.820	[127.0.0.1:28077]	OK	124.47 ms
+03:14:31.821	Server was stopped.
+03:15:59.161	Server was started.
+03:15:59.341	[127.0.0.1:28079]	LOGIN admin	OK
+03:15:59.383	[127.0.0.1:28079]	OPEN ffmapDatabase
+03:15:59.426	[127.0.0.1:28079]	OK	83.8 ms
+03:15:59.439	[127.0.0.1:28079]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+03:15:59.561	[127.0.0.1:28079]	OK	133.49 ms
+03:15:59.797	[127.0.0.1:28079]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:15:59.798	[127.0.0.1:28079]	QUERY(0)	OK
+03:15:59.873	[127.0.0.1:28079]	EXEC(0)	OK
+03:15:59.877	[127.0.0.1:28079]	CLOSE(0)	OK
+03:15:59.912	[127.0.0.1:28079]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:15:59.913	[127.0.0.1:28079]	QUERY(1)	OK
+03:15:59.918	[127.0.0.1:28079]	EXEC(1)	OK
+03:15:59.918	[127.0.0.1:28079]	CLOSE(1)	OK
+03:15:59.923	[127.0.0.1:28079]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:15:59.924	[127.0.0.1:28079]	QUERY(2)	OK
+03:15:59.925	[127.0.0.1:28079]	EXEC(2)	OK
+03:15:59.926	[127.0.0.1:28079]	CLOSE(2)	OK
+03:15:59.949	Server was stopped.
+03:16:55.181	Server was started.
+03:16:55.361	[127.0.0.1:28081]	LOGIN admin	OK
+03:16:55.403	[127.0.0.1:28081]	OPEN ffmapDatabase
+03:16:55.445	[127.0.0.1:28081]	OK	82.36 ms
+03:16:55.455	[127.0.0.1:28081]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+03:16:55.571	[127.0.0.1:28081]	OK	125.64 ms
+03:16:55.800	[127.0.0.1:28081]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:16:55.801	[127.0.0.1:28081]	QUERY(0)	OK
+03:16:55.872	[127.0.0.1:28081]	EXEC(0)	OK
+03:16:55.874	[127.0.0.1:28081]	CLOSE(0)	OK
+03:16:55.907	[127.0.0.1:28081]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:16:55.907	[127.0.0.1:28081]	QUERY(1)	OK
+03:16:55.912	[127.0.0.1:28081]	EXEC(1)	OK
+03:16:55.913	[127.0.0.1:28081]	CLOSE(1)	OK
+03:16:55.918	[127.0.0.1:28081]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:16:55.919	[127.0.0.1:28081]	QUERY(2)	OK
+03:16:55.920	[127.0.0.1:28081]	EXEC(2)	OK
+03:16:55.921	[127.0.0.1:28081]	CLOSE(2)	OK
+03:16:55.930	[127.0.0.1:28081]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:16:55.930	[127.0.0.1:28081]	QUERY(3)	OK
+03:16:55.932	[127.0.0.1:28081]	EXEC(3)	OK
+03:16:55.932	[127.0.0.1:28081]	CLOSE(3)	OK
+03:16:55.936	[127.0.0.1:28081]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:16:55.936	[127.0.0.1:28081]	QUERY(4)	OK
+03:16:55.938	[127.0.0.1:28081]	EXEC(4)	OK
+03:16:55.938	[127.0.0.1:28081]	CLOSE(4)	OK
+03:16:55.952	Server was stopped.
+03:17:12.053	Server was started.
+03:17:12.233	[127.0.0.1:28082]	LOGIN admin	OK
+03:17:12.275	[127.0.0.1:28082]	OPEN ffmapDatabase
+03:17:12.317	[127.0.0.1:28082]	OK	83.3 ms
+03:17:12.329	[127.0.0.1:28082]	CREATE DB ffmapDatabase src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+03:17:12.446	[127.0.0.1:28082]	OK	127.38 ms
+03:17:12.679	[127.0.0.1:28082]	QUERY(0)	let $joints := /fastfood-database/joints return $joints	OK
+03:17:12.679	[127.0.0.1:28082]	QUERY(0)	OK
+03:17:12.754	[127.0.0.1:28082]	EXEC(0)	OK
+03:17:12.757	[127.0.0.1:28082]	CLOSE(0)	OK
+03:17:12.789	[127.0.0.1:28082]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:17:12.790	[127.0.0.1:28082]	QUERY(1)	OK
+03:17:12.795	[127.0.0.1:28082]	EXEC(1)	OK
+03:17:12.796	[127.0.0.1:28082]	CLOSE(1)	OK
+03:17:12.801	[127.0.0.1:28082]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:17:12.802	[127.0.0.1:28082]	QUERY(2)	OK
+03:17:12.803	[127.0.0.1:28082]	EXEC(2)	OK
+03:17:12.804	[127.0.0.1:28082]	CLOSE(2)	OK
+03:17:12.813	[127.0.0.1:28082]	QUERY(3)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+03:17:12.813	[127.0.0.1:28082]	QUERY(3)	OK
+03:17:12.814	[127.0.0.1:28082]	EXEC(3)	OK
+03:17:12.815	[127.0.0.1:28082]	CLOSE(3)	OK
+03:17:12.819	[127.0.0.1:28082]	QUERY(4)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+03:17:12.819	[127.0.0.1:28082]	QUERY(4)	OK
+03:17:12.821	[127.0.0.1:28082]	EXEC(4)	OK
+03:17:12.821	[127.0.0.1:28082]	CLOSE(4)	OK
+03:17:12.826	Server was stopped.
+04:06:08.091	Server was started.
+04:06:08.118	Address already in use: JVM_Bind
+04:06:16.998	Server was started.
+04:06:17.166	[127.0.0.1:28927]	LOGIN admin	OK
+04:06:17.209	[127.0.0.1:28927]	OPEN ffmapDatabase
+04:06:17.252	[127.0.0.1:28927]	OK	84.61 ms
+04:06:17.262	[127.0.0.1:28927]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:06:17.397	[127.0.0.1:28927]	OK	145.01 ms
+04:06:17.403	Server was stopped.
+04:10:50.589	Server was started.
+04:10:50.774	[127.0.0.1:28953]	LOGIN admin	OK
+04:10:50.819	[127.0.0.1:28953]	OPEN ffmapDatabase
+04:10:50.871	[127.0.0.1:28953]	OK	95.64 ms
+04:10:50.883	[127.0.0.1:28953]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:10:51.016	[127.0.0.1:28953]	OK	144.95 ms
+04:10:51.272	[127.0.0.1:28953]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:10:51.272	[127.0.0.1:28953]	QUERY(0)	OK
+04:10:51.353	[127.0.0.1:28953]	EXEC(0)	OK
+04:10:51.354	[127.0.0.1:28953]	CLOSE(0)	OK
+04:10:51.381	[127.0.0.1:28953]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:10:51.382	[127.0.0.1:28953]	QUERY(1)	OK
+04:10:51.383	[127.0.0.1:28953]	EXEC(1)	OK
+04:10:51.384	[127.0.0.1:28953]	CLOSE(1)	OK
+04:10:51.390	[127.0.0.1:28953]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:10:51.390	[127.0.0.1:28953]	QUERY(2)	OK
+04:10:51.392	[127.0.0.1:28953]	EXEC(2)	OK
+04:10:51.392	[127.0.0.1:28953]	CLOSE(2)	OK
+04:10:51.400	Server was stopped.
+04:11:00.758	Server was started.
+04:11:00.928	[127.0.0.1:28954]	LOGIN admin	OK
+04:11:00.969	[127.0.0.1:28954]	OPEN ffmapDatabase
+04:11:01.015	[127.0.0.1:28954]	OK	85.71 ms
+04:11:01.027	[127.0.0.1:28954]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:11:01.153	[127.0.0.1:28954]	OK	137.13 ms
+04:11:01.408	[127.0.0.1:28954]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:11:01.408	[127.0.0.1:28954]	QUERY(0)	OK
+04:11:01.480	[127.0.0.1:28954]	EXEC(0)	OK
+04:11:01.482	[127.0.0.1:28954]	CLOSE(0)	OK
+04:11:01.509	[127.0.0.1:28954]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:11:01.509	[127.0.0.1:28954]	QUERY(1)	OK
+04:11:01.511	[127.0.0.1:28954]	EXEC(1)	OK
+04:11:01.511	[127.0.0.1:28954]	CLOSE(1)	OK
+04:11:01.517	[127.0.0.1:28954]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:11:01.517	[127.0.0.1:28954]	QUERY(2)	OK
+04:11:01.519	[127.0.0.1:28954]	EXEC(2)	OK
+04:11:01.519	[127.0.0.1:28954]	CLOSE(2)	OK
+04:11:01.533	Server was stopped.
+04:13:15.784	Server was started.
+04:13:15.988	[127.0.0.1:28960]	LOGIN admin	OK
+04:13:16.034	[127.0.0.1:28960]	OPEN ffmapDatabase
+04:13:16.079	[127.0.0.1:28960]	OK	89.52 ms
+04:13:16.090	[127.0.0.1:28960]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:13:16.212	[127.0.0.1:28960]	OK	132.06 ms
+04:13:16.470	[127.0.0.1:28960]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:13:16.470	[127.0.0.1:28960]	QUERY(0)	OK
+04:13:16.549	[127.0.0.1:28960]	EXEC(0)	OK
+04:13:16.551	[127.0.0.1:28960]	CLOSE(0)	OK
+04:13:16.579	[127.0.0.1:28960]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:13:16.580	[127.0.0.1:28960]	QUERY(1)	OK
+04:13:16.582	[127.0.0.1:28960]	EXEC(1)	OK
+04:13:16.583	[127.0.0.1:28960]	CLOSE(1)	OK
+04:13:16.588	[127.0.0.1:28960]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:13:16.588	[127.0.0.1:28960]	QUERY(2)	OK
+04:13:16.590	[127.0.0.1:28960]	EXEC(2)	OK
+04:13:16.590	[127.0.0.1:28960]	CLOSE(2)	OK
+04:13:16.604	Server was stopped.
+04:14:12.633	Server was started.
+04:14:12.814	[127.0.0.1:28962]	LOGIN admin	OK
+04:14:12.860	[127.0.0.1:28962]	OPEN ffmapDatabase
+04:14:12.924	[127.0.0.1:28962]	OK	107.83 ms
+04:14:12.934	[127.0.0.1:28962]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:14:13.067	[127.0.0.1:28962]	OK	143.06 ms
+04:14:13.318	[127.0.0.1:28962]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:14:13.318	[127.0.0.1:28962]	QUERY(0)	OK
+04:14:13.415	[127.0.0.1:28962]	EXEC(0)	OK
+04:14:13.418	[127.0.0.1:28962]	CLOSE(0)	OK
+04:14:13.447	[127.0.0.1:28962]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:14:13.447	[127.0.0.1:28962]	QUERY(1)	OK
+04:14:13.449	[127.0.0.1:28962]	EXEC(1)	OK
+04:14:13.449	[127.0.0.1:28962]	CLOSE(1)	OK
+04:14:13.455	[127.0.0.1:28962]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:14:13.456	[127.0.0.1:28962]	QUERY(2)	OK
+04:14:13.457	[127.0.0.1:28962]	EXEC(2)	OK
+04:14:13.458	[127.0.0.1:28962]	CLOSE(2)	OK
+04:14:13.474	Server was stopped.
+04:14:46.467	Server was started.
+04:14:46.635	[127.0.0.1:28964]	LOGIN admin	OK
+04:14:46.691	[127.0.0.1:28964]	OPEN ffmapDatabase
+04:14:46.742	[127.0.0.1:28964]	OK	105.77 ms
+04:14:46.752	[127.0.0.1:28964]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:14:46.893	[127.0.0.1:28964]	OK	150.76 ms
+04:14:47.142	[127.0.0.1:28964]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:14:47.142	[127.0.0.1:28964]	QUERY(0)	OK
+04:14:47.214	[127.0.0.1:28964]	EXEC(0)	OK
+04:14:47.215	[127.0.0.1:28964]	CLOSE(0)	OK
+04:14:47.244	[127.0.0.1:28964]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:14:47.245	[127.0.0.1:28964]	QUERY(1)	OK
+04:14:47.246	[127.0.0.1:28964]	EXEC(1)	OK
+04:14:47.247	[127.0.0.1:28964]	CLOSE(1)	OK
+04:14:47.254	[127.0.0.1:28964]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:14:47.255	[127.0.0.1:28964]	QUERY(2)	OK
+04:14:47.257	[127.0.0.1:28964]	EXEC(2)	OK
+04:14:47.257	[127.0.0.1:28964]	CLOSE(2)	OK
+04:14:47.270	Server was stopped.
+04:17:09.013	Server was started.
+04:17:09.183	[127.0.0.1:28968]	LOGIN admin	OK
+04:17:09.235	[127.0.0.1:28968]	OPEN ffmapDatabase
+04:17:09.281	[127.0.0.1:28968]	OK	97.05 ms
+04:17:09.297	[127.0.0.1:28968]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:17:09.429	[127.0.0.1:28968]	OK	145.26 ms
+04:17:09.692	[127.0.0.1:28968]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:17:09.693	[127.0.0.1:28968]	QUERY(0)	OK
+04:17:09.770	[127.0.0.1:28968]	EXEC(0)	OK
+04:17:09.773	[127.0.0.1:28968]	CLOSE(0)	OK
+04:17:09.800	[127.0.0.1:28968]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:17:09.801	[127.0.0.1:28968]	QUERY(1)	OK
+04:17:09.802	[127.0.0.1:28968]	EXEC(1)	OK
+04:17:09.803	[127.0.0.1:28968]	CLOSE(1)	OK
+04:17:09.809	[127.0.0.1:28968]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:17:09.810	[127.0.0.1:28968]	QUERY(2)	OK
+04:17:09.811	[127.0.0.1:28968]	EXEC(2)	OK
+04:17:09.812	[127.0.0.1:28968]	CLOSE(2)	OK
+04:17:09.826	Server was stopped.
+04:18:08.466	Server was started.
+04:18:08.630	[127.0.0.1:28970]	LOGIN admin	OK
+04:18:08.679	[127.0.0.1:28970]	OPEN ffmapDatabase
+04:18:08.727	[127.0.0.1:28970]	OK	94.45 ms
+04:18:08.743	[127.0.0.1:28970]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:18:08.874	[127.0.0.1:28970]	OK	146.55 ms
+04:18:09.181	[127.0.0.1:28970]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:18:09.181	[127.0.0.1:28970]	QUERY(0)	OK
+04:18:09.261	[127.0.0.1:28970]	EXEC(0)	OK
+04:18:09.263	[127.0.0.1:28970]	CLOSE(0)	OK
+04:18:09.294	[127.0.0.1:28970]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:18:09.294	[127.0.0.1:28970]	QUERY(1)	OK
+04:18:09.296	[127.0.0.1:28970]	EXEC(1)	OK
+04:18:09.296	[127.0.0.1:28970]	CLOSE(1)	OK
+04:18:09.305	[127.0.0.1:28970]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:18:09.305	[127.0.0.1:28970]	QUERY(2)	OK
+04:18:09.306	[127.0.0.1:28970]	EXEC(2)	OK
+04:18:09.307	[127.0.0.1:28970]	CLOSE(2)	OK
+04:18:09.320	Server was stopped.
+04:18:43.199	Server was started.
+04:18:43.369	[127.0.0.1:28972]	LOGIN admin	OK
+04:18:43.417	[127.0.0.1:28972]	OPEN ffmapDatabase
+04:18:43.462	[127.0.0.1:28972]	OK	91.91 ms
+04:18:43.479	[127.0.0.1:28972]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:18:43.614	[127.0.0.1:28972]	OK	144.79 ms
+04:18:43.865	[127.0.0.1:28972]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:18:43.865	[127.0.0.1:28972]	QUERY(0)	OK
+04:18:43.940	[127.0.0.1:28972]	EXEC(0)	OK
+04:18:43.942	[127.0.0.1:28972]	CLOSE(0)	OK
+04:18:43.988	[127.0.0.1:28972]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:18:43.989	[127.0.0.1:28972]	QUERY(1)	OK
+04:18:43.993	[127.0.0.1:28972]	EXEC(1)	OK
+04:18:43.994	[127.0.0.1:28972]	CLOSE(1)	OK
+04:18:44.002	[127.0.0.1:28972]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:18:44.002	[127.0.0.1:28972]	QUERY(2)	OK
+04:18:44.004	[127.0.0.1:28972]	EXEC(2)	OK
+04:18:44.005	[127.0.0.1:28972]	CLOSE(2)	OK
+04:18:44.026	Server was stopped.
+04:23:11.506	Server was started.
+04:23:11.690	[127.0.0.1:28979]	LOGIN admin	OK
+04:23:11.734	[127.0.0.1:28979]	OPEN ffmapDatabase
+04:23:11.784	[127.0.0.1:28979]	OK	92.62 ms
+04:23:11.794	[127.0.0.1:28979]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:23:11.918	[127.0.0.1:28979]	OK	134.17 ms
+04:23:12.189	[127.0.0.1:28979]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:23:12.189	[127.0.0.1:28979]	QUERY(0)	OK
+04:23:12.263	[127.0.0.1:28979]	EXEC(0)	OK
+04:23:12.264	[127.0.0.1:28979]	CLOSE(0)	OK
+04:23:12.294	[127.0.0.1:28979]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:23:12.295	[127.0.0.1:28979]	QUERY(1)	OK
+04:23:12.296	[127.0.0.1:28979]	EXEC(1)	OK
+04:23:12.297	[127.0.0.1:28979]	CLOSE(1)	OK
+04:23:12.303	[127.0.0.1:28979]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:23:12.303	[127.0.0.1:28979]	QUERY(2)	OK
+04:23:12.305	[127.0.0.1:28979]	EXEC(2)	OK
+04:23:12.305	[127.0.0.1:28979]	CLOSE(2)	OK
+04:23:12.320	Server was stopped.
+04:24:00.224	Server was started.
+04:24:00.415	[127.0.0.1:28981]	LOGIN admin	OK
+04:24:00.458	[127.0.0.1:28981]	OPEN ffmapDatabase
+04:24:00.503	[127.0.0.1:28981]	OK	86.26 ms
+04:24:00.516	[127.0.0.1:28981]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:24:00.641	[127.0.0.1:28981]	OK	137.52 ms
+04:24:00.890	[127.0.0.1:28981]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:24:00.891	[127.0.0.1:28981]	QUERY(0)	OK
+04:24:00.972	[127.0.0.1:28981]	EXEC(0)	OK
+04:24:00.974	[127.0.0.1:28981]	CLOSE(0)	OK
+04:24:01.006	[127.0.0.1:28981]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:24:01.006	[127.0.0.1:28981]	QUERY(1)	OK
+04:24:01.008	[127.0.0.1:28981]	EXEC(1)	OK
+04:24:01.010	[127.0.0.1:28981]	CLOSE(1)	OK
+04:24:01.018	[127.0.0.1:28981]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:24:01.018	[127.0.0.1:28981]	QUERY(2)	OK
+04:24:01.020	[127.0.0.1:28981]	EXEC(2)	OK
+04:24:01.020	[127.0.0.1:28981]	CLOSE(2)	OK
+04:24:01.048	Server was stopped.
+04:27:31.201	Server was started.
+04:27:31.386	[127.0.0.1:29009]	LOGIN admin	OK
+04:27:31.430	[127.0.0.1:29009]	OPEN ffmapDatabase
+04:27:31.491	[127.0.0.1:29009]	OK	102.88 ms
+04:27:31.501	[127.0.0.1:29009]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:27:31.640	[127.0.0.1:29009]	OK	149.1 ms
+04:27:31.875	[127.0.0.1:29009]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:27:31.875	[127.0.0.1:29009]	QUERY(0)	OK
+04:27:31.945	[127.0.0.1:29009]	EXEC(0)	OK
+04:27:31.947	[127.0.0.1:29009]	CLOSE(0)	OK
+04:27:31.973	[127.0.0.1:29009]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:27:31.974	[127.0.0.1:29009]	QUERY(1)	OK
+04:27:31.975	[127.0.0.1:29009]	EXEC(1)	OK
+04:27:31.976	[127.0.0.1:29009]	CLOSE(1)	OK
+04:27:31.981	[127.0.0.1:29009]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:27:31.982	[127.0.0.1:29009]	QUERY(2)	OK
+04:27:31.983	[127.0.0.1:29009]	EXEC(2)	OK
+04:27:31.984	[127.0.0.1:29009]	CLOSE(2)	OK
+04:27:31.996	Server was stopped.
+04:29:51.145	Server was started.
+04:29:51.337	[127.0.0.1:29013]	LOGIN admin	OK
+04:29:51.378	[127.0.0.1:29013]	OPEN ffmapDatabase
+04:29:51.421	[127.0.0.1:29013]	OK	83.28 ms
+04:29:51.434	[127.0.0.1:29013]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:29:51.556	[127.0.0.1:29013]	OK	133.36 ms
+04:29:51.792	[127.0.0.1:29013]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:29:51.793	[127.0.0.1:29013]	QUERY(0)	OK
+04:29:51.870	[127.0.0.1:29013]	EXEC(0)	OK
+04:29:51.872	[127.0.0.1:29013]	CLOSE(0)	OK
+04:29:51.901	[127.0.0.1:29013]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:29:51.901	[127.0.0.1:29013]	QUERY(1)	OK
+04:29:51.902	[127.0.0.1:29013]	EXEC(1)	OK
+04:29:51.903	[127.0.0.1:29013]	CLOSE(1)	OK
+04:29:51.909	[127.0.0.1:29013]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:29:51.910	[127.0.0.1:29013]	QUERY(2)	OK
+04:29:51.911	[127.0.0.1:29013]	EXEC(2)	OK
+04:29:51.911	[127.0.0.1:29013]	CLOSE(2)	OK
+04:29:51.925	Server was stopped.
+04:30:32.250	Server was started.
+04:30:32.435	[127.0.0.1:29014]	LOGIN admin	OK
+04:30:32.477	[127.0.0.1:29014]	OPEN ffmapDatabase
+04:30:32.518	[127.0.0.1:29014]	OK	81.59 ms
+04:30:32.528	[127.0.0.1:29014]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+04:30:32.638	[127.0.0.1:29014]	OK	119.33 ms
+04:30:32.864	[127.0.0.1:29014]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+04:30:32.864	[127.0.0.1:29014]	QUERY(0)	OK
+04:30:32.934	[127.0.0.1:29014]	EXEC(0)	OK
+04:30:32.935	[127.0.0.1:29014]	CLOSE(0)	OK
+04:30:32.962	[127.0.0.1:29014]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+04:30:32.962	[127.0.0.1:29014]	QUERY(1)	OK
+04:30:32.964	[127.0.0.1:29014]	EXEC(1)	OK
+04:30:32.964	[127.0.0.1:29014]	CLOSE(1)	OK
+04:30:32.969	[127.0.0.1:29014]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+04:30:32.970	[127.0.0.1:29014]	QUERY(2)	OK
+04:30:32.971	[127.0.0.1:29014]	EXEC(2)	OK
+04:30:32.972	[127.0.0.1:29014]	CLOSE(2)	OK
+04:30:32.985	Server was stopped.
+06:03:57.280	Server was started.
+06:03:57.300	Address already in use: JVM_Bind
+06:04:04.418	Server was started.
+06:04:04.599	[127.0.0.1:30367]	LOGIN admin	OK
+06:04:04.644	[127.0.0.1:30367]	OPEN ffmapDatabase
+06:04:04.690	[127.0.0.1:30367]	OK	89.45 ms
+06:04:04.701	[127.0.0.1:30367]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+06:04:04.833	[127.0.0.1:30367]	OK	143.25 ms
+06:04:04.841	Server was stopped.
+06:04:32.795	Server was started.
+06:04:33.003	[127.0.0.1:30369]	LOGIN admin	OK
+06:04:33.055	[127.0.0.1:30369]	OPEN ffmapDatabase
+06:04:33.143	[127.0.0.1:30369]	OK	138.33 ms
+06:04:33.161	[127.0.0.1:30369]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+06:04:33.442	[127.0.0.1:30369]	OK	299.37 ms
+06:04:33.474	Server was stopped.
+06:15:30.284	Server was started.
+06:15:30.299	Address already in use: JVM_Bind
+06:15:38.155	Server was started.
+06:15:38.339	[127.0.0.1:30612]	LOGIN admin	OK
+06:15:38.380	[127.0.0.1:30612]	OPEN ffmapDatabase
+06:15:38.423	[127.0.0.1:30612]	OK	81.88 ms
+06:15:38.433	[127.0.0.1:30612]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+06:15:38.548	[127.0.0.1:30612]	OK	124.39 ms
+06:15:38.550	Server was stopped.
+06:23:15.620	Server was started.
+06:23:15.636	Address already in use: JVM_Bind
+06:24:12.654	Server was started.
+06:24:12.669	Address already in use: JVM_Bind
+06:24:21.882	Server was started.
+06:24:22.061	[127.0.0.1:30735]	LOGIN admin	OK
+06:24:22.104	[127.0.0.1:30735]	OPEN ffmapDatabase
+06:24:22.148	[127.0.0.1:30735]	OK	85.16 ms
+06:24:22.158	[127.0.0.1:30735]	CREATE DB ffmapDatabase ./xml_data/ffmapDatabase.xml
+06:24:22.288	[127.0.0.1:30735]	OK	139.79 ms
+06:24:22.289	Server was stopped.

@@ -74,11 +74,12 @@ public class OpeningHour {
 
     private static Date parseDate(String date) {
         String[] dateSplit = date.split(":");
-        
+
         return new Date(
             Long.valueOf(dateSplit[0]).longValue() * 3600000 +
             Long.valueOf(dateSplit[1]).longValue() * 60000 +
-            Long.valueOf(dateSplit[2]).longValue() * 1000
+            Long.valueOf(dateSplit[2]).longValue() * 1000 -
+            3600000
         );
     }
 

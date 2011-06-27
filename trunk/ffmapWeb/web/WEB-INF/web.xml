@@ -25,6 +25,18 @@
         <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.userLoginServlet</servlet-class>
     </servlet>
     <servlet>
+        <servlet-name>viewJoint</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewJointServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>viewAllJoints</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewAllJointsServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>allJointsMap</servlet-name>
+        <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.viewAllJointsMapServlet</servlet-class>
+    </servlet>
+    <servlet>
         <servlet-name>logoutServlet</servlet-name>
         <servlet-class>cz.muni.fi.pb138.ffmap.classes.servlets.userLogoutServlet</servlet-class>
     </servlet>
@@ -67,6 +79,18 @@
     <servlet-mapping>
         <servlet-name>userLogin</servlet-name>
         <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewJoint</servlet-name>
+        <url-pattern>/joint/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>viewAllJoints</servlet-name>
+        <url-pattern>/joints</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>allJointsMap</servlet-name>
+        <url-pattern>/allJointsMap</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>logoutServlet</servlet-name>

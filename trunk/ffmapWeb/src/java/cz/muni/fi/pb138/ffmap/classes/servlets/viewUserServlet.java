@@ -32,5 +32,4 @@ public class viewUserServlet extends HttpServlet {
         req.setAttribute("user", user);
         req.getRequestDispatcher("/user.jsp").forward(req, resp);
     }
-
 }

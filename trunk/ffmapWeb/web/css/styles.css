@@ -8,7 +8,7 @@
 
 * {
     color: #333;
-    font-family: "Calibri, Verdana, Helvetica, sans-serif";
+    font-family: 'Calibri', 'Verdana', 'Helvetica', 'sans-serif';
 }
 
 body {
@@ -17,13 +17,96 @@ body {
     margin: 0px;
 }
 
+h1 {
+    padding: 21px 0px 0px 0px;
+    margin: 0px;
+}
+
+hr {
+    border: 1px solid #ccc;
+}
+
+a:hover {
+    color: red;
+}
+
 #content {
     width: 950px;
-    min-height: 700px; /* TODO: DELETE ME */
     background-color: #fff;
     text-align: left;
 
     margin: auto;
-    border: 1px solid gold;
+    border: 10px solid orange;
 }
 
+#header_wrapper {
+    padding: 0px 20px;
+}
+
+#subtitle {
+    font-family: 'Segoe Print', 'Calibri', 'Verdana', 'Helvetica', 'sans-serif';
+    font-style: italic;
+    margin: 0px 25px 10px 0px;
+}
+
+#menu_wrapper {
+    padding: 20px;
+    margin: 0px 0px 15px 0px;
+}
+
+#menu {
+    color: #333;
+}
+
+#menu ul {
+    display: inline;
+}
+
+#menu ul li {
+    display: inline;
+}
+
+#menu a {
+    color: red;
+    font-weight: bold;
+    margin: 0px 40px 0px 0px;
+}
+
+#text_wrapper {
+    padding: 0px 20px;
+    margin: 0px 0px 25px 0px;
+}
+
+#footer_wrapper {
+    background-color: orange;
+    padding: 5px 20px 5px 20px;
+}
+
+#footer {
+}
+
+#footer p {
+    text-align: center;
+}
+
+#googleMap {
+    margin: 40px 0px 0px 0px;
+}
+
+.jointMenu {
+    margin: 0px 0px 0px 20px;
+}
+
+.jointMenu td {
+    padding-right: 50px;
+}
+
+.flash {
+    border: 1px solid green;
+    text-align: center;
+}
+
+.exclamation {
+    font-style: italic;
+    color: red;
+}

@@ -2,7 +2,7 @@ package cz.muni.fi.pb138.ffmap.classes;
 
 import cz.muni.fi.pb138.ffmap.enums.WeekDay;
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
-import cz.muni.fi.pb138.ffmap.exceptions.MealException;
+import cz.muni.fi.pb138.ffmap.exceptions.MenuItemException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -129,7 +129,7 @@ public class Joint implements IDatabaseStoreable {
         openingHours.put(WeekDay.SUN, new ArrayList<OpeningHour>());
     }
 
-    public Long getID() {
+    public Long getId() {
         return id;
     }
     public Long getAddedBy() {
@@ -161,6 +161,15 @@ public class Joint implements IDatabaseStoreable {
     public Map<WeekDay, List<OpeningHour>> getOpeningHours() {
         return Collections.unmodifiableMap(openingHours);
     }
+    public List<String> getTags() {
+        return tags;
+    }
+    public List<String> getComments() {
+        return comments;
+    }
+    public String getWebPage() {
+        return webPage;
+    }
 
     public boolean save() {
         if (id == null) {
@@ -184,61 +193,83 @@ public class Joint implements IDatabaseStoreable {
         }
     }
     /**
-     * Adds supplied meal to joint's menu.
-     * @param menuItem meal to add
+     * Adds supplied menu item to joint's menu.
+     * @param menuItem menu item to add
      */
-    public void addMenuItem(MenuItem menuItem) throws MealException {
+    public void addMenuItem(MenuItem menuItem) throws MenuItemException {
         if (menuItem == null) {
             throw new IllegalArgumentException("MenuItem cannot be null");
         }
 
         if (menu.contains(menuItem)) {
-            //Todo: create and put MenuItemException, maybe just rename MealException
-            throw new MealException("Menu already contains item " + menuItem);
+            throw new MenuItemException("Menu already contains item " + menuItem);
         }
 
         menu.add(menuItem);
     }
     /**
-     * Tries to remove a meal from the menu. Provided that the passed meal is
-     * not on the menu, MealException is thrown.
+     * Tries to remove a menu item from the menu. Provided that the passed menu
+     * item is not on the menu, MenuItemException is thrown.
      *
-     * @param menuItem meal to remove from the menu
-     * @throws MealException
+     * @param menuItem menu item to remove from the menu
+     * @throws MenuItemException
      */
-    public void removeMealFromMenu(MenuItem menuItem) throws MealException {
+    public void removeMenuItem(MenuItem menuItem) throws MenuItemException {
         if (menuItem == null) {
             throw new IllegalArgumentException("MenuItem cannot be null");
         }
 
         if (!menu.remove(menuItem)) {
-            //Todo: create and put MenuItemException, maybe just rename MealException
-            throw new MealException("Unable to remove an item that's not on the menu.");
+            throw new MenuItemException("Unable to remove an item that's not on the menu.");
         }
     }
-    //TODO: fix
+    
+    public List<OpeningHour> getMonday() {
+        return openingHours.get(WeekDay.MON);
+    }
+    
+    public List<OpeningHour> getTuesday() {
+        return openingHours.get(WeekDay.TUE);
+    }
+
+    public List<OpeningHour> getWednesday() {
+        return openingHours.get(WeekDay.WED);
+    }
+
+    public List<OpeningHour> getThursday() {
+        return openingHours.get(WeekDay.THU);
+    }
+
+    public List<OpeningHour> getFriday() {
+        return openingHours.get(WeekDay.FRI);
+    }
+
+    public List<OpeningHour> getSaturday() {
+        return openingHours.get(WeekDay.SAT);
+    }
+
+    public List<OpeningHour> getSunday() {
+        return openingHours.get(WeekDay.SUN);
+    }
+
     /**
-     * Tries to add the new set of opening hours. Provided that opening hours
-     * overlapses an OpeningHourException is Thrown
+     * Sets new set of opening hours.
      *
-     * @param openingHours opening hours to add
+     * @param day day of the week
+     * @param openingHours list of opening hours
      * @throws OpeningHourException
      */
-
-    /*public void addOpeningHours(OpeningHour openingHours) throws OpeningHourException {
+    public void setOpeningHours(WeekDay day, List<OpeningHour> openingHours) {
         if (openingHours == null) {
             throw new IllegalArgumentException("Opening hours cannot be null");
         }
 
-        for (OpeningHour interval: this.openingHours) {
-            if ((interval.getFrom().getTime() >= openingHours.getFrom().getTime() &&
-                interval.getFrom().getTime() <= openingHours.getTo().getTime()) ||
-                (interval.getTo().getTime() >= openingHours.getFrom().getTime() &&
-                (interval.getTo().getTime() <= openingHours.getTo().getTime()))) {
-                throw new OpeningHourException("Passed opening hours overlapse with current ones.");
-            }
+        if (openingHours.isEmpty() || openingHours.size() > 2) {
+            throw new IllegalArgumentException("Invalid argument openingHours passed.");
         }
-    }*/
+
+        this.openingHours.put(day, openingHours);
+    }
 
     /**
      * Inserts new user into the database.
@@ -364,5 +395,11 @@ public class Joint implements IDatabaseStoreable {
         result += "</opening-hours>";
 
         return result;
+    }
+
+    /** TODO: delete me */
+    @Override
+    public String toString() {
+        return "Joint{" + "id=" + id + "addedBy=" + addedBy + "name=" + name + "location=" + location + "openingHours=" + openingHours + "menu=" + menu + "tags=" + tags + "comments=" + comments + "webPage=" + webPage + '}';
     }
 }

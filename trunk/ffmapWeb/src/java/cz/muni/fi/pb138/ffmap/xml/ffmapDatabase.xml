@@ -1,155 +1,247 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <fastfood-database xsi:noNamespaceSchemaLocation="ffmapSchema.xsd" xmlns=""
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" joints-key-number="2" meals-key-number="3" users-key-number="1">
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" joints-key-number="3" meals-key-number="6" users-key-number="2">
    <joints>
-   <joint id="1" name="Vyhlídal" added-by="1">
-       <location lat="32.2222" lon="45.55555">
+   <joint id="1" name="Bistro u Nováků" added-by="1">
+       <location lat="49.20492" lon="16.59665">
            <adress>
                <city>Brno</city>
-               <street-name>Sladkého</street-name>
-               <street-number>9A</street-number>
+               <street-name>Kotlářská</street-name>
+               <street-number>11</street-number>
            </adress>
        </location>
        <opening-hours>
            <mon>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </mon>
            <tue>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </tue>
            <wed>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </wed>
            <thu>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </thu>
            <fri>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </fri>
            <sat>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </sat>
            <sun>
                 <open-span>
                     <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <end>20:00:00</end>
                 </open-span>
            </sun>
        </opening-hours>
        <menu>
            <menu-item meal-ref="1">
-               <price from="10:00:00" to="20:00:00">10.00</price>
+               <price from="08:00:00" to="20:00:00">15.00</price>
            </menu-item>
-           <menu-item meal-ref="3">
-               <price>27.00</price>
+           <menu-item meal-ref="2">
+               <price from="00:00:00" to="20:00:00">16.00</price>
            </menu-item>
        </menu>
        <tags>
-           <tag>Kentus</tag>
+           <tag>hotdog</tag>
+           <tag>kecup</tag>
+           <tag>horcice</tag>
        </tags>
-       <comments/>
-       <web-page>http://www.stash.wz.cz</web-page>
+       <comments>
+           <comment>chutnalo!</comment>
+           <comment>mi ne!</comment>
+       </comments>
+       <web-page>http://www.novaci.cz</web-page>
    </joint>
-   <joint id="2" name="Nguyen Kong Noodles">
-       <location lat="32.2222" lon="45.55555">
+   <joint id="2" name="Asia Bistro">
+       <location lat="49.20285" lon="16.60446">
            <adress>
                <city>Brno</city>
-               <street-name>Sladkého</street-name>
-               <street-number>9A</street-number>
+               <street-name>Nádražní</street-name>
+               <street-number>6</street-number>
            </adress>
        </location>
        <opening-hours>
            <mon>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </mon>
            <tue>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </tue>
            <wed>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </wed>
            <thu>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </thu>
            <fri>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </fri>
            <sat>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </sat>
            <sun>
                 <open-span>
-                    <start>08:00:00</start>
-                    <end>23:30:00</end>
+                    <start>09:00:00</start>
+                    <end>23:00:00</end>
                 </open-span>
            </sun>
        </opening-hours>
        <menu>
-           <menu-item meal-ref="1">
-               <price>10.00</price>
-           </menu-item>
            <menu-item meal-ref="3">
-               <price>27.00</price>
+               <price from="00:00:00" to="23:59:59">42.00</price>
+           </menu-item>
+           <menu-item meal-ref="4">
+               <price from="00:00:00" to="23:59:59">41.00</price>
+           </menu-item>
+           <menu-item meal-ref="6">
+               <price from="00:00:00" to="23:59:59">55.00</price>
            </menu-item>
        </menu>
        <tags>
-           <tag>Kentus</tag>
+           <tag>hamburger</tag>
+           <tag>cheeseburger</tag>
+           <tag>kebab</tag>
        </tags>
        <comments/>
-       <web-page>http://www.stash.wz.cz</web-page>
+       <web-page>http://www.asia.cz</web-page>
+   </joint>
+   <joint id="3" name="Dragon">
+       <location lat="49.201672" lon="16.610641">
+           <adress>
+               <city>Brno</city>
+               <street-name>Masarykova</street-name>
+               <street-number>135</street-number>
+           </adress>
+       </location>
+       <opening-hours>
+           <mon>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </mon>
+           <tue>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </tue>
+           <wed>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </wed>
+           <thu>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </thu>
+           <fri>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </fri>
+           <sat>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </sat>
+           <sun>
+                <open-span>
+                    <start>12:00:00</start>
+                    <end>18:00:00</end>
+                </open-span>
+           </sun>
+       </opening-hours>
+       <menu>
+           <menu-item meal-ref="4">
+               <price from="12:00:00" to="18:00:00">39.00</price>
+           </menu-item>
+           <menu-item meal-ref="5">
+               <price from="12:00:00" to="18:00:00">39.00</price>
+           </menu-item>
+           <menu-item meal-ref="6">
+               <price from="00:00:00" to="18:00:00">49.00</price>
+           </menu-item>
+       </menu>
+       <tags>
+           <tag>cheeseburger</tag>
+           <tag>kebab</tag>
+       </tags>
+       <comments/>
+       <web-page>http://www.dragon.eu</web-page>
    </joint>
    </joints>
    <meals>
-       <meal id="1" name="Hermelínový hamburger" />
-       <meal id="2" name="Hot dog"/>
-       <meal id="3" name="Hnus fialovej">
-           <description>Hnis</description>
+       <meal id="1" name="Párek v rohlíku s kečupem" />
+       <meal id="2" name="Párek v rohlíku s hořčicí"/>
+       <meal id="3" name="Hamburger"/>
+       <meal id="4" name="Cheeseburger"/>
+       <meal id="5" name="Hamburger s kebabem"/>
+       <meal id="6" name="Hamburger se smaženým sýrem">
+           <description>Hamburger s masem a smaženým sýrem</description>
        </meal>
    </meals>
    <users>
        <user id="1">
            <username>admin</username>
-           <password>d033e22ae348aeb5660fc2140aec35850c4da997</password> <!--SHA1 of "admin"-->
+           <password>d033e22ae348aeb5660fc2140aec35850c4da997</password>
            <role>admin</role>
-           <first-name>Jan</first-name>
-           <surname>Sourek</surname>
+           <first-name>Marek</first-name>
+           <surname>Osvald</surname>
+           <date-registered>2011-06-12</date-registered>
+           <active>true</active>
+       </user>
+       <user id="2">
+           <username>admin2</username>
+           <password>d033e22ae348aeb5660fc2140aec35850c4da997</password>
+           <role>admin</role>
+           <first-name>Aleksandar</first-name>
+           <surname>Zivkovic</surname>
            <date-registered>2011-06-12</date-registered>
            <active>true</active>
        </user>
