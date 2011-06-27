@@ -1,5 +1,6 @@
 package cz.muni.fi.pb138.ffmap.classes;
 
+import cz.muni.fi.pb138.ffmap.enums.Role;
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
 import java.io.IOException;
@@ -18,7 +19,9 @@ public class Main {
     public static void main(String[] args) throws DatabaseInitException, BaseXException, IOException {
 
         System.out.println("User authentication:");
-        System.out.println("Username: dostojev, Password: koloman, Result: " + User.authenticate("dostojev", "koloman"));
+        User usr = new User("stash", "sefolo", Role.USER, "sm", "bd");
+        usr.save();
+        System.out.println("Username: stash, Password: sefolo, Result: " + User.authenticate("stash", "sefolo"));
         System.out.println("Username: admin, Password: koloman, Result: " + User.authenticate("admin", "koloman"));
         System.out.println("Username: dostojev, Password: admin, Result: " + User.authenticate("dostojev", "admin"));
         System.out.println("Username: admin, Password: admin, Result: " + User.authenticate("admin", "admin"));

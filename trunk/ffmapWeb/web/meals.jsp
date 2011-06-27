@@ -17,13 +17,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Výpis všech jídel v databázi</title>
+        <title>ffmap</title>
     </head>
     <body>
         <div>
             <c:forEach items="${meals}" var="meal">
                 <div>
                     <h2><a href="<c:url value="/meal/${meal.id}" />"><c:out value="${meal.name}" /></a></h2>
+                    <c:if test="${logged_user != null}">
+                        <a href="<c:url value="/editMeal/${meal.id}" />">Změnit</a>
+                        <c:if test="${logged_user.role == 'ADMIN'}">
+                            <a href="<c:url value="/deleteMeal/${meal.id}" />">Vymazat</a>
+                        </c:if>
+                    </c:if>
                     <ul>
                         <li>
                             Název:

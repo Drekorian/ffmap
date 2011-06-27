@@ -5,7 +5,7 @@
 
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
-import cz.muni.fi.pb138.ffmap.classes.Role;
+import cz.muni.fi.pb138.ffmap.enums.Role;
 import cz.muni.fi.pb138.ffmap.classes.User;
 import cz.muni.fi.pb138.ffmap.classes.UserManager;
 import java.io.IOException;
@@ -14,7 +14,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -73,7 +72,7 @@ public class registerNewUserServlet extends HttpServlet {
             }
         }
         if(!_password.equals(_passconf)){
-            request.setAttribute("passconf_error", "Hesla se neschodují!");
+            request.setAttribute("passconf_error", "Hesla se neshodují!");
             valid = false;
         }
         if((_firstName == null) || _firstName.isEmpty()){
@@ -95,7 +94,7 @@ public class registerNewUserServlet extends HttpServlet {
             }
         }
         if(valid){
-            User newUser = new User(_username, User.encrypt(_password), _role, _firstName, _lastName);
+            User newUser = new User(_username, _password, _role, _firstName, _lastName);
             if(!newUser.save()){
                 err.forward(request, response);
             } else {

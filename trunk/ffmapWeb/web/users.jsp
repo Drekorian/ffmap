@@ -17,13 +17,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Všichni uživatelé v systému</title>
+        <title>ffmap</title>
     </head>
     <body>
-        <div>
+        <c:choose>
+            <c:when test="${logged_user.role == 'ADMIN'}">
+                <div>
+            <form action="users" method="get">
+            Řadit podle: <select name="order-by">
+                <option value="uName">Uživatelského jména</option>
+                <option value="fName">Křestního jména</option>
+                <option value="lName">Příjmení</option>
+            </select>
+            <input type="submit" name="order" value="Seřadit!">
+            </form>
             <c:forEach items="${users}" var="user">
                 <div>
                     <h2><a href="<c:url value="/user/${user.id}" />"><c:out value="${user.userName}" /></a></h2>
+                    <a href="<c:url value="/deleteUser/${user.id}" />">Vymazat</a>
                     <ul>
                         <li>
                             Jméno:
@@ -35,7 +46,7 @@
                             <c:out value="${user.password}" />
                         </li>
                         <li>
-                            Datum registrace: 
+                            Datum registrace:
                             <f:formatDate type="date" value="${user.dateRegistered}" pattern="d. M. 20y" />
                         </li>
                         <li>
@@ -56,6 +67,12 @@
         <p>
             Celkem uživatelů: ${fn:length(users)}
         </p>
+            </c:when>
+            <c:otherwise>
+                Nemáte oprávnění sledovat tuto stránku!
+            </c:otherwise>
+        </c:choose>
+        
     </body>
 </html>
 

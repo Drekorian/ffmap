@@ -23,7 +23,7 @@
             <li><b>Heslo: </b><c:out value="${password}"></c:out></li>
             <li><b>Jméno: </b><c:out value="${firstname}"></c:out> <c:out value="${lastname}"></c:out></li>
         </ul>
-        <a href="<c:url value="index.jsp" />">Klepnutím zde se vraťte na úvodní stránku kde se můžete přihlásit</a><br/>
+        <a href="<c:url value="/index.jsp" />">Klepnutím zde se vraťte na úvodní stránku kde se můžete přihlásit</a><br/>
     </body>
 </html>
 
