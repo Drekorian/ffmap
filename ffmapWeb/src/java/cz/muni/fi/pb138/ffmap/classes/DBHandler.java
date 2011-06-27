@@ -22,8 +22,8 @@ public class DBHandler {
 
     private ClientSession master_session;
     private final String FFMAP_DATABASE = "./xml_data/ffmapDatabase.xml";
-    private final String FFMAP_TEST_DATABASE = "./xml_data/ffmapTestDatabase.xml";
-    /*private final String FFMAP_DATABASE = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml";
+    private final String FFMAP_TEST_DATABASE = "./xml_data/ffmapTestDatabase.xml";/*
+    private final String FFMAP_DATABASE = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml";
     private final String FFMAP_TEST_DATABASE = "src/java/cz/muni/fi/pb138/ffmap/xml/ffmapTestDatabase.xml";*/
     private BaseXServer server;
     private final Context context;
@@ -133,10 +133,10 @@ public class DBHandler {
         }
     }
 
-    public void createHack(String offset) {
+    public void createHack() {
         try {
             /*TODO: delete me */
-            createDatabase(FFMAP_DATABASE, "ffmap");
+            createDatabase(FFMAP_DATABASE, "ffmapDatabase");
         } catch (Exception ex) {
             Logger.getLogger(DBHandler.class.getName()).log(Level.SEVERE, null, ex);
         }

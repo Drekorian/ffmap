@@ -1,26 +1,31 @@
 <%--
     Document   : index
-    Version    : 2011.0624
+    Version    : 2011.0627
     Author     : Marek Osvald
 --%>
 
+<%@page import="cz.muni.fi.pb138.ffmap.classes.DBHandler"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@include file="includes/header.jsp" %>
+<%@include file="/includes/header_full.jsp" %>
 
-<b>
-    <c:choose>
-        <c:when test="${session} = true">Logged in</c:when>
-        <c:otherwise>
-            <form action="login" method="post">
-                Username: <input type="text" name="username" value="${uname}" size="20" maxlength="15">
-                Password: <input type="password" name="password" value="${pass}" size="20" maxlength="15">
-            </form>
-        </c:otherwise>
-    </c:choose>
+<% DBHandler.getInstance().createHack(); %>
 
-</b>
-<a href="<c:url value="users" />">Zobrazit registrované uživatele</a><br/>
-<a href="<c:url value="meals" />">Zobrazit jídla v databázi</a><br/>
-<a href="<c:url value="register" />">Registrace nového uživatele</a>
+<div id="text_wrapper">
+    <div id="text">
+        <h2>Vítej!</h2>
+        <p>
+            Vítej v aplikaci ffmap. ffmap byl vytvořen studenty Fakulty
+            informatiky Masarykovy univerzity Brně jako semestrální projekt
+            k předmětu PB138 Moderní značkovací jazyky a jejich aplikace.
+        </p>
 
-<%@include file="includes/footer.jsp" %>
+        <h2>Co ffmap umí?</h2>
+        <p>
+            Cílem ffmap je vytvořit databázi fastfoodu (lidově nazývaných
+            hladová okna) v Brně. Na ffmap se můžeš podílet i ty! Stačí zadat
+            informace o svém oblíbeném okně do naší databáze!
+        </p>
+    </div>
+</div>
+
+<%@include file="/includes/footer.jsp" %>

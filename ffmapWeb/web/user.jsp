@@ -5,19 +5,29 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<%@include file="includes/header.jsp" %>
+<%@include file="includes/header_full.jsp" %>
 
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<div id="text_wrapper">
+    <div id="text">
+        <h2>${user.userName}</h2>
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>User</h1>
-        user = "<c:out value="${user}" />"
-    </body>
-</html>
+        <ul>
+            <li><strong>Jméno:</strong> ${user.firstName}</li>
+            <li><strong>Příjmení:</strong> ${user.surname}</li>
+            <li><strong>Datum registrace:</strong>
+                <fmt:formatDate pattern="dd. MM. yyyy" value="${user.dateRegistered}" /></li>
+            <li><strong>Aktivní:</strong>
+                <c:choose>
+                    <c:when test="${user.active}">
+                        aktivní
+                    </c:when>
+                    <c:otherwise>
+                        neaktivní
+                    </c:otherwise>
+                </c:choose>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<%@include file="/includes/footer.jsp" %>

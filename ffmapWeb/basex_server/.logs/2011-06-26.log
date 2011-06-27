@@ -178,184 +178,187 @@
 11:47:10.980	[127.0.0.1:15687]	QUERY(0)	OK
 11:47:11.064	[127.0.0.1:15687]	EXEC(0)	OK
 11:47:11.183	Server was stopped.
-21:47:18.971	Server was started.
-21:47:18.984	Unrecognized Windows Sockets error: 0: JVM_Bind
-21:47:25.912	Server was started.
-21:47:26.055	[127.0.0.1:9820]	LOGIN admin	OK
-21:47:26.088	[127.0.0.1:9820]	OPEN ffmapDatabase
-21:47:26.131	[127.0.0.1:9820]	OK	75.01 ms
-21:47:26.383	[127.0.0.1:9820]	QUERY(0)	let $user := /fastfood-database/users/user[lower-case(username) = "stash" and password = "ea09e29922d1883299ae86f57ff15644d06480d0"] return exists($user)	OK
-21:47:26.384	[127.0.0.1:9820]	QUERY(0)	OK
-21:47:26.406	[127.0.0.1:9820]	EXEC(0)	OK
-21:47:26.406	[127.0.0.1:9820]	CLOSE(0)	OK
-21:47:26.409	[127.0.0.1:9820]	QUERY(1)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "15336b06843c465c9511b95464ec2123f6db34e0"] return exists($user)	OK
-21:47:26.409	[127.0.0.1:9820]	QUERY(1)	OK
-21:47:26.410	[127.0.0.1:9820]	EXEC(1)	OK
-21:47:26.411	[127.0.0.1:9820]	CLOSE(1)	OK
-21:47:26.413	[127.0.0.1:9820]	QUERY(2)	let $user := /fastfood-database/users/user[lower-case(username) = "dostojev" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:47:26.413	[127.0.0.1:9820]	QUERY(2)	OK
-21:47:26.418	[127.0.0.1:9820]	EXEC(2)	OK
-21:47:26.419	[127.0.0.1:9820]	CLOSE(2)	OK
-21:47:26.420	[127.0.0.1:9820]	QUERY(3)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:47:26.421	[127.0.0.1:9820]	QUERY(3)	OK
-21:47:26.422	[127.0.0.1:9820]	EXEC(3)	OK
-21:47:26.423	[127.0.0.1:9820]	CLOSE(3)	OK
-21:47:26.433	[127.0.0.1:9820]	QUERY(4)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
-21:47:26.433	[127.0.0.1:9820]	QUERY(4)	OK
-21:47:26.437	[127.0.0.1:9820]	EXEC(4)	OK
-21:47:26.438	[127.0.0.1:9820]	CLOSE(4)	OK
-21:47:26.450	[127.0.0.1:9820]	QUERY(5)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
-21:47:26.450	[127.0.0.1:9820]	QUERY(5)	OK
-21:47:26.463	[127.0.0.1:9820]	EXEC(5)	OK
-21:47:26.464	[127.0.0.1:9820]	CLOSE(5)	OK
-21:47:26.465	[127.0.0.1:9820]	QUERY(6)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
-21:47:26.465	[127.0.0.1:9820]	QUERY(6)	OK
-21:47:26.466	[127.0.0.1:9820]	EXEC(6)	OK
-21:47:26.466	[127.0.0.1:9820]	CLOSE(6)	OK
-21:47:26.471	[127.0.0.1:9820]	QUERY(7)	let $meals := /fastfood-database/meals return insert node <meal id="4" name="Grcka hnusna"> <description>Fakt kentus</description> </meal> as last into $meals 	OK
-21:47:26.471	[127.0.0.1:9820]	QUERY(7)	OK
-21:47:26.482	[127.0.0.1:9820]	EXEC(7)	OK
-21:47:26.483	[127.0.0.1:9820]	CLOSE(7)	OK
-21:47:26.484	[127.0.0.1:9820]	QUERY(8)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
-21:47:26.484	[127.0.0.1:9820]	QUERY(8)	OK
-21:47:26.485	[127.0.0.1:9820]	EXEC(8)	OK
-21:47:26.486	[127.0.0.1:9820]	CLOSE(8)	OK
-21:47:26.487	[127.0.0.1:9820]	QUERY(9)	let $lastKey := /fastfood-database/@meals-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
-21:47:26.487	[127.0.0.1:9820]	QUERY(9)	OK
-21:47:26.490	[127.0.0.1:9820]	EXEC(9)	OK
-21:47:26.490	[127.0.0.1:9820]	CLOSE(9)	OK
-21:47:26.491	[127.0.0.1:9820]	QUERY(10)	let $id := /fastfood-database/@meals-key-number return number($id)	OK
-21:47:26.491	[127.0.0.1:9820]	QUERY(10)	OK
-21:47:26.492	[127.0.0.1:9820]	EXEC(10)	OK
-21:47:26.493	[127.0.0.1:9820]	CLOSE(10)	OK
-21:47:26.493	[127.0.0.1:9820]	QUERY(11)	let $meals := /fastfood-database/meals return insert node <meal id="5" name="Vagintarian"> </meal> as last into $meals 	OK
-21:47:26.494	[127.0.0.1:9820]	QUERY(11)	OK
-21:47:26.497	[127.0.0.1:9820]	EXEC(11)	OK
-21:47:26.498	[127.0.0.1:9820]	CLOSE(11)	OK
-21:47:26.500	[127.0.0.1:9820]	QUERY(12)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
-21:47:26.500	[127.0.0.1:9820]	QUERY(12)	OK
-21:47:26.502	[127.0.0.1:9820]	EXEC(12)	OK
-21:47:26.502	[127.0.0.1:9820]	CLOSE(12)	OK
-21:47:26.572	[127.0.0.1:9820]	QUERY(13)	let $meal := /fastfood-database/meals/meal[@id=3]return (replace value of node $meal/@name with "Podkozak" , if(exists($meal/description)) then replace value of node $meal/description with "Variot" else insert node <description>Variot</description> into $meal)	OK
-21:47:26.572	[127.0.0.1:9820]	QUERY(13)	OK
-21:47:26.576	[127.0.0.1:9820]	EXEC(13)	OK
-21:47:26.577	[127.0.0.1:9820]	CLOSE(13)	OK
-21:47:26.578	[127.0.0.1:9820]	QUERY(14)	let $meals := /fastfood-database/meals return $meals	OK
-21:47:26.578	[127.0.0.1:9820]	QUERY(14)	OK
-21:47:26.579	[127.0.0.1:9820]	EXEC(14)	OK
-21:47:26.579	[127.0.0.1:9820]	CLOSE(14)	OK
-21:47:26.584	[127.0.0.1:9820]	QUERY(15)	for $meal in /fastfood-database/meals/meal[@id = 3] return delete node $meal	OK
-21:47:26.584	[127.0.0.1:9820]	QUERY(15)	OK
-21:47:26.588	[127.0.0.1:9820]	EXEC(15)	OK
-21:47:26.589	[127.0.0.1:9820]	CLOSE(15)	OK
-21:47:26.590	[127.0.0.1:9820]	QUERY(16)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
-21:47:26.590	[127.0.0.1:9820]	QUERY(16)	OK
-21:47:26.591	[127.0.0.1:9820]	EXEC(16)	OK
-21:47:26.591	[127.0.0.1:9820]	CLOSE(16)	OK
-21:47:26.594	[127.0.0.1:9820]	QUERY(17)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
-21:47:26.595	[127.0.0.1:9820]	QUERY(17)	OK
-21:47:26.597	[127.0.0.1:9820]	EXEC(17)	OK
-21:47:26.597	[127.0.0.1:9820]	CLOSE(17)	OK
-21:47:26.601	Server was stopped.
-21:47:40.005	Server was started.
-21:47:40.142	[127.0.0.1:9821]	LOGIN admin	OK
-21:47:40.173	[127.0.0.1:9821]	OPEN ffmapDatabase
-21:47:40.208	[127.0.0.1:9821]	OK	64.97 ms
-21:47:40.464	[127.0.0.1:9821]	QUERY(0)	let $user := /fastfood-database/users/user[lower-case(username) = "stash" and password = "ea09e29922d1883299ae86f57ff15644d06480d0"] return exists($user)	OK
-21:47:40.464	[127.0.0.1:9821]	QUERY(0)	OK
-21:47:40.488	[127.0.0.1:9821]	EXEC(0)	OK
-21:47:40.489	[127.0.0.1:9821]	CLOSE(0)	OK
-21:47:40.491	[127.0.0.1:9821]	QUERY(1)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "15336b06843c465c9511b95464ec2123f6db34e0"] return exists($user)	OK
-21:47:40.492	[127.0.0.1:9821]	QUERY(1)	OK
-21:47:40.493	[127.0.0.1:9821]	EXEC(1)	OK
-21:47:40.493	[127.0.0.1:9821]	CLOSE(1)	OK
-21:47:40.495	[127.0.0.1:9821]	QUERY(2)	let $user := /fastfood-database/users/user[lower-case(username) = "dostojev" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:47:40.495	[127.0.0.1:9821]	QUERY(2)	OK
-21:47:40.496	[127.0.0.1:9821]	EXEC(2)	OK
-21:47:40.497	[127.0.0.1:9821]	CLOSE(2)	OK
-21:47:40.499	[127.0.0.1:9821]	QUERY(3)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:47:40.500	[127.0.0.1:9821]	QUERY(3)	OK
-21:47:40.501	[127.0.0.1:9821]	EXEC(3)	OK
-21:47:40.501	[127.0.0.1:9821]	CLOSE(3)	OK
-21:47:40.513	[127.0.0.1:9821]	QUERY(4)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
-21:47:40.514	[127.0.0.1:9821]	QUERY(4)	OK
-21:47:40.518	[127.0.0.1:9821]	EXEC(4)	OK
-21:47:40.518	[127.0.0.1:9821]	CLOSE(4)	OK
-21:47:40.521	[127.0.0.1:9821]	QUERY(5)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
-21:47:40.522	[127.0.0.1:9821]	QUERY(5)	OK
-21:47:40.524	[127.0.0.1:9821]	EXEC(5)	OK
-21:47:40.524	[127.0.0.1:9821]	CLOSE(5)	OK
-21:47:40.526	[127.0.0.1:9821]	QUERY(6)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
-21:47:40.526	[127.0.0.1:9821]	QUERY(6)	OK
-21:47:40.527	[127.0.0.1:9821]	EXEC(6)	OK
-21:47:40.528	[127.0.0.1:9821]	CLOSE(6)	OK
-21:47:40.529	[127.0.0.1:9821]	QUERY(7)	let $meals := /fastfood-database/meals return $meals	OK
-21:47:40.529	[127.0.0.1:9821]	QUERY(7)	OK
-21:47:40.530	[127.0.0.1:9821]	EXEC(7)	OK
-21:47:40.530	[127.0.0.1:9821]	CLOSE(7)	OK
-21:47:40.593	[127.0.0.1:9821]	QUERY(8)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
-21:47:40.594	[127.0.0.1:9821]	QUERY(8)	OK
-21:47:40.595	[127.0.0.1:9821]	EXEC(8)	OK
-21:47:40.595	[127.0.0.1:9821]	CLOSE(8)	OK
-21:47:40.598	[127.0.0.1:9821]	QUERY(9)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
-21:47:40.599	[127.0.0.1:9821]	QUERY(9)	OK
-21:47:40.599	[127.0.0.1:9821]	EXEC(9)	OK
-21:47:40.600	[127.0.0.1:9821]	CLOSE(9)	OK
-21:47:40.601	Server was stopped.
-21:48:27.573	Server was started.
-21:48:27.711	[127.0.0.1:9822]	LOGIN admin	OK
-21:48:27.742	[127.0.0.1:9822]	OPEN ffmapDatabase
-21:48:27.775	[127.0.0.1:9822]	OK	62.46 ms
-21:48:28.004	[127.0.0.1:9822]	QUERY(0)	let $lastKey := /fastfood-database/@users-key-number return replace value of node $lastKey with number($lastKey) + 1	OK
-21:48:28.005	[127.0.0.1:9822]	QUERY(0)	OK
-21:48:28.035	[127.0.0.1:9822]	EXEC(0)	OK
-21:48:28.036	[127.0.0.1:9822]	CLOSE(0)	OK
-21:48:28.037	[127.0.0.1:9822]	QUERY(1)	let $id := /fastfood-database/@users-key-number return number($id)	OK
-21:48:28.037	[127.0.0.1:9822]	QUERY(1)	OK
-21:48:28.038	[127.0.0.1:9822]	EXEC(1)	OK
-21:48:28.038	[127.0.0.1:9822]	CLOSE(1)	OK
-21:48:28.045	[127.0.0.1:9822]	QUERY(2)	let $users := /fastfood-database/users return insert node <user id="2"> <username>stash</username> <password>ea09e29922d1883299ae86f57ff15644d06480d0</password> <role>user</role> <first-name>sm</first-name> <surname>bd</surname> <date-registered>2011-5-26</date-registered> <active>true</active> </user> as last into $users	OK
-21:48:28.045	[127.0.0.1:9822]	QUERY(2)	OK
-21:48:28.057	[127.0.0.1:9822]	EXEC(2)	OK
-21:48:28.057	[127.0.0.1:9822]	CLOSE(2)	OK
-21:48:28.071	[127.0.0.1:9822]	QUERY(3)	let $user := /fastfood-database/users/user[lower-case(username) = "stash" and password = "ea09e29922d1883299ae86f57ff15644d06480d0"] return exists($user)	OK
-21:48:28.071	[127.0.0.1:9822]	QUERY(3)	OK
-21:48:28.077	[127.0.0.1:9822]	EXEC(3)	OK
-21:48:28.077	[127.0.0.1:9822]	CLOSE(3)	OK
-21:48:28.079	[127.0.0.1:9822]	QUERY(4)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "15336b06843c465c9511b95464ec2123f6db34e0"] return exists($user)	OK
-21:48:28.079	[127.0.0.1:9822]	QUERY(4)	OK
-21:48:28.080	[127.0.0.1:9822]	EXEC(4)	OK
-21:48:28.081	[127.0.0.1:9822]	CLOSE(4)	OK
-21:48:28.083	[127.0.0.1:9822]	QUERY(5)	let $user := /fastfood-database/users/user[lower-case(username) = "dostojev" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:48:28.083	[127.0.0.1:9822]	QUERY(5)	OK
-21:48:28.084	[127.0.0.1:9822]	EXEC(5)	OK
-21:48:28.085	[127.0.0.1:9822]	CLOSE(5)	OK
-21:48:28.087	[127.0.0.1:9822]	QUERY(6)	let $user := /fastfood-database/users/user[lower-case(username) = "admin" and password = "d033e22ae348aeb5660fc2140aec35850c4da997"] return exists($user)	OK
-21:48:28.087	[127.0.0.1:9822]	QUERY(6)	OK
-21:48:28.088	[127.0.0.1:9822]	EXEC(6)	OK
-21:48:28.089	[127.0.0.1:9822]	CLOSE(6)	OK
-21:48:28.099	[127.0.0.1:9822]	QUERY(7)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "grcka hnusna"])	OK
-21:48:28.099	[127.0.0.1:9822]	QUERY(7)	OK
-21:48:28.102	[127.0.0.1:9822]	EXEC(7)	OK
-21:48:28.103	[127.0.0.1:9822]	CLOSE(7)	OK
-21:48:28.104	[127.0.0.1:9822]	QUERY(8)	let $meals := /fastfood-database/meals/meal return count($meals[lower-case(@name) = "vagintarian"])	OK
-21:48:28.105	[127.0.0.1:9822]	QUERY(8)	OK
-21:48:28.106	[127.0.0.1:9822]	EXEC(8)	OK
-21:48:28.106	[127.0.0.1:9822]	CLOSE(8)	OK
-21:48:28.108	[127.0.0.1:9822]	QUERY(9)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
-21:48:28.108	[127.0.0.1:9822]	QUERY(9)	OK
-21:48:28.110	[127.0.0.1:9822]	EXEC(9)	OK
-21:48:28.110	[127.0.0.1:9822]	CLOSE(9)	OK
-21:48:28.111	[127.0.0.1:9822]	QUERY(10)	let $meals := /fastfood-database/meals return $meals	OK
-21:48:28.111	[127.0.0.1:9822]	QUERY(10)	OK
-21:48:28.112	[127.0.0.1:9822]	EXEC(10)	OK
-21:48:28.112	[127.0.0.1:9822]	CLOSE(10)	OK
-21:48:28.176	[127.0.0.1:9822]	QUERY(11)	for $meal in /fastfood-database/meals/meal[lower-case(@name) = "vagintarian"] return $meal 	OK
-21:48:28.176	[127.0.0.1:9822]	QUERY(11)	OK
-21:48:28.177	[127.0.0.1:9822]	EXEC(11)	OK
-21:48:28.178	[127.0.0.1:9822]	CLOSE(11)	OK
-21:48:28.181	[127.0.0.1:9822]	QUERY(12)	let $meals := /fastfood-database/meals/meal return count($meals)	OK
-21:48:28.181	[127.0.0.1:9822]	QUERY(12)	OK
-21:48:28.182	[127.0.0.1:9822]	EXEC(12)	OK
-21:48:28.183	[127.0.0.1:9822]	CLOSE(12)	OK
-21:48:28.184	Server was stopped.
+22:15:20.307	Server was started.
+22:15:20.547	[127.0.0.1:23318]	LOGIN admin	OK
+22:15:20.599	[127.0.0.1:23318]	OPEN ffmapDatabase
+22:15:20.675	[127.0.0.1:23318]	OK	127.56 ms
+22:15:20.917	[127.0.0.1:23318]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:15:20.918	[127.0.0.1:23318]	QUERY(0)	OK
+22:15:20.992	[127.0.0.1:23318]	EXEC(0)	OK
+22:15:20.993	[127.0.0.1:23318]	CLOSE(0)	OK
+22:15:21.067	[127.0.0.1:23318]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:15:21.067	[127.0.0.1:23318]	QUERY(1)	OK
+22:15:21.069	[127.0.0.1:23318]	EXEC(1)	OK
+22:15:21.069	[127.0.0.1:23318]	CLOSE(1)	OK
+22:15:21.075	[127.0.0.1:23318]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:15:21.075	[127.0.0.1:23318]	QUERY(2)	OK
+22:15:21.077	[127.0.0.1:23318]	EXEC(2)	OK
+22:15:21.077	[127.0.0.1:23318]	CLOSE(2)	OK
+22:15:21.139	Server was stopped.
+22:16:19.943	Server was started.
+22:16:20.142	[127.0.0.1:23328]	LOGIN admin	OK
+22:16:20.184	[127.0.0.1:23328]	OPEN ffmapDatabase
+22:16:20.226	[127.0.0.1:23328]	OK	82.69 ms
+22:16:20.464	[127.0.0.1:23328]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:16:20.464	[127.0.0.1:23328]	QUERY(0)	OK
+22:16:20.553	[127.0.0.1:23328]	EXEC(0)	OK
+22:16:20.554	[127.0.0.1:23328]	CLOSE(0)	OK
+22:16:20.626	[127.0.0.1:23328]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:16:20.627	[127.0.0.1:23328]	QUERY(1)	OK
+22:16:20.628	[127.0.0.1:23328]	EXEC(1)	OK
+22:16:20.629	[127.0.0.1:23328]	CLOSE(1)	OK
+22:16:20.635	[127.0.0.1:23328]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:16:20.636	[127.0.0.1:23328]	QUERY(2)	OK
+22:16:20.637	[127.0.0.1:23328]	EXEC(2)	OK
+22:16:20.639	[127.0.0.1:23328]	CLOSE(2)	OK
+22:16:20.723	Server was stopped.
+22:24:28.684	Server was started.
+22:24:28.875	[127.0.0.1:23386]	LOGIN admin	OK
+22:24:28.918	[127.0.0.1:23386]	OPEN ffmapDatabase
+22:24:28.962	[127.0.0.1:23386]	OK	85.34 ms
+22:24:29.208	[127.0.0.1:23386]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:24:29.209	[127.0.0.1:23386]	QUERY(0)	OK
+22:24:29.284	[127.0.0.1:23386]	EXEC(0)	OK
+22:24:29.286	[127.0.0.1:23386]	CLOSE(0)	OK
+22:24:29.360	[127.0.0.1:23386]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:24:29.361	[127.0.0.1:23386]	QUERY(1)	OK
+22:24:29.363	[127.0.0.1:23386]	EXEC(1)	OK
+22:24:29.363	[127.0.0.1:23386]	CLOSE(1)	OK
+22:24:29.369	[127.0.0.1:23386]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:24:29.370	[127.0.0.1:23386]	QUERY(2)	OK
+22:24:29.371	[127.0.0.1:23386]	EXEC(2)	OK
+22:24:29.372	[127.0.0.1:23386]	CLOSE(2)	OK
+22:24:29.422	Server was stopped.
+22:25:49.414	Server was started.
+22:25:49.573	[127.0.0.1:23437]	LOGIN admin	OK
+22:25:49.614	[127.0.0.1:23437]	OPEN ffmapDatabase
+22:25:49.657	[127.0.0.1:23437]	OK	82.62 ms
+22:25:49.892	[127.0.0.1:23437]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:25:49.892	[127.0.0.1:23437]	QUERY(0)	OK
+22:25:49.966	[127.0.0.1:23437]	EXEC(0)	OK
+22:25:49.968	[127.0.0.1:23437]	CLOSE(0)	OK
+22:25:50.042	[127.0.0.1:23437]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:25:50.043	[127.0.0.1:23437]	QUERY(1)	OK
+22:25:50.044	[127.0.0.1:23437]	EXEC(1)	OK
+22:25:50.045	[127.0.0.1:23437]	CLOSE(1)	OK
+22:25:50.050	[127.0.0.1:23437]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:25:50.051	[127.0.0.1:23437]	QUERY(2)	OK
+22:25:50.052	[127.0.0.1:23437]	EXEC(2)	OK
+22:25:50.053	[127.0.0.1:23437]	CLOSE(2)	OK
+22:25:50.108	Server was stopped.
+22:26:16.325	Server was started.
+22:26:16.513	[127.0.0.1:23460]	LOGIN admin	OK
+22:26:16.556	[127.0.0.1:23460]	OPEN ffmapDatabase
+22:26:16.623	[127.0.0.1:23460]	OK	108.1 ms
+22:26:17.049	[127.0.0.1:23460]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:26:17.049	[127.0.0.1:23460]	QUERY(0)	OK
+22:26:17.127	[127.0.0.1:23460]	EXEC(0)	OK
+22:26:17.129	[127.0.0.1:23460]	CLOSE(0)	OK
+22:26:17.209	[127.0.0.1:23460]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:26:17.210	[127.0.0.1:23460]	QUERY(1)	OK
+22:26:17.212	[127.0.0.1:23460]	EXEC(1)	OK
+22:26:17.213	[127.0.0.1:23460]	CLOSE(1)	OK
+22:26:17.218	[127.0.0.1:23460]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:26:17.219	[127.0.0.1:23460]	QUERY(2)	OK
+22:26:17.220	[127.0.0.1:23460]	EXEC(2)	OK
+22:26:17.221	[127.0.0.1:23460]	CLOSE(2)	OK
+22:26:17.279	Server was stopped.
+22:27:03.052	Server was started.
+22:27:03.254	[127.0.0.1:23466]	LOGIN admin	OK
+22:27:03.296	[127.0.0.1:23466]	OPEN ffmapDatabase
+22:27:03.341	[127.0.0.1:23466]	OK	86.21 ms
+22:27:03.605	[127.0.0.1:23466]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:27:03.606	[127.0.0.1:23466]	QUERY(0)	OK
+22:27:03.681	[127.0.0.1:23466]	EXEC(0)	OK
+22:27:03.683	[127.0.0.1:23466]	CLOSE(0)	OK
+22:27:03.761	[127.0.0.1:23466]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:27:03.762	[127.0.0.1:23466]	QUERY(1)	OK
+22:27:03.764	[127.0.0.1:23466]	EXEC(1)	OK
+22:27:03.764	[127.0.0.1:23466]	CLOSE(1)	OK
+22:27:03.770	[127.0.0.1:23466]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:27:03.771	[127.0.0.1:23466]	QUERY(2)	OK
+22:27:03.772	[127.0.0.1:23466]	EXEC(2)	OK
+22:27:03.773	[127.0.0.1:23466]	CLOSE(2)	OK
+22:27:03.864	Server was stopped.
+22:29:16.609	Server was started.
+22:29:16.787	[127.0.0.1:23480]	LOGIN admin	OK
+22:29:16.829	[127.0.0.1:23480]	OPEN ffmapDatabase
+22:29:16.870	[127.0.0.1:23480]	OK	81.85 ms
+22:29:16.880	[127.0.0.1:23480]	CREATE DB ffmap src/java/cz/muni/fi/pb138/ffmap/xml/ffmapDatabase.xml
+22:29:17.022	[127.0.0.1:23480]	OK	151.56 ms
+22:29:17.269	[127.0.0.1:23480]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:29:17.270	[127.0.0.1:23480]	QUERY(0)	OK
+22:29:17.341	[127.0.0.1:23480]	EXEC(0)	OK
+22:29:17.343	[127.0.0.1:23480]	CLOSE(0)	OK
+22:29:17.371	[127.0.0.1:23480]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:29:17.372	[127.0.0.1:23480]	QUERY(1)	OK
+22:29:17.373	[127.0.0.1:23480]	EXEC(1)	OK
+22:29:17.374	[127.0.0.1:23480]	CLOSE(1)	OK
+22:29:17.380	[127.0.0.1:23480]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:29:17.380	[127.0.0.1:23480]	QUERY(2)	OK
+22:29:17.382	[127.0.0.1:23480]	EXEC(2)	OK
+22:29:17.382	[127.0.0.1:23480]	CLOSE(2)	OK
+22:29:17.390	Server was stopped.
+22:50:11.084	Server was started.
+22:50:11.099	Address already in use: JVM_Bind
+22:50:18.523	Server was started.
+22:50:18.690	[127.0.0.1:23871]	LOGIN admin	OK
+22:50:18.732	[127.0.0.1:23871]	OPEN ffmapDatabase
+22:50:18.774	[127.0.0.1:23871]	OK	82.17 ms
+22:50:19.012	[127.0.0.1:23871]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:50:19.013	[127.0.0.1:23871]	QUERY(0)	OK
+22:50:19.085	[127.0.0.1:23871]	EXEC(0)	OK
+22:50:19.087	[127.0.0.1:23871]	CLOSE(0)	OK
+22:50:19.159	[127.0.0.1:23871]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:50:19.160	[127.0.0.1:23871]	QUERY(1)	OK
+22:50:19.161	[127.0.0.1:23871]	EXEC(1)	OK
+22:50:19.162	[127.0.0.1:23871]	CLOSE(1)	OK
+22:50:19.168	[127.0.0.1:23871]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:50:19.168	[127.0.0.1:23871]	QUERY(2)	OK
+22:50:19.170	[127.0.0.1:23871]	EXEC(2)	OK
+22:50:19.170	[127.0.0.1:23871]	CLOSE(2)	OK
+22:50:19.226	Server was stopped.
+22:53:42.078	Server was started.
+22:53:42.253	[127.0.0.1:23893]	LOGIN admin	OK
+22:53:42.295	[127.0.0.1:23893]	OPEN ffmapDatabase
+22:53:42.336	[127.0.0.1:23893]	OK	82.05 ms
+22:53:42.338	[127.0.0.1:23893]	DROP DB ffmap
+22:53:42.346	[127.0.0.1:23893]	OK	8.59 ms
+22:53:42.357	[127.0.0.1:23893]	CREATE DB ffmap ./xml_data/ffmapDatabase.xml
+22:53:42.475	[127.0.0.1:23893]	OK	127.18 ms
+22:53:42.705	[127.0.0.1:23893]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+22:53:42.706	[127.0.0.1:23893]	QUERY(0)	OK
+22:53:42.776	[127.0.0.1:23893]	EXEC(0)	OK
+22:53:42.778	[127.0.0.1:23893]	CLOSE(0)	OK
+22:53:42.805	[127.0.0.1:23893]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+22:53:42.805	[127.0.0.1:23893]	QUERY(1)	OK
+22:53:42.807	[127.0.0.1:23893]	EXEC(1)	OK
+22:53:42.808	[127.0.0.1:23893]	CLOSE(1)	OK
+22:53:42.813	[127.0.0.1:23893]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+22:53:42.813	[127.0.0.1:23893]	QUERY(2)	OK
+22:53:42.815	[127.0.0.1:23893]	EXEC(2)	OK
+22:53:42.815	[127.0.0.1:23893]	CLOSE(2)	OK
+22:53:42.823	Server was stopped.
+23:08:54.589	Server was started.
+23:08:54.619	Address already in use: JVM_Bind
+23:09:03.383	Server was started.
+23:09:03.570	[127.0.0.1:24189]	LOGIN admin	OK
+23:09:03.610	[127.0.0.1:24189]	OPEN ffmapDatabase
+23:09:03.652	[127.0.0.1:24189]	OK	81.21 ms
+23:09:03.653	[127.0.0.1:24189]	DROP DB ffmap
+23:09:03.662	[127.0.0.1:24189]	OK	9.34 ms
+23:09:03.672	[127.0.0.1:24189]	CREATE DB ffmap ./xml_data/ffmapDatabase.xml
+23:09:03.781	[127.0.0.1:24189]	OK	117.9 ms
+23:09:04.007	[127.0.0.1:24189]	QUERY(0)	let $joint := /fastfood-database/joints/joint[@id=1]return $joint	OK
+23:09:04.007	[127.0.0.1:24189]	QUERY(0)	OK
+23:09:04.076	[127.0.0.1:24189]	EXEC(0)	OK
+23:09:04.078	[127.0.0.1:24189]	CLOSE(0)	OK
+23:09:04.105	[127.0.0.1:24189]	QUERY(1)	for $meal in /fastfood-database/meals/meal[@id = 1] return $meal	OK
+23:09:04.105	[127.0.0.1:24189]	QUERY(1)	OK
+23:09:04.107	[127.0.0.1:24189]	EXEC(1)	OK
+23:09:04.108	[127.0.0.1:24189]	CLOSE(1)	OK
+23:09:04.113	[127.0.0.1:24189]	QUERY(2)	for $meal in /fastfood-database/meals/meal[@id = 3] return $meal	OK
+23:09:04.113	[127.0.0.1:24189]	QUERY(2)	OK
+23:09:04.115	[127.0.0.1:24189]	EXEC(2)	OK
+23:09:04.115	[127.0.0.1:24189]	CLOSE(2)	OK
+23:09:04.125	Server was stopped.

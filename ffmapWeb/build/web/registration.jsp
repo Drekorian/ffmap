@@ -1,57 +1,47 @@
 <%-- 
     Document   : registration
-    Created on : 26.6.2011, 1:48:24
-    Author     : Stash
+    Author     : Aleksandar Zivkovic
+    Created on : 2011.0627
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-<%@include file="includes/header.jsp" %>
+<%@include file="includes/header_full.jsp" %>
 
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@taglib prefix="f" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ffmap</title>
-    </head>
-    <body>
-        <h1>Registrace nového uživatele</h1>
-        <p>Všechna pole jsou povinná</p>
+<div id="text_wrapper">
+    <div id="text">
+        <h2>Registrace nového uživatele</h2>
+        <p class="exclamation">Všechna pole jsou povinná</p>
         <form action="register" method="post">
             <table border="0">
                 <tr>
-                    <td><b>Uživatelské jméno: </b></td>
-                    <td><input type="text" name="username" value="${uname}" size="20" maxlength="15"></td>
+                    <td><strong>Uživatelské jméno: </strong></td>
+                    <td><input type="text" name="username" value="${uname}" size="20" maxlength="20"></td>
                     <td><c:out value="${username_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Heslo: </b></td>
-                    <td><input type="password" name="pass" value="" size="20" maxlength="15"></td>
+                    <td><strong>Heslo: </strong></td>
+                    <td><input type="password" name="pass" size="20" maxlength="20"></td>
                     <td><c:out value="${pass_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Potvrzení hesla: </b></td>
-                    <td><input type="password" name="passconf" value="" size="20" maxlength="15"></td>
+                    <td><strong>Potvrzení hesla: </strong></td>
+                    <td><input type="password" name="passconf" size="20" maxlength="20"></td>
                     <td><c:out value="${passconf_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Křestní jméno: </b></td>
+                    <td><strong>Křestní jméno: </strong></td>
                     <td><input type="text" name="firstname" value="${fname}" size="20"></td>
                     <td><c:out value="${firstname_error}"></c:out></td>
                 </tr>
                 <tr>
-                    <td><b>Příjmení: </b></td>
+                    <td><strong>Příjmení: </strong></td>
                     <td><input type="text" name="lastname" value="${lname}" size="20"></td>
                     <td><c:out value="${lastname_error}"></c:out></td>
                 </tr>
             </table>
-            <input type="submit" value="Submit" align="center">
-        </form>
-    </body>
-</html>
+            <input type="submit" value="Registrovat" align="center">
+            <input type="reset" value="Vymazat" align="center">
+        </div>
+</div>
 
 <%@include file="includes/footer.jsp" %>

@@ -1,8 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package cz.muni.fi.pb138.ffmap.classes.servlets;
 
 import cz.muni.fi.pb138.ffmap.classes.Meal;
@@ -18,13 +13,15 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
+ * TODO: description
  *
- * @author Stash
+ * @author Aleksandar Zivkovic
+ * @version 2011.0626
  */
+
 public class viewMealServlet extends HttpServlet {
     private static final String URL = "/ffmap/meal/";
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /** 
      * Handles the HTTP <code>GET</code> method.
      * @param request servlet request
@@ -48,5 +45,4 @@ public class viewMealServlet extends HttpServlet {
         }
 
     } 
-
 }

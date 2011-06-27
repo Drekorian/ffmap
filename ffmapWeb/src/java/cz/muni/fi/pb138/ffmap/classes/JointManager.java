@@ -4,15 +4,11 @@ import cz.muni.fi.pb138.ffmap.enums.WeekDay;
 import cz.muni.fi.pb138.ffmap.exceptions.DatabaseInitException;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseManager;
 import cz.muni.fi.pb138.ffmap.interfaces.IDatabaseStoreable;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.basex.core.BaseXException;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -102,7 +98,13 @@ public class JointManager implements IDatabaseManager {
         Joint result = null;
 
         Long _id = Long.valueOf(joint.getAttribute("id"));
-        Long _addedBy = Long.valueOf(joint.getAttribute("added-by"));
+
+        Long _addedBy = null;
+
+        if (joint.getAttribute("added-by") != null && !joint.getAttribute("added-by").equals("")) {
+            _addedBy = Long.valueOf(joint.getAttribute("added-by"));
+        }
+
         String _name = joint.getAttribute("name");
         Location location = Location.parseLocation((Element)joint.getElementsByTagName("location").item(0));
 
